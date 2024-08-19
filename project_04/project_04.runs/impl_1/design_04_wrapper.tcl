@@ -122,7 +122,6 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 7
-  set_param project.hsv.suppressChildGraphs 0
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
@@ -133,7 +132,7 @@ OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.cache/wt [current_project]
   set_property parent.project_path C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.xpr [current_project]
   set_property ip_repo_paths {
-  c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo
+  C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo
   C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs
 } [current_project]
   update_ip_catalog

@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Mon Aug 19 13:28:33 2024
+--Date        : Mon Aug 19 16:18:20 2024
 --Host        : Arif running 64-bit major release  (build 9200)
 --Command     : generate_target design_04.bd
 --Design      : design_04

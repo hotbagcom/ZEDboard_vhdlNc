@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Mon Aug 19 13:28:33 2024
+--Date        : Mon Aug 19 16:18:20 2024
 --Host        : Arif running 64-bit major release  (build 9200)
 --Command     : generate_target design_04_wrapper.bd
 --Design      : design_04_wrapper
@@ -42,6 +42,13 @@ end design_04_wrapper;
 architecture STRUCTURE of design_04_wrapper is
   component design_04 is
   port (
+    sw : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
+    FIXED_IO_ddr_vrn : inout STD_LOGIC;
+    FIXED_IO_ddr_vrp : inout STD_LOGIC;
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    FIXED_IO_ps_clk : inout STD_LOGIC;
+    FIXED_IO_ps_porb : inout STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -57,14 +64,7 @@ architecture STRUCTURE of design_04_wrapper is
     DDR_dq : inout STD_LOGIC_VECTOR ( 31 downto 0 );
     DDR_dqs_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
-    FIXED_IO_ddr_vrn : inout STD_LOGIC;
-    FIXED_IO_ddr_vrp : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC;
-    FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
-    led : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    sw : in STD_LOGIC_VECTOR ( 7 downto 0 )
+    led : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component design_04;
 begin

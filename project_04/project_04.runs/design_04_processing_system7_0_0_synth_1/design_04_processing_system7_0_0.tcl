@@ -86,13 +86,16 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
-set_property ip_repo_paths c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo [current_project]
+set_property ip_repo_paths {
+  c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo
+  c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_processing_system7_0_0/design_04_processing_system7_0_0.xci
+read_ip -quiet C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_processing_system7_0_0/design_04_processing_system7_0_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_processing_system7_0_0/design_04_processing_system7_0_0.xdc]
 
 OPTRACE "Adding files" END { }
