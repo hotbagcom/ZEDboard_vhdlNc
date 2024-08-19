@@ -2,8 +2,8 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Fri Aug 16 16:44:52 2024
-# Process ID: 16232
+# Start of session at: Mon Aug 19 13:29:32 2024
+# Process ID: 1052
 # Current directory: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1
 # Command line: vivado.exe -log design_04_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_04_wrapper.tcl
 # Log file: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/design_04_wrapper.vds
@@ -12,6 +12,7 @@
 source design_04_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Users/arify/Prog_4_user/Xlixv20_1/Vivado/2020.1/data/ip'.
 Command: synth_design -top design_04_wrapper -part xc7z020clg484-1
 Starting synth_design
@@ -20,40 +21,40 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 19624
+INFO: [Synth 8-7075] Helper process launched with PID 18112
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1097.977 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1098.602 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_04_wrapper' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/hdl/design_04_wrapper.vhd:42]
 INFO: [Synth 8-3491] module 'design_04' declared at 'C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:591' bound to instance 'design_04_i' of component 'design_04' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/hdl/design_04_wrapper.vhd:71]
 INFO: [Synth 8-638] synthesizing module 'design_04' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:623]
-INFO: [Synth 8-3491] module 'design_04_ay_ledsw_0_0' declared at 'C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-16232-Arif/realtime/design_04_ay_ledsw_0_0_stub.vhdl:5' bound to instance 'ay_ledsw_0' of component 'design_04_ay_ledsw_0_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:857]
-INFO: [Synth 8-638] synthesizing module 'design_04_ay_ledsw_0_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-16232-Arif/realtime/design_04_ay_ledsw_0_0_stub.vhdl:34]
-INFO: [Synth 8-3491] module 'design_04_processing_system7_0_0' declared at 'C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-16232-Arif/realtime/design_04_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_04_processing_system7_0_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:883]
-INFO: [Synth 8-638] synthesizing module 'design_04_processing_system7_0_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-16232-Arif/realtime/design_04_processing_system7_0_0_stub.vhdl:79]
+INFO: [Synth 8-3491] module 'design_04_ay_ledsw_0_4' declared at 'C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-1052-Arif/realtime/design_04_ay_ledsw_0_4_stub.vhdl:5' bound to instance 'ay_ledsw_0' of component 'design_04_ay_ledsw_0_4' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:857]
+INFO: [Synth 8-638] synthesizing module 'design_04_ay_ledsw_0_4' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-1052-Arif/realtime/design_04_ay_ledsw_0_4_stub.vhdl:34]
+INFO: [Synth 8-3491] module 'design_04_processing_system7_0_0' declared at 'C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-1052-Arif/realtime/design_04_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_04_processing_system7_0_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:883]
+INFO: [Synth 8-638] synthesizing module 'design_04_processing_system7_0_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-1052-Arif/realtime/design_04_processing_system7_0_0_stub.vhdl:79]
 INFO: [Synth 8-638] synthesizing module 'design_04_ps7_0_axi_periph_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:398]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_6JZT9U' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:80]
-INFO: [Synth 8-3491] module 'design_04_auto_pc_0' declared at 'C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-16232-Arif/realtime/design_04_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_04_auto_pc_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:263]
-INFO: [Synth 8-638] synthesizing module 'design_04_auto_pc_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-16232-Arif/realtime/design_04_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-3491] module 'design_04_auto_pc_0' declared at 'C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-1052-Arif/realtime/design_04_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_04_auto_pc_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'design_04_auto_pc_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-1052-Arif/realtime/design_04_auto_pc_0_stub.vhdl:70]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_6JZT9U' (1#1) [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:80]
 INFO: [Synth 8-256] done synthesizing module 'design_04_ps7_0_axi_periph_0' (2#1) [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:398]
-INFO: [Synth 8-3491] module 'design_04_rst_ps7_0_100M_0' declared at 'C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-16232-Arif/realtime/design_04_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'design_04_rst_ps7_0_100M_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:1020]
-INFO: [Synth 8-638] synthesizing module 'design_04_rst_ps7_0_100M_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-16232-Arif/realtime/design_04_rst_ps7_0_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_04_rst_ps7_0_100M_0' declared at 'C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-1052-Arif/realtime/design_04_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'design_04_rst_ps7_0_100M_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:1020]
+INFO: [Synth 8-638] synthesizing module 'design_04_rst_ps7_0_100M_0' [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/.Xil/Vivado-1052-Arif/realtime/design_04_rst_ps7_0_100M_0_stub.vhdl:21]
 INFO: [Synth 8-256] done synthesizing module 'design_04' (3#1) [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/synth/design_04.vhd:623]
 INFO: [Synth 8-256] done synthesizing module 'design_04_wrapper' (4#1) [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/hdl/design_04_wrapper.vhd:42]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1104.355 ; gain = 6.379
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1104.094 ; gain = 5.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1104.355 ; gain = 6.379
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1104.094 ; gain = 5.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1104.355 ; gain = 6.379
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1104.094 ; gain = 5.492
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1104.355 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1104.094 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -61,30 +62,64 @@ Initializing timing engine
 Parsing XDC File [c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_processing_system7_0_0/design_04_processing_system7_0_0/design_04_processing_system7_0_0_in_context.xdc] for cell 'design_04_i/processing_system7_0'
 WARNING: [Vivado 12-584] No ports matched ''. [c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_processing_system7_0_0/design_04_processing_system7_0_0/design_04_processing_system7_0_0_in_context.xdc:2]
 Finished Parsing XDC File [c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_processing_system7_0_0/design_04_processing_system7_0_0/design_04_processing_system7_0_0_in_context.xdc] for cell 'design_04_i/processing_system7_0'
-Parsing XDC File [c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_ay_ledsw_0_0/design_04_ay_ledsw_0_0/design_04_ay_ledsw_0_0_in_context.xdc] for cell 'design_04_i/ay_ledsw_0'
-Finished Parsing XDC File [c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_ay_ledsw_0_0/design_04_ay_ledsw_0_0/design_04_ay_ledsw_0_0_in_context.xdc] for cell 'design_04_i/ay_ledsw_0'
-Parsing XDC File [c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_auto_pc_0/design_04_auto_pc_0/design_04_auto_pc_0_in_context.xdc] for cell 'design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Finished Parsing XDC File [c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_auto_pc_0/design_04_auto_pc_0/design_04_auto_pc_0_in_context.xdc] for cell 'design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_rst_ps7_0_100M_0/design_04_rst_ps7_0_100M_0/design_04_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_04_i/rst_ps7_0_100M'
 Finished Parsing XDC File [c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_rst_ps7_0_100M_0/design_04_rst_ps7_0_100M_0/design_04_rst_ps7_0_100M_0_in_context.xdc] for cell 'design_04_i/rst_ps7_0_100M'
+Parsing XDC File [c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_ay_ledsw_0_4/design_04_ay_ledsw_0_4/design_04_ay_ledsw_0_4_in_context.xdc] for cell 'design_04_i/ay_ledsw_0'
+Finished Parsing XDC File [c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_ay_ledsw_0_4/design_04_ay_ledsw_0_4/design_04_ay_ledsw_0_4_in_context.xdc] for cell 'design_04_i/ay_ledsw_0'
+Parsing XDC File [c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_auto_pc_0/design_04_auto_pc_0/design_04_auto_pc_0_in_context.xdc] for cell 'design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_auto_pc_0/design_04_auto_pc_0/design_04_auto_pc_0_in_context.xdc] for cell 'design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[0]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:1]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[1]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:2]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[2]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:3]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[3]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:4]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[4]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:5]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[5]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:6]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[6]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:7]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[7]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:8]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[0]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:9]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[1]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:10]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[2]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:11]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[3]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:12]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[4]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:13]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[5]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:14]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[6]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:15]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[7]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:16]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[0]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:17]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[1]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:18]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[2]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:19]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[3]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:20]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[4]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:21]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[5]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:22]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[6]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:23]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{led[7]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:24]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[0]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:25]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[1]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:26]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[2]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:27]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[3]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:28]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[4]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:29]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[5]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:30]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[6]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:31]
+CRITICAL WARNING: [Designutils 20-1307] Command 'get_ports{sw[7]}' is not supported in the xdc constraint file. [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc:32]
+Finished Parsing XDC File [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/constrs_1/new/cnstr.xdc]
 Parsing XDC File [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1156.008 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1154.559 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1156.008 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1154.559 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1156.008 ; gain = 58.031
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1154.559 ; gain = 55.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1156.008 ; gain = 58.031
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1154.559 ; gain = 55.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -351,15 +386,15 @@ Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint fi
 Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_processing_system7_0_0/design_04_processing_system7_0_0/design_04_processing_system7_0_0_in_context.xdc, line 262).
 Applied set_property DONT_TOUCH = true for design_04_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_04_i/processing_system7_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_04_i/ay_ledsw_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_04_i/ps7_0_axi_periph. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_04_i/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_04_i/ay_ledsw_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1156.008 ; gain = 58.031
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1154.559 ; gain = 55.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1156.008 ; gain = 58.031
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1154.559 ; gain = 55.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -381,25 +416,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1156.008 ; gain = 58.031
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1154.559 ; gain = 55.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1183.145 ; gain = 85.168
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1184.551 ; gain = 85.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1183.219 ; gain = 85.242
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1184.625 ; gain = 86.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1202.320 ; gain = 104.344
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1204.234 ; gain = 105.633
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -417,37 +452,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1208.109 ; gain = 110.133
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1210.031 ; gain = 111.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1208.109 ; gain = 110.133
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1210.031 ; gain = 111.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1208.109 ; gain = 110.133
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1210.031 ; gain = 111.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1208.109 ; gain = 110.133
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1210.031 ; gain = 111.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1208.109 ; gain = 110.133
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1210.031 ; gain = 111.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1208.109 ; gain = 110.133
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1210.031 ; gain = 111.430
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -458,7 +493,7 @@ Report BlackBoxes:
 |      |BlackBox name                    |Instances |
 +------+---------------------------------+----------+
 |1     |design_04_auto_pc_0              |         1|
-|2     |design_04_ay_ledsw_0_0           |         1|
+|2     |design_04_ay_ledsw_0_4           |         1|
 |3     |design_04_processing_system7_0_0 |         1|
 |4     |design_04_rst_ps7_0_100M_0       |         1|
 +------+---------------------------------+----------+
@@ -468,30 +503,30 @@ Report Cell Usage:
 |      |Cell                                  |Count |
 +------+--------------------------------------+------+
 |1     |design_04_auto_pc_0_bbox              |     1|
-|2     |design_04_ay_ledsw_0_0_bbox           |     1|
+|2     |design_04_ay_ledsw_0_4_bbox           |     1|
 |3     |design_04_processing_system7_0_0_bbox |     1|
 |4     |design_04_rst_ps7_0_100M_0_bbox       |     1|
 |5     |IBUF                                  |     8|
 |6     |OBUF                                  |     8|
 +------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1208.109 ; gain = 110.133
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1210.031 ; gain = 111.430
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1208.109 ; gain = 58.480
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 1208.109 ; gain = 110.133
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:20 . Memory (MB): peak = 1210.031 ; gain = 60.965
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 1210.031 ; gain = 111.430
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1217.785 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1221.098 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1230.375 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1229.496 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-32 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+33 Infos, 1 Warnings, 32 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:25 . Memory (MB): peak = 1230.375 ; gain = 132.398
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:28 . Memory (MB): peak = 1229.496 ; gain = 130.895
 INFO: [Common 17-1381] The checkpoint 'C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1/design_04_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_04_wrapper_utilization_synth.rpt -pb design_04_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Aug 16 16:45:23 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 19 13:30:07 2024...

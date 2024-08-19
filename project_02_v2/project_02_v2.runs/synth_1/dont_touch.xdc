@@ -18,3 +18,5 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_02_rst_p
 
 # IP: bd/design_02/ip/design_02_auto_pc_0/design_02_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_02_auto_pc_0 || ORIG_REF_NAME==design_02_auto_pc_0} -quiet] -quiet
+
+# XDC: bd/design_02/design_02_ooc.xdc

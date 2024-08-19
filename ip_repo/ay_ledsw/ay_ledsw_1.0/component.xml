@@ -3,7 +3,7 @@
   <spirit:vendor>arf_yard</spirit:vendor>
   <spirit:library>user</spirit:library>
   <spirit:name>ay_ledsw</spirit:name>
-  <spirit:version>1.0</spirit:version>
+  <spirit:version>1.1</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
       <spirit:name>S00_AXI</spirit:name>
@@ -199,7 +199,7 @@
       <spirit:parameters>
         <spirit:parameter>
           <spirit:name>POLARITY</spirit:name>
-          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_74b5137e">ACTIVE_LOW</spirit:value>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
@@ -681,7 +681,7 @@
       <spirit:enumeration>32</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_74b5137e</spirit:name>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
       <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
       <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
     </spirit:choice>
@@ -718,7 +718,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/ay_ledsw_v1_0.tcl</spirit:name>
+        <spirit:name>xgui/ay_ledsw_v1_1.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_0e5443b4</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
@@ -797,12 +797,13 @@
       <xilinx:taxonomies>
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>ay_ledsw_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:displayName>ay_ledsw_v1.1</xilinx:displayName>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>xilinx.com:user:ay_ledsw:1.0</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>arf_yard:user:ay_ledsw:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2024-08-16T13:33:25Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2024-08-19T10:22:08Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@77ba243d_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4544da04_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
@@ -829,11 +830,70 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@473859cb_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@65646e_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@28ea958_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e194e39_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16c758e4_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48945f12_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12d3e706_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3faf5868_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10700114_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bed1b1_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69b4b9a3_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76c94d13_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c510550_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58c626c3_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@845a16c_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cbb6f77_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7346afbd_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a47f68a_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b788758_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@309b57cb_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24e07ea6_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42d4c1e5_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74cf58a_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c493655_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16bad189_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d7ae533_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28bf2ecc_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36c9984f_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2974b584_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bb32ef9_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f08d38_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74b7b41b_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75447e6_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@491c50c9_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60e58f66_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39e1641e_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fe55b2c_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4499dff5_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61595655_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bef4b30_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@231b2d8b_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44e7037a_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d19bbc6_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@512ca9f4_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b20481f_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39ac3d99_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55e59a32_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f76e286_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64275a18_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d9a7a37_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f2e80ff_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10f11ee8_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57f7a239_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ec0ffd2_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f617ae7_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79a4102a_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6077b329_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4197e3d2_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e77c4ef_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12d68cb8_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69cd78ba_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@453ca99f_ARCHIVE_LOCATION">c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/ay_ledsw/ay_ledsw_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a6aebf4"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="7a63f3fc"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
       <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="be9bee2e"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="a749b4ba"/>

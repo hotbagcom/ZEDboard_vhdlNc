@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1723815835">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1724063326">
   <File Type="PA-TCL" Name="design_04_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_04_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_04_wrapper_reports.tcl"/>
@@ -32,6 +32,12 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/cnstr.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
@@ -48,8 +54,7 @@
     </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_04_ay_ledsw_0_4"/>
   <BlockFileSet Type="BlockSrcs" Name="design_04_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_04_ay_ledsw_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_04_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_04_rst_ps7_0_100M_0"/>
 </GenRun>

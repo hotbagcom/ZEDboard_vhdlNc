@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1723816041">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1724063329">
   <File Type="BITSTR-BMM" Name="design_04_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="design_04_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="design_04_wrapper_timing_summary_init.rpt"/>
@@ -98,6 +98,12 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/cnstr.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
@@ -122,8 +128,7 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_04_ay_ledsw_0_4"/>
   <BlockFileSet Type="BlockSrcs" Name="design_04_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_04_ay_ledsw_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_04_auto_pc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_04_rst_ps7_0_100M_0"/>
 </GenRun>

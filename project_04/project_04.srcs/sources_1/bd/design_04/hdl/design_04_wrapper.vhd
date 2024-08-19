@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Fri Aug 16 16:43:39 2024
+--Date        : Mon Aug 19 13:28:33 2024
 --Host        : Arif running 64-bit major release  (build 9200)
 --Command     : generate_target design_04_wrapper.bd
 --Design      : design_04_wrapper
@@ -63,8 +63,8 @@ architecture STRUCTURE of design_04_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    sw : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    led : out STD_LOGIC_VECTOR ( 7 downto 0 )
+    led : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    sw : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component design_04;
 begin

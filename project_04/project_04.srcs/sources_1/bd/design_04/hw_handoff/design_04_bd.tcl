@@ -166,7 +166,7 @@ proc create_root_design { parentCell } {
   set sw [ create_bd_port -dir I -from 7 -to 0 sw ]
 
   # Create instance: ay_ledsw_0, and set properties
-  set ay_ledsw_0 [ create_bd_cell -type ip -vlnv arf_yard:user:ay_ledsw:1.0 ay_ledsw_0 ]
+  set ay_ledsw_0 [ create_bd_cell -type ip -vlnv arf_yard:user:ay_ledsw:1.1 ay_ledsw_0 ]
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
