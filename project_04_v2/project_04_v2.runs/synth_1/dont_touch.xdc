@@ -15,8 +15,8 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_04_ps7_0
 # IP: bd/design_04/ip/design_04_rst_ps7_0_100M_0/design_04_rst_ps7_0_100M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_04_rst_ps7_0_100M_0 || ORIG_REF_NAME==design_04_rst_ps7_0_100M_0} -quiet] -quiet
 
-# IP: bd/design_04/ip/design_04_ay_ledsw_0_4/design_04_ay_ledsw_0_4.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_04_ay_ledsw_0_4 || ORIG_REF_NAME==design_04_ay_ledsw_0_4} -quiet] -quiet
+# IP: bd/design_04/ip/design_04_ay_swled_0_0/design_04_ay_swled_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_04_ay_swled_0_0 || ORIG_REF_NAME==design_04_ay_swled_0_0} -quiet] -quiet
 
 # IP: bd/design_04/ip/design_04_auto_pc_0/design_04_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_04_auto_pc_0 || ORIG_REF_NAME==design_04_auto_pc_0} -quiet] -quiet

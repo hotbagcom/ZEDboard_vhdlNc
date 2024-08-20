@@ -2,14 +2,14 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="design_04" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1724157804"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1724157804"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1724157804"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1724157804"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1724161830"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1724161830"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1724161830"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1724161830"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\design_04_processing_system7_0_0\design_04_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1724157782" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -17,7 +17,7 @@
       </File>
       <File Name="ip\design_04_ps7_0_axi_periph_0\design_04_ps7_0_axi_periph_0.xci" Type="IP">
         <Instance HierarchyPath="ps7_0_axi_periph"/>
-        <Properties IsEditable="false" IsVisible="false" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Properties IsEditable="false" IsVisible="false" Timestamp="1723815795" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -25,7 +25,7 @@
       </File>
       <File Name="ip\design_04_rst_ps7_0_100M_0\design_04_rst_ps7_0_100M_0.xci" Type="IP">
         <Instance HierarchyPath="rst_ps7_0_100M"/>
-        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="1724157782" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <UsedIn Val="IMPLEMENTATION"/>
@@ -41,8 +41,8 @@
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\design_04_ay_ledsw_0_4\design_04_ay_ledsw_0_4.xci" Type="IP">
-        <Instance HierarchyPath="ay_ledsw_0"/>
+      <File Name="ip\design_04_ay_swled_0_0\design_04_ay_swled_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ay_swled_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

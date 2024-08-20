@@ -2,11 +2,11 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue Aug 20 15:54:17 2024
-# Process ID: 4092
-# Current directory: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/impl_1
+# Start of session at: Tue Aug 20 16:51:53 2024
+# Process ID: 11004
+# Current directory: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04_v2/project_04_v2.runs/impl_1
 # Command line: vivado.exe -log design_04_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_04_wrapper.tcl -notrace
-# Log file: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/impl_1/design_04_wrapper.vdi
-# Journal file: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/impl_1\vivado.jou
+# Log file: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04_v2/project_04_v2.runs/impl_1/design_04_wrapper.vdi
+# Journal file: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04_v2/project_04_v2.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source design_04_wrapper.tcl -notrace

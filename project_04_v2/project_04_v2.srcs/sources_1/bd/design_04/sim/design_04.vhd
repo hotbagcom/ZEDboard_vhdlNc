@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Tue Aug 20 15:43:08 2024
+--Date        : Tue Aug 20 16:50:29 2024
 --Host        : Arif running 64-bit major release  (build 9200)
 --Command     : generate_target design_04.bd
 --Design      : design_04
@@ -615,7 +615,7 @@ entity design_04 is
     sw : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_04 : entity is "design_04,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_04,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=6,numReposBlks=4,numNonXlnxBlks=1,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_04 : entity is "design_04,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_04,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=6,numReposBlks=4,numNonXlnxBlks=1,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_04 : entity is "design_04.hwdef";
 end design_04;
@@ -707,10 +707,10 @@ architecture STRUCTURE of design_04 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_04_rst_ps7_0_100M_0;
-  component design_04_ay_ledsw_0_4 is
+  component design_04_ay_swled_0_0 is
   port (
-    sw_i : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    led_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    sw : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    led : out STD_LOGIC_VECTOR ( 7 downto 0 );
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -733,8 +733,8 @@ architecture STRUCTURE of design_04 is
     s00_axi_rvalid : out STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  end component design_04_ay_ledsw_0_4;
-  signal ay_ledsw_0_led_o : STD_LOGIC_VECTOR ( 7 downto 0 );
+  end component design_04_ay_swled_0_0;
+  signal ay_swled_0_led : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -816,7 +816,7 @@ architecture STRUCTURE of design_04 is
   signal ps7_0_axi_periph_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ps7_0_axi_periph_M00_AXI_WVALID : STD_LOGIC;
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal sw_i_0_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal sw_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_processing_system7_0_TTC0_WAVE0_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE1_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE2_OUT_UNCONNECTED : STD_LOGIC;
@@ -852,11 +852,11 @@ architecture STRUCTURE of design_04 is
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
-  led(7 downto 0) <= ay_ledsw_0_led_o(7 downto 0);
-  sw_i_0_1(7 downto 0) <= sw(7 downto 0);
-ay_ledsw_0: component design_04_ay_ledsw_0_4
+  led(7 downto 0) <= ay_swled_0_led(7 downto 0);
+  sw_1(7 downto 0) <= sw(7 downto 0);
+ay_swled_0: component design_04_ay_swled_0_0
      port map (
-      led_o(7 downto 0) => ay_ledsw_0_led_o(7 downto 0),
+      led(7 downto 0) => ay_swled_0_led(7 downto 0),
       s00_axi_aclk => processing_system7_0_FCLK_CLK0,
       s00_axi_araddr(3 downto 0) => ps7_0_axi_periph_M00_AXI_ARADDR(3 downto 0),
       s00_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),
@@ -878,7 +878,7 @@ ay_ledsw_0: component design_04_ay_ledsw_0_4
       s00_axi_wready => ps7_0_axi_periph_M00_AXI_WREADY,
       s00_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
       s00_axi_wvalid => ps7_0_axi_periph_M00_AXI_WVALID,
-      sw_i(7 downto 0) => sw_i_0_1(7 downto 0)
+      sw(7 downto 0) => sw_1(7 downto 0)
     );
 processing_system7_0: component design_04_processing_system7_0_0
      port map (

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.runs/synth_1'
+HD_PWD='C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04_v2/project_04_v2.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

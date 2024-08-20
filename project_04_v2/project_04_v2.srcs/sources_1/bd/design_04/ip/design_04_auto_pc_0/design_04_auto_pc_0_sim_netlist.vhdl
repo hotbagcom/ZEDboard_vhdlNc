@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Tue Aug 20 15:44:19 2024
+-- Date        : Tue Aug 20 16:51:19 2024
 -- Host        : Arif running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04/project_04.srcs/sources_1/bd/design_04/ip/design_04_auto_pc_0/design_04_auto_pc_0_sim_netlist.vhdl
+--               c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_04_v2/project_04_v2.srcs/sources_1/bd/design_04/ip/design_04_auto_pc_0/design_04_auto_pc_0_sim_netlist.vhdl
 -- Design      : design_04_auto_pc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Tue Aug 20 15:55:41 2024
+| Date         : Tue Aug 20 16:52:43 2024
 | Host         : Arif running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file design_04_wrapper_timing_summary_routed.rpt -pb design_04_wrapper_timing_summary_routed.pb -rpx design_04_wrapper_timing_summary_routed.rpx -warn_on_violation
 | Design       : design_04_wrapper
@@ -972,7 +972,7 @@ Slack (MET) :             0.064ns  (arrival time - required time)
                          slack                                  0.064    
 
 Slack (MET) :             0.067ns  (arrival time - required time)
-  Source:                 design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_rdata_reg[2]/C
+  Source:                 design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_rdata_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][2]_srl32/D
                             (rising edge-triggered cell SRLC32E clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
@@ -993,10 +993,10 @@ Slack (MET) :             0.067ns  (arrival time - required time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_04_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.310     0.310    design_04_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_04_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=640, routed)         0.571     0.907    design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/s00_axi_aclk
-    SLICE_X27Y88         FDRE                                         r  design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_rdata_reg[2]/C
+                         net (fo=640, routed)         0.571     0.907    design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/s00_axi_aclk
+    SLICE_X27Y88         FDRE                                         r  design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_rdata_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y88         FDRE (Prop_fdre_C_Q)         0.141     1.048 r  design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_rdata_reg[2]/Q
+    SLICE_X27Y88         FDRE (Prop_fdre_C_Q)         0.141     1.048 r  design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_rdata_reg[2]/Q
                          net (fo=1, routed)           0.056     1.103    design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/in[2]
     SLICE_X26Y88         SRLC32E                                      r  design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][2]_srl32/D
   -------------------------------------------------------------------    -------------------
@@ -1110,7 +1110,7 @@ Slack (MET) :             0.088ns  (arrival time - required time)
                          slack                                  0.088    
 
 Slack (MET) :             0.094ns  (arrival time - required time)
-  Source:                 design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_rdata_reg[30]/C
+  Source:                 design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_rdata_reg[30]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][30]_srl32/D
                             (rising edge-triggered cell SRLC32E clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
@@ -1131,10 +1131,10 @@ Slack (MET) :             0.094ns  (arrival time - required time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_04_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.310     0.310    design_04_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_04_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=640, routed)         0.577     0.913    design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/s00_axi_aclk
-    SLICE_X29Y99         FDRE                                         r  design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_rdata_reg[30]/C
+                         net (fo=640, routed)         0.577     0.913    design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/s00_axi_aclk
+    SLICE_X29Y99         FDRE                                         r  design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_rdata_reg[30]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X29Y99         FDRE (Prop_fdre_C_Q)         0.141     1.054 r  design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_rdata_reg[30]/Q
+    SLICE_X29Y99         FDRE (Prop_fdre_C_Q)         0.141     1.054 r  design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_rdata_reg[30]/Q
                          net (fo=1, routed)           0.169     1.223    design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/in[30]
     SLICE_X26Y97         SRLC32E                                      r  design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][30]_srl32/D
   -------------------------------------------------------------------    -------------------
@@ -1156,7 +1156,7 @@ Slack (MET) :             0.094ns  (arrival time - required time)
                          slack                                  0.094    
 
 Slack (MET) :             0.102ns  (arrival time - required time)
-  Source:                 design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_rdata_reg[20]/C
+  Source:                 design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_rdata_reg[20]/C
                             (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
   Destination:            design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][20]_srl32/D
                             (rising edge-triggered cell SRLC32E clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
@@ -1177,10 +1177,10 @@ Slack (MET) :             0.102ns  (arrival time - required time)
     PS7_X0Y0             PS7                          0.000     0.000 r  design_04_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
                          net (fo=1, routed)           0.310     0.310    design_04_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
     BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.336 r  design_04_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
-                         net (fo=640, routed)         0.577     0.913    design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/s00_axi_aclk
-    SLICE_X29Y97         FDRE                                         r  design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_rdata_reg[20]/C
+                         net (fo=640, routed)         0.577     0.913    design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/s00_axi_aclk
+    SLICE_X29Y97         FDRE                                         r  design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_rdata_reg[20]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X29Y97         FDRE (Prop_fdre_C_Q)         0.141     1.054 r  design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_rdata_reg[20]/Q
+    SLICE_X29Y97         FDRE (Prop_fdre_C_Q)         0.141     1.054 r  design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_rdata_reg[20]/Q
                          net (fo=1, routed)           0.176     1.229    design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/in[20]
     SLICE_X26Y94         SRLC32E                                      r  design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/memory_reg[31][20]_srl32/D
   -------------------------------------------------------------------    -------------------
@@ -1260,15 +1260,15 @@ Sources:            { design_04_i/processing_system7_0/inst/PS7_i/FCLKCLK[0] }
 
 Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
 Min Period        n/a     BUFG/I       n/a            2.155         10.000      7.845      BUFGCTRL_X0Y16  design_04_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/I
-Min Period        n/a     FDSE/C       n/a            1.000         10.000      9.000      SLICE_X28Y101   design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/aw_en_reg/C
-Min Period        n/a     FDSE/C       n/a            1.000         10.000      9.000      SLICE_X31Y92    design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_araddr_reg[2]/C
-Min Period        n/a     FDSE/C       n/a            1.000         10.000      9.000      SLICE_X31Y92    design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_araddr_reg[3]/C
-Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X31Y92    design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_arready_reg/C
-Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X28Y97    design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_awaddr_reg[2]/C
-Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X28Y97    design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_awaddr_reg[3]/C
-Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X28Y101   design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_awready_reg/C
-Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X28Y101   design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/axi_bvalid_reg/C
-Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X28Y98    design_04_i/ay_ledsw_0/U0/ay_ledsw_v1_0_S00_AXI_inst/slv_reg0_reg[30]/C
+Min Period        n/a     FDSE/C       n/a            1.000         10.000      9.000      SLICE_X28Y101   design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/aw_en_reg/C
+Min Period        n/a     FDSE/C       n/a            1.000         10.000      9.000      SLICE_X31Y92    design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_araddr_reg[2]/C
+Min Period        n/a     FDSE/C       n/a            1.000         10.000      9.000      SLICE_X31Y92    design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_araddr_reg[3]/C
+Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X31Y92    design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_arready_reg/C
+Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X28Y97    design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_awaddr_reg[2]/C
+Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X28Y97    design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_awaddr_reg[3]/C
+Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X28Y101   design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_awready_reg/C
+Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X28Y101   design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/axi_bvalid_reg/C
+Min Period        n/a     FDRE/C       n/a            1.000         10.000      9.000      SLICE_X28Y98    design_04_i/ay_swled_0/U0/ay_swled_v1_0_S00_AXI_inst/slv_reg0_reg[30]/C
 Low Pulse Width   Slow    SRL16E/CLK   n/a            0.980         5.000       4.020      SLICE_X34Y105   design_04_i/rst_ps7_0_100M/U0/EXT_LPF/POR_SRL_I/CLK
 Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X30Y93    design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][0]_srl32/CLK
 Low Pulse Width   Fast    SRLC32E/CLK  n/a            0.980         5.000       4.020      SLICE_X30Y96    design_04_i/ps7_0_axi_periph/s00_couplers/auto_pc/inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/transaction_fifo_0/memory_reg[31][10]_srl32/CLK
