@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Aug 21 11:28:23 2024
+# Process ID: 17500
+# Current directory: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_05/project_05.runs/synth_1
+# Command line: vivado.exe -log p05_dds.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source p05_dds.tcl
+# Log file: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_05/project_05.runs/synth_1/p05_dds.vds
+# Journal file: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_05/project_05.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source p05_dds.tcl -notrace
