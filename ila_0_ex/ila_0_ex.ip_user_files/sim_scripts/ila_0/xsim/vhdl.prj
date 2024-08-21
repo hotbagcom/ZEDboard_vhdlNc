@@ -1,0 +1,7 @@
+vhdl xpm  \
+"C:/Users/arify/Prog_4_user/Xlixv20_1/Vivado/2020.1/data/ip/xpm/xpm_VCOMP.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../ip/ila_0/sim/ila_0.vhd" \
+
+nosort

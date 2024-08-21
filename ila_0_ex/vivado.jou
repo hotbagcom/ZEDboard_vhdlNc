@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Aug 21 13:41:22 2024
+# Process ID: 22300
+# Current directory: c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ila_0_ex
+# Command line: vivado.exe -notrace -source c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ila_0_ex/ila_0_ex.tcl
+# Log file: c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ila_0_ex/vivado.log
+# Journal file: c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ila_0_ex\vivado.jou
+#-----------------------------------------------------------
+start_gui
+source c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ila_0_ex/ila_0_ex.tcl -notrace
+update_compile_order -fileset sources_1
