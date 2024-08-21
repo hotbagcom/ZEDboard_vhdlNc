@@ -173,3 +173,5 @@ set_property PACKAGE_PIN M15 [get_ports {mode_sFREQ[7]}]
 #set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
 #set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
 #connect_debug_port dbg_hub/clk [get_nets clk_IBUF]
+
+set_property IOSTANDARD LVCMOS33 [get_ports clk]

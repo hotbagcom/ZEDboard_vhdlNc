@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1724249243">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1724251491">
   <File Type="PA-TCL" Name="p05_dds.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="p05_dds_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="p05_dds_reports.tcl"/>
@@ -51,6 +51,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="p05_dds"/>
@@ -71,6 +78,7 @@
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/WorkSpace/constr.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

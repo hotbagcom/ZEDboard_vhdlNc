@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 7
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -82,6 +83,8 @@ set_property parent.project_path C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/projec
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part em.avnet.com:zed:part0:1.4 [current_project]
+set_property ip_repo_paths c:/Users/arify/WorkSpace [current_project]
+update_ip_catalog
 set_property ip_output_repo c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }

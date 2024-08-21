@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date             : Wed Aug 21 17:08:34 2024
+| Date             : Wed Aug 21 17:46:07 2024
 | Host             : Arif running 64-bit major release  (build 9200)
 | Command          : report_power -file p05_dds_power_routed.rpt -pb p05_dds_power_summary_routed.pb -rpx p05_dds_power_routed.rpx
 | Design           : p05_dds
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 89.080 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 88.509 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 88.034                           |
+| Dynamic (W)              | 87.462                           |
 | Device Static (W)        | 1.046                            |
 | Effective TJA (C/W)      | 11.5                             |
 | Max Ambient (C)          | 0.0                              |
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |    11.086 |     1189 |       --- |             --- |
-|   LUT as Logic |     9.504 |      789 |     53200 |            1.48 |
+| Slice Logic    |    10.959 |     1189 |       --- |             --- |
+|   LUT as Logic |     9.377 |      789 |     53200 |            1.48 |
 |   CARRY4       |     1.550 |      246 |     13300 |            1.85 |
 |   Register     |     0.027 |       25 |    106400 |            0.02 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        9 |       --- |             --- |
-| Signals        |    13.033 |     1441 |       --- |             --- |
+| Signals        |    12.589 |     1441 |       --- |             --- |
 | Block RAM      |     1.044 |        4 |       140 |            2.86 |
 | DSPs           |     2.644 |        3 |       220 |            1.36 |
 | I/O            |    60.227 |       74 |       200 |           37.00 |
 | Static Power   |     1.046 |          |           |                 |
-| Total          |    89.080 |          |           |                 |
+| Total          |    88.509 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |    28.063 |      27.762 |      0.301 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |    27.491 |      27.191 |      0.301 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     5.027 |       4.927 |      0.100 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -147,9 +147,9 @@ Table of Contents
 +-----------+-----------+
 | Name      | Power (W) |
 +-----------+-----------+
-| p05_dds   |    88.034 |
-|   ACC     |    24.196 |
-|   Sinwave |     3.245 |
+| p05_dds   |    87.462 |
+|   ACC     |    24.075 |
+|   Sinwave |     2.796 |
 +-----------+-----------+
 
 

@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Wed Aug 21 15:51:54 2024">
+<application name="pa" timeStamp="Wed Aug 21 17:27:29 2024">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="3c1262cd959045da968e0c412881926b" type="ProjectID"/>
 <property name="ProjectIteration" value="21" type="ProjectIteration"/>
@@ -21,16 +21,18 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="AddSources" value="3" type="JavaHandler"/>
 <property name="AssignDebugNet" value="4" type="JavaHandler"/>
 <property name="AutoConnectTarget" value="1" type="JavaHandler"/>
-<property name="CloseProject" value="1" type="JavaHandler"/>
+<property name="CloseProject" value="2" type="JavaHandler"/>
 <property name="CoreView" value="1" type="JavaHandler"/>
 <property name="CreateBlockDesign" value="1" type="JavaHandler"/>
 <property name="CreateDebugCore" value="1" type="JavaHandler"/>
 <property name="CreateDebugPort" value="2" type="JavaHandler"/>
 <property name="CustomizeCore" value="1" type="JavaHandler"/>
+<property name="CustomizeRSBBlock" value="1" type="JavaHandler"/>
 <property name="DebugWizardCmdHandler" value="7" type="JavaHandler"/>
-<property name="EditDelete" value="4" type="JavaHandler"/>
+<property name="EditDelete" value="5" type="JavaHandler"/>
 <property name="EditPaste" value="2" type="JavaHandler"/>
 <property name="EditProperties" value="8" type="JavaHandler"/>
+<property name="EditUndo" value="24" type="JavaHandler"/>
 <property name="ExportIOPorts" value="1" type="JavaHandler"/>
 <property name="IPPackagerHandler" value="1" type="JavaHandler"/>
 <property name="IPPackagerWizardHandler" value="3" type="JavaHandler"/>
@@ -53,6 +55,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="RunSynthesis" value="3" type="JavaHandler"/>
 <property name="SaveDesign" value="4" type="JavaHandler"/>
 <property name="SaveFileProxyHandler" value="2" type="JavaHandler"/>
+<property name="SaveRSBDesign" value="1" type="JavaHandler"/>
 <property name="SetSourceEnabled" value="4" type="JavaHandler"/>
 <property name="ShowCompatibleFamilies" value="1" type="JavaHandler"/>
 <property name="ShowConnectivity" value="1" type="JavaHandler"/>
@@ -72,8 +75,8 @@ This means code written to parse this file will need to be revisited each subseq
 </item>
 <item name="Gui Handlers">
 <property name="AssignDebugNetDialog_DEBUG_CORES_TREE_TABLE" value="4" type="GuiHandlerData"/>
-<property name="BaseDialog_CANCEL" value="13" type="GuiHandlerData"/>
-<property name="BaseDialog_OK" value="83" type="GuiHandlerData"/>
+<property name="BaseDialog_CANCEL" value="14" type="GuiHandlerData"/>
+<property name="BaseDialog_OK" value="84" type="GuiHandlerData"/>
 <property name="BaseDialog_YES" value="17" type="GuiHandlerData"/>
 <property name="BoardChooser_BOARD_TABLE" value="1" type="GuiHandlerData"/>
 <property name="CheckTimingSectionPanel_CHECK_TIMING_SELECTION_TABLE" value="1" type="GuiHandlerData"/>
@@ -192,6 +195,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PACommandNames_PROJECT_SUMMARY" value="4" type="GuiHandlerData"/>
 <property name="PACommandNames_RECUSTOMIZE_CORE" value="3" type="GuiHandlerData"/>
 <property name="PACommandNames_SAVE_DESIGN" value="1" type="GuiHandlerData"/>
+<property name="PACommandNames_SAVE_RSB_DESIGN" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_SCHEMATIC" value="6" type="GuiHandlerData"/>
 <property name="PACommandNames_SEQUENTIAL_PLACE_PORTS_MODE" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_SHOW_COMPATIBLE_FAMILIES" value="1" type="GuiHandlerData"/>
@@ -223,7 +227,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PropertiesView_NEXT_OBJECT" value="1" type="GuiHandlerData"/>
 <property name="PropertiesView_PREVIOUS_OBJECT" value="2" type="GuiHandlerData"/>
 <property name="RDICommands_CUSTOM_COMMANDS" value="1" type="GuiHandlerData"/>
-<property name="RDICommands_DELETE" value="4" type="GuiHandlerData"/>
+<property name="RDICommands_DELETE" value="5" type="GuiHandlerData"/>
 <property name="RDICommands_PASTE" value="1" type="GuiHandlerData"/>
 <property name="RDICommands_PROPERTIES" value="7" type="GuiHandlerData"/>
 <property name="RDICommands_SAVE_FILE" value="11" type="GuiHandlerData"/>
@@ -258,11 +262,17 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="StaleRunDialog_OPEN_DESIGN" value="1" type="GuiHandlerData"/>
 <property name="StateMonitor_RESET_RUN" value="1" type="GuiHandlerData"/>
 <property name="SyntheticaStateMonitor_CANCEL" value="2" type="GuiHandlerData"/>
+<property name="SystemBuilderView_PINNING" value="1" type="GuiHandlerData"/>
 <property name="TaskBanner_CLOSE" value="1" type="GuiHandlerData"/>
 <property name="TclObjectTreeTable_TREETABLE" value="24" type="GuiHandlerData"/>
 <property name="VioResultsTab_WARNINGS" value="1" type="GuiHandlerData"/>
 <property name="XdcCategoryTree_XDC_CATEGORY_TREE" value="5" type="GuiHandlerData"/>
 <property name="XdcTableEditorsPanel_CREATE_NEW_TIMING_CONSTRAINT" value="1" type="GuiHandlerData"/>
+</item>
+<item name="Other">
+<property name="GuiMode" value="1" type="GuiMode"/>
+<property name="BatchMode" value="0" type="BatchMode"/>
+<property name="TclMode" value="0" type="TclMode"/>
 </item>
 </section>
 </application>
