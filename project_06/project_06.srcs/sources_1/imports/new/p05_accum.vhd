@@ -57,26 +57,50 @@ architecture bhvrl_accum of p05_accum is
 signal accum_value : std_logic_vector( Accum_bsize - 1 downto 0 ) := (others => '0');
 signal inc : integer ;
 signal w_MODEfreq : integer range 1 to x_clk := 25_000_000;
+
+signal TEMP0   : integer range 0 to X_clk:= 0;
+signal TEMP1   : integer range 0 to X_clk:= 0;
+signal TEMP2   : integer range 0 to X_clk:= 0;
+signal TEMP3   : integer range 0 to X_clk:= 0;
 ------- VARIABLE -------
-shared variable TEMP   : integer range 0 to X_clk:= 0;
 ------- CONSTANT -------
 --constant multi_ofset : integer := powof10(log10(x_clk)-(Mux_in_size/2 +1));
 
 begin
 
 FmodsACC :process (Md_SLK )begin 
-    TEMP := 0;
-    for i in 0 to (Mux_in_size/2) -1 loop 
-        TEMP := TEMP *10;
-        case( Md_SLK ( Mux_in_size-1-i*2 downto Mux_in_size-2-i*2 ) ) is 
-        when "00" => TEMP := TEMP*10;
-        when "01" => TEMP := (TEMP + 25 )*10;
-        when "10" => TEMP := (TEMP + 50 )*10;
-        when "11" => TEMP := (TEMP + 75 )*10;
-        when others => TEMP := temp ;
+ 
+    
+        
+        case( Md_SLK ( 7 downto 6) ) is 
+        when "00" => TEMP0 <= 2_500_000;
+        when "01" => TEMP0 <= 5_000_000;
+        when "10" => TEMP0 <= 7_500_000;
+        when "11" => TEMP0 <= 10_000_000;
+        when others => TEMP0 <= 0 ;
         end case ;         
-     end loop;
-     w_MODEfreq <= temp;--*  multi_ofset ;
+    case( Md_SLK ( 5 downto 4) ) is 
+        when "00" => TEMP1 <= 2_500_000;
+        when "01" => TEMP1 <= 5_000_000;
+        when "10" => TEMP1 <= 7_500_000;
+        when "11" => TEMP1 <= 10_000_000;
+        when others => TEMP1 <= 0 ;
+        end case ;  
+        case( Md_SLK ( 3 downto 2) ) is 
+        when "00" => TEMP2 <= 250_000;
+        when "01" => TEMP2 <= 500_000;
+        when "10" => TEMP2 <= 750_000;
+        when "11" => TEMP2 <= 1_000_000;
+        when others => TEMP2 <= 0 ;
+        end case ;  
+        case( Md_SLK ( 1 downto 0) ) is 
+        when "00" => TEMP3 <= 25_000;
+        when "01" => TEMP3 <= 50_000;
+        when "10" => TEMP3 <= 75_000;
+        when "11" => TEMP3 <= 100_000;
+        when others => TEMP3 <= 1_000 ;
+        end case ;  
+     w_MODEfreq <= TEMP0 + TEMP1 + TEMP2 + TEMP3;--*  multi_ofset ;
 end process ;
 
 PincACCM : process (clk , rst ) begin 

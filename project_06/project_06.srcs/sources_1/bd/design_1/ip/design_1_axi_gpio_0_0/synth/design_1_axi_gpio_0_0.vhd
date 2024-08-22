@@ -77,7 +77,7 @@ ENTITY design_1_axi_gpio_0_0 IS
     s_axi_rresp : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     s_axi_rvalid : OUT STD_LOGIC;
     s_axi_rready : IN STD_LOGIC;
-    gpio_io_i : IN STD_LOGIC_VECTOR(7 DOWNTO 0)
+    gpio_io_i : IN STD_LOGIC_VECTOR(4 DOWNTO 0)
   );
 END design_1_axi_gpio_0_0;
 
@@ -123,9 +123,9 @@ ARCHITECTURE design_1_axi_gpio_0_0_arch OF design_1_axi_gpio_0_0 IS
       s_axi_rvalid : OUT STD_LOGIC;
       s_axi_rready : IN STD_LOGIC;
       ip2intc_irpt : OUT STD_LOGIC;
-      gpio_io_i : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      gpio_io_o : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-      gpio_io_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+      gpio_io_i : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
+      gpio_io_o : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
+      gpio_io_t : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
       gpio2_io_i : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       gpio2_io_o : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       gpio2_io_t : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
@@ -136,7 +136,7 @@ ARCHITECTURE design_1_axi_gpio_0_0_arch OF design_1_axi_gpio_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_axi_gpio_0_0_arch : ARCHITECTURE IS "design_1_axi_gpio_0_0,axi_gpio,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_axi_gpio_0_0_arch: ARCHITECTURE IS "design_1_axi_gpio_0_0,axi_gpio,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_gpio,x_ipVersion=2.0,x_ipCoreRevision=23,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL,C_FAMILY=zynq,C_S_AXI_ADDR_WIDTH=9,C_S_AXI_DATA_WIDTH=32,C_GPIO_WIDTH=8,C_GPIO2_WIDTH=32,C_ALL_INPUTS=1,C_ALL_INPUTS_2=0,C_ALL_OUTPUTS=0,C_ALL_OUTPUTS_2=0,C_INTERRUPT_PRESENT=0,C_DOUT_DEFAULT=0x00000000,C_TRI_DEFAULT=0xFFFFFFFF,C_IS_DUAL=0,C_DOUT_DEFAULT_2=0x00000000,C_TRI_DEFAULT_2=0xFFFFFFFF}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_axi_gpio_0_0_arch: ARCHITECTURE IS "design_1_axi_gpio_0_0,axi_gpio,{x_ipProduct=Vivado 2020.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_gpio,x_ipVersion=2.0,x_ipCoreRevision=23,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL,C_FAMILY=zynq,C_S_AXI_ADDR_WIDTH=9,C_S_AXI_DATA_WIDTH=32,C_GPIO_WIDTH=5,C_GPIO2_WIDTH=32,C_ALL_INPUTS=1,C_ALL_INPUTS_2=0,C_ALL_OUTPUTS=0,C_ALL_OUTPUTS_2=0,C_INTERRUPT_PRESENT=0,C_DOUT_DEFAULT=0x00000000,C_TRI_DEFAULT=0xFFFFFFFF,C_IS_DUAL=0,C_DOUT_DEFAULT_2=0x00000000,C_TRI_DEFAULT_2=0xFFFFFFFF}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF gpio_io_i: SIGNAL IS "XIL_INTERFACENAME GPIO, BOARD.ASSOCIATED_PARAM GPIO_BOARD_INTERFACE";
@@ -170,7 +170,7 @@ BEGIN
       C_FAMILY => "zynq",
       C_S_AXI_ADDR_WIDTH => 9,
       C_S_AXI_DATA_WIDTH => 32,
-      C_GPIO_WIDTH => 8,
+      C_GPIO_WIDTH => 5,
       C_GPIO2_WIDTH => 32,
       C_ALL_INPUTS => 1,
       C_ALL_INPUTS_2 => 0,

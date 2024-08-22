@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-// Date        : Thu Aug 22 10:51:45 2024
+// Date        : Thu Aug 22 17:05:52 2024
 // Host        : Arif running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_p05_dds_0_0_sim_netlist.v
@@ -34,8 +34,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire U0_n_1;
   wire U0_n_10;
   wire U0_n_11;
-  wire U0_n_13;
-  wire U0_n_14;
   wire U0_n_2;
   wire U0_n_3;
   wire U0_n_4;
@@ -57,26 +55,16 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire dout_reg_3_i_7_n_0;
   wire dout_reg_3_i_8_n_0;
   wire dout_reg_3_i_9_n_0;
-  wire i__carry_i_10_n_0;
-  wire i__carry_i_11_n_0;
-  wire i__carry_i_13_n_0;
-  wire i__carry_i_7_n_0;
-  wire i__carry_i_9__0_n_0;
   wire [7:0]mode_sFREQ;
   wire reset;
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_p05_dds U0
        (.Cos_val(Cos_val),
         .D({U0_n_0,U0_n_1,U0_n_2,U0_n_3,U0_n_4,U0_n_5,U0_n_6,U0_n_7,U0_n_8,U0_n_9,U0_n_10,U0_n_11}),
-        .DI(i__carry_i_11_n_0),
         .E(CEP),
-        .O({U0_n_13,U0_n_14}),
         .Q({dout_reg_3_i_1_n_0,dout_reg_3_i_2_n_0,dout_reg_3_i_3_n_0,dout_reg_3_i_4_n_0,dout_reg_3_i_5_n_0,dout_reg_3_i_6_n_0,dout_reg_3_i_7_n_0,dout_reg_3_i_8_n_0,dout_reg_3_i_9_n_0,dout_reg_3_i_10_n_0,dout_reg_3_i_11_n_0,dout_reg_3_i_12_n_0}),
-        .S(i__carry_i_13_n_0),
         .Sin_val(Sin_val),
         .clk(clk),
-        .i__carry_i_2__6(i__carry_i_7_n_0),
-        .i__carry_i_2__6_0({i__carry_i_9__0_n_0,i__carry_i_10_n_0}),
         .mode_sFREQ(mode_sFREQ),
         .reset(reset));
   FDRE dout_reg_3_i_1
@@ -151,530 +139,25 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
         .D(U0_n_8),
         .Q(dout_reg_3_i_9_n_0),
         .R(1'b0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_10
-       (.I0(U0_n_14),
-        .O(i__carry_i_10_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_11
-       (.I0(U0_n_13),
-        .O(i__carry_i_11_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_13
-       (.I0(U0_n_14),
-        .O(i__carry_i_13_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_7
-       (.I0(U0_n_13),
-        .O(i__carry_i_7_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_9__0
-       (.I0(U0_n_13),
-        .O(i__carry_i_9__0_n_0));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_p05_accum
    (D,
     E,
-    O,
     Q,
-    mode_sFREQ,
     clk,
-    DI,
-    S,
-    i__carry_i_2__6_0,
-    i__carry_i_2__6_1,
-    reset);
+    reset,
+    mode_sFREQ);
   output [11:0]D;
   output [0:0]E;
-  output [1:0]O;
   output [11:0]Q;
-  input [7:0]mode_sFREQ;
   input clk;
-  input [0:0]DI;
-  input [0:0]S;
-  input [0:0]i__carry_i_2__6_0;
-  input [1:0]i__carry_i_2__6_1;
   input reset;
+  input [7:0]mode_sFREQ;
 
-  wire [17:3]A;
   wire [11:0]D;
-  wire [0:0]DI;
   wire [0:0]E;
-  wire [1:0]O;
   wire [11:0]Q;
-  wire [0:0]S;
-  wire [26:3]TEMP;
-  wire [24:3]TEMP0;
-  wire [26:3]TEMP00_in;
-  wire [26:3]TEMP01_in;
-  wire [26:3]TEMP02_in;
-  wire \TEMP0_inferred__0/i__carry__0_n_0 ;
-  wire \TEMP0_inferred__0/i__carry__0_n_1 ;
-  wire \TEMP0_inferred__0/i__carry__0_n_2 ;
-  wire \TEMP0_inferred__0/i__carry__0_n_3 ;
-  wire \TEMP0_inferred__0/i__carry__0_n_4 ;
-  wire \TEMP0_inferred__0/i__carry__0_n_5 ;
-  wire \TEMP0_inferred__0/i__carry__0_n_6 ;
-  wire \TEMP0_inferred__0/i__carry__0_n_7 ;
-  wire \TEMP0_inferred__0/i__carry__1_n_0 ;
-  wire \TEMP0_inferred__0/i__carry__1_n_1 ;
-  wire \TEMP0_inferred__0/i__carry__1_n_2 ;
-  wire \TEMP0_inferred__0/i__carry__1_n_3 ;
-  wire \TEMP0_inferred__0/i__carry__1_n_4 ;
-  wire \TEMP0_inferred__0/i__carry__1_n_5 ;
-  wire \TEMP0_inferred__0/i__carry__1_n_6 ;
-  wire \TEMP0_inferred__0/i__carry__1_n_7 ;
-  wire \TEMP0_inferred__0/i__carry__2_n_0 ;
-  wire \TEMP0_inferred__0/i__carry__2_n_2 ;
-  wire \TEMP0_inferred__0/i__carry__2_n_3 ;
-  wire \TEMP0_inferred__0/i__carry__2_n_5 ;
-  wire \TEMP0_inferred__0/i__carry__2_n_6 ;
-  wire \TEMP0_inferred__0/i__carry__2_n_7 ;
-  wire \TEMP0_inferred__0/i__carry_n_0 ;
-  wire \TEMP0_inferred__0/i__carry_n_1 ;
-  wire \TEMP0_inferred__0/i__carry_n_2 ;
-  wire \TEMP0_inferred__0/i__carry_n_3 ;
-  wire \TEMP0_inferred__0/i__carry_n_4 ;
-  wire \TEMP0_inferred__0/i__carry_n_5 ;
-  wire \TEMP0_inferred__0/i__carry_n_6 ;
-  wire \TEMP0_inferred__10/i__carry__0_n_0 ;
-  wire \TEMP0_inferred__10/i__carry__0_n_1 ;
-  wire \TEMP0_inferred__10/i__carry__0_n_2 ;
-  wire \TEMP0_inferred__10/i__carry__0_n_3 ;
-  wire \TEMP0_inferred__10/i__carry__1_n_0 ;
-  wire \TEMP0_inferred__10/i__carry__1_n_1 ;
-  wire \TEMP0_inferred__10/i__carry__1_n_2 ;
-  wire \TEMP0_inferred__10/i__carry__1_n_3 ;
-  wire \TEMP0_inferred__10/i__carry__2_n_0 ;
-  wire \TEMP0_inferred__10/i__carry__2_n_1 ;
-  wire \TEMP0_inferred__10/i__carry__2_n_2 ;
-  wire \TEMP0_inferred__10/i__carry__2_n_3 ;
-  wire \TEMP0_inferred__10/i__carry__3_n_0 ;
-  wire \TEMP0_inferred__10/i__carry__3_n_1 ;
-  wire \TEMP0_inferred__10/i__carry__3_n_2 ;
-  wire \TEMP0_inferred__10/i__carry__3_n_3 ;
-  wire \TEMP0_inferred__10/i__carry__4_n_0 ;
-  wire \TEMP0_inferred__10/i__carry__4_n_1 ;
-  wire \TEMP0_inferred__10/i__carry__4_n_2 ;
-  wire \TEMP0_inferred__10/i__carry__4_n_3 ;
-  wire \TEMP0_inferred__10/i__carry_n_0 ;
-  wire \TEMP0_inferred__10/i__carry_n_1 ;
-  wire \TEMP0_inferred__10/i__carry_n_2 ;
-  wire \TEMP0_inferred__10/i__carry_n_3 ;
-  wire \TEMP0_inferred__4/i__carry__0_n_0 ;
-  wire \TEMP0_inferred__4/i__carry__0_n_1 ;
-  wire \TEMP0_inferred__4/i__carry__0_n_2 ;
-  wire \TEMP0_inferred__4/i__carry__0_n_3 ;
-  wire \TEMP0_inferred__4/i__carry__0_n_4 ;
-  wire \TEMP0_inferred__4/i__carry__0_n_5 ;
-  wire \TEMP0_inferred__4/i__carry__0_n_6 ;
-  wire \TEMP0_inferred__4/i__carry__0_n_7 ;
-  wire \TEMP0_inferred__4/i__carry__1_n_0 ;
-  wire \TEMP0_inferred__4/i__carry__1_n_1 ;
-  wire \TEMP0_inferred__4/i__carry__1_n_2 ;
-  wire \TEMP0_inferred__4/i__carry__1_n_3 ;
-  wire \TEMP0_inferred__4/i__carry__1_n_4 ;
-  wire \TEMP0_inferred__4/i__carry__1_n_5 ;
-  wire \TEMP0_inferred__4/i__carry__1_n_6 ;
-  wire \TEMP0_inferred__4/i__carry__1_n_7 ;
-  wire \TEMP0_inferred__4/i__carry__2_n_0 ;
-  wire \TEMP0_inferred__4/i__carry__2_n_1 ;
-  wire \TEMP0_inferred__4/i__carry__2_n_2 ;
-  wire \TEMP0_inferred__4/i__carry__2_n_3 ;
-  wire \TEMP0_inferred__4/i__carry__2_n_4 ;
-  wire \TEMP0_inferred__4/i__carry__2_n_5 ;
-  wire \TEMP0_inferred__4/i__carry__2_n_6 ;
-  wire \TEMP0_inferred__4/i__carry__2_n_7 ;
-  wire \TEMP0_inferred__4/i__carry__3_n_0 ;
-  wire \TEMP0_inferred__4/i__carry__3_n_1 ;
-  wire \TEMP0_inferred__4/i__carry__3_n_2 ;
-  wire \TEMP0_inferred__4/i__carry__3_n_3 ;
-  wire \TEMP0_inferred__4/i__carry__3_n_4 ;
-  wire \TEMP0_inferred__4/i__carry__3_n_5 ;
-  wire \TEMP0_inferred__4/i__carry__3_n_6 ;
-  wire \TEMP0_inferred__4/i__carry__3_n_7 ;
-  wire \TEMP0_inferred__4/i__carry__4_n_2 ;
-  wire \TEMP0_inferred__4/i__carry__4_n_3 ;
-  wire \TEMP0_inferred__4/i__carry__4_n_5 ;
-  wire \TEMP0_inferred__4/i__carry__4_n_6 ;
-  wire \TEMP0_inferred__4/i__carry__4_n_7 ;
-  wire \TEMP0_inferred__4/i__carry_n_0 ;
-  wire \TEMP0_inferred__4/i__carry_n_1 ;
-  wire \TEMP0_inferred__4/i__carry_n_2 ;
-  wire \TEMP0_inferred__4/i__carry_n_3 ;
-  wire \TEMP0_inferred__4/i__carry_n_4 ;
-  wire \TEMP0_inferred__4/i__carry_n_5 ;
-  wire \TEMP0_inferred__4/i__carry_n_6 ;
-  wire \TEMP0_inferred__7/i__carry__0_n_0 ;
-  wire \TEMP0_inferred__7/i__carry__0_n_1 ;
-  wire \TEMP0_inferred__7/i__carry__0_n_2 ;
-  wire \TEMP0_inferred__7/i__carry__0_n_3 ;
-  wire \TEMP0_inferred__7/i__carry__0_n_4 ;
-  wire \TEMP0_inferred__7/i__carry__0_n_5 ;
-  wire \TEMP0_inferred__7/i__carry__0_n_6 ;
-  wire \TEMP0_inferred__7/i__carry__0_n_7 ;
-  wire \TEMP0_inferred__7/i__carry__1_n_0 ;
-  wire \TEMP0_inferred__7/i__carry__1_n_1 ;
-  wire \TEMP0_inferred__7/i__carry__1_n_2 ;
-  wire \TEMP0_inferred__7/i__carry__1_n_3 ;
-  wire \TEMP0_inferred__7/i__carry__1_n_4 ;
-  wire \TEMP0_inferred__7/i__carry__1_n_5 ;
-  wire \TEMP0_inferred__7/i__carry__1_n_6 ;
-  wire \TEMP0_inferred__7/i__carry__1_n_7 ;
-  wire \TEMP0_inferred__7/i__carry__2_n_0 ;
-  wire \TEMP0_inferred__7/i__carry__2_n_1 ;
-  wire \TEMP0_inferred__7/i__carry__2_n_2 ;
-  wire \TEMP0_inferred__7/i__carry__2_n_3 ;
-  wire \TEMP0_inferred__7/i__carry__2_n_4 ;
-  wire \TEMP0_inferred__7/i__carry__2_n_5 ;
-  wire \TEMP0_inferred__7/i__carry__2_n_6 ;
-  wire \TEMP0_inferred__7/i__carry__2_n_7 ;
-  wire \TEMP0_inferred__7/i__carry__3_n_0 ;
-  wire \TEMP0_inferred__7/i__carry__3_n_1 ;
-  wire \TEMP0_inferred__7/i__carry__3_n_2 ;
-  wire \TEMP0_inferred__7/i__carry__3_n_3 ;
-  wire \TEMP0_inferred__7/i__carry__3_n_4 ;
-  wire \TEMP0_inferred__7/i__carry__3_n_5 ;
-  wire \TEMP0_inferred__7/i__carry__3_n_6 ;
-  wire \TEMP0_inferred__7/i__carry__3_n_7 ;
-  wire \TEMP0_inferred__7/i__carry__4_n_0 ;
-  wire \TEMP0_inferred__7/i__carry__4_n_1 ;
-  wire \TEMP0_inferred__7/i__carry__4_n_2 ;
-  wire \TEMP0_inferred__7/i__carry__4_n_3 ;
-  wire \TEMP0_inferred__7/i__carry__4_n_4 ;
-  wire \TEMP0_inferred__7/i__carry__4_n_5 ;
-  wire \TEMP0_inferred__7/i__carry__4_n_6 ;
-  wire \TEMP0_inferred__7/i__carry__4_n_7 ;
-  wire \TEMP0_inferred__7/i__carry__5_n_7 ;
-  wire \TEMP0_inferred__7/i__carry_n_0 ;
-  wire \TEMP0_inferred__7/i__carry_n_1 ;
-  wire \TEMP0_inferred__7/i__carry_n_2 ;
-  wire \TEMP0_inferred__7/i__carry_n_3 ;
-  wire \TEMP0_inferred__7/i__carry_n_4 ;
-  wire \TEMP0_inferred__7/i__carry_n_5 ;
-  wire \TEMP0_inferred__7/i__carry_n_6 ;
-  wire \TEMP0_inferred__8/i__carry__0_n_0 ;
-  wire \TEMP0_inferred__8/i__carry__0_n_1 ;
-  wire \TEMP0_inferred__8/i__carry__0_n_2 ;
-  wire \TEMP0_inferred__8/i__carry__0_n_3 ;
-  wire \TEMP0_inferred__8/i__carry__1_n_0 ;
-  wire \TEMP0_inferred__8/i__carry__1_n_1 ;
-  wire \TEMP0_inferred__8/i__carry__1_n_2 ;
-  wire \TEMP0_inferred__8/i__carry__1_n_3 ;
-  wire \TEMP0_inferred__8/i__carry__2_n_0 ;
-  wire \TEMP0_inferred__8/i__carry__2_n_1 ;
-  wire \TEMP0_inferred__8/i__carry__2_n_2 ;
-  wire \TEMP0_inferred__8/i__carry__2_n_3 ;
-  wire \TEMP0_inferred__8/i__carry__3_n_0 ;
-  wire \TEMP0_inferred__8/i__carry__3_n_1 ;
-  wire \TEMP0_inferred__8/i__carry__3_n_2 ;
-  wire \TEMP0_inferred__8/i__carry__3_n_3 ;
-  wire \TEMP0_inferred__8/i__carry__4_n_0 ;
-  wire \TEMP0_inferred__8/i__carry__4_n_1 ;
-  wire \TEMP0_inferred__8/i__carry__4_n_2 ;
-  wire \TEMP0_inferred__8/i__carry__4_n_3 ;
-  wire \TEMP0_inferred__8/i__carry_n_0 ;
-  wire \TEMP0_inferred__8/i__carry_n_1 ;
-  wire \TEMP0_inferred__8/i__carry_n_2 ;
-  wire \TEMP0_inferred__8/i__carry_n_3 ;
-  wire \TEMP0_inferred__9/i__carry__0_n_0 ;
-  wire \TEMP0_inferred__9/i__carry__0_n_1 ;
-  wire \TEMP0_inferred__9/i__carry__0_n_2 ;
-  wire \TEMP0_inferred__9/i__carry__0_n_3 ;
-  wire \TEMP0_inferred__9/i__carry__1_n_0 ;
-  wire \TEMP0_inferred__9/i__carry__1_n_1 ;
-  wire \TEMP0_inferred__9/i__carry__1_n_2 ;
-  wire \TEMP0_inferred__9/i__carry__1_n_3 ;
-  wire \TEMP0_inferred__9/i__carry__2_n_0 ;
-  wire \TEMP0_inferred__9/i__carry__2_n_1 ;
-  wire \TEMP0_inferred__9/i__carry__2_n_2 ;
-  wire \TEMP0_inferred__9/i__carry__2_n_3 ;
-  wire \TEMP0_inferred__9/i__carry__3_n_0 ;
-  wire \TEMP0_inferred__9/i__carry__3_n_1 ;
-  wire \TEMP0_inferred__9/i__carry__3_n_2 ;
-  wire \TEMP0_inferred__9/i__carry__3_n_3 ;
-  wire \TEMP0_inferred__9/i__carry__4_n_0 ;
-  wire \TEMP0_inferred__9/i__carry__4_n_1 ;
-  wire \TEMP0_inferred__9/i__carry__4_n_2 ;
-  wire \TEMP0_inferred__9/i__carry__4_n_3 ;
-  wire \TEMP0_inferred__9/i__carry_n_0 ;
-  wire \TEMP0_inferred__9/i__carry_n_1 ;
-  wire \TEMP0_inferred__9/i__carry_n_2 ;
-  wire \TEMP0_inferred__9/i__carry_n_3 ;
-  wire [25:2]TEMP1;
-  wire TEMP1_carry__0_i_1_n_0;
-  wire TEMP1_carry__0_i_2_n_0;
-  wire TEMP1_carry__0_i_3_n_0;
-  wire TEMP1_carry__0_i_4_n_0;
-  wire TEMP1_carry__0_i_5_n_0;
-  wire TEMP1_carry__0_i_6_n_0;
-  wire TEMP1_carry__0_i_7_n_0;
-  wire TEMP1_carry__0_n_0;
-  wire TEMP1_carry__0_n_1;
-  wire TEMP1_carry__0_n_2;
-  wire TEMP1_carry__0_n_3;
-  wire TEMP1_carry__0_n_4;
-  wire TEMP1_carry__0_n_5;
-  wire TEMP1_carry__0_n_6;
-  wire TEMP1_carry__0_n_7;
-  wire TEMP1_carry__1_i_1_n_0;
-  wire TEMP1_carry__1_i_2_n_0;
-  wire TEMP1_carry__1_i_3_n_0;
-  wire TEMP1_carry__1_n_3;
-  wire TEMP1_carry__1_n_6;
-  wire TEMP1_carry__1_n_7;
-  wire TEMP1_carry_i_1_n_0;
-  wire TEMP1_carry_i_2_n_0;
-  wire TEMP1_carry_i_3_n_0;
-  wire TEMP1_carry_i_4_n_0;
-  wire TEMP1_carry_i_5_n_0;
-  wire TEMP1_carry_n_0;
-  wire TEMP1_carry_n_1;
-  wire TEMP1_carry_n_2;
-  wire TEMP1_carry_n_3;
-  wire TEMP1_carry_n_4;
-  wire TEMP1_carry_n_5;
-  wire TEMP1_carry_n_6;
-  wire \TEMP1_inferred__0/i__carry__0_n_2 ;
-  wire \TEMP1_inferred__0/i__carry__0_n_3 ;
-  wire \TEMP1_inferred__0/i__carry__0_n_5 ;
-  wire \TEMP1_inferred__0/i__carry__0_n_6 ;
-  wire \TEMP1_inferred__0/i__carry__0_n_7 ;
-  wire \TEMP1_inferred__0/i__carry_n_0 ;
-  wire \TEMP1_inferred__0/i__carry_n_1 ;
-  wire \TEMP1_inferred__0/i__carry_n_2 ;
-  wire \TEMP1_inferred__0/i__carry_n_3 ;
-  wire \TEMP1_inferred__0/i__carry_n_4 ;
-  wire \TEMP1_inferred__0/i__carry_n_5 ;
-  wire \TEMP1_inferred__0/i__carry_n_6 ;
-  wire \TEMP1_inferred__0/i__carry_n_7 ;
-  wire \TEMP1_inferred__4/i__carry__0_n_0 ;
-  wire \TEMP1_inferred__4/i__carry__0_n_1 ;
-  wire \TEMP1_inferred__4/i__carry__0_n_2 ;
-  wire \TEMP1_inferred__4/i__carry__0_n_3 ;
-  wire \TEMP1_inferred__4/i__carry__0_n_4 ;
-  wire \TEMP1_inferred__4/i__carry__0_n_5 ;
-  wire \TEMP1_inferred__4/i__carry__0_n_6 ;
-  wire \TEMP1_inferred__4/i__carry__0_n_7 ;
-  wire \TEMP1_inferred__4/i__carry__1_n_0 ;
-  wire \TEMP1_inferred__4/i__carry__1_n_1 ;
-  wire \TEMP1_inferred__4/i__carry__1_n_2 ;
-  wire \TEMP1_inferred__4/i__carry__1_n_3 ;
-  wire \TEMP1_inferred__4/i__carry__1_n_4 ;
-  wire \TEMP1_inferred__4/i__carry__1_n_5 ;
-  wire \TEMP1_inferred__4/i__carry__1_n_6 ;
-  wire \TEMP1_inferred__4/i__carry__1_n_7 ;
-  wire \TEMP1_inferred__4/i__carry__2_n_0 ;
-  wire \TEMP1_inferred__4/i__carry__2_n_1 ;
-  wire \TEMP1_inferred__4/i__carry__2_n_2 ;
-  wire \TEMP1_inferred__4/i__carry__2_n_3 ;
-  wire \TEMP1_inferred__4/i__carry__2_n_4 ;
-  wire \TEMP1_inferred__4/i__carry__2_n_5 ;
-  wire \TEMP1_inferred__4/i__carry__2_n_6 ;
-  wire \TEMP1_inferred__4/i__carry__2_n_7 ;
-  wire \TEMP1_inferred__4/i__carry__3_n_1 ;
-  wire \TEMP1_inferred__4/i__carry__3_n_3 ;
-  wire \TEMP1_inferred__4/i__carry__3_n_6 ;
-  wire \TEMP1_inferred__4/i__carry__3_n_7 ;
-  wire \TEMP1_inferred__4/i__carry_n_0 ;
-  wire \TEMP1_inferred__4/i__carry_n_1 ;
-  wire \TEMP1_inferred__4/i__carry_n_2 ;
-  wire \TEMP1_inferred__4/i__carry_n_3 ;
-  wire \TEMP1_inferred__4/i__carry_n_4 ;
-  wire \TEMP1_inferred__4/i__carry_n_5 ;
-  wire \TEMP1_inferred__4/i__carry_n_6 ;
-  wire \TEMP1_inferred__4/i__carry_n_7 ;
-  wire \TEMP1_inferred__5/i__carry__0_n_0 ;
-  wire \TEMP1_inferred__5/i__carry__0_n_1 ;
-  wire \TEMP1_inferred__5/i__carry__0_n_2 ;
-  wire \TEMP1_inferred__5/i__carry__0_n_3 ;
-  wire \TEMP1_inferred__5/i__carry__0_n_4 ;
-  wire \TEMP1_inferred__5/i__carry__0_n_5 ;
-  wire \TEMP1_inferred__5/i__carry__0_n_6 ;
-  wire \TEMP1_inferred__5/i__carry__0_n_7 ;
-  wire \TEMP1_inferred__5/i__carry__1_n_0 ;
-  wire \TEMP1_inferred__5/i__carry__1_n_1 ;
-  wire \TEMP1_inferred__5/i__carry__1_n_2 ;
-  wire \TEMP1_inferred__5/i__carry__1_n_3 ;
-  wire \TEMP1_inferred__5/i__carry__1_n_4 ;
-  wire \TEMP1_inferred__5/i__carry__1_n_5 ;
-  wire \TEMP1_inferred__5/i__carry__1_n_6 ;
-  wire \TEMP1_inferred__5/i__carry__1_n_7 ;
-  wire \TEMP1_inferred__5/i__carry__2_n_0 ;
-  wire \TEMP1_inferred__5/i__carry__2_n_1 ;
-  wire \TEMP1_inferred__5/i__carry__2_n_2 ;
-  wire \TEMP1_inferred__5/i__carry__2_n_3 ;
-  wire \TEMP1_inferred__5/i__carry__2_n_4 ;
-  wire \TEMP1_inferred__5/i__carry__2_n_5 ;
-  wire \TEMP1_inferred__5/i__carry__2_n_6 ;
-  wire \TEMP1_inferred__5/i__carry__2_n_7 ;
-  wire \TEMP1_inferred__5/i__carry__3_n_0 ;
-  wire \TEMP1_inferred__5/i__carry__3_n_2 ;
-  wire \TEMP1_inferred__5/i__carry__3_n_3 ;
-  wire \TEMP1_inferred__5/i__carry__3_n_5 ;
-  wire \TEMP1_inferred__5/i__carry__3_n_6 ;
-  wire \TEMP1_inferred__5/i__carry__3_n_7 ;
-  wire \TEMP1_inferred__5/i__carry_n_0 ;
-  wire \TEMP1_inferred__5/i__carry_n_1 ;
-  wire \TEMP1_inferred__5/i__carry_n_2 ;
-  wire \TEMP1_inferred__5/i__carry_n_3 ;
-  wire \TEMP1_inferred__5/i__carry_n_4 ;
-  wire \TEMP1_inferred__5/i__carry_n_5 ;
-  wire \TEMP1_inferred__5/i__carry_n_6 ;
-  wire \TEMP1_inferred__5/i__carry_n_7 ;
-  wire \TEMP1_inferred__6/i__carry__0_n_0 ;
-  wire \TEMP1_inferred__6/i__carry__0_n_1 ;
-  wire \TEMP1_inferred__6/i__carry__0_n_2 ;
-  wire \TEMP1_inferred__6/i__carry__0_n_3 ;
-  wire \TEMP1_inferred__6/i__carry__0_n_4 ;
-  wire \TEMP1_inferred__6/i__carry__0_n_5 ;
-  wire \TEMP1_inferred__6/i__carry__0_n_6 ;
-  wire \TEMP1_inferred__6/i__carry__0_n_7 ;
-  wire \TEMP1_inferred__6/i__carry__1_n_0 ;
-  wire \TEMP1_inferred__6/i__carry__1_n_1 ;
-  wire \TEMP1_inferred__6/i__carry__1_n_2 ;
-  wire \TEMP1_inferred__6/i__carry__1_n_3 ;
-  wire \TEMP1_inferred__6/i__carry__1_n_4 ;
-  wire \TEMP1_inferred__6/i__carry__1_n_5 ;
-  wire \TEMP1_inferred__6/i__carry__1_n_6 ;
-  wire \TEMP1_inferred__6/i__carry__1_n_7 ;
-  wire \TEMP1_inferred__6/i__carry__2_n_0 ;
-  wire \TEMP1_inferred__6/i__carry__2_n_1 ;
-  wire \TEMP1_inferred__6/i__carry__2_n_2 ;
-  wire \TEMP1_inferred__6/i__carry__2_n_3 ;
-  wire \TEMP1_inferred__6/i__carry__2_n_4 ;
-  wire \TEMP1_inferred__6/i__carry__2_n_5 ;
-  wire \TEMP1_inferred__6/i__carry__2_n_6 ;
-  wire \TEMP1_inferred__6/i__carry__2_n_7 ;
-  wire \TEMP1_inferred__6/i__carry__3_n_1 ;
-  wire \TEMP1_inferred__6/i__carry__3_n_3 ;
-  wire \TEMP1_inferred__6/i__carry__3_n_6 ;
-  wire \TEMP1_inferred__6/i__carry__3_n_7 ;
-  wire \TEMP1_inferred__6/i__carry_n_0 ;
-  wire \TEMP1_inferred__6/i__carry_n_1 ;
-  wire \TEMP1_inferred__6/i__carry_n_2 ;
-  wire \TEMP1_inferred__6/i__carry_n_3 ;
-  wire \TEMP1_inferred__6/i__carry_n_4 ;
-  wire \TEMP1_inferred__6/i__carry_n_5 ;
-  wire \TEMP1_inferred__6/i__carry_n_6 ;
-  wire \TEMP1_inferred__6/i__carry_n_7 ;
-  wire \TEMP1_inferred__7/i__carry__0_n_0 ;
-  wire \TEMP1_inferred__7/i__carry__0_n_1 ;
-  wire \TEMP1_inferred__7/i__carry__0_n_2 ;
-  wire \TEMP1_inferred__7/i__carry__0_n_3 ;
-  wire \TEMP1_inferred__7/i__carry__1_n_0 ;
-  wire \TEMP1_inferred__7/i__carry__1_n_1 ;
-  wire \TEMP1_inferred__7/i__carry__1_n_2 ;
-  wire \TEMP1_inferred__7/i__carry__1_n_3 ;
-  wire \TEMP1_inferred__7/i__carry__2_n_0 ;
-  wire \TEMP1_inferred__7/i__carry__2_n_1 ;
-  wire \TEMP1_inferred__7/i__carry__2_n_2 ;
-  wire \TEMP1_inferred__7/i__carry__2_n_3 ;
-  wire \TEMP1_inferred__7/i__carry__3_n_0 ;
-  wire \TEMP1_inferred__7/i__carry__3_n_1 ;
-  wire \TEMP1_inferred__7/i__carry__3_n_2 ;
-  wire \TEMP1_inferred__7/i__carry__3_n_3 ;
-  wire \TEMP1_inferred__7/i__carry__4_n_1 ;
-  wire \TEMP1_inferred__7/i__carry__4_n_2 ;
-  wire \TEMP1_inferred__7/i__carry__4_n_3 ;
-  wire \TEMP1_inferred__7/i__carry_n_0 ;
-  wire \TEMP1_inferred__7/i__carry_n_1 ;
-  wire \TEMP1_inferred__7/i__carry_n_2 ;
-  wire \TEMP1_inferred__7/i__carry_n_3 ;
-  wire \TEMP1_inferred__8/i__carry__0_n_0 ;
-  wire \TEMP1_inferred__8/i__carry__0_n_1 ;
-  wire \TEMP1_inferred__8/i__carry__0_n_2 ;
-  wire \TEMP1_inferred__8/i__carry__0_n_3 ;
-  wire \TEMP1_inferred__8/i__carry__0_n_4 ;
-  wire \TEMP1_inferred__8/i__carry__0_n_5 ;
-  wire \TEMP1_inferred__8/i__carry__0_n_6 ;
-  wire \TEMP1_inferred__8/i__carry__0_n_7 ;
-  wire \TEMP1_inferred__8/i__carry__1_n_0 ;
-  wire \TEMP1_inferred__8/i__carry__1_n_1 ;
-  wire \TEMP1_inferred__8/i__carry__1_n_2 ;
-  wire \TEMP1_inferred__8/i__carry__1_n_3 ;
-  wire \TEMP1_inferred__8/i__carry__1_n_4 ;
-  wire \TEMP1_inferred__8/i__carry__1_n_5 ;
-  wire \TEMP1_inferred__8/i__carry__1_n_6 ;
-  wire \TEMP1_inferred__8/i__carry__1_n_7 ;
-  wire \TEMP1_inferred__8/i__carry__2_n_0 ;
-  wire \TEMP1_inferred__8/i__carry__2_n_1 ;
-  wire \TEMP1_inferred__8/i__carry__2_n_2 ;
-  wire \TEMP1_inferred__8/i__carry__2_n_3 ;
-  wire \TEMP1_inferred__8/i__carry__2_n_4 ;
-  wire \TEMP1_inferred__8/i__carry__2_n_5 ;
-  wire \TEMP1_inferred__8/i__carry__2_n_6 ;
-  wire \TEMP1_inferred__8/i__carry__2_n_7 ;
-  wire \TEMP1_inferred__8/i__carry__3_n_0 ;
-  wire \TEMP1_inferred__8/i__carry__3_n_1 ;
-  wire \TEMP1_inferred__8/i__carry__3_n_2 ;
-  wire \TEMP1_inferred__8/i__carry__3_n_3 ;
-  wire \TEMP1_inferred__8/i__carry__3_n_4 ;
-  wire \TEMP1_inferred__8/i__carry__3_n_5 ;
-  wire \TEMP1_inferred__8/i__carry__3_n_6 ;
-  wire \TEMP1_inferred__8/i__carry__3_n_7 ;
-  wire \TEMP1_inferred__8/i__carry__4_n_3 ;
-  wire \TEMP1_inferred__8/i__carry__4_n_6 ;
-  wire \TEMP1_inferred__8/i__carry__4_n_7 ;
-  wire \TEMP1_inferred__8/i__carry_n_0 ;
-  wire \TEMP1_inferred__8/i__carry_n_1 ;
-  wire \TEMP1_inferred__8/i__carry_n_2 ;
-  wire \TEMP1_inferred__8/i__carry_n_3 ;
-  wire \TEMP1_inferred__8/i__carry_n_4 ;
-  wire \TEMP1_inferred__8/i__carry_n_5 ;
-  wire \TEMP1_inferred__8/i__carry_n_6 ;
-  wire \TEMP1_inferred__8/i__carry_n_7 ;
-  wire \TEMP1_inferred__9/i__carry__0_n_0 ;
-  wire \TEMP1_inferred__9/i__carry__0_n_1 ;
-  wire \TEMP1_inferred__9/i__carry__0_n_2 ;
-  wire \TEMP1_inferred__9/i__carry__0_n_3 ;
-  wire \TEMP1_inferred__9/i__carry__0_n_4 ;
-  wire \TEMP1_inferred__9/i__carry__0_n_5 ;
-  wire \TEMP1_inferred__9/i__carry__0_n_6 ;
-  wire \TEMP1_inferred__9/i__carry__0_n_7 ;
-  wire \TEMP1_inferred__9/i__carry__1_n_0 ;
-  wire \TEMP1_inferred__9/i__carry__1_n_1 ;
-  wire \TEMP1_inferred__9/i__carry__1_n_2 ;
-  wire \TEMP1_inferred__9/i__carry__1_n_3 ;
-  wire \TEMP1_inferred__9/i__carry__1_n_4 ;
-  wire \TEMP1_inferred__9/i__carry__1_n_5 ;
-  wire \TEMP1_inferred__9/i__carry__1_n_6 ;
-  wire \TEMP1_inferred__9/i__carry__1_n_7 ;
-  wire \TEMP1_inferred__9/i__carry__2_n_0 ;
-  wire \TEMP1_inferred__9/i__carry__2_n_1 ;
-  wire \TEMP1_inferred__9/i__carry__2_n_2 ;
-  wire \TEMP1_inferred__9/i__carry__2_n_3 ;
-  wire \TEMP1_inferred__9/i__carry__2_n_4 ;
-  wire \TEMP1_inferred__9/i__carry__2_n_5 ;
-  wire \TEMP1_inferred__9/i__carry__2_n_6 ;
-  wire \TEMP1_inferred__9/i__carry__2_n_7 ;
-  wire \TEMP1_inferred__9/i__carry__3_n_0 ;
-  wire \TEMP1_inferred__9/i__carry__3_n_1 ;
-  wire \TEMP1_inferred__9/i__carry__3_n_2 ;
-  wire \TEMP1_inferred__9/i__carry__3_n_3 ;
-  wire \TEMP1_inferred__9/i__carry__3_n_4 ;
-  wire \TEMP1_inferred__9/i__carry__3_n_5 ;
-  wire \TEMP1_inferred__9/i__carry__3_n_6 ;
-  wire \TEMP1_inferred__9/i__carry__3_n_7 ;
-  wire \TEMP1_inferred__9/i__carry__4_n_2 ;
-  wire \TEMP1_inferred__9/i__carry__4_n_3 ;
-  wire \TEMP1_inferred__9/i__carry__4_n_5 ;
-  wire \TEMP1_inferred__9/i__carry__4_n_6 ;
-  wire \TEMP1_inferred__9/i__carry__4_n_7 ;
-  wire \TEMP1_inferred__9/i__carry_n_0 ;
-  wire \TEMP1_inferred__9/i__carry_n_1 ;
-  wire \TEMP1_inferred__9/i__carry_n_2 ;
-  wire \TEMP1_inferred__9/i__carry_n_3 ;
-  wire \TEMP1_inferred__9/i__carry_n_4 ;
-  wire \TEMP1_inferred__9/i__carry_n_5 ;
-  wire \TEMP1_inferred__9/i__carry_n_6 ;
-  wire \TEMP1_inferred__9/i__carry_n_7 ;
   wire accum_value0_n_100;
   wire accum_value0_n_101;
   wire accum_value0_n_102;
@@ -691,1688 +174,712 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_p05_accum
   wire accum_value0_n_97;
   wire accum_value0_n_98;
   wire accum_value0_n_99;
-  wire adj_Pinc_byfreq0__0_carry__0_i_1_n_0;
-  wire adj_Pinc_byfreq0__0_carry__0_i_2_n_0;
-  wire adj_Pinc_byfreq0__0_carry__0_i_3_n_0;
-  wire adj_Pinc_byfreq0__0_carry__0_i_4_n_0;
-  wire adj_Pinc_byfreq0__0_carry__0_i_5_n_0;
-  wire adj_Pinc_byfreq0__0_carry__0_i_6_n_0;
-  wire adj_Pinc_byfreq0__0_carry__0_i_7_n_0;
-  wire adj_Pinc_byfreq0__0_carry__0_i_8_n_0;
-  wire adj_Pinc_byfreq0__0_carry__0_n_0;
-  wire adj_Pinc_byfreq0__0_carry__0_n_1;
-  wire adj_Pinc_byfreq0__0_carry__0_n_2;
-  wire adj_Pinc_byfreq0__0_carry__0_n_3;
-  wire adj_Pinc_byfreq0__0_carry__0_n_4;
-  wire adj_Pinc_byfreq0__0_carry__0_n_5;
-  wire adj_Pinc_byfreq0__0_carry__0_n_6;
-  wire adj_Pinc_byfreq0__0_carry__0_n_7;
-  wire adj_Pinc_byfreq0__0_carry__1_i_1_n_0;
-  wire adj_Pinc_byfreq0__0_carry__1_i_2_n_0;
-  wire adj_Pinc_byfreq0__0_carry__1_i_3_n_0;
-  wire adj_Pinc_byfreq0__0_carry__1_i_4_n_0;
-  wire adj_Pinc_byfreq0__0_carry__1_i_5_n_0;
-  wire adj_Pinc_byfreq0__0_carry__1_i_6_n_0;
-  wire adj_Pinc_byfreq0__0_carry__1_i_7_n_0;
-  wire adj_Pinc_byfreq0__0_carry__1_i_8_n_0;
-  wire adj_Pinc_byfreq0__0_carry__1_n_0;
-  wire adj_Pinc_byfreq0__0_carry__1_n_1;
-  wire adj_Pinc_byfreq0__0_carry__1_n_2;
-  wire adj_Pinc_byfreq0__0_carry__1_n_3;
-  wire adj_Pinc_byfreq0__0_carry__1_n_4;
-  wire adj_Pinc_byfreq0__0_carry__1_n_5;
-  wire adj_Pinc_byfreq0__0_carry__1_n_6;
-  wire adj_Pinc_byfreq0__0_carry__1_n_7;
-  wire adj_Pinc_byfreq0__0_carry__2_i_1_n_0;
-  wire adj_Pinc_byfreq0__0_carry__2_i_2_n_0;
-  wire adj_Pinc_byfreq0__0_carry__2_i_3_n_0;
-  wire adj_Pinc_byfreq0__0_carry__2_i_4_n_0;
-  wire adj_Pinc_byfreq0__0_carry__2_i_5_n_0;
-  wire adj_Pinc_byfreq0__0_carry__2_i_6_n_0;
-  wire adj_Pinc_byfreq0__0_carry__2_i_7_n_0;
-  wire adj_Pinc_byfreq0__0_carry__2_i_8_n_0;
-  wire adj_Pinc_byfreq0__0_carry__2_n_0;
-  wire adj_Pinc_byfreq0__0_carry__2_n_1;
-  wire adj_Pinc_byfreq0__0_carry__2_n_2;
-  wire adj_Pinc_byfreq0__0_carry__2_n_3;
-  wire adj_Pinc_byfreq0__0_carry__2_n_4;
-  wire adj_Pinc_byfreq0__0_carry__2_n_5;
-  wire adj_Pinc_byfreq0__0_carry__2_n_6;
-  wire adj_Pinc_byfreq0__0_carry__2_n_7;
-  wire adj_Pinc_byfreq0__0_carry__3_i_1_n_0;
-  wire adj_Pinc_byfreq0__0_carry__3_i_2_n_0;
-  wire adj_Pinc_byfreq0__0_carry__3_i_3_n_0;
-  wire adj_Pinc_byfreq0__0_carry__3_i_4_n_0;
-  wire adj_Pinc_byfreq0__0_carry__3_i_5_n_0;
-  wire adj_Pinc_byfreq0__0_carry__3_i_6_n_0;
-  wire adj_Pinc_byfreq0__0_carry__3_i_7_n_0;
-  wire adj_Pinc_byfreq0__0_carry__3_i_8_n_0;
-  wire adj_Pinc_byfreq0__0_carry__3_n_0;
-  wire adj_Pinc_byfreq0__0_carry__3_n_1;
-  wire adj_Pinc_byfreq0__0_carry__3_n_2;
-  wire adj_Pinc_byfreq0__0_carry__3_n_3;
-  wire adj_Pinc_byfreq0__0_carry__3_n_4;
-  wire adj_Pinc_byfreq0__0_carry__3_n_5;
-  wire adj_Pinc_byfreq0__0_carry__3_n_6;
-  wire adj_Pinc_byfreq0__0_carry__3_n_7;
-  wire adj_Pinc_byfreq0__0_carry__4_i_1_n_0;
-  wire adj_Pinc_byfreq0__0_carry__4_i_2_n_0;
-  wire adj_Pinc_byfreq0__0_carry__4_i_3_n_0;
-  wire adj_Pinc_byfreq0__0_carry__4_i_4_n_0;
-  wire adj_Pinc_byfreq0__0_carry__4_i_5_n_0;
-  wire adj_Pinc_byfreq0__0_carry__4_i_6_n_0;
-  wire adj_Pinc_byfreq0__0_carry__4_i_7_n_0;
-  wire adj_Pinc_byfreq0__0_carry__4_i_8_n_0;
-  wire adj_Pinc_byfreq0__0_carry__4_n_0;
-  wire adj_Pinc_byfreq0__0_carry__4_n_1;
-  wire adj_Pinc_byfreq0__0_carry__4_n_2;
-  wire adj_Pinc_byfreq0__0_carry__4_n_3;
-  wire adj_Pinc_byfreq0__0_carry__4_n_4;
-  wire adj_Pinc_byfreq0__0_carry__4_n_5;
-  wire adj_Pinc_byfreq0__0_carry__4_n_6;
-  wire adj_Pinc_byfreq0__0_carry__4_n_7;
-  wire adj_Pinc_byfreq0__0_carry__5_i_1_n_0;
-  wire adj_Pinc_byfreq0__0_carry__5_i_2_n_0;
-  wire adj_Pinc_byfreq0__0_carry__5_i_3_n_0;
-  wire adj_Pinc_byfreq0__0_carry__5_i_4_n_0;
-  wire adj_Pinc_byfreq0__0_carry__5_i_5_n_0;
-  wire adj_Pinc_byfreq0__0_carry__5_i_6_n_0;
-  wire adj_Pinc_byfreq0__0_carry__5_i_7_n_0;
-  wire adj_Pinc_byfreq0__0_carry__5_i_8_n_0;
-  wire adj_Pinc_byfreq0__0_carry__5_n_0;
-  wire adj_Pinc_byfreq0__0_carry__5_n_1;
-  wire adj_Pinc_byfreq0__0_carry__5_n_2;
-  wire adj_Pinc_byfreq0__0_carry__5_n_3;
-  wire adj_Pinc_byfreq0__0_carry__5_n_4;
-  wire adj_Pinc_byfreq0__0_carry__5_n_5;
-  wire adj_Pinc_byfreq0__0_carry__5_n_6;
-  wire adj_Pinc_byfreq0__0_carry__5_n_7;
-  wire adj_Pinc_byfreq0__0_carry__6_i_1_n_0;
-  wire adj_Pinc_byfreq0__0_carry__6_i_2_n_0;
-  wire adj_Pinc_byfreq0__0_carry__6_n_1;
-  wire adj_Pinc_byfreq0__0_carry__6_n_3;
-  wire adj_Pinc_byfreq0__0_carry__6_n_6;
-  wire adj_Pinc_byfreq0__0_carry__6_n_7;
-  wire adj_Pinc_byfreq0__0_carry_i_1_n_0;
-  wire adj_Pinc_byfreq0__0_carry_i_2_n_0;
-  wire adj_Pinc_byfreq0__0_carry_i_3_n_0;
-  wire adj_Pinc_byfreq0__0_carry_i_4_n_0;
-  wire adj_Pinc_byfreq0__0_carry_i_5_n_0;
-  wire adj_Pinc_byfreq0__0_carry_i_6_n_0;
-  wire adj_Pinc_byfreq0__0_carry_i_7_n_0;
-  wire adj_Pinc_byfreq0__0_carry_n_0;
-  wire adj_Pinc_byfreq0__0_carry_n_1;
-  wire adj_Pinc_byfreq0__0_carry_n_2;
-  wire adj_Pinc_byfreq0__0_carry_n_3;
-  wire adj_Pinc_byfreq0__0_carry_n_4;
-  wire adj_Pinc_byfreq0__0_carry_n_5;
-  wire adj_Pinc_byfreq0__175_carry__0_i_1_n_0;
-  wire adj_Pinc_byfreq0__175_carry__0_i_2_n_0;
-  wire adj_Pinc_byfreq0__175_carry__0_i_3_n_0;
-  wire adj_Pinc_byfreq0__175_carry__0_i_4_n_0;
-  wire adj_Pinc_byfreq0__175_carry__0_n_0;
-  wire adj_Pinc_byfreq0__175_carry__0_n_1;
-  wire adj_Pinc_byfreq0__175_carry__0_n_2;
-  wire adj_Pinc_byfreq0__175_carry__0_n_3;
-  wire adj_Pinc_byfreq0__175_carry__0_n_4;
-  wire adj_Pinc_byfreq0__175_carry__0_n_5;
-  wire adj_Pinc_byfreq0__175_carry__0_n_6;
-  wire adj_Pinc_byfreq0__175_carry__0_n_7;
-  wire adj_Pinc_byfreq0__175_carry__1_i_1_n_0;
-  wire adj_Pinc_byfreq0__175_carry__1_i_2_n_0;
-  wire adj_Pinc_byfreq0__175_carry__1_i_3_n_0;
-  wire adj_Pinc_byfreq0__175_carry__1_i_4_n_0;
-  wire adj_Pinc_byfreq0__175_carry__1_n_0;
-  wire adj_Pinc_byfreq0__175_carry__1_n_1;
-  wire adj_Pinc_byfreq0__175_carry__1_n_2;
-  wire adj_Pinc_byfreq0__175_carry__1_n_3;
-  wire adj_Pinc_byfreq0__175_carry__1_n_4;
-  wire adj_Pinc_byfreq0__175_carry__1_n_5;
-  wire adj_Pinc_byfreq0__175_carry__1_n_6;
-  wire adj_Pinc_byfreq0__175_carry__1_n_7;
-  wire adj_Pinc_byfreq0__175_carry__2_i_1_n_0;
-  wire adj_Pinc_byfreq0__175_carry__2_i_2_n_0;
-  wire adj_Pinc_byfreq0__175_carry__2_i_3_n_0;
-  wire adj_Pinc_byfreq0__175_carry__2_i_4_n_0;
-  wire adj_Pinc_byfreq0__175_carry__2_n_0;
-  wire adj_Pinc_byfreq0__175_carry__2_n_1;
-  wire adj_Pinc_byfreq0__175_carry__2_n_2;
-  wire adj_Pinc_byfreq0__175_carry__2_n_3;
-  wire adj_Pinc_byfreq0__175_carry__2_n_4;
-  wire adj_Pinc_byfreq0__175_carry__2_n_5;
-  wire adj_Pinc_byfreq0__175_carry__2_n_6;
-  wire adj_Pinc_byfreq0__175_carry__2_n_7;
-  wire adj_Pinc_byfreq0__175_carry__3_i_1_n_0;
-  wire adj_Pinc_byfreq0__175_carry__3_i_2_n_0;
-  wire adj_Pinc_byfreq0__175_carry__3_i_3_n_0;
-  wire adj_Pinc_byfreq0__175_carry__3_i_4_n_0;
-  wire adj_Pinc_byfreq0__175_carry__3_n_0;
-  wire adj_Pinc_byfreq0__175_carry__3_n_1;
-  wire adj_Pinc_byfreq0__175_carry__3_n_2;
-  wire adj_Pinc_byfreq0__175_carry__3_n_3;
-  wire adj_Pinc_byfreq0__175_carry__3_n_4;
-  wire adj_Pinc_byfreq0__175_carry__3_n_5;
-  wire adj_Pinc_byfreq0__175_carry__3_n_6;
-  wire adj_Pinc_byfreq0__175_carry__3_n_7;
-  wire adj_Pinc_byfreq0__175_carry__4_i_1_n_0;
-  wire adj_Pinc_byfreq0__175_carry__4_i_2_n_0;
-  wire adj_Pinc_byfreq0__175_carry__4_i_3_n_0;
-  wire adj_Pinc_byfreq0__175_carry__4_i_4_n_0;
-  wire adj_Pinc_byfreq0__175_carry__4_n_0;
-  wire adj_Pinc_byfreq0__175_carry__4_n_1;
-  wire adj_Pinc_byfreq0__175_carry__4_n_2;
-  wire adj_Pinc_byfreq0__175_carry__4_n_3;
-  wire adj_Pinc_byfreq0__175_carry__4_n_4;
-  wire adj_Pinc_byfreq0__175_carry__4_n_5;
-  wire adj_Pinc_byfreq0__175_carry__4_n_6;
-  wire adj_Pinc_byfreq0__175_carry__4_n_7;
-  wire adj_Pinc_byfreq0__175_carry__5_i_1_n_0;
-  wire adj_Pinc_byfreq0__175_carry__5_i_2_n_0;
-  wire adj_Pinc_byfreq0__175_carry__5_i_3_n_0;
-  wire adj_Pinc_byfreq0__175_carry__5_i_4_n_0;
-  wire adj_Pinc_byfreq0__175_carry__5_n_0;
-  wire adj_Pinc_byfreq0__175_carry__5_n_1;
-  wire adj_Pinc_byfreq0__175_carry__5_n_2;
-  wire adj_Pinc_byfreq0__175_carry__5_n_3;
-  wire adj_Pinc_byfreq0__175_carry__5_n_4;
-  wire adj_Pinc_byfreq0__175_carry__5_n_5;
-  wire adj_Pinc_byfreq0__175_carry__5_n_6;
-  wire adj_Pinc_byfreq0__175_carry__5_n_7;
-  wire adj_Pinc_byfreq0__175_carry__6_i_1_n_0;
-  wire adj_Pinc_byfreq0__175_carry__6_i_2_n_0;
-  wire adj_Pinc_byfreq0__175_carry__6_n_1;
-  wire adj_Pinc_byfreq0__175_carry__6_n_3;
-  wire adj_Pinc_byfreq0__175_carry__6_n_6;
-  wire adj_Pinc_byfreq0__175_carry__6_n_7;
-  wire adj_Pinc_byfreq0__175_carry_i_1_n_0;
-  wire adj_Pinc_byfreq0__175_carry_i_2_n_0;
-  wire adj_Pinc_byfreq0__175_carry_i_3_n_0;
-  wire adj_Pinc_byfreq0__175_carry_n_0;
-  wire adj_Pinc_byfreq0__175_carry_n_1;
-  wire adj_Pinc_byfreq0__175_carry_n_2;
-  wire adj_Pinc_byfreq0__175_carry_n_3;
-  wire adj_Pinc_byfreq0__175_carry_n_4;
-  wire adj_Pinc_byfreq0__175_carry_n_5;
-  wire adj_Pinc_byfreq0__175_carry_n_6;
-  wire adj_Pinc_byfreq0__175_carry_n_7;
-  wire adj_Pinc_byfreq0__261_carry__0_i_1_n_0;
-  wire adj_Pinc_byfreq0__261_carry__0_i_2_n_0;
-  wire adj_Pinc_byfreq0__261_carry__0_i_3_n_0;
-  wire adj_Pinc_byfreq0__261_carry__0_i_4_n_0;
-  wire adj_Pinc_byfreq0__261_carry__0_i_5_n_0;
-  wire adj_Pinc_byfreq0__261_carry__0_i_6_n_0;
-  wire adj_Pinc_byfreq0__261_carry__0_i_7_n_0;
-  wire adj_Pinc_byfreq0__261_carry__0_i_8_n_0;
-  wire adj_Pinc_byfreq0__261_carry__0_n_0;
-  wire adj_Pinc_byfreq0__261_carry__0_n_1;
-  wire adj_Pinc_byfreq0__261_carry__0_n_2;
-  wire adj_Pinc_byfreq0__261_carry__0_n_3;
-  wire adj_Pinc_byfreq0__261_carry__0_n_4;
-  wire adj_Pinc_byfreq0__261_carry__0_n_5;
-  wire adj_Pinc_byfreq0__261_carry__0_n_6;
-  wire adj_Pinc_byfreq0__261_carry__0_n_7;
-  wire adj_Pinc_byfreq0__261_carry__1_i_1_n_0;
-  wire adj_Pinc_byfreq0__261_carry__1_i_2_n_0;
-  wire adj_Pinc_byfreq0__261_carry__1_i_3_n_0;
-  wire adj_Pinc_byfreq0__261_carry__1_i_4_n_0;
-  wire adj_Pinc_byfreq0__261_carry__1_i_5_n_0;
-  wire adj_Pinc_byfreq0__261_carry__1_i_6_n_0;
-  wire adj_Pinc_byfreq0__261_carry__1_i_7_n_0;
-  wire adj_Pinc_byfreq0__261_carry__1_i_8_n_0;
-  wire adj_Pinc_byfreq0__261_carry__1_n_0;
-  wire adj_Pinc_byfreq0__261_carry__1_n_1;
-  wire adj_Pinc_byfreq0__261_carry__1_n_2;
-  wire adj_Pinc_byfreq0__261_carry__1_n_3;
-  wire adj_Pinc_byfreq0__261_carry__1_n_4;
-  wire adj_Pinc_byfreq0__261_carry__1_n_5;
-  wire adj_Pinc_byfreq0__261_carry__1_n_6;
-  wire adj_Pinc_byfreq0__261_carry__1_n_7;
-  wire adj_Pinc_byfreq0__261_carry__2_i_1_n_0;
-  wire adj_Pinc_byfreq0__261_carry__2_i_2_n_0;
-  wire adj_Pinc_byfreq0__261_carry__2_i_3_n_0;
-  wire adj_Pinc_byfreq0__261_carry__2_i_4_n_0;
-  wire adj_Pinc_byfreq0__261_carry__2_i_5_n_0;
-  wire adj_Pinc_byfreq0__261_carry__2_i_6_n_0;
-  wire adj_Pinc_byfreq0__261_carry__2_i_7_n_0;
-  wire adj_Pinc_byfreq0__261_carry__2_i_8_n_0;
-  wire adj_Pinc_byfreq0__261_carry__2_n_0;
-  wire adj_Pinc_byfreq0__261_carry__2_n_1;
-  wire adj_Pinc_byfreq0__261_carry__2_n_2;
-  wire adj_Pinc_byfreq0__261_carry__2_n_3;
-  wire adj_Pinc_byfreq0__261_carry__2_n_4;
-  wire adj_Pinc_byfreq0__261_carry__2_n_5;
-  wire adj_Pinc_byfreq0__261_carry__2_n_6;
-  wire adj_Pinc_byfreq0__261_carry__2_n_7;
-  wire adj_Pinc_byfreq0__261_carry__3_i_1_n_0;
-  wire adj_Pinc_byfreq0__261_carry__3_i_2_n_0;
-  wire adj_Pinc_byfreq0__261_carry__3_i_3_n_0;
-  wire adj_Pinc_byfreq0__261_carry__3_i_4_n_0;
-  wire adj_Pinc_byfreq0__261_carry__3_i_5_n_0;
-  wire adj_Pinc_byfreq0__261_carry__3_i_6_n_0;
-  wire adj_Pinc_byfreq0__261_carry__3_i_7_n_0;
-  wire adj_Pinc_byfreq0__261_carry__3_i_8_n_0;
-  wire adj_Pinc_byfreq0__261_carry__3_n_0;
-  wire adj_Pinc_byfreq0__261_carry__3_n_1;
-  wire adj_Pinc_byfreq0__261_carry__3_n_2;
-  wire adj_Pinc_byfreq0__261_carry__3_n_3;
-  wire adj_Pinc_byfreq0__261_carry__3_n_4;
-  wire adj_Pinc_byfreq0__261_carry__3_n_5;
-  wire adj_Pinc_byfreq0__261_carry__3_n_6;
-  wire adj_Pinc_byfreq0__261_carry__3_n_7;
-  wire adj_Pinc_byfreq0__261_carry__4_i_1_n_0;
-  wire adj_Pinc_byfreq0__261_carry__4_i_2_n_0;
-  wire adj_Pinc_byfreq0__261_carry__4_i_3_n_0;
-  wire adj_Pinc_byfreq0__261_carry__4_i_4_n_0;
-  wire adj_Pinc_byfreq0__261_carry__4_i_5_n_0;
-  wire adj_Pinc_byfreq0__261_carry__4_i_6_n_0;
-  wire adj_Pinc_byfreq0__261_carry__4_i_7_n_0;
-  wire adj_Pinc_byfreq0__261_carry__4_i_8_n_0;
-  wire adj_Pinc_byfreq0__261_carry__4_n_0;
-  wire adj_Pinc_byfreq0__261_carry__4_n_1;
-  wire adj_Pinc_byfreq0__261_carry__4_n_2;
-  wire adj_Pinc_byfreq0__261_carry__4_n_3;
-  wire adj_Pinc_byfreq0__261_carry__4_n_4;
-  wire adj_Pinc_byfreq0__261_carry__4_n_5;
-  wire adj_Pinc_byfreq0__261_carry__4_n_6;
-  wire adj_Pinc_byfreq0__261_carry__4_n_7;
-  wire adj_Pinc_byfreq0__261_carry__5_i_1_n_0;
-  wire adj_Pinc_byfreq0__261_carry__5_i_2_n_0;
-  wire adj_Pinc_byfreq0__261_carry__5_i_3_n_0;
-  wire adj_Pinc_byfreq0__261_carry__5_i_4_n_0;
-  wire adj_Pinc_byfreq0__261_carry__5_i_5_n_0;
-  wire adj_Pinc_byfreq0__261_carry__5_i_6_n_0;
-  wire adj_Pinc_byfreq0__261_carry__5_i_7_n_0;
-  wire adj_Pinc_byfreq0__261_carry__5_i_8_n_0;
-  wire adj_Pinc_byfreq0__261_carry__5_n_0;
-  wire adj_Pinc_byfreq0__261_carry__5_n_1;
-  wire adj_Pinc_byfreq0__261_carry__5_n_2;
-  wire adj_Pinc_byfreq0__261_carry__5_n_3;
-  wire adj_Pinc_byfreq0__261_carry__5_n_4;
-  wire adj_Pinc_byfreq0__261_carry__5_n_5;
-  wire adj_Pinc_byfreq0__261_carry__5_n_6;
-  wire adj_Pinc_byfreq0__261_carry__5_n_7;
-  wire adj_Pinc_byfreq0__261_carry__6_i_1_n_0;
-  wire adj_Pinc_byfreq0__261_carry__6_i_2_n_0;
-  wire adj_Pinc_byfreq0__261_carry__6_i_3_n_0;
-  wire adj_Pinc_byfreq0__261_carry__6_i_4_n_0;
-  wire adj_Pinc_byfreq0__261_carry__6_i_5_n_0;
-  wire adj_Pinc_byfreq0__261_carry__6_n_2;
-  wire adj_Pinc_byfreq0__261_carry__6_n_3;
-  wire adj_Pinc_byfreq0__261_carry__6_n_5;
-  wire adj_Pinc_byfreq0__261_carry__6_n_6;
-  wire adj_Pinc_byfreq0__261_carry__6_n_7;
-  wire adj_Pinc_byfreq0__261_carry_i_1_n_0;
-  wire adj_Pinc_byfreq0__261_carry_i_2_n_0;
-  wire adj_Pinc_byfreq0__261_carry_i_3_n_0;
-  wire adj_Pinc_byfreq0__261_carry_n_0;
-  wire adj_Pinc_byfreq0__261_carry_n_1;
-  wire adj_Pinc_byfreq0__261_carry_n_2;
-  wire adj_Pinc_byfreq0__261_carry_n_3;
-  wire adj_Pinc_byfreq0__261_carry_n_4;
-  wire adj_Pinc_byfreq0__261_carry_n_5;
-  wire adj_Pinc_byfreq0__261_carry_n_6;
-  wire adj_Pinc_byfreq0__261_carry_n_7;
-  wire adj_Pinc_byfreq0__352_carry__0_i_1_n_0;
-  wire adj_Pinc_byfreq0__352_carry__0_i_2_n_0;
-  wire adj_Pinc_byfreq0__352_carry__0_i_3_n_0;
-  wire adj_Pinc_byfreq0__352_carry__0_i_4_n_0;
-  wire adj_Pinc_byfreq0__352_carry__0_i_5_n_0;
-  wire adj_Pinc_byfreq0__352_carry__0_i_6_n_0;
-  wire adj_Pinc_byfreq0__352_carry__0_i_7_n_0;
-  wire adj_Pinc_byfreq0__352_carry__0_i_8_n_0;
-  wire adj_Pinc_byfreq0__352_carry__0_n_0;
-  wire adj_Pinc_byfreq0__352_carry__0_n_1;
-  wire adj_Pinc_byfreq0__352_carry__0_n_2;
-  wire adj_Pinc_byfreq0__352_carry__0_n_3;
-  wire adj_Pinc_byfreq0__352_carry__1_i_1_n_0;
-  wire adj_Pinc_byfreq0__352_carry__1_i_2_n_0;
-  wire adj_Pinc_byfreq0__352_carry__1_i_3_n_0;
-  wire adj_Pinc_byfreq0__352_carry__1_i_4_n_0;
-  wire adj_Pinc_byfreq0__352_carry__1_i_5_n_0;
-  wire adj_Pinc_byfreq0__352_carry__1_i_6_n_0;
-  wire adj_Pinc_byfreq0__352_carry__1_i_7_n_0;
-  wire adj_Pinc_byfreq0__352_carry__1_i_8_n_0;
-  wire adj_Pinc_byfreq0__352_carry__1_n_0;
-  wire adj_Pinc_byfreq0__352_carry__1_n_1;
-  wire adj_Pinc_byfreq0__352_carry__1_n_2;
-  wire adj_Pinc_byfreq0__352_carry__1_n_3;
-  wire adj_Pinc_byfreq0__352_carry__2_i_1_n_0;
-  wire adj_Pinc_byfreq0__352_carry__2_i_2_n_0;
-  wire adj_Pinc_byfreq0__352_carry__2_i_3_n_0;
-  wire adj_Pinc_byfreq0__352_carry__2_i_4_n_0;
-  wire adj_Pinc_byfreq0__352_carry__2_i_5_n_0;
-  wire adj_Pinc_byfreq0__352_carry__2_i_6_n_0;
-  wire adj_Pinc_byfreq0__352_carry__2_i_7_n_0;
-  wire adj_Pinc_byfreq0__352_carry__2_i_8_n_0;
-  wire adj_Pinc_byfreq0__352_carry__2_n_0;
-  wire adj_Pinc_byfreq0__352_carry__2_n_1;
-  wire adj_Pinc_byfreq0__352_carry__2_n_2;
-  wire adj_Pinc_byfreq0__352_carry__2_n_3;
-  wire adj_Pinc_byfreq0__352_carry__3_i_1_n_0;
-  wire adj_Pinc_byfreq0__352_carry__3_i_2_n_0;
-  wire adj_Pinc_byfreq0__352_carry__3_i_3_n_0;
-  wire adj_Pinc_byfreq0__352_carry__3_i_4_n_0;
-  wire adj_Pinc_byfreq0__352_carry__3_i_5_n_0;
-  wire adj_Pinc_byfreq0__352_carry__3_i_6_n_0;
-  wire adj_Pinc_byfreq0__352_carry__3_i_7_n_0;
-  wire adj_Pinc_byfreq0__352_carry__3_i_8_n_0;
-  wire adj_Pinc_byfreq0__352_carry__3_n_0;
-  wire adj_Pinc_byfreq0__352_carry__3_n_1;
-  wire adj_Pinc_byfreq0__352_carry__3_n_2;
-  wire adj_Pinc_byfreq0__352_carry__3_n_3;
-  wire adj_Pinc_byfreq0__352_carry__4_i_1_n_0;
-  wire adj_Pinc_byfreq0__352_carry__4_i_2_n_0;
-  wire adj_Pinc_byfreq0__352_carry__4_i_3_n_0;
-  wire adj_Pinc_byfreq0__352_carry__4_i_4_n_0;
-  wire adj_Pinc_byfreq0__352_carry__4_i_5_n_0;
-  wire adj_Pinc_byfreq0__352_carry__4_i_6_n_0;
-  wire adj_Pinc_byfreq0__352_carry__4_i_7_n_0;
-  wire adj_Pinc_byfreq0__352_carry__4_i_8_n_0;
-  wire adj_Pinc_byfreq0__352_carry__4_n_0;
-  wire adj_Pinc_byfreq0__352_carry__4_n_1;
-  wire adj_Pinc_byfreq0__352_carry__4_n_2;
-  wire adj_Pinc_byfreq0__352_carry__4_n_3;
-  wire adj_Pinc_byfreq0__352_carry__4_n_4;
-  wire adj_Pinc_byfreq0__352_carry__4_n_5;
-  wire adj_Pinc_byfreq0__352_carry__4_n_6;
-  wire adj_Pinc_byfreq0__352_carry__4_n_7;
-  wire adj_Pinc_byfreq0__352_carry__5_i_1_n_0;
-  wire adj_Pinc_byfreq0__352_carry__5_i_2_n_0;
-  wire adj_Pinc_byfreq0__352_carry__5_i_3_n_0;
-  wire adj_Pinc_byfreq0__352_carry__5_i_4_n_0;
-  wire adj_Pinc_byfreq0__352_carry__5_i_5_n_0;
-  wire adj_Pinc_byfreq0__352_carry__5_i_6_n_0;
-  wire adj_Pinc_byfreq0__352_carry__5_i_7_n_0;
-  wire adj_Pinc_byfreq0__352_carry__5_i_8_n_0;
-  wire adj_Pinc_byfreq0__352_carry__5_n_0;
-  wire adj_Pinc_byfreq0__352_carry__5_n_1;
-  wire adj_Pinc_byfreq0__352_carry__5_n_2;
-  wire adj_Pinc_byfreq0__352_carry__5_n_3;
-  wire adj_Pinc_byfreq0__352_carry__5_n_4;
-  wire adj_Pinc_byfreq0__352_carry__5_n_5;
-  wire adj_Pinc_byfreq0__352_carry__5_n_6;
-  wire adj_Pinc_byfreq0__352_carry__5_n_7;
-  wire adj_Pinc_byfreq0__352_carry__6_i_1_n_0;
-  wire adj_Pinc_byfreq0__352_carry__6_i_2_n_0;
-  wire adj_Pinc_byfreq0__352_carry__6_i_3_n_0;
-  wire adj_Pinc_byfreq0__352_carry__6_i_4_n_0;
-  wire adj_Pinc_byfreq0__352_carry__6_i_5_n_0;
-  wire adj_Pinc_byfreq0__352_carry__6_i_6_n_0;
-  wire adj_Pinc_byfreq0__352_carry__6_i_7_n_0;
-  wire adj_Pinc_byfreq0__352_carry__6_i_8_n_0;
-  wire adj_Pinc_byfreq0__352_carry__6_n_0;
-  wire adj_Pinc_byfreq0__352_carry__6_n_1;
-  wire adj_Pinc_byfreq0__352_carry__6_n_2;
-  wire adj_Pinc_byfreq0__352_carry__6_n_3;
-  wire adj_Pinc_byfreq0__352_carry__6_n_4;
-  wire adj_Pinc_byfreq0__352_carry__6_n_5;
-  wire adj_Pinc_byfreq0__352_carry__6_n_6;
-  wire adj_Pinc_byfreq0__352_carry__6_n_7;
-  wire adj_Pinc_byfreq0__352_carry__7_i_1_n_0;
-  wire adj_Pinc_byfreq0__352_carry__7_i_2_n_0;
-  wire adj_Pinc_byfreq0__352_carry__7_i_3_n_0;
-  wire adj_Pinc_byfreq0__352_carry__7_i_4_n_0;
-  wire adj_Pinc_byfreq0__352_carry__7_i_5_n_0;
-  wire adj_Pinc_byfreq0__352_carry__7_i_6_n_0;
-  wire adj_Pinc_byfreq0__352_carry__7_i_7_n_0;
-  wire adj_Pinc_byfreq0__352_carry__7_i_8_n_0;
-  wire adj_Pinc_byfreq0__352_carry__7_n_0;
-  wire adj_Pinc_byfreq0__352_carry__7_n_1;
-  wire adj_Pinc_byfreq0__352_carry__7_n_2;
-  wire adj_Pinc_byfreq0__352_carry__7_n_3;
-  wire adj_Pinc_byfreq0__352_carry__7_n_4;
-  wire adj_Pinc_byfreq0__352_carry__7_n_5;
-  wire adj_Pinc_byfreq0__352_carry__7_n_6;
-  wire adj_Pinc_byfreq0__352_carry__7_n_7;
-  wire adj_Pinc_byfreq0__352_carry__8_i_1_n_0;
-  wire adj_Pinc_byfreq0__352_carry__8_i_2_n_0;
-  wire adj_Pinc_byfreq0__352_carry__8_i_3_n_0;
-  wire adj_Pinc_byfreq0__352_carry__8_i_4_n_0;
-  wire adj_Pinc_byfreq0__352_carry__8_i_5_n_0;
-  wire adj_Pinc_byfreq0__352_carry__8_i_6_n_0;
-  wire adj_Pinc_byfreq0__352_carry__8_i_7_n_0;
-  wire adj_Pinc_byfreq0__352_carry__8_i_8_n_0;
-  wire adj_Pinc_byfreq0__352_carry__8_n_0;
-  wire adj_Pinc_byfreq0__352_carry__8_n_1;
-  wire adj_Pinc_byfreq0__352_carry__8_n_2;
-  wire adj_Pinc_byfreq0__352_carry__8_n_3;
-  wire adj_Pinc_byfreq0__352_carry__8_n_4;
-  wire adj_Pinc_byfreq0__352_carry__8_n_5;
-  wire adj_Pinc_byfreq0__352_carry__8_n_6;
-  wire adj_Pinc_byfreq0__352_carry__8_n_7;
-  wire adj_Pinc_byfreq0__352_carry__9_i_1_n_0;
-  wire adj_Pinc_byfreq0__352_carry__9_n_7;
-  wire adj_Pinc_byfreq0__352_carry_i_1_n_0;
-  wire adj_Pinc_byfreq0__352_carry_i_2_n_0;
-  wire adj_Pinc_byfreq0__352_carry_i_3_n_0;
-  wire adj_Pinc_byfreq0__352_carry_i_4_n_0;
-  wire adj_Pinc_byfreq0__352_carry_i_5_n_0;
-  wire adj_Pinc_byfreq0__352_carry_i_6_n_0;
-  wire adj_Pinc_byfreq0__352_carry_i_7_n_0;
-  wire adj_Pinc_byfreq0__352_carry_n_0;
-  wire adj_Pinc_byfreq0__352_carry_n_1;
-  wire adj_Pinc_byfreq0__352_carry_n_2;
-  wire adj_Pinc_byfreq0__352_carry_n_3;
-  wire adj_Pinc_byfreq0__453_carry__0_i_1_n_0;
-  wire adj_Pinc_byfreq0__453_carry__0_i_2_n_0;
-  wire adj_Pinc_byfreq0__453_carry__0_i_3_n_0;
-  wire adj_Pinc_byfreq0__453_carry__0_i_4_n_0;
-  wire adj_Pinc_byfreq0__453_carry__0_i_5_n_0;
-  wire adj_Pinc_byfreq0__453_carry__0_i_6_n_0;
-  wire adj_Pinc_byfreq0__453_carry__0_i_7_n_0;
-  wire adj_Pinc_byfreq0__453_carry__0_i_8_n_0;
-  wire adj_Pinc_byfreq0__453_carry__0_n_0;
-  wire adj_Pinc_byfreq0__453_carry__0_n_1;
-  wire adj_Pinc_byfreq0__453_carry__0_n_2;
-  wire adj_Pinc_byfreq0__453_carry__0_n_3;
-  wire adj_Pinc_byfreq0__453_carry__0_n_4;
-  wire adj_Pinc_byfreq0__453_carry__0_n_5;
-  wire adj_Pinc_byfreq0__453_carry__0_n_6;
-  wire adj_Pinc_byfreq0__453_carry__0_n_7;
-  wire adj_Pinc_byfreq0__453_carry__1_i_1_n_0;
-  wire adj_Pinc_byfreq0__453_carry__1_i_2_n_0;
-  wire adj_Pinc_byfreq0__453_carry__1_i_3_n_0;
-  wire adj_Pinc_byfreq0__453_carry__1_i_4_n_0;
-  wire adj_Pinc_byfreq0__453_carry__1_i_5_n_0;
-  wire adj_Pinc_byfreq0__453_carry__1_i_6_n_0;
-  wire adj_Pinc_byfreq0__453_carry__1_i_7_n_0;
-  wire adj_Pinc_byfreq0__453_carry__1_i_8_n_0;
-  wire adj_Pinc_byfreq0__453_carry__1_n_0;
-  wire adj_Pinc_byfreq0__453_carry__1_n_1;
-  wire adj_Pinc_byfreq0__453_carry__1_n_2;
-  wire adj_Pinc_byfreq0__453_carry__1_n_3;
-  wire adj_Pinc_byfreq0__453_carry__1_n_4;
-  wire adj_Pinc_byfreq0__453_carry__1_n_5;
-  wire adj_Pinc_byfreq0__453_carry__1_n_6;
-  wire adj_Pinc_byfreq0__453_carry__1_n_7;
-  wire adj_Pinc_byfreq0__453_carry__2_i_1_n_0;
-  wire adj_Pinc_byfreq0__453_carry__2_i_2_n_0;
-  wire adj_Pinc_byfreq0__453_carry__2_i_3_n_0;
-  wire adj_Pinc_byfreq0__453_carry__2_i_4_n_0;
-  wire adj_Pinc_byfreq0__453_carry__2_i_5_n_0;
-  wire adj_Pinc_byfreq0__453_carry__2_i_6_n_0;
-  wire adj_Pinc_byfreq0__453_carry__2_i_7_n_0;
-  wire adj_Pinc_byfreq0__453_carry__2_i_8_n_0;
-  wire adj_Pinc_byfreq0__453_carry__2_n_0;
-  wire adj_Pinc_byfreq0__453_carry__2_n_1;
-  wire adj_Pinc_byfreq0__453_carry__2_n_2;
-  wire adj_Pinc_byfreq0__453_carry__2_n_3;
-  wire adj_Pinc_byfreq0__453_carry__2_n_4;
-  wire adj_Pinc_byfreq0__453_carry__2_n_5;
-  wire adj_Pinc_byfreq0__453_carry__2_n_6;
-  wire adj_Pinc_byfreq0__453_carry__2_n_7;
-  wire adj_Pinc_byfreq0__453_carry__3_i_1_n_0;
-  wire adj_Pinc_byfreq0__453_carry__3_i_2_n_0;
-  wire adj_Pinc_byfreq0__453_carry__3_i_3_n_0;
-  wire adj_Pinc_byfreq0__453_carry__3_i_4_n_0;
-  wire adj_Pinc_byfreq0__453_carry__3_i_5_n_0;
-  wire adj_Pinc_byfreq0__453_carry__3_i_6_n_0;
-  wire adj_Pinc_byfreq0__453_carry__3_i_7_n_0;
-  wire adj_Pinc_byfreq0__453_carry__3_i_8_n_0;
-  wire adj_Pinc_byfreq0__453_carry__3_n_0;
-  wire adj_Pinc_byfreq0__453_carry__3_n_1;
-  wire adj_Pinc_byfreq0__453_carry__3_n_2;
-  wire adj_Pinc_byfreq0__453_carry__3_n_3;
-  wire adj_Pinc_byfreq0__453_carry__3_n_4;
-  wire adj_Pinc_byfreq0__453_carry__3_n_5;
-  wire adj_Pinc_byfreq0__453_carry__3_n_6;
-  wire adj_Pinc_byfreq0__453_carry__3_n_7;
-  wire adj_Pinc_byfreq0__453_carry__4_i_1_n_0;
-  wire adj_Pinc_byfreq0__453_carry__4_i_2_n_0;
-  wire adj_Pinc_byfreq0__453_carry__4_i_3_n_0;
-  wire adj_Pinc_byfreq0__453_carry__4_n_3;
-  wire adj_Pinc_byfreq0__453_carry__4_n_6;
-  wire adj_Pinc_byfreq0__453_carry__4_n_7;
-  wire adj_Pinc_byfreq0__453_carry_i_1_n_0;
-  wire adj_Pinc_byfreq0__453_carry_i_2_n_0;
-  wire adj_Pinc_byfreq0__453_carry_i_3_n_0;
-  wire adj_Pinc_byfreq0__453_carry_i_4_n_0;
-  wire adj_Pinc_byfreq0__453_carry_i_5_n_0;
-  wire adj_Pinc_byfreq0__453_carry_i_6_n_0;
-  wire adj_Pinc_byfreq0__453_carry_i_7_n_0;
-  wire adj_Pinc_byfreq0__453_carry_n_0;
-  wire adj_Pinc_byfreq0__453_carry_n_1;
-  wire adj_Pinc_byfreq0__453_carry_n_2;
-  wire adj_Pinc_byfreq0__453_carry_n_3;
-  wire adj_Pinc_byfreq0__453_carry_n_4;
-  wire adj_Pinc_byfreq0__453_carry_n_5;
-  wire adj_Pinc_byfreq0__453_carry_n_6;
-  wire adj_Pinc_byfreq0__453_carry_n_7;
-  wire adj_Pinc_byfreq0__517_carry__0_i_1_n_0;
-  wire adj_Pinc_byfreq0__517_carry__0_i_2_n_0;
-  wire adj_Pinc_byfreq0__517_carry__0_i_3_n_0;
-  wire adj_Pinc_byfreq0__517_carry__0_i_4_n_0;
-  wire adj_Pinc_byfreq0__517_carry__0_i_5_n_0;
-  wire adj_Pinc_byfreq0__517_carry__0_i_6_n_0;
-  wire adj_Pinc_byfreq0__517_carry__0_i_7_n_0;
-  wire adj_Pinc_byfreq0__517_carry__0_i_8_n_0;
-  wire adj_Pinc_byfreq0__517_carry__0_n_0;
-  wire adj_Pinc_byfreq0__517_carry__0_n_1;
-  wire adj_Pinc_byfreq0__517_carry__0_n_2;
-  wire adj_Pinc_byfreq0__517_carry__0_n_3;
-  wire adj_Pinc_byfreq0__517_carry__1_i_1_n_0;
-  wire adj_Pinc_byfreq0__517_carry__1_i_2_n_0;
-  wire adj_Pinc_byfreq0__517_carry__1_i_3_n_0;
-  wire adj_Pinc_byfreq0__517_carry__1_i_4_n_0;
-  wire adj_Pinc_byfreq0__517_carry__1_i_5_n_0;
-  wire adj_Pinc_byfreq0__517_carry__1_i_6_n_0;
-  wire adj_Pinc_byfreq0__517_carry__1_i_7_n_0;
-  wire adj_Pinc_byfreq0__517_carry__1_i_8_n_0;
-  wire adj_Pinc_byfreq0__517_carry__1_n_0;
-  wire adj_Pinc_byfreq0__517_carry__1_n_1;
-  wire adj_Pinc_byfreq0__517_carry__1_n_2;
-  wire adj_Pinc_byfreq0__517_carry__1_n_3;
-  wire adj_Pinc_byfreq0__517_carry__2_i_1_n_0;
-  wire adj_Pinc_byfreq0__517_carry__2_i_2_n_0;
-  wire adj_Pinc_byfreq0__517_carry__2_i_3_n_0;
-  wire adj_Pinc_byfreq0__517_carry__2_i_4_n_0;
-  wire adj_Pinc_byfreq0__517_carry__2_i_5_n_0;
-  wire adj_Pinc_byfreq0__517_carry__2_i_6_n_0;
-  wire adj_Pinc_byfreq0__517_carry__2_i_7_n_0;
-  wire adj_Pinc_byfreq0__517_carry__2_i_8_n_0;
-  wire adj_Pinc_byfreq0__517_carry__2_n_0;
-  wire adj_Pinc_byfreq0__517_carry__2_n_1;
-  wire adj_Pinc_byfreq0__517_carry__2_n_2;
-  wire adj_Pinc_byfreq0__517_carry__2_n_3;
-  wire adj_Pinc_byfreq0__517_carry__3_i_1_n_0;
-  wire adj_Pinc_byfreq0__517_carry__3_i_2_n_0;
-  wire adj_Pinc_byfreq0__517_carry__3_i_3_n_0;
-  wire adj_Pinc_byfreq0__517_carry__3_i_4_n_0;
-  wire adj_Pinc_byfreq0__517_carry__3_i_5_n_0;
-  wire adj_Pinc_byfreq0__517_carry__3_i_6_n_0;
-  wire adj_Pinc_byfreq0__517_carry__3_i_7_n_0;
-  wire adj_Pinc_byfreq0__517_carry__3_i_8_n_0;
-  wire adj_Pinc_byfreq0__517_carry__3_n_0;
-  wire adj_Pinc_byfreq0__517_carry__3_n_1;
-  wire adj_Pinc_byfreq0__517_carry__3_n_2;
-  wire adj_Pinc_byfreq0__517_carry__3_n_3;
-  wire adj_Pinc_byfreq0__517_carry__4_i_1_n_0;
-  wire adj_Pinc_byfreq0__517_carry__4_i_2_n_0;
-  wire adj_Pinc_byfreq0__517_carry__4_i_3_n_0;
-  wire adj_Pinc_byfreq0__517_carry__4_i_4_n_0;
-  wire adj_Pinc_byfreq0__517_carry__4_i_5_n_0;
-  wire adj_Pinc_byfreq0__517_carry__4_i_6_n_0;
-  wire adj_Pinc_byfreq0__517_carry__4_i_7_n_0;
-  wire adj_Pinc_byfreq0__517_carry__4_i_8_n_0;
-  wire adj_Pinc_byfreq0__517_carry__4_n_0;
-  wire adj_Pinc_byfreq0__517_carry__4_n_1;
-  wire adj_Pinc_byfreq0__517_carry__4_n_2;
-  wire adj_Pinc_byfreq0__517_carry__4_n_3;
-  wire adj_Pinc_byfreq0__517_carry__5_i_1_n_0;
-  wire adj_Pinc_byfreq0__517_carry__5_i_2_n_0;
-  wire adj_Pinc_byfreq0__517_carry__5_n_3;
-  wire adj_Pinc_byfreq0__517_carry_i_1_n_0;
-  wire adj_Pinc_byfreq0__517_carry_i_2_n_0;
-  wire adj_Pinc_byfreq0__517_carry_i_3_n_0;
-  wire adj_Pinc_byfreq0__517_carry_i_4_n_0;
-  wire adj_Pinc_byfreq0__517_carry_i_5_n_0;
-  wire adj_Pinc_byfreq0__517_carry_i_6_n_0;
-  wire adj_Pinc_byfreq0__517_carry_i_7_n_0;
-  wire adj_Pinc_byfreq0__517_carry_n_0;
-  wire adj_Pinc_byfreq0__517_carry_n_1;
-  wire adj_Pinc_byfreq0__517_carry_n_2;
-  wire adj_Pinc_byfreq0__517_carry_n_3;
-  wire adj_Pinc_byfreq0__566_carry__0_n_0;
-  wire adj_Pinc_byfreq0__566_carry__0_n_1;
-  wire adj_Pinc_byfreq0__566_carry__0_n_2;
-  wire adj_Pinc_byfreq0__566_carry__0_n_3;
-  wire adj_Pinc_byfreq0__566_carry__0_n_4;
-  wire adj_Pinc_byfreq0__566_carry__0_n_5;
-  wire adj_Pinc_byfreq0__566_carry__0_n_6;
-  wire adj_Pinc_byfreq0__566_carry__0_n_7;
-  wire adj_Pinc_byfreq0__566_carry__1_n_0;
-  wire adj_Pinc_byfreq0__566_carry__1_n_1;
-  wire adj_Pinc_byfreq0__566_carry__1_n_2;
-  wire adj_Pinc_byfreq0__566_carry__1_n_3;
-  wire adj_Pinc_byfreq0__566_carry__1_n_4;
-  wire adj_Pinc_byfreq0__566_carry__1_n_5;
-  wire adj_Pinc_byfreq0__566_carry__1_n_6;
-  wire adj_Pinc_byfreq0__566_carry__1_n_7;
-  wire adj_Pinc_byfreq0__566_carry__2_n_0;
-  wire adj_Pinc_byfreq0__566_carry__2_n_1;
-  wire adj_Pinc_byfreq0__566_carry__2_n_2;
-  wire adj_Pinc_byfreq0__566_carry__2_n_3;
-  wire adj_Pinc_byfreq0__566_carry__2_n_4;
-  wire adj_Pinc_byfreq0__566_carry__2_n_5;
-  wire adj_Pinc_byfreq0__566_carry__2_n_6;
-  wire adj_Pinc_byfreq0__566_carry__2_n_7;
-  wire adj_Pinc_byfreq0__566_carry__3_n_0;
-  wire adj_Pinc_byfreq0__566_carry__3_n_1;
-  wire adj_Pinc_byfreq0__566_carry__3_n_2;
-  wire adj_Pinc_byfreq0__566_carry__3_n_3;
-  wire adj_Pinc_byfreq0__566_carry__3_n_4;
-  wire adj_Pinc_byfreq0__566_carry__3_n_5;
-  wire adj_Pinc_byfreq0__566_carry__3_n_6;
-  wire adj_Pinc_byfreq0__566_carry__3_n_7;
-  wire adj_Pinc_byfreq0__566_carry__4_n_7;
-  wire adj_Pinc_byfreq0__566_carry_i_1_n_0;
-  wire adj_Pinc_byfreq0__566_carry_n_0;
-  wire adj_Pinc_byfreq0__566_carry_n_1;
-  wire adj_Pinc_byfreq0__566_carry_n_2;
-  wire adj_Pinc_byfreq0__566_carry_n_3;
-  wire adj_Pinc_byfreq0__566_carry_n_4;
-  wire adj_Pinc_byfreq0__566_carry_n_5;
-  wire adj_Pinc_byfreq0__566_carry_n_6;
-  wire adj_Pinc_byfreq0__566_carry_n_7;
-  wire adj_Pinc_byfreq0__89_carry__0_i_1_n_0;
-  wire adj_Pinc_byfreq0__89_carry__0_i_2_n_0;
-  wire adj_Pinc_byfreq0__89_carry__0_i_3_n_0;
-  wire adj_Pinc_byfreq0__89_carry__0_i_4_n_0;
-  wire adj_Pinc_byfreq0__89_carry__0_i_5_n_0;
-  wire adj_Pinc_byfreq0__89_carry__0_i_6_n_0;
-  wire adj_Pinc_byfreq0__89_carry__0_i_7_n_0;
-  wire adj_Pinc_byfreq0__89_carry__0_i_8_n_0;
-  wire adj_Pinc_byfreq0__89_carry__0_n_0;
-  wire adj_Pinc_byfreq0__89_carry__0_n_1;
-  wire adj_Pinc_byfreq0__89_carry__0_n_2;
-  wire adj_Pinc_byfreq0__89_carry__0_n_3;
-  wire adj_Pinc_byfreq0__89_carry__0_n_4;
-  wire adj_Pinc_byfreq0__89_carry__0_n_5;
-  wire adj_Pinc_byfreq0__89_carry__0_n_6;
-  wire adj_Pinc_byfreq0__89_carry__0_n_7;
-  wire adj_Pinc_byfreq0__89_carry__1_i_1_n_0;
-  wire adj_Pinc_byfreq0__89_carry__1_i_2_n_0;
-  wire adj_Pinc_byfreq0__89_carry__1_i_3_n_0;
-  wire adj_Pinc_byfreq0__89_carry__1_i_4_n_0;
-  wire adj_Pinc_byfreq0__89_carry__1_i_5_n_0;
-  wire adj_Pinc_byfreq0__89_carry__1_i_6_n_0;
-  wire adj_Pinc_byfreq0__89_carry__1_i_7_n_0;
-  wire adj_Pinc_byfreq0__89_carry__1_i_8_n_0;
-  wire adj_Pinc_byfreq0__89_carry__1_n_0;
-  wire adj_Pinc_byfreq0__89_carry__1_n_1;
-  wire adj_Pinc_byfreq0__89_carry__1_n_2;
-  wire adj_Pinc_byfreq0__89_carry__1_n_3;
-  wire adj_Pinc_byfreq0__89_carry__1_n_4;
-  wire adj_Pinc_byfreq0__89_carry__1_n_5;
-  wire adj_Pinc_byfreq0__89_carry__1_n_6;
-  wire adj_Pinc_byfreq0__89_carry__1_n_7;
-  wire adj_Pinc_byfreq0__89_carry__2_i_1_n_0;
-  wire adj_Pinc_byfreq0__89_carry__2_i_2_n_0;
-  wire adj_Pinc_byfreq0__89_carry__2_i_3_n_0;
-  wire adj_Pinc_byfreq0__89_carry__2_i_4_n_0;
-  wire adj_Pinc_byfreq0__89_carry__2_i_5_n_0;
-  wire adj_Pinc_byfreq0__89_carry__2_i_6_n_0;
-  wire adj_Pinc_byfreq0__89_carry__2_i_7_n_0;
-  wire adj_Pinc_byfreq0__89_carry__2_i_8_n_0;
-  wire adj_Pinc_byfreq0__89_carry__2_n_0;
-  wire adj_Pinc_byfreq0__89_carry__2_n_1;
-  wire adj_Pinc_byfreq0__89_carry__2_n_2;
-  wire adj_Pinc_byfreq0__89_carry__2_n_3;
-  wire adj_Pinc_byfreq0__89_carry__2_n_4;
-  wire adj_Pinc_byfreq0__89_carry__2_n_5;
-  wire adj_Pinc_byfreq0__89_carry__2_n_6;
-  wire adj_Pinc_byfreq0__89_carry__2_n_7;
-  wire adj_Pinc_byfreq0__89_carry__3_i_1_n_0;
-  wire adj_Pinc_byfreq0__89_carry__3_i_2_n_0;
-  wire adj_Pinc_byfreq0__89_carry__3_i_3_n_0;
-  wire adj_Pinc_byfreq0__89_carry__3_i_4_n_0;
-  wire adj_Pinc_byfreq0__89_carry__3_i_5_n_0;
-  wire adj_Pinc_byfreq0__89_carry__3_i_6_n_0;
-  wire adj_Pinc_byfreq0__89_carry__3_i_7_n_0;
-  wire adj_Pinc_byfreq0__89_carry__3_i_8_n_0;
-  wire adj_Pinc_byfreq0__89_carry__3_n_0;
-  wire adj_Pinc_byfreq0__89_carry__3_n_1;
-  wire adj_Pinc_byfreq0__89_carry__3_n_2;
-  wire adj_Pinc_byfreq0__89_carry__3_n_3;
-  wire adj_Pinc_byfreq0__89_carry__3_n_4;
-  wire adj_Pinc_byfreq0__89_carry__3_n_5;
-  wire adj_Pinc_byfreq0__89_carry__3_n_6;
-  wire adj_Pinc_byfreq0__89_carry__3_n_7;
-  wire adj_Pinc_byfreq0__89_carry__4_i_1_n_0;
-  wire adj_Pinc_byfreq0__89_carry__4_i_2_n_0;
-  wire adj_Pinc_byfreq0__89_carry__4_i_3_n_0;
-  wire adj_Pinc_byfreq0__89_carry__4_i_4_n_0;
-  wire adj_Pinc_byfreq0__89_carry__4_i_5_n_0;
-  wire adj_Pinc_byfreq0__89_carry__4_i_6_n_0;
-  wire adj_Pinc_byfreq0__89_carry__4_i_7_n_0;
-  wire adj_Pinc_byfreq0__89_carry__4_i_8_n_0;
-  wire adj_Pinc_byfreq0__89_carry__4_n_0;
-  wire adj_Pinc_byfreq0__89_carry__4_n_1;
-  wire adj_Pinc_byfreq0__89_carry__4_n_2;
-  wire adj_Pinc_byfreq0__89_carry__4_n_3;
-  wire adj_Pinc_byfreq0__89_carry__4_n_4;
-  wire adj_Pinc_byfreq0__89_carry__4_n_5;
-  wire adj_Pinc_byfreq0__89_carry__4_n_6;
-  wire adj_Pinc_byfreq0__89_carry__4_n_7;
-  wire adj_Pinc_byfreq0__89_carry__5_i_1_n_0;
-  wire adj_Pinc_byfreq0__89_carry__5_i_2_n_0;
-  wire adj_Pinc_byfreq0__89_carry__5_i_3_n_0;
-  wire adj_Pinc_byfreq0__89_carry__5_i_4_n_0;
-  wire adj_Pinc_byfreq0__89_carry__5_i_5_n_0;
-  wire adj_Pinc_byfreq0__89_carry__5_i_6_n_0;
-  wire adj_Pinc_byfreq0__89_carry__5_i_7_n_0;
-  wire adj_Pinc_byfreq0__89_carry__5_i_8_n_0;
-  wire adj_Pinc_byfreq0__89_carry__5_n_0;
-  wire adj_Pinc_byfreq0__89_carry__5_n_1;
-  wire adj_Pinc_byfreq0__89_carry__5_n_2;
-  wire adj_Pinc_byfreq0__89_carry__5_n_3;
-  wire adj_Pinc_byfreq0__89_carry__5_n_4;
-  wire adj_Pinc_byfreq0__89_carry__5_n_5;
-  wire adj_Pinc_byfreq0__89_carry__5_n_6;
-  wire adj_Pinc_byfreq0__89_carry__5_n_7;
-  wire adj_Pinc_byfreq0__89_carry__6_i_1_n_0;
-  wire adj_Pinc_byfreq0__89_carry__6_n_1;
-  wire adj_Pinc_byfreq0__89_carry__6_n_3;
-  wire adj_Pinc_byfreq0__89_carry__6_n_6;
-  wire adj_Pinc_byfreq0__89_carry__6_n_7;
-  wire adj_Pinc_byfreq0__89_carry_i_1_n_0;
-  wire adj_Pinc_byfreq0__89_carry_i_2_n_0;
-  wire adj_Pinc_byfreq0__89_carry_i_3_n_0;
-  wire adj_Pinc_byfreq0__89_carry_n_0;
-  wire adj_Pinc_byfreq0__89_carry_n_1;
-  wire adj_Pinc_byfreq0__89_carry_n_2;
-  wire adj_Pinc_byfreq0__89_carry_n_3;
-  wire adj_Pinc_byfreq0__89_carry_n_4;
-  wire adj_Pinc_byfreq0__89_carry_n_5;
-  wire adj_Pinc_byfreq0__89_carry_n_6;
-  wire adj_Pinc_byfreq0__89_carry_n_7;
+  wire adj_Pinc_byfreq0__234_carry__0_i_10_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_11_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_12_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_13_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_14_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_15_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_16_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_17_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_1_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_2_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_3_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_4_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_5_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_6_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_7_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_8_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_9_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_i_9_n_1;
+  wire adj_Pinc_byfreq0__234_carry__0_i_9_n_2;
+  wire adj_Pinc_byfreq0__234_carry__0_i_9_n_3;
+  wire adj_Pinc_byfreq0__234_carry__0_i_9_n_4;
+  wire adj_Pinc_byfreq0__234_carry__0_i_9_n_5;
+  wire adj_Pinc_byfreq0__234_carry__0_i_9_n_6;
+  wire adj_Pinc_byfreq0__234_carry__0_i_9_n_7;
+  wire adj_Pinc_byfreq0__234_carry__0_n_0;
+  wire adj_Pinc_byfreq0__234_carry__0_n_1;
+  wire adj_Pinc_byfreq0__234_carry__0_n_2;
+  wire adj_Pinc_byfreq0__234_carry__0_n_3;
+  wire adj_Pinc_byfreq0__234_carry__1_i_10_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_11_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_11_n_1;
+  wire adj_Pinc_byfreq0__234_carry__1_i_11_n_2;
+  wire adj_Pinc_byfreq0__234_carry__1_i_11_n_3;
+  wire adj_Pinc_byfreq0__234_carry__1_i_11_n_4;
+  wire adj_Pinc_byfreq0__234_carry__1_i_11_n_5;
+  wire adj_Pinc_byfreq0__234_carry__1_i_11_n_6;
+  wire adj_Pinc_byfreq0__234_carry__1_i_11_n_7;
+  wire adj_Pinc_byfreq0__234_carry__1_i_12_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_13_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_14_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_15_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_16_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_17_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_18_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_19_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_1_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_20_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_2_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_3_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_4_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_5_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_6_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_7_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_8_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_i_9_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_n_0;
+  wire adj_Pinc_byfreq0__234_carry__1_n_1;
+  wire adj_Pinc_byfreq0__234_carry__1_n_2;
+  wire adj_Pinc_byfreq0__234_carry__1_n_3;
+  wire adj_Pinc_byfreq0__234_carry__2_i_10_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_11_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_12_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_13_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_13_n_1;
+  wire adj_Pinc_byfreq0__234_carry__2_i_13_n_2;
+  wire adj_Pinc_byfreq0__234_carry__2_i_13_n_3;
+  wire adj_Pinc_byfreq0__234_carry__2_i_13_n_4;
+  wire adj_Pinc_byfreq0__234_carry__2_i_13_n_5;
+  wire adj_Pinc_byfreq0__234_carry__2_i_13_n_6;
+  wire adj_Pinc_byfreq0__234_carry__2_i_13_n_7;
+  wire adj_Pinc_byfreq0__234_carry__2_i_14_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_15_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_16_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_17_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_18_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_19_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_1_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_20_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_21_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_2_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_3_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_4_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_5_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_6_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_7_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_8_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_i_9_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_n_0;
+  wire adj_Pinc_byfreq0__234_carry__2_n_1;
+  wire adj_Pinc_byfreq0__234_carry__2_n_2;
+  wire adj_Pinc_byfreq0__234_carry__2_n_3;
+  wire adj_Pinc_byfreq0__234_carry__2_n_4;
+  wire adj_Pinc_byfreq0__234_carry__2_n_5;
+  wire adj_Pinc_byfreq0__234_carry__3_i_10_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_11_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_12_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_13_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_13_n_1;
+  wire adj_Pinc_byfreq0__234_carry__3_i_13_n_2;
+  wire adj_Pinc_byfreq0__234_carry__3_i_13_n_3;
+  wire adj_Pinc_byfreq0__234_carry__3_i_13_n_4;
+  wire adj_Pinc_byfreq0__234_carry__3_i_13_n_5;
+  wire adj_Pinc_byfreq0__234_carry__3_i_13_n_6;
+  wire adj_Pinc_byfreq0__234_carry__3_i_13_n_7;
+  wire adj_Pinc_byfreq0__234_carry__3_i_14_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_15_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_16_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_17_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_18_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_19_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_1_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_20_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_21_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_2_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_3_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_4_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_5_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_6_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_7_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_8_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_i_9_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_n_0;
+  wire adj_Pinc_byfreq0__234_carry__3_n_1;
+  wire adj_Pinc_byfreq0__234_carry__3_n_2;
+  wire adj_Pinc_byfreq0__234_carry__3_n_3;
+  wire adj_Pinc_byfreq0__234_carry__3_n_4;
+  wire adj_Pinc_byfreq0__234_carry__3_n_5;
+  wire adj_Pinc_byfreq0__234_carry__3_n_6;
+  wire adj_Pinc_byfreq0__234_carry__3_n_7;
+  wire adj_Pinc_byfreq0__234_carry__4_i_10_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_11_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_12_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_13_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_14_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_15_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_16_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_17_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_18_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_19_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_1_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_20_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_21_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_2_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_3_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_4_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_5_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_6_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_7_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_8_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_9_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_i_9_n_1;
+  wire adj_Pinc_byfreq0__234_carry__4_i_9_n_2;
+  wire adj_Pinc_byfreq0__234_carry__4_i_9_n_3;
+  wire adj_Pinc_byfreq0__234_carry__4_i_9_n_4;
+  wire adj_Pinc_byfreq0__234_carry__4_i_9_n_5;
+  wire adj_Pinc_byfreq0__234_carry__4_i_9_n_6;
+  wire adj_Pinc_byfreq0__234_carry__4_i_9_n_7;
+  wire adj_Pinc_byfreq0__234_carry__4_n_0;
+  wire adj_Pinc_byfreq0__234_carry__4_n_1;
+  wire adj_Pinc_byfreq0__234_carry__4_n_2;
+  wire adj_Pinc_byfreq0__234_carry__4_n_3;
+  wire adj_Pinc_byfreq0__234_carry__4_n_4;
+  wire adj_Pinc_byfreq0__234_carry__4_n_5;
+  wire adj_Pinc_byfreq0__234_carry__4_n_6;
+  wire adj_Pinc_byfreq0__234_carry__4_n_7;
+  wire adj_Pinc_byfreq0__234_carry__5_i_10_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_11_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_12_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_13_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_14_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_15_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_16_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_17_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_18_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_19_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_1_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_20_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_2_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_3_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_4_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_5_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_6_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_7_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_8_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_9_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_i_9_n_1;
+  wire adj_Pinc_byfreq0__234_carry__5_i_9_n_2;
+  wire adj_Pinc_byfreq0__234_carry__5_i_9_n_3;
+  wire adj_Pinc_byfreq0__234_carry__5_i_9_n_4;
+  wire adj_Pinc_byfreq0__234_carry__5_i_9_n_5;
+  wire adj_Pinc_byfreq0__234_carry__5_i_9_n_6;
+  wire adj_Pinc_byfreq0__234_carry__5_i_9_n_7;
+  wire adj_Pinc_byfreq0__234_carry__5_n_0;
+  wire adj_Pinc_byfreq0__234_carry__5_n_1;
+  wire adj_Pinc_byfreq0__234_carry__5_n_2;
+  wire adj_Pinc_byfreq0__234_carry__5_n_3;
+  wire adj_Pinc_byfreq0__234_carry__5_n_4;
+  wire adj_Pinc_byfreq0__234_carry__5_n_5;
+  wire adj_Pinc_byfreq0__234_carry__5_n_6;
+  wire adj_Pinc_byfreq0__234_carry__5_n_7;
+  wire adj_Pinc_byfreq0__234_carry__6_i_10_n_1;
+  wire adj_Pinc_byfreq0__234_carry__6_i_10_n_3;
+  wire adj_Pinc_byfreq0__234_carry__6_i_10_n_6;
+  wire adj_Pinc_byfreq0__234_carry__6_i_10_n_7;
+  wire adj_Pinc_byfreq0__234_carry__6_i_11_n_0;
+  wire adj_Pinc_byfreq0__234_carry__6_i_12_n_0;
+  wire adj_Pinc_byfreq0__234_carry__6_i_1_n_0;
+  wire adj_Pinc_byfreq0__234_carry__6_i_2_n_0;
+  wire adj_Pinc_byfreq0__234_carry__6_i_3_n_0;
+  wire adj_Pinc_byfreq0__234_carry__6_i_4_n_0;
+  wire adj_Pinc_byfreq0__234_carry__6_i_5_n_0;
+  wire adj_Pinc_byfreq0__234_carry__6_i_6_n_0;
+  wire adj_Pinc_byfreq0__234_carry__6_i_7_n_0;
+  wire adj_Pinc_byfreq0__234_carry__6_i_8_n_0;
+  wire adj_Pinc_byfreq0__234_carry__6_i_9_n_3;
+  wire adj_Pinc_byfreq0__234_carry__6_n_0;
+  wire adj_Pinc_byfreq0__234_carry__6_n_1;
+  wire adj_Pinc_byfreq0__234_carry__6_n_2;
+  wire adj_Pinc_byfreq0__234_carry__6_n_3;
+  wire adj_Pinc_byfreq0__234_carry__6_n_4;
+  wire adj_Pinc_byfreq0__234_carry__6_n_5;
+  wire adj_Pinc_byfreq0__234_carry__6_n_6;
+  wire adj_Pinc_byfreq0__234_carry__6_n_7;
+  wire adj_Pinc_byfreq0__234_carry__7_i_1_n_0;
+  wire adj_Pinc_byfreq0__234_carry__7_i_2_n_0;
+  wire adj_Pinc_byfreq0__234_carry__7_i_3_n_0;
+  wire adj_Pinc_byfreq0__234_carry__7_n_3;
+  wire adj_Pinc_byfreq0__234_carry__7_n_6;
+  wire adj_Pinc_byfreq0__234_carry__7_n_7;
+  wire adj_Pinc_byfreq0__234_carry_i_10_n_0;
+  wire adj_Pinc_byfreq0__234_carry_i_11_n_0;
+  wire adj_Pinc_byfreq0__234_carry_i_12_n_0;
+  wire adj_Pinc_byfreq0__234_carry_i_1_n_0;
+  wire adj_Pinc_byfreq0__234_carry_i_2_n_0;
+  wire adj_Pinc_byfreq0__234_carry_i_3_n_0;
+  wire adj_Pinc_byfreq0__234_carry_i_4_n_0;
+  wire adj_Pinc_byfreq0__234_carry_i_5_n_0;
+  wire adj_Pinc_byfreq0__234_carry_i_6_n_0;
+  wire adj_Pinc_byfreq0__234_carry_i_7_n_0;
+  wire adj_Pinc_byfreq0__234_carry_i_8_n_0;
+  wire adj_Pinc_byfreq0__234_carry_i_9_n_0;
+  wire adj_Pinc_byfreq0__234_carry_i_9_n_1;
+  wire adj_Pinc_byfreq0__234_carry_i_9_n_2;
+  wire adj_Pinc_byfreq0__234_carry_i_9_n_3;
+  wire adj_Pinc_byfreq0__234_carry_i_9_n_4;
+  wire adj_Pinc_byfreq0__234_carry_i_9_n_5;
+  wire adj_Pinc_byfreq0__234_carry_i_9_n_6;
+  wire adj_Pinc_byfreq0__234_carry_n_0;
+  wire adj_Pinc_byfreq0__234_carry_n_1;
+  wire adj_Pinc_byfreq0__234_carry_n_2;
+  wire adj_Pinc_byfreq0__234_carry_n_3;
+  wire adj_Pinc_byfreq0__320_carry__0_i_1_n_0;
+  wire adj_Pinc_byfreq0__320_carry__0_i_2_n_0;
+  wire adj_Pinc_byfreq0__320_carry__0_i_3_n_0;
+  wire adj_Pinc_byfreq0__320_carry__0_i_4_n_0;
+  wire adj_Pinc_byfreq0__320_carry__0_i_5_n_0;
+  wire adj_Pinc_byfreq0__320_carry__0_i_6_n_0;
+  wire adj_Pinc_byfreq0__320_carry__0_i_7_n_0;
+  wire adj_Pinc_byfreq0__320_carry__0_i_8_n_0;
+  wire adj_Pinc_byfreq0__320_carry__0_n_0;
+  wire adj_Pinc_byfreq0__320_carry__0_n_1;
+  wire adj_Pinc_byfreq0__320_carry__0_n_2;
+  wire adj_Pinc_byfreq0__320_carry__0_n_3;
+  wire adj_Pinc_byfreq0__320_carry__0_n_4;
+  wire adj_Pinc_byfreq0__320_carry__0_n_5;
+  wire adj_Pinc_byfreq0__320_carry__0_n_6;
+  wire adj_Pinc_byfreq0__320_carry__0_n_7;
+  wire adj_Pinc_byfreq0__320_carry__1_i_1_n_0;
+  wire adj_Pinc_byfreq0__320_carry__1_i_2_n_0;
+  wire adj_Pinc_byfreq0__320_carry__1_i_3_n_0;
+  wire adj_Pinc_byfreq0__320_carry__1_i_4_n_0;
+  wire adj_Pinc_byfreq0__320_carry__1_i_5_n_0;
+  wire adj_Pinc_byfreq0__320_carry__1_i_6_n_0;
+  wire adj_Pinc_byfreq0__320_carry__1_i_7_n_0;
+  wire adj_Pinc_byfreq0__320_carry__1_i_8_n_0;
+  wire adj_Pinc_byfreq0__320_carry__1_n_0;
+  wire adj_Pinc_byfreq0__320_carry__1_n_1;
+  wire adj_Pinc_byfreq0__320_carry__1_n_2;
+  wire adj_Pinc_byfreq0__320_carry__1_n_3;
+  wire adj_Pinc_byfreq0__320_carry__1_n_4;
+  wire adj_Pinc_byfreq0__320_carry__1_n_5;
+  wire adj_Pinc_byfreq0__320_carry__1_n_6;
+  wire adj_Pinc_byfreq0__320_carry__1_n_7;
+  wire adj_Pinc_byfreq0__320_carry__2_i_1_n_0;
+  wire adj_Pinc_byfreq0__320_carry__2_i_2_n_0;
+  wire adj_Pinc_byfreq0__320_carry__2_i_3_n_0;
+  wire adj_Pinc_byfreq0__320_carry__2_i_4_n_0;
+  wire adj_Pinc_byfreq0__320_carry__2_i_5_n_0;
+  wire adj_Pinc_byfreq0__320_carry__2_i_6_n_0;
+  wire adj_Pinc_byfreq0__320_carry__2_i_7_n_0;
+  wire adj_Pinc_byfreq0__320_carry__2_i_8_n_0;
+  wire adj_Pinc_byfreq0__320_carry__2_n_0;
+  wire adj_Pinc_byfreq0__320_carry__2_n_1;
+  wire adj_Pinc_byfreq0__320_carry__2_n_2;
+  wire adj_Pinc_byfreq0__320_carry__2_n_3;
+  wire adj_Pinc_byfreq0__320_carry__2_n_4;
+  wire adj_Pinc_byfreq0__320_carry__2_n_5;
+  wire adj_Pinc_byfreq0__320_carry__2_n_6;
+  wire adj_Pinc_byfreq0__320_carry__2_n_7;
+  wire adj_Pinc_byfreq0__320_carry__3_i_1_n_0;
+  wire adj_Pinc_byfreq0__320_carry__3_i_2_n_0;
+  wire adj_Pinc_byfreq0__320_carry__3_i_3_n_0;
+  wire adj_Pinc_byfreq0__320_carry__3_i_4_n_0;
+  wire adj_Pinc_byfreq0__320_carry__3_i_5_n_0;
+  wire adj_Pinc_byfreq0__320_carry__3_i_6_n_0;
+  wire adj_Pinc_byfreq0__320_carry__3_i_7_n_0;
+  wire adj_Pinc_byfreq0__320_carry__3_i_8_n_0;
+  wire adj_Pinc_byfreq0__320_carry__3_n_0;
+  wire adj_Pinc_byfreq0__320_carry__3_n_1;
+  wire adj_Pinc_byfreq0__320_carry__3_n_2;
+  wire adj_Pinc_byfreq0__320_carry__3_n_3;
+  wire adj_Pinc_byfreq0__320_carry__3_n_4;
+  wire adj_Pinc_byfreq0__320_carry__3_n_5;
+  wire adj_Pinc_byfreq0__320_carry__3_n_6;
+  wire adj_Pinc_byfreq0__320_carry__3_n_7;
+  wire adj_Pinc_byfreq0__320_carry__4_i_1_n_0;
+  wire adj_Pinc_byfreq0__320_carry__4_n_7;
+  wire adj_Pinc_byfreq0__320_carry_i_1_n_0;
+  wire adj_Pinc_byfreq0__320_carry_i_2_n_0;
+  wire adj_Pinc_byfreq0__320_carry_i_3_n_0;
+  wire adj_Pinc_byfreq0__320_carry_i_4_n_0;
+  wire adj_Pinc_byfreq0__320_carry_i_5_n_0;
+  wire adj_Pinc_byfreq0__320_carry_i_6_n_0;
+  wire adj_Pinc_byfreq0__320_carry_i_7_n_0;
+  wire adj_Pinc_byfreq0__320_carry_n_0;
+  wire adj_Pinc_byfreq0__320_carry_n_1;
+  wire adj_Pinc_byfreq0__320_carry_n_2;
+  wire adj_Pinc_byfreq0__320_carry_n_3;
+  wire adj_Pinc_byfreq0__320_carry_n_4;
+  wire adj_Pinc_byfreq0__320_carry_n_5;
+  wire adj_Pinc_byfreq0__320_carry_n_6;
+  wire adj_Pinc_byfreq0__320_carry_n_7;
+  wire adj_Pinc_byfreq0__381_carry__0_i_1_n_0;
+  wire adj_Pinc_byfreq0__381_carry__0_i_2_n_0;
+  wire adj_Pinc_byfreq0__381_carry__0_i_3_n_0;
+  wire adj_Pinc_byfreq0__381_carry__0_i_4_n_0;
+  wire adj_Pinc_byfreq0__381_carry__0_i_5_n_0;
+  wire adj_Pinc_byfreq0__381_carry__0_i_6_n_0;
+  wire adj_Pinc_byfreq0__381_carry__0_i_7_n_0;
+  wire adj_Pinc_byfreq0__381_carry__0_i_8_n_0;
+  wire adj_Pinc_byfreq0__381_carry__0_n_0;
+  wire adj_Pinc_byfreq0__381_carry__0_n_1;
+  wire adj_Pinc_byfreq0__381_carry__0_n_2;
+  wire adj_Pinc_byfreq0__381_carry__0_n_3;
+  wire adj_Pinc_byfreq0__381_carry__1_i_1_n_0;
+  wire adj_Pinc_byfreq0__381_carry__1_i_2_n_0;
+  wire adj_Pinc_byfreq0__381_carry__1_i_3_n_0;
+  wire adj_Pinc_byfreq0__381_carry__1_i_4_n_0;
+  wire adj_Pinc_byfreq0__381_carry__1_i_5_n_0;
+  wire adj_Pinc_byfreq0__381_carry__1_i_6_n_0;
+  wire adj_Pinc_byfreq0__381_carry__1_i_7_n_0;
+  wire adj_Pinc_byfreq0__381_carry__1_i_8_n_0;
+  wire adj_Pinc_byfreq0__381_carry__1_n_0;
+  wire adj_Pinc_byfreq0__381_carry__1_n_1;
+  wire adj_Pinc_byfreq0__381_carry__1_n_2;
+  wire adj_Pinc_byfreq0__381_carry__1_n_3;
+  wire adj_Pinc_byfreq0__381_carry__2_i_1_n_0;
+  wire adj_Pinc_byfreq0__381_carry__2_i_2_n_0;
+  wire adj_Pinc_byfreq0__381_carry__2_i_3_n_0;
+  wire adj_Pinc_byfreq0__381_carry__2_i_4_n_0;
+  wire adj_Pinc_byfreq0__381_carry__2_i_5_n_0;
+  wire adj_Pinc_byfreq0__381_carry__2_i_6_n_0;
+  wire adj_Pinc_byfreq0__381_carry__2_i_7_n_0;
+  wire adj_Pinc_byfreq0__381_carry__2_i_8_n_0;
+  wire adj_Pinc_byfreq0__381_carry__2_n_0;
+  wire adj_Pinc_byfreq0__381_carry__2_n_1;
+  wire adj_Pinc_byfreq0__381_carry__2_n_2;
+  wire adj_Pinc_byfreq0__381_carry__2_n_3;
+  wire adj_Pinc_byfreq0__381_carry__3_i_1_n_0;
+  wire adj_Pinc_byfreq0__381_carry__3_i_2_n_0;
+  wire adj_Pinc_byfreq0__381_carry__3_i_3_n_0;
+  wire adj_Pinc_byfreq0__381_carry__3_i_4_n_0;
+  wire adj_Pinc_byfreq0__381_carry__3_i_5_n_0;
+  wire adj_Pinc_byfreq0__381_carry__3_i_6_n_0;
+  wire adj_Pinc_byfreq0__381_carry__3_i_7_n_0;
+  wire adj_Pinc_byfreq0__381_carry__3_i_8_n_0;
+  wire adj_Pinc_byfreq0__381_carry__3_n_0;
+  wire adj_Pinc_byfreq0__381_carry__3_n_1;
+  wire adj_Pinc_byfreq0__381_carry__3_n_2;
+  wire adj_Pinc_byfreq0__381_carry__3_n_3;
+  wire adj_Pinc_byfreq0__381_carry__4_i_1_n_0;
+  wire adj_Pinc_byfreq0__381_carry__4_i_2_n_0;
+  wire adj_Pinc_byfreq0__381_carry__4_i_3_n_0;
+  wire adj_Pinc_byfreq0__381_carry__4_i_4_n_0;
+  wire adj_Pinc_byfreq0__381_carry__4_i_5_n_0;
+  wire adj_Pinc_byfreq0__381_carry__4_i_6_n_0;
+  wire adj_Pinc_byfreq0__381_carry__4_n_1;
+  wire adj_Pinc_byfreq0__381_carry__4_n_2;
+  wire adj_Pinc_byfreq0__381_carry__4_n_3;
+  wire adj_Pinc_byfreq0__381_carry_i_1_n_0;
+  wire adj_Pinc_byfreq0__381_carry_i_2_n_0;
+  wire adj_Pinc_byfreq0__381_carry_i_3_n_0;
+  wire adj_Pinc_byfreq0__381_carry_i_4_n_0;
+  wire adj_Pinc_byfreq0__381_carry_i_5_n_0;
+  wire adj_Pinc_byfreq0__381_carry_i_6_n_0;
+  wire adj_Pinc_byfreq0__381_carry_i_7_n_0;
+  wire adj_Pinc_byfreq0__381_carry_n_0;
+  wire adj_Pinc_byfreq0__381_carry_n_1;
+  wire adj_Pinc_byfreq0__381_carry_n_2;
+  wire adj_Pinc_byfreq0__381_carry_n_3;
+  wire adj_Pinc_byfreq0__426_carry__0_n_0;
+  wire adj_Pinc_byfreq0__426_carry__0_n_1;
+  wire adj_Pinc_byfreq0__426_carry__0_n_2;
+  wire adj_Pinc_byfreq0__426_carry__0_n_3;
+  wire adj_Pinc_byfreq0__426_carry__0_n_4;
+  wire adj_Pinc_byfreq0__426_carry__0_n_5;
+  wire adj_Pinc_byfreq0__426_carry__0_n_6;
+  wire adj_Pinc_byfreq0__426_carry__0_n_7;
+  wire adj_Pinc_byfreq0__426_carry__1_n_0;
+  wire adj_Pinc_byfreq0__426_carry__1_n_1;
+  wire adj_Pinc_byfreq0__426_carry__1_n_2;
+  wire adj_Pinc_byfreq0__426_carry__1_n_3;
+  wire adj_Pinc_byfreq0__426_carry__1_n_4;
+  wire adj_Pinc_byfreq0__426_carry__1_n_5;
+  wire adj_Pinc_byfreq0__426_carry__1_n_6;
+  wire adj_Pinc_byfreq0__426_carry__1_n_7;
+  wire adj_Pinc_byfreq0__426_carry__2_n_0;
+  wire adj_Pinc_byfreq0__426_carry__2_n_1;
+  wire adj_Pinc_byfreq0__426_carry__2_n_2;
+  wire adj_Pinc_byfreq0__426_carry__2_n_3;
+  wire adj_Pinc_byfreq0__426_carry__2_n_4;
+  wire adj_Pinc_byfreq0__426_carry__2_n_5;
+  wire adj_Pinc_byfreq0__426_carry__2_n_6;
+  wire adj_Pinc_byfreq0__426_carry__2_n_7;
+  wire adj_Pinc_byfreq0__426_carry__3_n_1;
+  wire adj_Pinc_byfreq0__426_carry__3_n_2;
+  wire adj_Pinc_byfreq0__426_carry__3_n_3;
+  wire adj_Pinc_byfreq0__426_carry__3_n_4;
+  wire adj_Pinc_byfreq0__426_carry__3_n_5;
+  wire adj_Pinc_byfreq0__426_carry__3_n_6;
+  wire adj_Pinc_byfreq0__426_carry__3_n_7;
+  wire adj_Pinc_byfreq0__426_carry_i_1_n_0;
+  wire adj_Pinc_byfreq0__426_carry_n_0;
+  wire adj_Pinc_byfreq0__426_carry_n_1;
+  wire adj_Pinc_byfreq0__426_carry_n_2;
+  wire adj_Pinc_byfreq0__426_carry_n_3;
+  wire adj_Pinc_byfreq0__426_carry_n_4;
+  wire adj_Pinc_byfreq0__426_carry_n_5;
+  wire adj_Pinc_byfreq0__426_carry_n_6;
+  wire adj_Pinc_byfreq0__426_carry_n_7;
+  wire adj_Pinc_byfreq0__67_carry__0_i_1_n_0;
+  wire adj_Pinc_byfreq0__67_carry__0_i_2_n_0;
+  wire adj_Pinc_byfreq0__67_carry__0_i_3_n_0;
+  wire adj_Pinc_byfreq0__67_carry__0_i_4_n_0;
+  wire adj_Pinc_byfreq0__67_carry__0_i_5_n_0;
+  wire adj_Pinc_byfreq0__67_carry__0_i_6_n_0;
+  wire adj_Pinc_byfreq0__67_carry__0_i_7_n_0;
+  wire adj_Pinc_byfreq0__67_carry__0_i_8_n_0;
+  wire adj_Pinc_byfreq0__67_carry__0_n_0;
+  wire adj_Pinc_byfreq0__67_carry__0_n_1;
+  wire adj_Pinc_byfreq0__67_carry__0_n_2;
+  wire adj_Pinc_byfreq0__67_carry__0_n_3;
+  wire adj_Pinc_byfreq0__67_carry__0_n_4;
+  wire adj_Pinc_byfreq0__67_carry__0_n_5;
+  wire adj_Pinc_byfreq0__67_carry__0_n_6;
+  wire adj_Pinc_byfreq0__67_carry__0_n_7;
+  wire adj_Pinc_byfreq0__67_carry__1_i_1_n_0;
+  wire adj_Pinc_byfreq0__67_carry__1_i_2_n_0;
+  wire adj_Pinc_byfreq0__67_carry__1_i_3_n_0;
+  wire adj_Pinc_byfreq0__67_carry__1_i_4_n_0;
+  wire adj_Pinc_byfreq0__67_carry__1_i_5_n_0;
+  wire adj_Pinc_byfreq0__67_carry__1_i_6_n_0;
+  wire adj_Pinc_byfreq0__67_carry__1_i_7_n_0;
+  wire adj_Pinc_byfreq0__67_carry__1_i_8_n_0;
+  wire adj_Pinc_byfreq0__67_carry__1_n_0;
+  wire adj_Pinc_byfreq0__67_carry__1_n_1;
+  wire adj_Pinc_byfreq0__67_carry__1_n_2;
+  wire adj_Pinc_byfreq0__67_carry__1_n_3;
+  wire adj_Pinc_byfreq0__67_carry__1_n_4;
+  wire adj_Pinc_byfreq0__67_carry__1_n_5;
+  wire adj_Pinc_byfreq0__67_carry__1_n_6;
+  wire adj_Pinc_byfreq0__67_carry__1_n_7;
+  wire adj_Pinc_byfreq0__67_carry__2_i_1_n_0;
+  wire adj_Pinc_byfreq0__67_carry__2_i_2_n_0;
+  wire adj_Pinc_byfreq0__67_carry__2_i_3_n_0;
+  wire adj_Pinc_byfreq0__67_carry__2_i_4_n_0;
+  wire adj_Pinc_byfreq0__67_carry__2_i_5_n_0;
+  wire adj_Pinc_byfreq0__67_carry__2_i_6_n_0;
+  wire adj_Pinc_byfreq0__67_carry__2_i_7_n_0;
+  wire adj_Pinc_byfreq0__67_carry__2_i_8_n_0;
+  wire adj_Pinc_byfreq0__67_carry__2_n_0;
+  wire adj_Pinc_byfreq0__67_carry__2_n_1;
+  wire adj_Pinc_byfreq0__67_carry__2_n_2;
+  wire adj_Pinc_byfreq0__67_carry__2_n_3;
+  wire adj_Pinc_byfreq0__67_carry__2_n_4;
+  wire adj_Pinc_byfreq0__67_carry__2_n_5;
+  wire adj_Pinc_byfreq0__67_carry__2_n_6;
+  wire adj_Pinc_byfreq0__67_carry__2_n_7;
+  wire adj_Pinc_byfreq0__67_carry__3_i_1_n_0;
+  wire adj_Pinc_byfreq0__67_carry__3_i_2_n_0;
+  wire adj_Pinc_byfreq0__67_carry__3_i_3_n_0;
+  wire adj_Pinc_byfreq0__67_carry__3_i_4_n_0;
+  wire adj_Pinc_byfreq0__67_carry__3_i_5_n_0;
+  wire adj_Pinc_byfreq0__67_carry__3_i_6_n_0;
+  wire adj_Pinc_byfreq0__67_carry__3_i_7_n_0;
+  wire adj_Pinc_byfreq0__67_carry__3_i_8_n_0;
+  wire adj_Pinc_byfreq0__67_carry__3_n_0;
+  wire adj_Pinc_byfreq0__67_carry__3_n_1;
+  wire adj_Pinc_byfreq0__67_carry__3_n_2;
+  wire adj_Pinc_byfreq0__67_carry__3_n_3;
+  wire adj_Pinc_byfreq0__67_carry__3_n_4;
+  wire adj_Pinc_byfreq0__67_carry__3_n_5;
+  wire adj_Pinc_byfreq0__67_carry__3_n_6;
+  wire adj_Pinc_byfreq0__67_carry__3_n_7;
+  wire adj_Pinc_byfreq0__67_carry__4_i_1_n_0;
+  wire adj_Pinc_byfreq0__67_carry__4_i_2_n_0;
+  wire adj_Pinc_byfreq0__67_carry__4_i_3_n_0;
+  wire adj_Pinc_byfreq0__67_carry__4_i_4_n_0;
+  wire adj_Pinc_byfreq0__67_carry__4_i_5_n_0;
+  wire adj_Pinc_byfreq0__67_carry__4_i_6_n_0;
+  wire adj_Pinc_byfreq0__67_carry__4_i_7_n_0;
+  wire adj_Pinc_byfreq0__67_carry__4_i_8_n_0;
+  wire adj_Pinc_byfreq0__67_carry__4_n_0;
+  wire adj_Pinc_byfreq0__67_carry__4_n_1;
+  wire adj_Pinc_byfreq0__67_carry__4_n_2;
+  wire adj_Pinc_byfreq0__67_carry__4_n_3;
+  wire adj_Pinc_byfreq0__67_carry__4_n_4;
+  wire adj_Pinc_byfreq0__67_carry__4_n_5;
+  wire adj_Pinc_byfreq0__67_carry__4_n_6;
+  wire adj_Pinc_byfreq0__67_carry__4_n_7;
+  wire adj_Pinc_byfreq0__67_carry__5_i_1_n_0;
+  wire adj_Pinc_byfreq0__67_carry__5_i_2_n_0;
+  wire adj_Pinc_byfreq0__67_carry__5_i_3_n_0;
+  wire adj_Pinc_byfreq0__67_carry__5_i_4_n_0;
+  wire adj_Pinc_byfreq0__67_carry__5_i_5_n_0;
+  wire adj_Pinc_byfreq0__67_carry__5_i_6_n_0;
+  wire adj_Pinc_byfreq0__67_carry__5_n_0;
+  wire adj_Pinc_byfreq0__67_carry__5_n_1;
+  wire adj_Pinc_byfreq0__67_carry__5_n_2;
+  wire adj_Pinc_byfreq0__67_carry__5_n_3;
+  wire adj_Pinc_byfreq0__67_carry__5_n_4;
+  wire adj_Pinc_byfreq0__67_carry__5_n_5;
+  wire adj_Pinc_byfreq0__67_carry__5_n_6;
+  wire adj_Pinc_byfreq0__67_carry__5_n_7;
+  wire adj_Pinc_byfreq0__67_carry_i_1_n_0;
+  wire adj_Pinc_byfreq0__67_carry_i_2_n_0;
+  wire adj_Pinc_byfreq0__67_carry_i_3_n_0;
+  wire adj_Pinc_byfreq0__67_carry_i_4_n_0;
+  wire adj_Pinc_byfreq0__67_carry_n_0;
+  wire adj_Pinc_byfreq0__67_carry_n_1;
+  wire adj_Pinc_byfreq0__67_carry_n_2;
+  wire adj_Pinc_byfreq0__67_carry_n_3;
+  wire adj_Pinc_byfreq0__67_carry_n_4;
+  wire adj_Pinc_byfreq0__67_carry_n_5;
+  wire adj_Pinc_byfreq0__67_carry_n_6;
+  wire adj_Pinc_byfreq0__67_carry_n_7;
+  wire adj_Pinc_byfreq0_carry__0_i_1_n_0;
+  wire adj_Pinc_byfreq0_carry__0_i_2_n_0;
+  wire adj_Pinc_byfreq0_carry__0_i_3_n_0;
+  wire adj_Pinc_byfreq0_carry__0_i_4_n_0;
+  wire adj_Pinc_byfreq0_carry__0_n_0;
+  wire adj_Pinc_byfreq0_carry__0_n_1;
+  wire adj_Pinc_byfreq0_carry__0_n_2;
+  wire adj_Pinc_byfreq0_carry__0_n_3;
+  wire adj_Pinc_byfreq0_carry__0_n_4;
+  wire adj_Pinc_byfreq0_carry__0_n_5;
+  wire adj_Pinc_byfreq0_carry__0_n_6;
+  wire adj_Pinc_byfreq0_carry__0_n_7;
+  wire adj_Pinc_byfreq0_carry__1_i_1_n_0;
+  wire adj_Pinc_byfreq0_carry__1_i_2_n_0;
+  wire adj_Pinc_byfreq0_carry__1_i_3_n_0;
+  wire adj_Pinc_byfreq0_carry__1_i_4_n_0;
+  wire adj_Pinc_byfreq0_carry__1_n_0;
+  wire adj_Pinc_byfreq0_carry__1_n_1;
+  wire adj_Pinc_byfreq0_carry__1_n_2;
+  wire adj_Pinc_byfreq0_carry__1_n_3;
+  wire adj_Pinc_byfreq0_carry__1_n_4;
+  wire adj_Pinc_byfreq0_carry__1_n_5;
+  wire adj_Pinc_byfreq0_carry__1_n_6;
+  wire adj_Pinc_byfreq0_carry__1_n_7;
+  wire adj_Pinc_byfreq0_carry__2_i_1_n_0;
+  wire adj_Pinc_byfreq0_carry__2_i_2_n_0;
+  wire adj_Pinc_byfreq0_carry__2_i_3_n_0;
+  wire adj_Pinc_byfreq0_carry__2_i_4_n_0;
+  wire adj_Pinc_byfreq0_carry__2_n_0;
+  wire adj_Pinc_byfreq0_carry__2_n_1;
+  wire adj_Pinc_byfreq0_carry__2_n_2;
+  wire adj_Pinc_byfreq0_carry__2_n_3;
+  wire adj_Pinc_byfreq0_carry__2_n_4;
+  wire adj_Pinc_byfreq0_carry__2_n_5;
+  wire adj_Pinc_byfreq0_carry__2_n_6;
+  wire adj_Pinc_byfreq0_carry__2_n_7;
+  wire adj_Pinc_byfreq0_carry__3_i_1_n_0;
+  wire adj_Pinc_byfreq0_carry__3_i_2_n_0;
+  wire adj_Pinc_byfreq0_carry__3_i_3_n_0;
+  wire adj_Pinc_byfreq0_carry__3_i_4_n_0;
+  wire adj_Pinc_byfreq0_carry__3_n_0;
+  wire adj_Pinc_byfreq0_carry__3_n_1;
+  wire adj_Pinc_byfreq0_carry__3_n_2;
+  wire adj_Pinc_byfreq0_carry__3_n_3;
+  wire adj_Pinc_byfreq0_carry__3_n_4;
+  wire adj_Pinc_byfreq0_carry__3_n_5;
+  wire adj_Pinc_byfreq0_carry__3_n_6;
+  wire adj_Pinc_byfreq0_carry__3_n_7;
+  wire adj_Pinc_byfreq0_carry__4_i_1_n_0;
+  wire adj_Pinc_byfreq0_carry__4_i_2_n_0;
+  wire adj_Pinc_byfreq0_carry__4_i_3_n_0;
+  wire adj_Pinc_byfreq0_carry__4_i_4_n_0;
+  wire adj_Pinc_byfreq0_carry__4_n_0;
+  wire adj_Pinc_byfreq0_carry__4_n_1;
+  wire adj_Pinc_byfreq0_carry__4_n_2;
+  wire adj_Pinc_byfreq0_carry__4_n_3;
+  wire adj_Pinc_byfreq0_carry__4_n_4;
+  wire adj_Pinc_byfreq0_carry__4_n_5;
+  wire adj_Pinc_byfreq0_carry__4_n_6;
+  wire adj_Pinc_byfreq0_carry__4_n_7;
+  wire adj_Pinc_byfreq0_carry__5_i_1_n_0;
+  wire adj_Pinc_byfreq0_carry__5_i_2_n_0;
+  wire adj_Pinc_byfreq0_carry__5_n_1;
+  wire adj_Pinc_byfreq0_carry__5_n_3;
+  wire adj_Pinc_byfreq0_carry__5_n_6;
+  wire adj_Pinc_byfreq0_carry__5_n_7;
+  wire adj_Pinc_byfreq0_carry_i_1_n_0;
+  wire adj_Pinc_byfreq0_carry_i_2_n_0;
+  wire adj_Pinc_byfreq0_carry_i_3_n_0;
+  wire adj_Pinc_byfreq0_carry_i_4_n_0;
+  wire adj_Pinc_byfreq0_carry_n_0;
+  wire adj_Pinc_byfreq0_carry_n_1;
+  wire adj_Pinc_byfreq0_carry_n_2;
+  wire adj_Pinc_byfreq0_carry_n_3;
   wire clk;
-  wire i__carry__0_i_10__0_n_0;
-  wire i__carry__0_i_10__0_n_1;
-  wire i__carry__0_i_10__0_n_2;
-  wire i__carry__0_i_10__0_n_3;
-  wire i__carry__0_i_10__0_n_4;
-  wire i__carry__0_i_10__0_n_5;
-  wire i__carry__0_i_10__0_n_6;
-  wire i__carry__0_i_10__0_n_7;
-  wire i__carry__0_i_10_n_0;
-  wire i__carry__0_i_10_n_1;
-  wire i__carry__0_i_10_n_2;
-  wire i__carry__0_i_10_n_3;
-  wire i__carry__0_i_10_n_4;
-  wire i__carry__0_i_10_n_5;
-  wire i__carry__0_i_10_n_6;
-  wire i__carry__0_i_10_n_7;
-  wire i__carry__0_i_11__0_n_0;
-  wire i__carry__0_i_11__0_n_1;
-  wire i__carry__0_i_11__0_n_2;
-  wire i__carry__0_i_11__0_n_3;
-  wire i__carry__0_i_11_n_0;
-  wire i__carry__0_i_11_n_1;
-  wire i__carry__0_i_11_n_2;
-  wire i__carry__0_i_11_n_3;
-  wire i__carry__0_i_11_n_4;
-  wire i__carry__0_i_11_n_5;
-  wire i__carry__0_i_11_n_6;
-  wire i__carry__0_i_11_n_7;
-  wire i__carry__0_i_12__0_n_0;
-  wire i__carry__0_i_12__0_n_1;
-  wire i__carry__0_i_12__0_n_2;
-  wire i__carry__0_i_12__0_n_3;
-  wire i__carry__0_i_12__0_n_4;
-  wire i__carry__0_i_12__0_n_5;
-  wire i__carry__0_i_12__0_n_6;
-  wire i__carry__0_i_12__0_n_7;
-  wire i__carry__0_i_12_n_0;
-  wire i__carry__0_i_13__0_n_0;
-  wire i__carry__0_i_13_n_0;
-  wire i__carry__0_i_14__0_n_0;
-  wire i__carry__0_i_14_n_0;
-  wire i__carry__0_i_15__0_n_0;
-  wire i__carry__0_i_15_n_0;
-  wire i__carry__0_i_16__0_n_0;
-  wire i__carry__0_i_16_n_0;
-  wire i__carry__0_i_17__0_n_0;
-  wire i__carry__0_i_17_n_0;
-  wire i__carry__0_i_17_n_1;
-  wire i__carry__0_i_17_n_2;
-  wire i__carry__0_i_17_n_3;
-  wire i__carry__0_i_17_n_4;
-  wire i__carry__0_i_17_n_5;
-  wire i__carry__0_i_17_n_6;
-  wire i__carry__0_i_17_n_7;
-  wire i__carry__0_i_18__0_n_0;
-  wire i__carry__0_i_18_n_0;
-  wire i__carry__0_i_19__0_n_0;
-  wire i__carry__0_i_19_n_0;
-  wire i__carry__0_i_1__0_n_0;
-  wire i__carry__0_i_1__0_n_1;
-  wire i__carry__0_i_1__0_n_2;
-  wire i__carry__0_i_1__0_n_3;
-  wire i__carry__0_i_1__0_n_4;
-  wire i__carry__0_i_1__0_n_5;
-  wire i__carry__0_i_1__0_n_6;
-  wire i__carry__0_i_1__0_n_7;
-  wire i__carry__0_i_1__1_n_0;
-  wire i__carry__0_i_1__1_n_1;
-  wire i__carry__0_i_1__1_n_2;
-  wire i__carry__0_i_1__1_n_3;
-  wire i__carry__0_i_1__1_n_4;
-  wire i__carry__0_i_1__1_n_5;
-  wire i__carry__0_i_1__1_n_6;
-  wire i__carry__0_i_1__1_n_7;
-  wire i__carry__0_i_1__2_n_0;
-  wire i__carry__0_i_1__2_n_1;
-  wire i__carry__0_i_1__2_n_2;
-  wire i__carry__0_i_1__2_n_3;
-  wire i__carry__0_i_1__2_n_4;
-  wire i__carry__0_i_1__2_n_5;
-  wire i__carry__0_i_1__2_n_6;
-  wire i__carry__0_i_1__2_n_7;
-  wire i__carry__0_i_1__3_n_0;
-  wire i__carry__0_i_1__4_n_0;
-  wire i__carry__0_i_1__5_n_0;
-  wire i__carry__0_i_1__6_n_0;
-  wire i__carry__0_i_1_n_0;
-  wire i__carry__0_i_20__0_n_0;
-  wire i__carry__0_i_20_n_0;
-  wire i__carry__0_i_21__0_n_0;
-  wire i__carry__0_i_21_n_0;
-  wire i__carry__0_i_22__0_n_0;
-  wire i__carry__0_i_22_n_0;
-  wire i__carry__0_i_23__0_n_0;
-  wire i__carry__0_i_23_n_0;
-  wire i__carry__0_i_24__0_n_0;
-  wire i__carry__0_i_24_n_0;
-  wire i__carry__0_i_25__0_n_0;
-  wire i__carry__0_i_25_n_0;
-  wire i__carry__0_i_2__1_n_0;
-  wire i__carry__0_i_2__1_n_1;
-  wire i__carry__0_i_2__1_n_2;
-  wire i__carry__0_i_2__1_n_3;
-  wire i__carry__0_i_2__1_n_4;
-  wire i__carry__0_i_2__1_n_5;
-  wire i__carry__0_i_2__1_n_6;
-  wire i__carry__0_i_2__2_n_0;
-  wire i__carry__0_i_2__3_n_0;
-  wire i__carry__0_i_2__4_n_0;
-  wire i__carry__0_i_2__5_n_0;
-  wire i__carry__0_i_2__6_n_0;
-  wire i__carry__0_i_2_n_0;
-  wire i__carry__0_i_3__1_n_0;
-  wire i__carry__0_i_3__2_n_0;
-  wire i__carry__0_i_3__3_n_0;
-  wire i__carry__0_i_3__4_n_0;
-  wire i__carry__0_i_3__5_n_0;
-  wire i__carry__0_i_3__6_n_0;
-  wire i__carry__0_i_3_n_0;
-  wire i__carry__0_i_4__1_n_0;
-  wire i__carry__0_i_4__2_n_0;
-  wire i__carry__0_i_4__3_n_0;
-  wire i__carry__0_i_4__4_n_0;
-  wire i__carry__0_i_4__5_n_0;
-  wire i__carry__0_i_4__6_n_0;
-  wire i__carry__0_i_4_n_0;
-  wire i__carry__0_i_5__0_n_0;
-  wire i__carry__0_i_5__1_n_0;
-  wire i__carry__0_i_5__2_n_0;
-  wire i__carry__0_i_6__0_n_0;
-  wire i__carry__0_i_6__1_n_0;
-  wire i__carry__0_i_6_n_0;
-  wire i__carry__0_i_7__0_n_0;
-  wire i__carry__0_i_7__1_n_0;
-  wire i__carry__0_i_7_n_0;
-  wire i__carry__0_i_8__0_n_0;
-  wire i__carry__0_i_8_n_0;
-  wire i__carry__0_i_9__0_n_0;
-  wire i__carry__0_i_9_n_0;
-  wire i__carry__0_i_9_n_1;
-  wire i__carry__0_i_9_n_2;
-  wire i__carry__0_i_9_n_3;
-  wire i__carry__0_i_9_n_4;
-  wire i__carry__0_i_9_n_5;
-  wire i__carry__0_i_9_n_6;
-  wire i__carry__0_i_9_n_7;
-  wire i__carry__1_i_10__0_n_0;
-  wire i__carry__1_i_10__0_n_1;
-  wire i__carry__1_i_10__0_n_2;
-  wire i__carry__1_i_10__0_n_3;
-  wire i__carry__1_i_10__0_n_4;
-  wire i__carry__1_i_10__0_n_5;
-  wire i__carry__1_i_10__0_n_6;
-  wire i__carry__1_i_10__0_n_7;
-  wire i__carry__1_i_10_n_0;
-  wire i__carry__1_i_10_n_2;
-  wire i__carry__1_i_10_n_3;
-  wire i__carry__1_i_10_n_5;
-  wire i__carry__1_i_10_n_6;
-  wire i__carry__1_i_10_n_7;
-  wire i__carry__1_i_11__0_n_0;
-  wire i__carry__1_i_11__0_n_1;
-  wire i__carry__1_i_11__0_n_2;
-  wire i__carry__1_i_11__0_n_3;
-  wire i__carry__1_i_11_n_0;
-  wire i__carry__1_i_11_n_2;
-  wire i__carry__1_i_11_n_3;
-  wire i__carry__1_i_11_n_5;
-  wire i__carry__1_i_11_n_6;
-  wire i__carry__1_i_11_n_7;
-  wire i__carry__1_i_12__0_n_0;
-  wire i__carry__1_i_12_n_0;
-  wire i__carry__1_i_12_n_2;
-  wire i__carry__1_i_12_n_3;
-  wire i__carry__1_i_12_n_5;
-  wire i__carry__1_i_12_n_6;
-  wire i__carry__1_i_12_n_7;
-  wire i__carry__1_i_13__0_n_0;
-  wire i__carry__1_i_13_n_0;
-  wire i__carry__1_i_14__0_n_0;
-  wire i__carry__1_i_14_n_7;
-  wire i__carry__1_i_15__0_n_0;
-  wire i__carry__1_i_15_n_0;
-  wire i__carry__1_i_16__0_n_0;
-  wire i__carry__1_i_16_n_0;
-  wire i__carry__1_i_17_n_0;
-  wire i__carry__1_i_18_n_0;
-  wire i__carry__1_i_19_n_0;
-  wire i__carry__1_i_1__0_n_3;
-  wire i__carry__1_i_1__0_n_6;
-  wire i__carry__1_i_1__0_n_7;
-  wire i__carry__1_i_1__1_n_0;
-  wire i__carry__1_i_1__1_n_1;
-  wire i__carry__1_i_1__1_n_2;
-  wire i__carry__1_i_1__1_n_3;
-  wire i__carry__1_i_1__1_n_4;
-  wire i__carry__1_i_1__1_n_5;
-  wire i__carry__1_i_1__1_n_6;
-  wire i__carry__1_i_1__1_n_7;
-  wire i__carry__1_i_1__2_n_0;
-  wire i__carry__1_i_1__2_n_1;
-  wire i__carry__1_i_1__2_n_2;
-  wire i__carry__1_i_1__2_n_3;
-  wire i__carry__1_i_1__2_n_4;
-  wire i__carry__1_i_1__2_n_5;
-  wire i__carry__1_i_1__2_n_6;
-  wire i__carry__1_i_1__2_n_7;
-  wire i__carry__1_i_1__3_n_0;
-  wire i__carry__1_i_1__4_n_0;
-  wire i__carry__1_i_1__5_n_0;
-  wire i__carry__1_i_1__6_n_0;
-  wire i__carry__1_i_1_n_0;
-  wire i__carry__1_i_20_n_0;
-  wire i__carry__1_i_21_n_0;
-  wire i__carry__1_i_22_n_0;
-  wire i__carry__1_i_23_n_0;
-  wire i__carry__1_i_2__1_n_0;
-  wire i__carry__1_i_2__2_n_0;
-  wire i__carry__1_i_2__3_n_0;
-  wire i__carry__1_i_2__4_n_0;
-  wire i__carry__1_i_2__5_n_0;
-  wire i__carry__1_i_2__6_n_0;
-  wire i__carry__1_i_2_n_0;
-  wire i__carry__1_i_3__1_n_0;
-  wire i__carry__1_i_3__2_n_0;
-  wire i__carry__1_i_3__3_n_0;
-  wire i__carry__1_i_3__4_n_0;
-  wire i__carry__1_i_3__5_n_0;
-  wire i__carry__1_i_3__6_n_0;
-  wire i__carry__1_i_3_n_0;
-  wire i__carry__1_i_4__1_n_0;
-  wire i__carry__1_i_4__2_n_0;
-  wire i__carry__1_i_4__3_n_0;
-  wire i__carry__1_i_4__4_n_0;
-  wire i__carry__1_i_4__5_n_0;
-  wire i__carry__1_i_4__6_n_0;
-  wire i__carry__1_i_4_n_0;
-  wire i__carry__1_i_5__0_n_0;
-  wire i__carry__1_i_5__1_n_0;
-  wire i__carry__1_i_5__2_n_0;
-  wire i__carry__1_i_6__0_n_0;
-  wire i__carry__1_i_6_n_0;
-  wire i__carry__1_i_7__0_n_0;
-  wire i__carry__1_i_7_n_0;
-  wire i__carry__1_i_8__0_n_0;
-  wire i__carry__1_i_8_n_0;
-  wire i__carry__1_i_9__0_n_0;
-  wire i__carry__1_i_9_n_0;
-  wire i__carry__1_i_9_n_1;
-  wire i__carry__1_i_9_n_2;
-  wire i__carry__1_i_9_n_3;
-  wire i__carry__1_i_9_n_4;
-  wire i__carry__1_i_9_n_5;
-  wire i__carry__1_i_9_n_6;
-  wire i__carry__1_i_9_n_7;
-  wire i__carry__2_i_10_n_0;
-  wire i__carry__2_i_10_n_1;
-  wire i__carry__2_i_10_n_2;
-  wire i__carry__2_i_10_n_3;
-  wire i__carry__2_i_10_n_4;
-  wire i__carry__2_i_10_n_5;
-  wire i__carry__2_i_10_n_6;
-  wire i__carry__2_i_10_n_7;
-  wire i__carry__2_i_11_n_0;
-  wire i__carry__2_i_11_n_1;
-  wire i__carry__2_i_11_n_2;
-  wire i__carry__2_i_11_n_3;
-  wire i__carry__2_i_12_n_0;
-  wire i__carry__2_i_13_n_0;
-  wire i__carry__2_i_14_n_0;
-  wire i__carry__2_i_15_n_0;
-  wire i__carry__2_i_16_n_0;
-  wire i__carry__2_i_17_n_0;
-  wire i__carry__2_i_18_n_0;
-  wire i__carry__2_i_19_n_0;
-  wire i__carry__2_i_1__0_n_0;
-  wire i__carry__2_i_1__0_n_2;
-  wire i__carry__2_i_1__0_n_3;
-  wire i__carry__2_i_1__0_n_5;
-  wire i__carry__2_i_1__0_n_6;
-  wire i__carry__2_i_1__0_n_7;
-  wire i__carry__2_i_1__1_n_0;
-  wire i__carry__2_i_1__1_n_1;
-  wire i__carry__2_i_1__1_n_2;
-  wire i__carry__2_i_1__1_n_3;
-  wire i__carry__2_i_1__1_n_4;
-  wire i__carry__2_i_1__1_n_5;
-  wire i__carry__2_i_1__1_n_6;
-  wire i__carry__2_i_1__1_n_7;
-  wire i__carry__2_i_1__2_n_0;
-  wire i__carry__2_i_1__3_n_0;
-  wire i__carry__2_i_1__4_n_0;
-  wire i__carry__2_i_1__5_n_0;
-  wire i__carry__2_i_1__6_n_0;
-  wire i__carry__2_i_1_n_0;
-  wire i__carry__2_i_20_n_0;
-  wire i__carry__2_i_21_n_0;
-  wire i__carry__2_i_22_n_0;
-  wire i__carry__2_i_23_n_0;
-  wire i__carry__2_i_2__1_n_0;
-  wire i__carry__2_i_2__2_n_0;
-  wire i__carry__2_i_2__3_n_0;
-  wire i__carry__2_i_2__4_n_0;
-  wire i__carry__2_i_2__5_n_0;
-  wire i__carry__2_i_2_n_0;
-  wire i__carry__2_i_3__0_n_0;
-  wire i__carry__2_i_3__1_n_0;
-  wire i__carry__2_i_3__2_n_0;
-  wire i__carry__2_i_3__3_n_0;
-  wire i__carry__2_i_3__4_n_0;
-  wire i__carry__2_i_3__5_n_0;
-  wire i__carry__2_i_3_n_0;
-  wire i__carry__2_i_4__0_n_0;
-  wire i__carry__2_i_4__1_n_0;
-  wire i__carry__2_i_4__2_n_0;
-  wire i__carry__2_i_4__3_n_0;
-  wire i__carry__2_i_4__4_n_0;
-  wire i__carry__2_i_4__5_n_0;
-  wire i__carry__2_i_4_n_0;
-  wire i__carry__2_i_5__0_n_0;
-  wire i__carry__2_i_5__1_n_0;
-  wire i__carry__2_i_5_n_0;
-  wire i__carry__2_i_6_n_0;
-  wire i__carry__2_i_7_n_0;
-  wire i__carry__2_i_8_n_0;
-  wire i__carry__2_i_9_n_0;
-  wire i__carry__2_i_9_n_1;
-  wire i__carry__2_i_9_n_2;
-  wire i__carry__2_i_9_n_3;
-  wire i__carry__2_i_9_n_4;
-  wire i__carry__2_i_9_n_5;
-  wire i__carry__2_i_9_n_6;
-  wire i__carry__2_i_9_n_7;
-  wire i__carry__3_i_10_n_0;
-  wire i__carry__3_i_10_n_1;
-  wire i__carry__3_i_10_n_2;
-  wire i__carry__3_i_10_n_3;
-  wire i__carry__3_i_10_n_4;
-  wire i__carry__3_i_10_n_5;
-  wire i__carry__3_i_10_n_6;
-  wire i__carry__3_i_10_n_7;
-  wire i__carry__3_i_11_n_0;
-  wire i__carry__3_i_11_n_1;
-  wire i__carry__3_i_11_n_2;
-  wire i__carry__3_i_11_n_3;
-  wire i__carry__3_i_12_n_0;
-  wire i__carry__3_i_13_n_0;
-  wire i__carry__3_i_14_n_0;
-  wire i__carry__3_i_15_n_0;
-  wire i__carry__3_i_16_n_0;
-  wire i__carry__3_i_17_n_0;
-  wire i__carry__3_i_18_n_0;
-  wire i__carry__3_i_19_n_0;
-  wire i__carry__3_i_1__0_n_0;
-  wire i__carry__3_i_1__0_n_1;
-  wire i__carry__3_i_1__0_n_2;
-  wire i__carry__3_i_1__0_n_3;
-  wire i__carry__3_i_1__0_n_4;
-  wire i__carry__3_i_1__0_n_5;
-  wire i__carry__3_i_1__0_n_6;
-  wire i__carry__3_i_1__0_n_7;
-  wire i__carry__3_i_1__1_n_0;
-  wire i__carry__3_i_1__2_n_0;
-  wire i__carry__3_i_1__3_n_0;
-  wire i__carry__3_i_1__4_n_0;
-  wire i__carry__3_i_1_n_0;
-  wire i__carry__3_i_20_n_0;
-  wire i__carry__3_i_21_n_0;
-  wire i__carry__3_i_22_n_0;
-  wire i__carry__3_i_23_n_0;
-  wire i__carry__3_i_2__0_n_0;
-  wire i__carry__3_i_2__1_n_0;
-  wire i__carry__3_i_2__2_n_0;
-  wire i__carry__3_i_2__3_n_0;
-  wire i__carry__3_i_2__4_n_0;
-  wire i__carry__3_i_2_n_0;
-  wire i__carry__3_i_3__0_n_0;
-  wire i__carry__3_i_3__1_n_0;
-  wire i__carry__3_i_3__2_n_0;
-  wire i__carry__3_i_3__3_n_0;
-  wire i__carry__3_i_3__4_n_0;
-  wire i__carry__3_i_3_n_0;
-  wire i__carry__3_i_4__0_n_0;
-  wire i__carry__3_i_4__1_n_0;
-  wire i__carry__3_i_4__2_n_0;
-  wire i__carry__3_i_4__3_n_0;
-  wire i__carry__3_i_4__4_n_0;
-  wire i__carry__3_i_4_n_0;
-  wire i__carry__3_i_5__0_n_0;
-  wire i__carry__3_i_5_n_0;
-  wire i__carry__3_i_6_n_0;
-  wire i__carry__3_i_7_n_0;
-  wire i__carry__3_i_8_n_0;
-  wire i__carry__3_i_9_n_0;
-  wire i__carry__3_i_9_n_1;
-  wire i__carry__3_i_9_n_2;
-  wire i__carry__3_i_9_n_3;
-  wire i__carry__3_i_9_n_4;
-  wire i__carry__3_i_9_n_5;
-  wire i__carry__3_i_9_n_6;
-  wire i__carry__3_i_9_n_7;
-  wire i__carry__4_i_10_n_2;
-  wire i__carry__4_i_10_n_3;
-  wire i__carry__4_i_11_n_0;
-  wire i__carry__4_i_12_n_0;
-  wire i__carry__4_i_13_n_0;
-  wire i__carry__4_i_14_n_0;
-  wire i__carry__4_i_15_n_0;
-  wire i__carry__4_i_16_n_0;
-  wire i__carry__4_i_17_n_0;
-  wire i__carry__4_i_1__0_n_3;
-  wire i__carry__4_i_1__0_n_6;
-  wire i__carry__4_i_1__0_n_7;
-  wire i__carry__4_i_1__1_n_0;
-  wire i__carry__4_i_1__2_n_0;
-  wire i__carry__4_i_1__3_n_0;
-  wire i__carry__4_i_1__4_n_0;
-  wire i__carry__4_i_1_n_0;
-  wire i__carry__4_i_2__0_n_0;
-  wire i__carry__4_i_2__1_n_0;
-  wire i__carry__4_i_2__2_n_0;
-  wire i__carry__4_i_2__3_n_0;
-  wire i__carry__4_i_2__4_n_0;
-  wire i__carry__4_i_2_n_0;
-  wire i__carry__4_i_3__0_n_0;
-  wire i__carry__4_i_3__1_n_0;
-  wire i__carry__4_i_3__2_n_0;
-  wire i__carry__4_i_3__3_n_0;
-  wire i__carry__4_i_3_n_0;
-  wire i__carry__4_i_4__0_n_0;
-  wire i__carry__4_i_4__1_n_0;
-  wire i__carry__4_i_4__2_n_0;
-  wire i__carry__4_i_4__3_n_0;
-  wire i__carry__4_i_4_n_0;
-  wire i__carry__4_i_5__0_n_0;
-  wire i__carry__4_i_5_n_0;
-  wire i__carry__4_i_6_n_0;
-  wire i__carry__4_i_7_n_0;
-  wire i__carry__4_i_8_n_2;
-  wire i__carry__4_i_8_n_3;
-  wire i__carry__4_i_8_n_5;
-  wire i__carry__4_i_8_n_6;
-  wire i__carry__4_i_8_n_7;
-  wire i__carry__4_i_9_n_2;
-  wire i__carry__4_i_9_n_3;
-  wire i__carry__4_i_9_n_5;
-  wire i__carry__4_i_9_n_6;
-  wire i__carry__4_i_9_n_7;
-  wire i__carry__5_i_1__0_n_0;
-  wire i__carry__5_i_1__1_n_0;
-  wire i__carry__5_i_1__2_n_0;
-  wire i__carry__5_i_1_n_0;
-  wire i__carry_i_10_n_0;
-  wire i__carry_i_11_n_0;
-  wire i__carry_i_12__0_n_0;
-  wire i__carry_i_12_n_0;
-  wire i__carry_i_13_n_0;
-  wire i__carry_i_14_n_0;
-  wire i__carry_i_14_n_1;
-  wire i__carry_i_14_n_2;
-  wire i__carry_i_14_n_3;
-  wire i__carry_i_14_n_4;
-  wire i__carry_i_14_n_5;
-  wire i__carry_i_14_n_6;
-  wire i__carry_i_15_n_0;
-  wire i__carry_i_15_n_1;
-  wire i__carry_i_15_n_2;
-  wire i__carry_i_15_n_3;
-  wire i__carry_i_15_n_4;
-  wire i__carry_i_15_n_5;
-  wire i__carry_i_15_n_6;
-  wire i__carry_i_16_n_0;
-  wire i__carry_i_16_n_1;
-  wire i__carry_i_16_n_2;
-  wire i__carry_i_16_n_3;
-  wire i__carry_i_16_n_4;
-  wire i__carry_i_16_n_5;
-  wire i__carry_i_16_n_6;
-  wire i__carry_i_17_n_0;
-  wire i__carry_i_17_n_1;
-  wire i__carry_i_17_n_2;
-  wire i__carry_i_17_n_3;
-  wire i__carry_i_17_n_4;
-  wire i__carry_i_17_n_5;
-  wire i__carry_i_17_n_6;
-  wire i__carry_i_17_n_7;
-  wire i__carry_i_18_n_0;
-  wire i__carry_i_18_n_1;
-  wire i__carry_i_18_n_2;
-  wire i__carry_i_18_n_3;
-  wire i__carry_i_18_n_4;
-  wire i__carry_i_18_n_5;
-  wire i__carry_i_18_n_6;
-  wire i__carry_i_18_n_7;
-  wire i__carry_i_19_n_0;
-  wire i__carry_i_19_n_1;
-  wire i__carry_i_19_n_2;
-  wire i__carry_i_19_n_3;
-  wire i__carry_i_19_n_4;
-  wire i__carry_i_19_n_5;
-  wire i__carry_i_19_n_6;
-  wire i__carry_i_19_n_7;
-  wire i__carry_i_1__0_n_0;
-  wire i__carry_i_1__10_n_0;
-  wire i__carry_i_1__1_n_0;
-  wire i__carry_i_1__2_n_0;
-  wire i__carry_i_1__3_n_0;
-  wire i__carry_i_1__4_n_0;
-  wire i__carry_i_1__5_n_0;
-  wire i__carry_i_1__5_n_1;
-  wire i__carry_i_1__5_n_2;
-  wire i__carry_i_1__5_n_3;
-  wire i__carry_i_1__5_n_4;
-  wire i__carry_i_1__5_n_5;
-  wire i__carry_i_1__6_n_0;
-  wire i__carry_i_1__6_n_1;
-  wire i__carry_i_1__6_n_2;
-  wire i__carry_i_1__6_n_3;
-  wire i__carry_i_1__6_n_4;
-  wire i__carry_i_1__6_n_5;
-  wire i__carry_i_1__6_n_6;
-  wire i__carry_i_1__6_n_7;
-  wire i__carry_i_1__7_n_0;
-  wire i__carry_i_1__8_n_0;
-  wire i__carry_i_1__9_n_0;
-  wire i__carry_i_1_n_0;
-  wire i__carry_i_22_n_0;
-  wire i__carry_i_23_n_0;
-  wire i__carry_i_24_n_0;
-  wire i__carry_i_25_n_0;
-  wire i__carry_i_26_n_0;
-  wire i__carry_i_27_n_0;
-  wire i__carry_i_28_n_0;
-  wire i__carry_i_29_n_0;
-  wire i__carry_i_2__0_n_0;
-  wire i__carry_i_2__1_n_0;
-  wire i__carry_i_2__2_n_0;
-  wire i__carry_i_2__3_n_0;
-  wire i__carry_i_2__4_n_0;
-  wire i__carry_i_2__5_n_0;
-  wire i__carry_i_2__5_n_1;
-  wire i__carry_i_2__5_n_2;
-  wire i__carry_i_2__5_n_3;
-  wire i__carry_i_2__5_n_4;
-  wire i__carry_i_2__5_n_5;
-  wire i__carry_i_2__5_n_6;
-  wire i__carry_i_2__5_n_7;
-  wire [0:0]i__carry_i_2__6_0;
-  wire [1:0]i__carry_i_2__6_1;
-  wire i__carry_i_2__6_n_0;
-  wire i__carry_i_2__7_n_0;
-  wire i__carry_i_2_n_0;
-  wire i__carry_i_30_n_0;
-  wire i__carry_i_31_n_0;
-  wire i__carry_i_32_n_0;
-  wire i__carry_i_33_n_0;
-  wire i__carry_i_33_n_1;
-  wire i__carry_i_33_n_2;
-  wire i__carry_i_33_n_3;
-  wire i__carry_i_33_n_4;
-  wire i__carry_i_33_n_5;
-  wire i__carry_i_33_n_6;
-  wire i__carry_i_33_n_7;
-  wire i__carry_i_34_n_0;
-  wire i__carry_i_35_n_0;
-  wire i__carry_i_36_n_0;
-  wire i__carry_i_37_n_0;
-  wire i__carry_i_38_n_0;
-  wire i__carry_i_39_n_0;
-  wire i__carry_i_3__0_n_0;
-  wire i__carry_i_3__1_n_0;
-  wire i__carry_i_3__1_n_1;
-  wire i__carry_i_3__1_n_2;
-  wire i__carry_i_3__1_n_3;
-  wire i__carry_i_3__2_n_0;
-  wire i__carry_i_3_n_0;
-  wire i__carry_i_40_n_0;
-  wire i__carry_i_4__0_n_0;
-  wire i__carry_i_4__0_n_1;
-  wire i__carry_i_4__0_n_2;
-  wire i__carry_i_4__0_n_3;
-  wire i__carry_i_4__0_n_4;
-  wire i__carry_i_4__0_n_5;
-  wire i__carry_i_4__0_n_6;
-  wire i__carry_i_4__1_n_0;
-  wire i__carry_i_4_n_0;
-  wire i__carry_i_5__0_n_0;
-  wire i__carry_i_5__0_n_1;
-  wire i__carry_i_5__0_n_2;
-  wire i__carry_i_5__0_n_3;
-  wire i__carry_i_5__0_n_4;
-  wire i__carry_i_5__0_n_5;
-  wire i__carry_i_5__0_n_6;
-  wire i__carry_i_5__1_n_0;
-  wire i__carry_i_5_n_0;
-  wire i__carry_i_6__1_n_0;
-  wire i__carry_i_6_n_0;
-  wire i__carry_i_8__0_n_0;
+  wire [25:3]freq;
   wire [7:0]mode_sFREQ;
-  wire [20:0]p_0_in;
+  wire [19:0]p_0_in;
   wire reset;
-  wire w_MODEfreq0__0_n_100;
-  wire w_MODEfreq0__0_n_101;
-  wire w_MODEfreq0__0_n_102;
-  wire w_MODEfreq0__0_n_103;
-  wire w_MODEfreq0__0_n_104;
-  wire w_MODEfreq0__0_n_105;
-  wire w_MODEfreq0__0_n_106;
-  wire w_MODEfreq0__0_n_107;
-  wire w_MODEfreq0__0_n_108;
-  wire w_MODEfreq0__0_n_109;
-  wire w_MODEfreq0__0_n_110;
-  wire w_MODEfreq0__0_n_111;
-  wire w_MODEfreq0__0_n_112;
-  wire w_MODEfreq0__0_n_113;
-  wire w_MODEfreq0__0_n_114;
-  wire w_MODEfreq0__0_n_115;
-  wire w_MODEfreq0__0_n_116;
-  wire w_MODEfreq0__0_n_117;
-  wire w_MODEfreq0__0_n_118;
-  wire w_MODEfreq0__0_n_119;
-  wire w_MODEfreq0__0_n_120;
-  wire w_MODEfreq0__0_n_121;
-  wire w_MODEfreq0__0_n_122;
-  wire w_MODEfreq0__0_n_123;
-  wire w_MODEfreq0__0_n_124;
-  wire w_MODEfreq0__0_n_125;
-  wire w_MODEfreq0__0_n_126;
-  wire w_MODEfreq0__0_n_127;
-  wire w_MODEfreq0__0_n_128;
-  wire w_MODEfreq0__0_n_129;
-  wire w_MODEfreq0__0_n_130;
-  wire w_MODEfreq0__0_n_131;
-  wire w_MODEfreq0__0_n_132;
-  wire w_MODEfreq0__0_n_133;
-  wire w_MODEfreq0__0_n_134;
-  wire w_MODEfreq0__0_n_135;
-  wire w_MODEfreq0__0_n_136;
-  wire w_MODEfreq0__0_n_137;
-  wire w_MODEfreq0__0_n_138;
-  wire w_MODEfreq0__0_n_139;
-  wire w_MODEfreq0__0_n_140;
-  wire w_MODEfreq0__0_n_141;
-  wire w_MODEfreq0__0_n_142;
-  wire w_MODEfreq0__0_n_143;
-  wire w_MODEfreq0__0_n_144;
-  wire w_MODEfreq0__0_n_145;
-  wire w_MODEfreq0__0_n_146;
-  wire w_MODEfreq0__0_n_147;
-  wire w_MODEfreq0__0_n_148;
-  wire w_MODEfreq0__0_n_149;
-  wire w_MODEfreq0__0_n_150;
-  wire w_MODEfreq0__0_n_151;
-  wire w_MODEfreq0__0_n_152;
-  wire w_MODEfreq0__0_n_153;
-  wire w_MODEfreq0__0_n_58;
-  wire w_MODEfreq0__0_n_59;
-  wire w_MODEfreq0__0_n_60;
-  wire w_MODEfreq0__0_n_61;
-  wire w_MODEfreq0__0_n_62;
-  wire w_MODEfreq0__0_n_63;
-  wire w_MODEfreq0__0_n_64;
-  wire w_MODEfreq0__0_n_65;
-  wire w_MODEfreq0__0_n_66;
-  wire w_MODEfreq0__0_n_67;
-  wire w_MODEfreq0__0_n_68;
-  wire w_MODEfreq0__0_n_69;
-  wire w_MODEfreq0__0_n_70;
-  wire w_MODEfreq0__0_n_71;
-  wire w_MODEfreq0__0_n_72;
-  wire w_MODEfreq0__0_n_73;
-  wire w_MODEfreq0__0_n_74;
-  wire w_MODEfreq0__0_n_75;
-  wire w_MODEfreq0__0_n_76;
-  wire w_MODEfreq0__0_n_77;
-  wire w_MODEfreq0__0_n_78;
-  wire w_MODEfreq0__0_n_79;
-  wire w_MODEfreq0__0_n_80;
-  wire w_MODEfreq0__0_n_81;
-  wire w_MODEfreq0__0_n_82;
-  wire w_MODEfreq0__0_n_83;
-  wire w_MODEfreq0__0_n_84;
-  wire w_MODEfreq0__0_n_85;
-  wire w_MODEfreq0__0_n_86;
-  wire w_MODEfreq0__0_n_87;
-  wire w_MODEfreq0__0_n_88;
-  wire w_MODEfreq0__0_n_89;
-  wire w_MODEfreq0__0_n_90;
-  wire w_MODEfreq0__0_n_91;
-  wire w_MODEfreq0__0_n_92;
-  wire w_MODEfreq0__0_n_93;
-  wire w_MODEfreq0__0_n_94;
-  wire w_MODEfreq0__0_n_95;
-  wire w_MODEfreq0__0_n_96;
-  wire w_MODEfreq0__0_n_97;
-  wire w_MODEfreq0__0_n_98;
-  wire w_MODEfreq0__0_n_99;
-  wire w_MODEfreq0__1_n_100;
-  wire w_MODEfreq0__1_n_101;
-  wire w_MODEfreq0__1_n_102;
-  wire w_MODEfreq0__1_n_103;
-  wire w_MODEfreq0__1_n_104;
-  wire w_MODEfreq0__1_n_105;
-  wire w_MODEfreq0__1_n_58;
-  wire w_MODEfreq0__1_n_59;
-  wire w_MODEfreq0__1_n_60;
-  wire w_MODEfreq0__1_n_61;
-  wire w_MODEfreq0__1_n_62;
-  wire w_MODEfreq0__1_n_63;
-  wire w_MODEfreq0__1_n_64;
-  wire w_MODEfreq0__1_n_65;
-  wire w_MODEfreq0__1_n_66;
-  wire w_MODEfreq0__1_n_67;
-  wire w_MODEfreq0__1_n_68;
-  wire w_MODEfreq0__1_n_69;
-  wire w_MODEfreq0__1_n_70;
-  wire w_MODEfreq0__1_n_71;
-  wire w_MODEfreq0__1_n_72;
-  wire w_MODEfreq0__1_n_73;
-  wire w_MODEfreq0__1_n_74;
-  wire w_MODEfreq0__1_n_75;
-  wire w_MODEfreq0__1_n_76;
-  wire w_MODEfreq0__1_n_77;
-  wire w_MODEfreq0__1_n_78;
-  wire w_MODEfreq0__1_n_79;
-  wire w_MODEfreq0__1_n_80;
-  wire w_MODEfreq0__1_n_81;
-  wire w_MODEfreq0__1_n_82;
-  wire w_MODEfreq0__1_n_83;
-  wire w_MODEfreq0__1_n_84;
-  wire w_MODEfreq0__1_n_85;
-  wire w_MODEfreq0__1_n_86;
-  wire w_MODEfreq0__1_n_87;
-  wire w_MODEfreq0__1_n_88;
-  wire w_MODEfreq0__1_n_89;
-  wire w_MODEfreq0__1_n_90;
-  wire w_MODEfreq0__1_n_91;
-  wire w_MODEfreq0__1_n_92;
-  wire w_MODEfreq0__1_n_93;
-  wire w_MODEfreq0__1_n_94;
-  wire w_MODEfreq0__1_n_95;
-  wire w_MODEfreq0__1_n_96;
-  wire w_MODEfreq0__1_n_97;
-  wire w_MODEfreq0__1_n_98;
-  wire w_MODEfreq0__1_n_99;
-  wire w_MODEfreq0_carry__0_i_1_n_0;
-  wire w_MODEfreq0_carry__0_i_2_n_0;
-  wire w_MODEfreq0_carry__0_i_3_n_0;
-  wire w_MODEfreq0_carry__0_i_4_n_0;
-  wire w_MODEfreq0_carry__0_n_0;
-  wire w_MODEfreq0_carry__0_n_1;
-  wire w_MODEfreq0_carry__0_n_2;
-  wire w_MODEfreq0_carry__0_n_3;
-  wire w_MODEfreq0_carry__0_n_4;
-  wire w_MODEfreq0_carry__0_n_5;
-  wire w_MODEfreq0_carry__0_n_6;
-  wire w_MODEfreq0_carry__0_n_7;
-  wire w_MODEfreq0_carry__1_i_1_n_0;
-  wire w_MODEfreq0_carry__1_i_2_n_0;
-  wire w_MODEfreq0_carry__1_i_3_n_0;
-  wire w_MODEfreq0_carry__1_n_2;
-  wire w_MODEfreq0_carry__1_n_3;
-  wire w_MODEfreq0_carry__1_n_5;
-  wire w_MODEfreq0_carry__1_n_6;
-  wire w_MODEfreq0_carry__1_n_7;
-  wire w_MODEfreq0_carry_i_1_n_0;
-  wire w_MODEfreq0_carry_i_2_n_0;
-  wire w_MODEfreq0_carry_i_3_n_0;
-  wire w_MODEfreq0_carry_n_0;
-  wire w_MODEfreq0_carry_n_1;
-  wire w_MODEfreq0_carry_n_2;
-  wire w_MODEfreq0_carry_n_3;
-  wire w_MODEfreq0_carry_n_4;
-  wire w_MODEfreq0_carry_n_5;
-  wire w_MODEfreq0_carry_n_6;
-  wire w_MODEfreq0_carry_n_7;
-  wire w_MODEfreq0_n_100;
-  wire w_MODEfreq0_n_101;
-  wire w_MODEfreq0_n_102;
-  wire w_MODEfreq0_n_103;
-  wire w_MODEfreq0_n_104;
-  wire w_MODEfreq0_n_105;
-  wire w_MODEfreq0_n_106;
-  wire w_MODEfreq0_n_107;
-  wire w_MODEfreq0_n_108;
-  wire w_MODEfreq0_n_109;
-  wire w_MODEfreq0_n_110;
-  wire w_MODEfreq0_n_111;
-  wire w_MODEfreq0_n_112;
-  wire w_MODEfreq0_n_113;
-  wire w_MODEfreq0_n_114;
-  wire w_MODEfreq0_n_115;
-  wire w_MODEfreq0_n_116;
-  wire w_MODEfreq0_n_117;
-  wire w_MODEfreq0_n_118;
-  wire w_MODEfreq0_n_119;
-  wire w_MODEfreq0_n_120;
-  wire w_MODEfreq0_n_121;
-  wire w_MODEfreq0_n_122;
-  wire w_MODEfreq0_n_123;
-  wire w_MODEfreq0_n_124;
-  wire w_MODEfreq0_n_125;
-  wire w_MODEfreq0_n_126;
-  wire w_MODEfreq0_n_127;
-  wire w_MODEfreq0_n_128;
-  wire w_MODEfreq0_n_129;
-  wire w_MODEfreq0_n_130;
-  wire w_MODEfreq0_n_131;
-  wire w_MODEfreq0_n_132;
-  wire w_MODEfreq0_n_133;
-  wire w_MODEfreq0_n_134;
-  wire w_MODEfreq0_n_135;
-  wire w_MODEfreq0_n_136;
-  wire w_MODEfreq0_n_137;
-  wire w_MODEfreq0_n_138;
-  wire w_MODEfreq0_n_139;
-  wire w_MODEfreq0_n_140;
-  wire w_MODEfreq0_n_141;
-  wire w_MODEfreq0_n_142;
-  wire w_MODEfreq0_n_143;
-  wire w_MODEfreq0_n_144;
-  wire w_MODEfreq0_n_145;
-  wire w_MODEfreq0_n_146;
-  wire w_MODEfreq0_n_147;
-  wire w_MODEfreq0_n_148;
-  wire w_MODEfreq0_n_149;
-  wire w_MODEfreq0_n_150;
-  wire w_MODEfreq0_n_151;
-  wire w_MODEfreq0_n_152;
-  wire w_MODEfreq0_n_153;
-  wire w_MODEfreq0_n_58;
-  wire w_MODEfreq0_n_59;
-  wire w_MODEfreq0_n_60;
-  wire w_MODEfreq0_n_61;
-  wire w_MODEfreq0_n_62;
-  wire w_MODEfreq0_n_63;
-  wire w_MODEfreq0_n_64;
-  wire w_MODEfreq0_n_65;
-  wire w_MODEfreq0_n_66;
-  wire w_MODEfreq0_n_67;
-  wire w_MODEfreq0_n_68;
-  wire w_MODEfreq0_n_69;
-  wire w_MODEfreq0_n_70;
-  wire w_MODEfreq0_n_71;
-  wire w_MODEfreq0_n_72;
-  wire w_MODEfreq0_n_73;
-  wire w_MODEfreq0_n_74;
-  wire w_MODEfreq0_n_75;
-  wire w_MODEfreq0_n_76;
-  wire w_MODEfreq0_n_77;
-  wire w_MODEfreq0_n_78;
-  wire w_MODEfreq0_n_79;
-  wire w_MODEfreq0_n_80;
-  wire w_MODEfreq0_n_81;
-  wire w_MODEfreq0_n_82;
-  wire w_MODEfreq0_n_83;
-  wire w_MODEfreq0_n_84;
-  wire w_MODEfreq0_n_85;
-  wire w_MODEfreq0_n_86;
-  wire w_MODEfreq0_n_87;
-  wire w_MODEfreq0_n_88;
-  wire w_MODEfreq0_n_89;
-  wire w_MODEfreq0_n_90;
-  wire w_MODEfreq0_n_91;
-  wire w_MODEfreq0_n_92;
-  wire w_MODEfreq0_n_93;
-  wire w_MODEfreq0_n_94;
-  wire w_MODEfreq0_n_95;
-  wire w_MODEfreq0_n_96;
-  wire w_MODEfreq0_n_97;
-  wire w_MODEfreq0_n_98;
-  wire w_MODEfreq0_n_99;
-  wire [0:0]\NLW_TEMP0_inferred__0/i__carry_O_UNCONNECTED ;
-  wire [2:2]\NLW_TEMP0_inferred__0/i__carry__2_CO_UNCONNECTED ;
-  wire [3:3]\NLW_TEMP0_inferred__0/i__carry__2_O_UNCONNECTED ;
-  wire [0:0]\NLW_TEMP0_inferred__10/i__carry_O_UNCONNECTED ;
-  wire [3:0]\NLW_TEMP0_inferred__10/i__carry__5_CO_UNCONNECTED ;
-  wire [3:1]\NLW_TEMP0_inferred__10/i__carry__5_O_UNCONNECTED ;
-  wire [0:0]\NLW_TEMP0_inferred__4/i__carry_O_UNCONNECTED ;
-  wire [3:2]\NLW_TEMP0_inferred__4/i__carry__4_CO_UNCONNECTED ;
-  wire [3:3]\NLW_TEMP0_inferred__4/i__carry__4_O_UNCONNECTED ;
-  wire [0:0]\NLW_TEMP0_inferred__7/i__carry_O_UNCONNECTED ;
-  wire [3:0]\NLW_TEMP0_inferred__7/i__carry__5_CO_UNCONNECTED ;
-  wire [3:1]\NLW_TEMP0_inferred__7/i__carry__5_O_UNCONNECTED ;
-  wire [0:0]\NLW_TEMP0_inferred__8/i__carry_O_UNCONNECTED ;
-  wire [3:0]\NLW_TEMP0_inferred__8/i__carry__5_CO_UNCONNECTED ;
-  wire [3:1]\NLW_TEMP0_inferred__8/i__carry__5_O_UNCONNECTED ;
-  wire [0:0]\NLW_TEMP0_inferred__9/i__carry_O_UNCONNECTED ;
-  wire [3:0]\NLW_TEMP0_inferred__9/i__carry__5_CO_UNCONNECTED ;
-  wire [3:1]\NLW_TEMP0_inferred__9/i__carry__5_O_UNCONNECTED ;
-  wire [0:0]NLW_TEMP1_carry_O_UNCONNECTED;
-  wire [3:1]NLW_TEMP1_carry__1_CO_UNCONNECTED;
-  wire [3:2]NLW_TEMP1_carry__1_O_UNCONNECTED;
-  wire [3:2]\NLW_TEMP1_inferred__0/i__carry__0_CO_UNCONNECTED ;
-  wire [3:3]\NLW_TEMP1_inferred__0/i__carry__0_O_UNCONNECTED ;
-  wire [3:1]\NLW_TEMP1_inferred__4/i__carry__3_CO_UNCONNECTED ;
-  wire [3:2]\NLW_TEMP1_inferred__4/i__carry__3_O_UNCONNECTED ;
-  wire [2:2]\NLW_TEMP1_inferred__5/i__carry__3_CO_UNCONNECTED ;
-  wire [3:3]\NLW_TEMP1_inferred__5/i__carry__3_O_UNCONNECTED ;
-  wire [3:1]\NLW_TEMP1_inferred__6/i__carry__3_CO_UNCONNECTED ;
-  wire [3:2]\NLW_TEMP1_inferred__6/i__carry__3_O_UNCONNECTED ;
-  wire [3:3]\NLW_TEMP1_inferred__7/i__carry__4_CO_UNCONNECTED ;
-  wire [3:1]\NLW_TEMP1_inferred__8/i__carry__4_CO_UNCONNECTED ;
-  wire [3:2]\NLW_TEMP1_inferred__8/i__carry__4_O_UNCONNECTED ;
-  wire [3:2]\NLW_TEMP1_inferred__9/i__carry__4_CO_UNCONNECTED ;
-  wire [3:3]\NLW_TEMP1_inferred__9/i__carry__4_O_UNCONNECTED ;
+  wire w_MODEfreq0__4_carry__0_i_10_n_0;
+  wire w_MODEfreq0__4_carry__0_i_11_n_0;
+  wire w_MODEfreq0__4_carry__0_i_12_n_0;
+  wire w_MODEfreq0__4_carry__0_i_13_n_0;
+  wire w_MODEfreq0__4_carry__0_i_14_n_0;
+  wire w_MODEfreq0__4_carry__0_i_15_n_0;
+  wire w_MODEfreq0__4_carry__0_i_16_n_0;
+  wire w_MODEfreq0__4_carry__0_i_17_n_0;
+  wire w_MODEfreq0__4_carry__0_i_18_n_0;
+  wire w_MODEfreq0__4_carry__0_i_19_n_0;
+  wire w_MODEfreq0__4_carry__0_i_1_n_0;
+  wire w_MODEfreq0__4_carry__0_i_2_n_0;
+  wire w_MODEfreq0__4_carry__0_i_3_n_0;
+  wire w_MODEfreq0__4_carry__0_i_4_n_0;
+  wire w_MODEfreq0__4_carry__0_i_5_n_0;
+  wire w_MODEfreq0__4_carry__0_i_6_n_0;
+  wire w_MODEfreq0__4_carry__0_i_7_n_0;
+  wire w_MODEfreq0__4_carry__0_i_8_n_0;
+  wire w_MODEfreq0__4_carry__0_i_9_n_0;
+  wire w_MODEfreq0__4_carry__0_n_0;
+  wire w_MODEfreq0__4_carry__0_n_1;
+  wire w_MODEfreq0__4_carry__0_n_2;
+  wire w_MODEfreq0__4_carry__0_n_3;
+  wire w_MODEfreq0__4_carry__1_i_1_n_0;
+  wire w_MODEfreq0__4_carry__1_i_2_n_0;
+  wire w_MODEfreq0__4_carry__1_i_3_n_0;
+  wire w_MODEfreq0__4_carry__1_i_4_n_0;
+  wire w_MODEfreq0__4_carry__1_i_5_n_0;
+  wire w_MODEfreq0__4_carry__1_i_6_n_0;
+  wire w_MODEfreq0__4_carry__1_i_7_n_0;
+  wire w_MODEfreq0__4_carry__1_i_8_n_0;
+  wire w_MODEfreq0__4_carry__1_i_9_n_0;
+  wire w_MODEfreq0__4_carry__1_n_0;
+  wire w_MODEfreq0__4_carry__1_n_1;
+  wire w_MODEfreq0__4_carry__1_n_2;
+  wire w_MODEfreq0__4_carry__1_n_3;
+  wire w_MODEfreq0__4_carry__2_i_10_n_0;
+  wire w_MODEfreq0__4_carry__2_i_11_n_0;
+  wire w_MODEfreq0__4_carry__2_i_12_n_0;
+  wire w_MODEfreq0__4_carry__2_i_1_n_0;
+  wire w_MODEfreq0__4_carry__2_i_2_n_0;
+  wire w_MODEfreq0__4_carry__2_i_3_n_0;
+  wire w_MODEfreq0__4_carry__2_i_4_n_0;
+  wire w_MODEfreq0__4_carry__2_i_5_n_0;
+  wire w_MODEfreq0__4_carry__2_i_6_n_0;
+  wire w_MODEfreq0__4_carry__2_i_7_n_0;
+  wire w_MODEfreq0__4_carry__2_i_8_n_0;
+  wire w_MODEfreq0__4_carry__2_i_9_n_0;
+  wire w_MODEfreq0__4_carry__2_n_0;
+  wire w_MODEfreq0__4_carry__2_n_1;
+  wire w_MODEfreq0__4_carry__2_n_2;
+  wire w_MODEfreq0__4_carry__2_n_3;
+  wire w_MODEfreq0__4_carry__3_i_1_n_0;
+  wire w_MODEfreq0__4_carry__3_i_2_n_0;
+  wire w_MODEfreq0__4_carry__3_i_3_n_0;
+  wire w_MODEfreq0__4_carry__3_i_4_n_0;
+  wire w_MODEfreq0__4_carry__3_i_5_n_0;
+  wire w_MODEfreq0__4_carry__3_i_6_n_0;
+  wire w_MODEfreq0__4_carry__3_i_7_n_0;
+  wire w_MODEfreq0__4_carry__3_i_8_n_0;
+  wire w_MODEfreq0__4_carry__3_n_0;
+  wire w_MODEfreq0__4_carry__3_n_1;
+  wire w_MODEfreq0__4_carry__3_n_2;
+  wire w_MODEfreq0__4_carry__3_n_3;
+  wire w_MODEfreq0__4_carry__4_i_1_n_0;
+  wire w_MODEfreq0__4_carry__4_i_2_n_0;
+  wire w_MODEfreq0__4_carry__4_i_3_n_0;
+  wire w_MODEfreq0__4_carry__4_n_3;
+  wire w_MODEfreq0__4_carry_i_1_n_0;
+  wire w_MODEfreq0__4_carry_i_2_n_0;
+  wire w_MODEfreq0__4_carry_i_3_n_0;
+  wire w_MODEfreq0__4_carry_i_4_n_0;
+  wire w_MODEfreq0__4_carry_i_5_n_0;
+  wire w_MODEfreq0__4_carry_i_6_n_0;
+  wire w_MODEfreq0__4_carry_i_7_n_0;
+  wire w_MODEfreq0__4_carry_i_8_n_0;
+  wire w_MODEfreq0__4_carry_i_9_n_0;
+  wire w_MODEfreq0__4_carry_n_0;
+  wire w_MODEfreq0__4_carry_n_1;
+  wire w_MODEfreq0__4_carry_n_2;
+  wire w_MODEfreq0__4_carry_n_3;
   wire NLW_accum_value0_CARRYCASCOUT_UNCONNECTED;
   wire NLW_accum_value0_MULTSIGNOUT_UNCONNECTED;
   wire NLW_accum_value0_OVERFLOW_UNCONNECTED;
@@ -2384,741 +891,33 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_p05_accum
   wire [3:0]NLW_accum_value0_CARRYOUT_UNCONNECTED;
   wire [47:28]NLW_accum_value0_P_UNCONNECTED;
   wire [47:0]NLW_accum_value0_PCOUT_UNCONNECTED;
-  wire [1:0]NLW_adj_Pinc_byfreq0__0_carry_O_UNCONNECTED;
-  wire [3:1]NLW_adj_Pinc_byfreq0__0_carry__6_CO_UNCONNECTED;
-  wire [3:2]NLW_adj_Pinc_byfreq0__0_carry__6_O_UNCONNECTED;
-  wire [3:1]NLW_adj_Pinc_byfreq0__175_carry__6_CO_UNCONNECTED;
-  wire [3:2]NLW_adj_Pinc_byfreq0__175_carry__6_O_UNCONNECTED;
-  wire [3:2]NLW_adj_Pinc_byfreq0__261_carry__6_CO_UNCONNECTED;
-  wire [3:3]NLW_adj_Pinc_byfreq0__261_carry__6_O_UNCONNECTED;
-  wire [3:0]NLW_adj_Pinc_byfreq0__352_carry_O_UNCONNECTED;
-  wire [3:0]NLW_adj_Pinc_byfreq0__352_carry__0_O_UNCONNECTED;
-  wire [3:0]NLW_adj_Pinc_byfreq0__352_carry__1_O_UNCONNECTED;
-  wire [3:0]NLW_adj_Pinc_byfreq0__352_carry__2_O_UNCONNECTED;
-  wire [3:0]NLW_adj_Pinc_byfreq0__352_carry__3_O_UNCONNECTED;
-  wire [3:0]NLW_adj_Pinc_byfreq0__352_carry__9_CO_UNCONNECTED;
-  wire [3:1]NLW_adj_Pinc_byfreq0__352_carry__9_O_UNCONNECTED;
-  wire [3:1]NLW_adj_Pinc_byfreq0__453_carry__4_CO_UNCONNECTED;
-  wire [3:2]NLW_adj_Pinc_byfreq0__453_carry__4_O_UNCONNECTED;
-  wire [3:0]NLW_adj_Pinc_byfreq0__517_carry_O_UNCONNECTED;
-  wire [3:0]NLW_adj_Pinc_byfreq0__517_carry__0_O_UNCONNECTED;
-  wire [3:0]NLW_adj_Pinc_byfreq0__517_carry__1_O_UNCONNECTED;
-  wire [3:0]NLW_adj_Pinc_byfreq0__517_carry__2_O_UNCONNECTED;
-  wire [3:0]NLW_adj_Pinc_byfreq0__517_carry__3_O_UNCONNECTED;
-  wire [3:0]NLW_adj_Pinc_byfreq0__517_carry__4_O_UNCONNECTED;
-  wire [3:1]NLW_adj_Pinc_byfreq0__517_carry__5_CO_UNCONNECTED;
-  wire [3:0]NLW_adj_Pinc_byfreq0__517_carry__5_O_UNCONNECTED;
-  wire [3:0]NLW_adj_Pinc_byfreq0__566_carry__4_CO_UNCONNECTED;
-  wire [3:1]NLW_adj_Pinc_byfreq0__566_carry__4_O_UNCONNECTED;
-  wire [3:1]NLW_adj_Pinc_byfreq0__89_carry__6_CO_UNCONNECTED;
-  wire [3:2]NLW_adj_Pinc_byfreq0__89_carry__6_O_UNCONNECTED;
-  wire [0:0]NLW_i__carry__0_i_2__1_O_UNCONNECTED;
-  wire [2:2]NLW_i__carry__1_i_10_CO_UNCONNECTED;
-  wire [3:3]NLW_i__carry__1_i_10_O_UNCONNECTED;
-  wire [2:2]NLW_i__carry__1_i_11_CO_UNCONNECTED;
-  wire [3:3]NLW_i__carry__1_i_11_O_UNCONNECTED;
-  wire [2:2]NLW_i__carry__1_i_12_CO_UNCONNECTED;
-  wire [3:3]NLW_i__carry__1_i_12_O_UNCONNECTED;
-  wire [3:0]NLW_i__carry__1_i_14_CO_UNCONNECTED;
-  wire [3:1]NLW_i__carry__1_i_14_O_UNCONNECTED;
-  wire [3:1]NLW_i__carry__1_i_1__0_CO_UNCONNECTED;
-  wire [3:2]NLW_i__carry__1_i_1__0_O_UNCONNECTED;
-  wire [2:2]NLW_i__carry__2_i_1__0_CO_UNCONNECTED;
-  wire [3:3]NLW_i__carry__2_i_1__0_O_UNCONNECTED;
-  wire [3:2]NLW_i__carry__4_i_10_CO_UNCONNECTED;
-  wire [3:3]NLW_i__carry__4_i_10_O_UNCONNECTED;
-  wire [3:1]NLW_i__carry__4_i_1__0_CO_UNCONNECTED;
-  wire [3:2]NLW_i__carry__4_i_1__0_O_UNCONNECTED;
-  wire [3:2]NLW_i__carry__4_i_8_CO_UNCONNECTED;
-  wire [3:3]NLW_i__carry__4_i_8_O_UNCONNECTED;
-  wire [3:2]NLW_i__carry__4_i_9_CO_UNCONNECTED;
-  wire [3:3]NLW_i__carry__4_i_9_O_UNCONNECTED;
-  wire [0:0]NLW_i__carry_i_14_O_UNCONNECTED;
-  wire [0:0]NLW_i__carry_i_15_O_UNCONNECTED;
-  wire [0:0]NLW_i__carry_i_16_O_UNCONNECTED;
-  wire [0:0]NLW_i__carry_i_3__1_O_UNCONNECTED;
-  wire [0:0]NLW_i__carry_i_4__0_O_UNCONNECTED;
-  wire [0:0]NLW_i__carry_i_5__0_O_UNCONNECTED;
-  wire NLW_w_MODEfreq0_CARRYCASCOUT_UNCONNECTED;
-  wire NLW_w_MODEfreq0_MULTSIGNOUT_UNCONNECTED;
-  wire NLW_w_MODEfreq0_OVERFLOW_UNCONNECTED;
-  wire NLW_w_MODEfreq0_PATTERNBDETECT_UNCONNECTED;
-  wire NLW_w_MODEfreq0_PATTERNDETECT_UNCONNECTED;
-  wire NLW_w_MODEfreq0_UNDERFLOW_UNCONNECTED;
-  wire [29:0]NLW_w_MODEfreq0_ACOUT_UNCONNECTED;
-  wire [17:0]NLW_w_MODEfreq0_BCOUT_UNCONNECTED;
-  wire [3:0]NLW_w_MODEfreq0_CARRYOUT_UNCONNECTED;
-  wire NLW_w_MODEfreq0__0_CARRYCASCOUT_UNCONNECTED;
-  wire NLW_w_MODEfreq0__0_MULTSIGNOUT_UNCONNECTED;
-  wire NLW_w_MODEfreq0__0_OVERFLOW_UNCONNECTED;
-  wire NLW_w_MODEfreq0__0_PATTERNBDETECT_UNCONNECTED;
-  wire NLW_w_MODEfreq0__0_PATTERNDETECT_UNCONNECTED;
-  wire NLW_w_MODEfreq0__0_UNDERFLOW_UNCONNECTED;
-  wire [29:0]NLW_w_MODEfreq0__0_ACOUT_UNCONNECTED;
-  wire [17:0]NLW_w_MODEfreq0__0_BCOUT_UNCONNECTED;
-  wire [3:0]NLW_w_MODEfreq0__0_CARRYOUT_UNCONNECTED;
-  wire NLW_w_MODEfreq0__1_CARRYCASCOUT_UNCONNECTED;
-  wire NLW_w_MODEfreq0__1_MULTSIGNOUT_UNCONNECTED;
-  wire NLW_w_MODEfreq0__1_OVERFLOW_UNCONNECTED;
-  wire NLW_w_MODEfreq0__1_PATTERNBDETECT_UNCONNECTED;
-  wire NLW_w_MODEfreq0__1_PATTERNDETECT_UNCONNECTED;
-  wire NLW_w_MODEfreq0__1_UNDERFLOW_UNCONNECTED;
-  wire [29:0]NLW_w_MODEfreq0__1_ACOUT_UNCONNECTED;
-  wire [17:0]NLW_w_MODEfreq0__1_BCOUT_UNCONNECTED;
-  wire [3:0]NLW_w_MODEfreq0__1_CARRYOUT_UNCONNECTED;
-  wire [47:0]NLW_w_MODEfreq0__1_PCOUT_UNCONNECTED;
-  wire [3:2]NLW_w_MODEfreq0_carry__1_CO_UNCONNECTED;
-  wire [3:3]NLW_w_MODEfreq0_carry__1_O_UNCONNECTED;
+  wire [3:0]NLW_adj_Pinc_byfreq0__234_carry_O_UNCONNECTED;
+  wire [3:0]NLW_adj_Pinc_byfreq0__234_carry__0_O_UNCONNECTED;
+  wire [3:0]NLW_adj_Pinc_byfreq0__234_carry__1_O_UNCONNECTED;
+  wire [1:0]NLW_adj_Pinc_byfreq0__234_carry__2_O_UNCONNECTED;
+  wire [3:1]NLW_adj_Pinc_byfreq0__234_carry__6_i_10_CO_UNCONNECTED;
+  wire [3:2]NLW_adj_Pinc_byfreq0__234_carry__6_i_10_O_UNCONNECTED;
+  wire [3:1]NLW_adj_Pinc_byfreq0__234_carry__6_i_9_CO_UNCONNECTED;
+  wire [3:0]NLW_adj_Pinc_byfreq0__234_carry__6_i_9_O_UNCONNECTED;
+  wire [3:1]NLW_adj_Pinc_byfreq0__234_carry__7_CO_UNCONNECTED;
+  wire [3:2]NLW_adj_Pinc_byfreq0__234_carry__7_O_UNCONNECTED;
+  wire [0:0]NLW_adj_Pinc_byfreq0__234_carry_i_9_O_UNCONNECTED;
+  wire [3:0]NLW_adj_Pinc_byfreq0__320_carry__4_CO_UNCONNECTED;
+  wire [3:1]NLW_adj_Pinc_byfreq0__320_carry__4_O_UNCONNECTED;
+  wire [3:0]NLW_adj_Pinc_byfreq0__381_carry_O_UNCONNECTED;
+  wire [3:0]NLW_adj_Pinc_byfreq0__381_carry__0_O_UNCONNECTED;
+  wire [3:0]NLW_adj_Pinc_byfreq0__381_carry__1_O_UNCONNECTED;
+  wire [3:0]NLW_adj_Pinc_byfreq0__381_carry__2_O_UNCONNECTED;
+  wire [3:0]NLW_adj_Pinc_byfreq0__381_carry__3_O_UNCONNECTED;
+  wire [3:3]NLW_adj_Pinc_byfreq0__381_carry__4_CO_UNCONNECTED;
+  wire [3:0]NLW_adj_Pinc_byfreq0__381_carry__4_O_UNCONNECTED;
+  wire [3:3]NLW_adj_Pinc_byfreq0__426_carry__3_CO_UNCONNECTED;
+  wire [3:0]NLW_adj_Pinc_byfreq0_carry_O_UNCONNECTED;
+  wire [3:1]NLW_adj_Pinc_byfreq0_carry__5_CO_UNCONNECTED;
+  wire [3:2]NLW_adj_Pinc_byfreq0_carry__5_O_UNCONNECTED;
+  wire [3:1]NLW_w_MODEfreq0__4_carry__4_CO_UNCONNECTED;
+  wire [3:2]NLW_w_MODEfreq0__4_carry__4_O_UNCONNECTED;
 
-  CARRY4 \TEMP0_inferred__0/i__carry 
-       (.CI(1'b0),
-        .CO({\TEMP0_inferred__0/i__carry_n_0 ,\TEMP0_inferred__0/i__carry_n_1 ,\TEMP0_inferred__0/i__carry_n_2 ,\TEMP0_inferred__0/i__carry_n_3 }),
-        .CYINIT(1'b0),
-        .DI({mode_sFREQ[6],mode_sFREQ[7:6],1'b0}),
-        .O({\TEMP0_inferred__0/i__carry_n_4 ,\TEMP0_inferred__0/i__carry_n_5 ,\TEMP0_inferred__0/i__carry_n_6 ,\NLW_TEMP0_inferred__0/i__carry_O_UNCONNECTED [0]}),
-        .S({i__carry_i_1__3_n_0,i__carry_i_2__2_n_0,mode_sFREQ[6],1'b1}));
-  CARRY4 \TEMP0_inferred__0/i__carry__0 
-       (.CI(\TEMP0_inferred__0/i__carry_n_0 ),
-        .CO({\TEMP0_inferred__0/i__carry__0_n_0 ,\TEMP0_inferred__0/i__carry__0_n_1 ,\TEMP0_inferred__0/i__carry__0_n_2 ,\TEMP0_inferred__0/i__carry__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({i__carry__0_i_1__0_n_7,i__carry__0_i_2__1_n_4,i__carry__0_i_2__1_n_5,i__carry__0_i_2__1_n_6}),
-        .O({\TEMP0_inferred__0/i__carry__0_n_4 ,\TEMP0_inferred__0/i__carry__0_n_5 ,\TEMP0_inferred__0/i__carry__0_n_6 ,\TEMP0_inferred__0/i__carry__0_n_7 }),
-        .S({i__carry__0_i_3__1_n_0,i__carry__0_i_4__1_n_0,i__carry__0_i_5__1_n_0,i__carry__0_i_6_n_0}));
-  CARRY4 \TEMP0_inferred__0/i__carry__1 
-       (.CI(\TEMP0_inferred__0/i__carry__0_n_0 ),
-        .CO({\TEMP0_inferred__0/i__carry__1_n_0 ,\TEMP0_inferred__0/i__carry__1_n_1 ,\TEMP0_inferred__0/i__carry__1_n_2 ,\TEMP0_inferred__0/i__carry__1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({i__carry__1_i_1__0_n_7,i__carry__0_i_1__0_n_4,i__carry__0_i_1__0_n_5,i__carry__0_i_1__0_n_6}),
-        .O({\TEMP0_inferred__0/i__carry__1_n_4 ,\TEMP0_inferred__0/i__carry__1_n_5 ,\TEMP0_inferred__0/i__carry__1_n_6 ,\TEMP0_inferred__0/i__carry__1_n_7 }),
-        .S({i__carry__1_i_2__1_n_0,i__carry__1_i_3__1_n_0,i__carry__1_i_4__1_n_0,i__carry__1_i_5__0_n_0}));
-  CARRY4 \TEMP0_inferred__0/i__carry__2 
-       (.CI(\TEMP0_inferred__0/i__carry__1_n_0 ),
-        .CO({\TEMP0_inferred__0/i__carry__2_n_0 ,\NLW_TEMP0_inferred__0/i__carry__2_CO_UNCONNECTED [2],\TEMP0_inferred__0/i__carry__2_n_2 ,\TEMP0_inferred__0/i__carry__2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,i__carry__1_i_1__0_n_6}),
-        .O({\NLW_TEMP0_inferred__0/i__carry__2_O_UNCONNECTED [3],\TEMP0_inferred__0/i__carry__2_n_5 ,\TEMP0_inferred__0/i__carry__2_n_6 ,\TEMP0_inferred__0/i__carry__2_n_7 }),
-        .S({1'b1,i__carry__1_i_1__0_n_6,i__carry__1_i_1__0_n_7,i__carry__2_i_1__2_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__10/i__carry 
-       (.CI(1'b0),
-        .CO({\TEMP0_inferred__10/i__carry_n_0 ,\TEMP0_inferred__10/i__carry_n_1 ,\TEMP0_inferred__10/i__carry_n_2 ,\TEMP0_inferred__10/i__carry_n_3 }),
-        .CYINIT(1'b0),
-        .DI({TEMP1[4:2],1'b0}),
-        .O({TEMP02_in[5:3],\NLW_TEMP0_inferred__10/i__carry_O_UNCONNECTED [0]}),
-        .S({i__carry_i_1__10_n_0,TEMP1[3:2],1'b0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__10/i__carry__0 
-       (.CI(\TEMP0_inferred__10/i__carry_n_0 ),
-        .CO({\TEMP0_inferred__10/i__carry__0_n_0 ,\TEMP0_inferred__10/i__carry__0_n_1 ,\TEMP0_inferred__10/i__carry__0_n_2 ,\TEMP0_inferred__10/i__carry__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI(TEMP1[8:5]),
-        .O(TEMP02_in[9:6]),
-        .S({i__carry__0_i_1__6_n_0,i__carry__0_i_2__6_n_0,i__carry__0_i_3__6_n_0,i__carry__0_i_4__5_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__10/i__carry__1 
-       (.CI(\TEMP0_inferred__10/i__carry__0_n_0 ),
-        .CO({\TEMP0_inferred__10/i__carry__1_n_0 ,\TEMP0_inferred__10/i__carry__1_n_1 ,\TEMP0_inferred__10/i__carry__1_n_2 ,\TEMP0_inferred__10/i__carry__1_n_3 }),
-        .CYINIT(1'b0),
-        .DI(TEMP1[12:9]),
-        .O(TEMP02_in[13:10]),
-        .S({i__carry__1_i_1__6_n_0,i__carry__1_i_2__6_n_0,i__carry__1_i_3__6_n_0,i__carry__1_i_4__6_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__10/i__carry__2 
-       (.CI(\TEMP0_inferred__10/i__carry__1_n_0 ),
-        .CO({\TEMP0_inferred__10/i__carry__2_n_0 ,\TEMP0_inferred__10/i__carry__2_n_1 ,\TEMP0_inferred__10/i__carry__2_n_2 ,\TEMP0_inferred__10/i__carry__2_n_3 }),
-        .CYINIT(1'b0),
-        .DI(TEMP1[16:13]),
-        .O(TEMP02_in[17:14]),
-        .S({i__carry__2_i_1__6_n_0,i__carry__2_i_2__5_n_0,i__carry__2_i_3__5_n_0,i__carry__2_i_4__5_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__10/i__carry__3 
-       (.CI(\TEMP0_inferred__10/i__carry__2_n_0 ),
-        .CO({\TEMP0_inferred__10/i__carry__3_n_0 ,\TEMP0_inferred__10/i__carry__3_n_1 ,\TEMP0_inferred__10/i__carry__3_n_2 ,\TEMP0_inferred__10/i__carry__3_n_3 }),
-        .CYINIT(1'b0),
-        .DI(TEMP1[20:17]),
-        .O(TEMP02_in[21:18]),
-        .S({i__carry__3_i_1__4_n_0,i__carry__3_i_2__4_n_0,i__carry__3_i_3__4_n_0,i__carry__3_i_4__4_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__10/i__carry__4 
-       (.CI(\TEMP0_inferred__10/i__carry__3_n_0 ),
-        .CO({\TEMP0_inferred__10/i__carry__4_n_0 ,\TEMP0_inferred__10/i__carry__4_n_1 ,\TEMP0_inferred__10/i__carry__4_n_2 ,\TEMP0_inferred__10/i__carry__4_n_3 }),
-        .CYINIT(1'b0),
-        .DI(TEMP1[24:21]),
-        .O(TEMP02_in[25:22]),
-        .S({i__carry__4_i_1__4_n_0,i__carry__4_i_2__4_n_0,i__carry__4_i_3__3_n_0,i__carry__4_i_4__3_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__10/i__carry__5 
-       (.CI(\TEMP0_inferred__10/i__carry__4_n_0 ),
-        .CO(\NLW_TEMP0_inferred__10/i__carry__5_CO_UNCONNECTED [3:0]),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_TEMP0_inferred__10/i__carry__5_O_UNCONNECTED [3:1],TEMP02_in[26]}),
-        .S({1'b0,1'b0,1'b0,i__carry__5_i_1_n_0}));
-  CARRY4 \TEMP0_inferred__4/i__carry 
-       (.CI(1'b0),
-        .CO({\TEMP0_inferred__4/i__carry_n_0 ,\TEMP0_inferred__4/i__carry_n_1 ,\TEMP0_inferred__4/i__carry_n_2 ,\TEMP0_inferred__4/i__carry_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__5/i__carry_n_6 ,\TEMP1_inferred__5/i__carry_n_7 ,O[0],1'b0}),
-        .O({\TEMP0_inferred__4/i__carry_n_4 ,\TEMP0_inferred__4/i__carry_n_5 ,\TEMP0_inferred__4/i__carry_n_6 ,\NLW_TEMP0_inferred__4/i__carry_O_UNCONNECTED [0]}),
-        .S({i__carry_i_1__7_n_0,i__carry_i_2_n_0,O[0],1'b1}));
-  CARRY4 \TEMP0_inferred__4/i__carry__0 
-       (.CI(\TEMP0_inferred__4/i__carry_n_0 ),
-        .CO({\TEMP0_inferred__4/i__carry__0_n_0 ,\TEMP0_inferred__4/i__carry__0_n_1 ,\TEMP0_inferred__4/i__carry__0_n_2 ,\TEMP0_inferred__4/i__carry__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__5/i__carry__0_n_6 ,\TEMP1_inferred__5/i__carry__0_n_7 ,\TEMP1_inferred__5/i__carry_n_4 ,\TEMP1_inferred__5/i__carry_n_5 }),
-        .O({\TEMP0_inferred__4/i__carry__0_n_4 ,\TEMP0_inferred__4/i__carry__0_n_5 ,\TEMP0_inferred__4/i__carry__0_n_6 ,\TEMP0_inferred__4/i__carry__0_n_7 }),
-        .S({i__carry__0_i_1__3_n_0,i__carry__0_i_2__2_n_0,i__carry__0_i_3__2_n_0,i__carry__0_i_4__2_n_0}));
-  CARRY4 \TEMP0_inferred__4/i__carry__1 
-       (.CI(\TEMP0_inferred__4/i__carry__0_n_0 ),
-        .CO({\TEMP0_inferred__4/i__carry__1_n_0 ,\TEMP0_inferred__4/i__carry__1_n_1 ,\TEMP0_inferred__4/i__carry__1_n_2 ,\TEMP0_inferred__4/i__carry__1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__5/i__carry__1_n_6 ,\TEMP1_inferred__5/i__carry__1_n_7 ,\TEMP1_inferred__5/i__carry__0_n_4 ,\TEMP1_inferred__5/i__carry__0_n_5 }),
-        .O({\TEMP0_inferred__4/i__carry__1_n_4 ,\TEMP0_inferred__4/i__carry__1_n_5 ,\TEMP0_inferred__4/i__carry__1_n_6 ,\TEMP0_inferred__4/i__carry__1_n_7 }),
-        .S({i__carry__1_i_1__3_n_0,i__carry__1_i_2__2_n_0,i__carry__1_i_3__2_n_0,i__carry__1_i_4__2_n_0}));
-  CARRY4 \TEMP0_inferred__4/i__carry__2 
-       (.CI(\TEMP0_inferred__4/i__carry__1_n_0 ),
-        .CO({\TEMP0_inferred__4/i__carry__2_n_0 ,\TEMP0_inferred__4/i__carry__2_n_1 ,\TEMP0_inferred__4/i__carry__2_n_2 ,\TEMP0_inferred__4/i__carry__2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__5/i__carry__2_n_6 ,\TEMP1_inferred__5/i__carry__2_n_7 ,\TEMP1_inferred__5/i__carry__1_n_4 ,\TEMP1_inferred__5/i__carry__1_n_5 }),
-        .O({\TEMP0_inferred__4/i__carry__2_n_4 ,\TEMP0_inferred__4/i__carry__2_n_5 ,\TEMP0_inferred__4/i__carry__2_n_6 ,\TEMP0_inferred__4/i__carry__2_n_7 }),
-        .S({i__carry__2_i_1__3_n_0,i__carry__2_i_2__1_n_0,i__carry__2_i_3__1_n_0,i__carry__2_i_4__1_n_0}));
-  CARRY4 \TEMP0_inferred__4/i__carry__3 
-       (.CI(\TEMP0_inferred__4/i__carry__2_n_0 ),
-        .CO({\TEMP0_inferred__4/i__carry__3_n_0 ,\TEMP0_inferred__4/i__carry__3_n_1 ,\TEMP0_inferred__4/i__carry__3_n_2 ,\TEMP0_inferred__4/i__carry__3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__5/i__carry__3_n_6 ,\TEMP1_inferred__5/i__carry__3_n_7 ,\TEMP1_inferred__5/i__carry__2_n_4 ,\TEMP1_inferred__5/i__carry__2_n_5 }),
-        .O({\TEMP0_inferred__4/i__carry__3_n_4 ,\TEMP0_inferred__4/i__carry__3_n_5 ,\TEMP0_inferred__4/i__carry__3_n_6 ,\TEMP0_inferred__4/i__carry__3_n_7 }),
-        .S({i__carry__3_i_1__1_n_0,i__carry__3_i_2__0_n_0,i__carry__3_i_3__0_n_0,i__carry__3_i_4__0_n_0}));
-  CARRY4 \TEMP0_inferred__4/i__carry__4 
-       (.CI(\TEMP0_inferred__4/i__carry__3_n_0 ),
-        .CO({\NLW_TEMP0_inferred__4/i__carry__4_CO_UNCONNECTED [3:2],\TEMP0_inferred__4/i__carry__4_n_2 ,\TEMP0_inferred__4/i__carry__4_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,\TEMP1_inferred__5/i__carry__3_n_0 ,\TEMP1_inferred__5/i__carry__3_n_5 }),
-        .O({\NLW_TEMP0_inferred__4/i__carry__4_O_UNCONNECTED [3],\TEMP0_inferred__4/i__carry__4_n_5 ,\TEMP0_inferred__4/i__carry__4_n_6 ,\TEMP0_inferred__4/i__carry__4_n_7 }),
-        .S({1'b0,\TEMP1_inferred__5/i__carry__3_n_5 ,i__carry__4_i_1__1_n_0,i__carry__4_i_2__0_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__7/i__carry 
-       (.CI(1'b0),
-        .CO({\TEMP0_inferred__7/i__carry_n_0 ,\TEMP0_inferred__7/i__carry_n_1 ,\TEMP0_inferred__7/i__carry_n_2 ,\TEMP0_inferred__7/i__carry_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__8/i__carry_n_7 ,i__carry_i_1__4_n_0,TEMP1[2],1'b0}),
-        .O({\TEMP0_inferred__7/i__carry_n_4 ,\TEMP0_inferred__7/i__carry_n_5 ,\TEMP0_inferred__7/i__carry_n_6 ,\NLW_TEMP0_inferred__7/i__carry_O_UNCONNECTED [0]}),
-        .S({i__carry_i_2__7_n_0,TEMP1[3],i__carry_i_3__0_n_0,1'b1}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__7/i__carry__0 
-       (.CI(\TEMP0_inferred__7/i__carry_n_0 ),
-        .CO({\TEMP0_inferred__7/i__carry__0_n_0 ,\TEMP0_inferred__7/i__carry__0_n_1 ,\TEMP0_inferred__7/i__carry__0_n_2 ,\TEMP0_inferred__7/i__carry__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__8/i__carry__0_n_7 ,\TEMP1_inferred__8/i__carry_n_4 ,\TEMP1_inferred__8/i__carry_n_5 ,\TEMP1_inferred__8/i__carry_n_6 }),
-        .O({\TEMP0_inferred__7/i__carry__0_n_4 ,\TEMP0_inferred__7/i__carry__0_n_5 ,\TEMP0_inferred__7/i__carry__0_n_6 ,\TEMP0_inferred__7/i__carry__0_n_7 }),
-        .S({i__carry__0_i_1__4_n_0,i__carry__0_i_2__3_n_0,i__carry__0_i_3__3_n_0,i__carry__0_i_4__6_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__7/i__carry__1 
-       (.CI(\TEMP0_inferred__7/i__carry__0_n_0 ),
-        .CO({\TEMP0_inferred__7/i__carry__1_n_0 ,\TEMP0_inferred__7/i__carry__1_n_1 ,\TEMP0_inferred__7/i__carry__1_n_2 ,\TEMP0_inferred__7/i__carry__1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__8/i__carry__1_n_7 ,\TEMP1_inferred__8/i__carry__0_n_4 ,\TEMP1_inferred__8/i__carry__0_n_5 ,\TEMP1_inferred__8/i__carry__0_n_6 }),
-        .O({\TEMP0_inferred__7/i__carry__1_n_4 ,\TEMP0_inferred__7/i__carry__1_n_5 ,\TEMP0_inferred__7/i__carry__1_n_6 ,\TEMP0_inferred__7/i__carry__1_n_7 }),
-        .S({i__carry__1_i_1__4_n_0,i__carry__1_i_2__3_n_0,i__carry__1_i_3__3_n_0,i__carry__1_i_4__3_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__7/i__carry__2 
-       (.CI(\TEMP0_inferred__7/i__carry__1_n_0 ),
-        .CO({\TEMP0_inferred__7/i__carry__2_n_0 ,\TEMP0_inferred__7/i__carry__2_n_1 ,\TEMP0_inferred__7/i__carry__2_n_2 ,\TEMP0_inferred__7/i__carry__2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__8/i__carry__2_n_7 ,\TEMP1_inferred__8/i__carry__1_n_4 ,\TEMP1_inferred__8/i__carry__1_n_5 ,\TEMP1_inferred__8/i__carry__1_n_6 }),
-        .O({\TEMP0_inferred__7/i__carry__2_n_4 ,\TEMP0_inferred__7/i__carry__2_n_5 ,\TEMP0_inferred__7/i__carry__2_n_6 ,\TEMP0_inferred__7/i__carry__2_n_7 }),
-        .S({i__carry__2_i_1__4_n_0,i__carry__2_i_2__2_n_0,i__carry__2_i_3__2_n_0,i__carry__2_i_4__2_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__7/i__carry__3 
-       (.CI(\TEMP0_inferred__7/i__carry__2_n_0 ),
-        .CO({\TEMP0_inferred__7/i__carry__3_n_0 ,\TEMP0_inferred__7/i__carry__3_n_1 ,\TEMP0_inferred__7/i__carry__3_n_2 ,\TEMP0_inferred__7/i__carry__3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__8/i__carry__3_n_7 ,\TEMP1_inferred__8/i__carry__2_n_4 ,\TEMP1_inferred__8/i__carry__2_n_5 ,\TEMP1_inferred__8/i__carry__2_n_6 }),
-        .O({\TEMP0_inferred__7/i__carry__3_n_4 ,\TEMP0_inferred__7/i__carry__3_n_5 ,\TEMP0_inferred__7/i__carry__3_n_6 ,\TEMP0_inferred__7/i__carry__3_n_7 }),
-        .S({i__carry__3_i_1__2_n_0,i__carry__3_i_2__1_n_0,i__carry__3_i_3__1_n_0,i__carry__3_i_4__1_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__7/i__carry__4 
-       (.CI(\TEMP0_inferred__7/i__carry__3_n_0 ),
-        .CO({\TEMP0_inferred__7/i__carry__4_n_0 ,\TEMP0_inferred__7/i__carry__4_n_1 ,\TEMP0_inferred__7/i__carry__4_n_2 ,\TEMP0_inferred__7/i__carry__4_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__8/i__carry__4_n_7 ,\TEMP1_inferred__8/i__carry__3_n_4 ,\TEMP1_inferred__8/i__carry__3_n_5 ,\TEMP1_inferred__8/i__carry__3_n_6 }),
-        .O({\TEMP0_inferred__7/i__carry__4_n_4 ,\TEMP0_inferred__7/i__carry__4_n_5 ,\TEMP0_inferred__7/i__carry__4_n_6 ,\TEMP0_inferred__7/i__carry__4_n_7 }),
-        .S({i__carry__4_i_1__2_n_0,i__carry__4_i_2__1_n_0,i__carry__4_i_3__0_n_0,i__carry__4_i_4__0_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__7/i__carry__5 
-       (.CI(\TEMP0_inferred__7/i__carry__4_n_0 ),
-        .CO(\NLW_TEMP0_inferred__7/i__carry__5_CO_UNCONNECTED [3:0]),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_TEMP0_inferred__7/i__carry__5_O_UNCONNECTED [3:1],\TEMP0_inferred__7/i__carry__5_n_7 }),
-        .S({1'b0,1'b0,1'b0,i__carry__5_i_1__2_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__8/i__carry 
-       (.CI(1'b0),
-        .CO({\TEMP0_inferred__8/i__carry_n_0 ,\TEMP0_inferred__8/i__carry_n_1 ,\TEMP0_inferred__8/i__carry_n_2 ,\TEMP0_inferred__8/i__carry_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__9/i__carry_n_6 ,\TEMP1_inferred__9/i__carry_n_7 ,TEMP1[2],1'b0}),
-        .O({TEMP00_in[5:3],\NLW_TEMP0_inferred__8/i__carry_O_UNCONNECTED [0]}),
-        .S({i__carry_i_1__9_n_0,i__carry_i_2__1_n_0,TEMP1[2],1'b1}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__8/i__carry__0 
-       (.CI(\TEMP0_inferred__8/i__carry_n_0 ),
-        .CO({\TEMP0_inferred__8/i__carry__0_n_0 ,\TEMP0_inferred__8/i__carry__0_n_1 ,\TEMP0_inferred__8/i__carry__0_n_2 ,\TEMP0_inferred__8/i__carry__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__9/i__carry__0_n_6 ,\TEMP1_inferred__9/i__carry__0_n_7 ,\TEMP1_inferred__9/i__carry_n_4 ,\TEMP1_inferred__9/i__carry_n_5 }),
-        .O(TEMP00_in[9:6]),
-        .S({i__carry__0_i_1__5_n_0,i__carry__0_i_2__4_n_0,i__carry__0_i_3__4_n_0,i__carry__0_i_4__3_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__8/i__carry__1 
-       (.CI(\TEMP0_inferred__8/i__carry__0_n_0 ),
-        .CO({\TEMP0_inferred__8/i__carry__1_n_0 ,\TEMP0_inferred__8/i__carry__1_n_1 ,\TEMP0_inferred__8/i__carry__1_n_2 ,\TEMP0_inferred__8/i__carry__1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__9/i__carry__1_n_6 ,\TEMP1_inferred__9/i__carry__1_n_7 ,\TEMP1_inferred__9/i__carry__0_n_4 ,\TEMP1_inferred__9/i__carry__0_n_5 }),
-        .O(TEMP00_in[13:10]),
-        .S({i__carry__1_i_1__5_n_0,i__carry__1_i_2__4_n_0,i__carry__1_i_3__4_n_0,i__carry__1_i_4__4_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__8/i__carry__2 
-       (.CI(\TEMP0_inferred__8/i__carry__1_n_0 ),
-        .CO({\TEMP0_inferred__8/i__carry__2_n_0 ,\TEMP0_inferred__8/i__carry__2_n_1 ,\TEMP0_inferred__8/i__carry__2_n_2 ,\TEMP0_inferred__8/i__carry__2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__9/i__carry__2_n_6 ,\TEMP1_inferred__9/i__carry__2_n_7 ,\TEMP1_inferred__9/i__carry__1_n_4 ,\TEMP1_inferred__9/i__carry__1_n_5 }),
-        .O(TEMP00_in[17:14]),
-        .S({i__carry__2_i_1__5_n_0,i__carry__2_i_2__3_n_0,i__carry__2_i_3__3_n_0,i__carry__2_i_4__3_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__8/i__carry__3 
-       (.CI(\TEMP0_inferred__8/i__carry__2_n_0 ),
-        .CO({\TEMP0_inferred__8/i__carry__3_n_0 ,\TEMP0_inferred__8/i__carry__3_n_1 ,\TEMP0_inferred__8/i__carry__3_n_2 ,\TEMP0_inferred__8/i__carry__3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__9/i__carry__3_n_6 ,\TEMP1_inferred__9/i__carry__3_n_7 ,\TEMP1_inferred__9/i__carry__2_n_4 ,\TEMP1_inferred__9/i__carry__2_n_5 }),
-        .O(TEMP00_in[21:18]),
-        .S({i__carry__3_i_1__3_n_0,i__carry__3_i_2__2_n_0,i__carry__3_i_3__2_n_0,i__carry__3_i_4__2_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__8/i__carry__4 
-       (.CI(\TEMP0_inferred__8/i__carry__3_n_0 ),
-        .CO({\TEMP0_inferred__8/i__carry__4_n_0 ,\TEMP0_inferred__8/i__carry__4_n_1 ,\TEMP0_inferred__8/i__carry__4_n_2 ,\TEMP0_inferred__8/i__carry__4_n_3 }),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__9/i__carry__4_n_6 ,\TEMP1_inferred__9/i__carry__4_n_7 ,\TEMP1_inferred__9/i__carry__3_n_4 ,\TEMP1_inferred__9/i__carry__3_n_5 }),
-        .O(TEMP00_in[25:22]),
-        .S({i__carry__4_i_1__3_n_0,i__carry__4_i_2__2_n_0,i__carry__4_i_3__1_n_0,i__carry__4_i_4__1_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__8/i__carry__5 
-       (.CI(\TEMP0_inferred__8/i__carry__4_n_0 ),
-        .CO(\NLW_TEMP0_inferred__8/i__carry__5_CO_UNCONNECTED [3:0]),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_TEMP0_inferred__8/i__carry__5_O_UNCONNECTED [3:1],TEMP00_in[26]}),
-        .S({1'b0,1'b0,1'b0,i__carry__5_i_1__1_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__9/i__carry 
-       (.CI(1'b0),
-        .CO({\TEMP0_inferred__9/i__carry_n_0 ,\TEMP0_inferred__9/i__carry_n_1 ,\TEMP0_inferred__9/i__carry_n_2 ,\TEMP0_inferred__9/i__carry_n_3 }),
-        .CYINIT(1'b0),
-        .DI({i__carry_i_1__6_n_7,i__carry_i_2__0_n_0,TEMP1[2],1'b0}),
-        .O({TEMP01_in[5:3],\NLW_TEMP0_inferred__9/i__carry_O_UNCONNECTED [0]}),
-        .S({i__carry_i_3__2_n_0,i__carry_i_4_n_0,i__carry_i_5_n_0,1'b0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__9/i__carry__0 
-       (.CI(\TEMP0_inferred__9/i__carry_n_0 ),
-        .CO({\TEMP0_inferred__9/i__carry__0_n_0 ,\TEMP0_inferred__9/i__carry__0_n_1 ,\TEMP0_inferred__9/i__carry__0_n_2 ,\TEMP0_inferred__9/i__carry__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({i__carry__0_i_1__2_n_7,i__carry_i_1__6_n_4,i__carry_i_1__6_n_5,i__carry_i_1__6_n_6}),
-        .O(TEMP01_in[9:6]),
-        .S({i__carry__0_i_2__5_n_0,i__carry__0_i_3__5_n_0,i__carry__0_i_4__4_n_0,i__carry__0_i_5__2_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__9/i__carry__1 
-       (.CI(\TEMP0_inferred__9/i__carry__0_n_0 ),
-        .CO({\TEMP0_inferred__9/i__carry__1_n_0 ,\TEMP0_inferred__9/i__carry__1_n_1 ,\TEMP0_inferred__9/i__carry__1_n_2 ,\TEMP0_inferred__9/i__carry__1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({i__carry__1_i_1__2_n_7,i__carry__0_i_1__2_n_4,i__carry__0_i_1__2_n_5,i__carry__0_i_1__2_n_6}),
-        .O(TEMP01_in[13:10]),
-        .S({i__carry__1_i_2__5_n_0,i__carry__1_i_3__5_n_0,i__carry__1_i_4__5_n_0,i__carry__1_i_5__2_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__9/i__carry__2 
-       (.CI(\TEMP0_inferred__9/i__carry__1_n_0 ),
-        .CO({\TEMP0_inferred__9/i__carry__2_n_0 ,\TEMP0_inferred__9/i__carry__2_n_1 ,\TEMP0_inferred__9/i__carry__2_n_2 ,\TEMP0_inferred__9/i__carry__2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({i__carry__2_i_1__1_n_7,i__carry__1_i_1__2_n_4,i__carry__1_i_1__2_n_5,i__carry__1_i_1__2_n_6}),
-        .O(TEMP01_in[17:14]),
-        .S({i__carry__2_i_2__4_n_0,i__carry__2_i_3__4_n_0,i__carry__2_i_4__4_n_0,i__carry__2_i_5__0_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__9/i__carry__3 
-       (.CI(\TEMP0_inferred__9/i__carry__2_n_0 ),
-        .CO({\TEMP0_inferred__9/i__carry__3_n_0 ,\TEMP0_inferred__9/i__carry__3_n_1 ,\TEMP0_inferred__9/i__carry__3_n_2 ,\TEMP0_inferred__9/i__carry__3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({i__carry__3_i_1__0_n_7,i__carry__2_i_1__1_n_4,i__carry__2_i_1__1_n_5,i__carry__2_i_1__1_n_6}),
-        .O(TEMP01_in[21:18]),
-        .S({i__carry__3_i_2__3_n_0,i__carry__3_i_3__3_n_0,i__carry__3_i_4__3_n_0,i__carry__3_i_5__0_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__9/i__carry__4 
-       (.CI(\TEMP0_inferred__9/i__carry__3_n_0 ),
-        .CO({\TEMP0_inferred__9/i__carry__4_n_0 ,\TEMP0_inferred__9/i__carry__4_n_1 ,\TEMP0_inferred__9/i__carry__4_n_2 ,\TEMP0_inferred__9/i__carry__4_n_3 }),
-        .CYINIT(1'b0),
-        .DI({i__carry__4_i_1__0_n_7,i__carry__3_i_1__0_n_4,i__carry__3_i_1__0_n_5,i__carry__3_i_1__0_n_6}),
-        .O(TEMP01_in[25:22]),
-        .S({i__carry__4_i_2__3_n_0,i__carry__4_i_3__2_n_0,i__carry__4_i_4__2_n_0,i__carry__4_i_5__0_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP0_inferred__9/i__carry__5 
-       (.CI(\TEMP0_inferred__9/i__carry__4_n_0 ),
-        .CO(\NLW_TEMP0_inferred__9/i__carry__5_CO_UNCONNECTED [3:0]),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_TEMP0_inferred__9/i__carry__5_O_UNCONNECTED [3:1],TEMP01_in[26]}),
-        .S({1'b0,1'b0,1'b0,i__carry__5_i_1__0_n_0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 TEMP1_carry
-       (.CI(1'b0),
-        .CO({TEMP1_carry_n_0,TEMP1_carry_n_1,TEMP1_carry_n_2,TEMP1_carry_n_3}),
-        .CYINIT(1'b0),
-        .DI({TEMP1_carry_i_1_n_0,TEMP1_carry_i_2_n_0,TEMP1_carry_i_3_n_0,1'b0}),
-        .O({TEMP1_carry_n_4,TEMP1_carry_n_5,TEMP1_carry_n_6,NLW_TEMP1_carry_O_UNCONNECTED[0]}),
-        .S({TEMP1_carry_i_4_n_0,TEMP1_carry_i_5_n_0,1'b0,1'b0}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 TEMP1_carry__0
-       (.CI(TEMP1_carry_n_0),
-        .CO({TEMP1_carry__0_n_0,TEMP1_carry__0_n_1,TEMP1_carry__0_n_2,TEMP1_carry__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({TEMP1_carry__0_i_1_n_0,TEMP1_carry__0_i_2_n_0,TEMP1_carry__0_i_3_n_0,TEMP1_carry__0_i_4_n_0}),
-        .O({TEMP1_carry__0_n_4,TEMP1_carry__0_n_5,TEMP1_carry__0_n_6,TEMP1_carry__0_n_7}),
-        .S({TEMP1_carry__0_i_5_n_0,TEMP1_carry__0_i_6_n_0,TEMP1_carry__0_i_7_n_0,1'b1}));
-  LUT1 #(
-    .INIT(2'h1)) 
-    TEMP1_carry__0_i_1
-       (.I0(mode_sFREQ[6]),
-        .O(TEMP1_carry__0_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    TEMP1_carry__0_i_2
-       (.I0(mode_sFREQ[7]),
-        .I1(mode_sFREQ[6]),
-        .O(TEMP1_carry__0_i_2_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    TEMP1_carry__0_i_3
-       (.I0(mode_sFREQ[6]),
-        .I1(mode_sFREQ[7]),
-        .O(TEMP1_carry__0_i_3_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    TEMP1_carry__0_i_4
-       (.I0(mode_sFREQ[6]),
-        .I1(mode_sFREQ[7]),
-        .O(TEMP1_carry__0_i_4_n_0));
-  LUT2 #(
-    .INIT(4'hB)) 
-    TEMP1_carry__0_i_5
-       (.I0(mode_sFREQ[7]),
-        .I1(mode_sFREQ[6]),
-        .O(TEMP1_carry__0_i_5_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    TEMP1_carry__0_i_6
-       (.I0(mode_sFREQ[7]),
-        .O(TEMP1_carry__0_i_6_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    TEMP1_carry__0_i_7
-       (.I0(mode_sFREQ[6]),
-        .O(TEMP1_carry__0_i_7_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 TEMP1_carry__1
-       (.CI(TEMP1_carry__0_n_0),
-        .CO({NLW_TEMP1_carry__1_CO_UNCONNECTED[3:1],TEMP1_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,TEMP1_carry__1_i_1_n_0}),
-        .O({NLW_TEMP1_carry__1_O_UNCONNECTED[3:2],TEMP1_carry__1_n_6,TEMP1_carry__1_n_7}),
-        .S({1'b0,1'b0,TEMP1_carry__1_i_2_n_0,TEMP1_carry__1_i_3_n_0}));
-  LUT2 #(
-    .INIT(4'hE)) 
-    TEMP1_carry__1_i_1
-       (.I0(mode_sFREQ[6]),
-        .I1(mode_sFREQ[7]),
-        .O(TEMP1_carry__1_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h7)) 
-    TEMP1_carry__1_i_2
-       (.I0(mode_sFREQ[6]),
-        .I1(mode_sFREQ[7]),
-        .O(TEMP1_carry__1_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    TEMP1_carry__1_i_3
-       (.I0(mode_sFREQ[7]),
-        .I1(mode_sFREQ[6]),
-        .O(TEMP1_carry__1_i_3_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    TEMP1_carry_i_1
-       (.I0(mode_sFREQ[7]),
-        .O(TEMP1_carry_i_1_n_0));
-  LUT2 #(
-    .INIT(4'hB)) 
-    TEMP1_carry_i_2
-       (.I0(mode_sFREQ[7]),
-        .I1(mode_sFREQ[6]),
-        .O(TEMP1_carry_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    TEMP1_carry_i_3
-       (.I0(mode_sFREQ[6]),
-        .I1(mode_sFREQ[7]),
-        .O(TEMP1_carry_i_3_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    TEMP1_carry_i_4
-       (.I0(mode_sFREQ[7]),
-        .O(TEMP1_carry_i_4_n_0));
-  LUT1 #(
-    .INIT(2'h2)) 
-    TEMP1_carry_i_5
-       (.I0(mode_sFREQ[7]),
-        .O(TEMP1_carry_i_5_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP1_inferred__0/i__carry 
-       (.CI(1'b0),
-        .CO({\TEMP1_inferred__0/i__carry_n_0 ,\TEMP1_inferred__0/i__carry_n_1 ,\TEMP1_inferred__0/i__carry_n_2 ,\TEMP1_inferred__0/i__carry_n_3 }),
-        .CYINIT(TEMP1_carry_n_5),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__0/i__carry_n_4 ,\TEMP1_inferred__0/i__carry_n_5 ,\TEMP1_inferred__0/i__carry_n_6 ,\TEMP1_inferred__0/i__carry_n_7 }),
-        .S({TEMP1_carry__0_n_5,TEMP1_carry__0_n_6,TEMP1_carry__0_n_7,TEMP1_carry_n_4}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 \TEMP1_inferred__0/i__carry__0 
-       (.CI(\TEMP1_inferred__0/i__carry_n_0 ),
-        .CO({\NLW_TEMP1_inferred__0/i__carry__0_CO_UNCONNECTED [3:2],\TEMP1_inferred__0/i__carry__0_n_2 ,\TEMP1_inferred__0/i__carry__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_TEMP1_inferred__0/i__carry__0_O_UNCONNECTED [3],\TEMP1_inferred__0/i__carry__0_n_5 ,\TEMP1_inferred__0/i__carry__0_n_6 ,\TEMP1_inferred__0/i__carry__0_n_7 }),
-        .S({1'b0,TEMP1_carry__1_n_6,TEMP1_carry__1_n_7,TEMP1_carry__0_n_4}));
-  CARRY4 \TEMP1_inferred__4/i__carry 
-       (.CI(1'b0),
-        .CO({\TEMP1_inferred__4/i__carry_n_0 ,\TEMP1_inferred__4/i__carry_n_1 ,\TEMP1_inferred__4/i__carry_n_2 ,\TEMP1_inferred__4/i__carry_n_3 }),
-        .CYINIT(O[1]),
-        .DI({1'b0,i__carry_i_2__5_n_7,1'b0,1'b0}),
-        .O({\TEMP1_inferred__4/i__carry_n_4 ,\TEMP1_inferred__4/i__carry_n_5 ,\TEMP1_inferred__4/i__carry_n_6 ,\TEMP1_inferred__4/i__carry_n_7 }),
-        .S({i__carry_i_2__5_n_6,i__carry_i_3_n_0,i__carry_i_1__5_n_4,i__carry_i_1__5_n_5}));
-  CARRY4 \TEMP1_inferred__4/i__carry__0 
-       (.CI(\TEMP1_inferred__4/i__carry_n_0 ),
-        .CO({\TEMP1_inferred__4/i__carry__0_n_0 ,\TEMP1_inferred__4/i__carry__0_n_1 ,\TEMP1_inferred__4/i__carry__0_n_2 ,\TEMP1_inferred__4/i__carry__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__4/i__carry__0_n_4 ,\TEMP1_inferred__4/i__carry__0_n_5 ,\TEMP1_inferred__4/i__carry__0_n_6 ,\TEMP1_inferred__4/i__carry__0_n_7 }),
-        .S({i__carry__0_i_1__1_n_6,i__carry__0_i_1__1_n_7,i__carry_i_2__5_n_4,i__carry_i_2__5_n_5}));
-  CARRY4 \TEMP1_inferred__4/i__carry__1 
-       (.CI(\TEMP1_inferred__4/i__carry__0_n_0 ),
-        .CO({\TEMP1_inferred__4/i__carry__1_n_0 ,\TEMP1_inferred__4/i__carry__1_n_1 ,\TEMP1_inferred__4/i__carry__1_n_2 ,\TEMP1_inferred__4/i__carry__1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__4/i__carry__1_n_4 ,\TEMP1_inferred__4/i__carry__1_n_5 ,\TEMP1_inferred__4/i__carry__1_n_6 ,\TEMP1_inferred__4/i__carry__1_n_7 }),
-        .S({i__carry__1_i_1__1_n_6,i__carry__1_i_1__1_n_7,i__carry__0_i_1__1_n_4,i__carry__0_i_1__1_n_5}));
-  CARRY4 \TEMP1_inferred__4/i__carry__2 
-       (.CI(\TEMP1_inferred__4/i__carry__1_n_0 ),
-        .CO({\TEMP1_inferred__4/i__carry__2_n_0 ,\TEMP1_inferred__4/i__carry__2_n_1 ,\TEMP1_inferred__4/i__carry__2_n_2 ,\TEMP1_inferred__4/i__carry__2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__4/i__carry__2_n_4 ,\TEMP1_inferred__4/i__carry__2_n_5 ,\TEMP1_inferred__4/i__carry__2_n_6 ,\TEMP1_inferred__4/i__carry__2_n_7 }),
-        .S({i__carry__2_i_1__0_n_6,i__carry__2_i_1__0_n_7,i__carry__1_i_1__1_n_4,i__carry__1_i_1__1_n_5}));
-  CARRY4 \TEMP1_inferred__4/i__carry__3 
-       (.CI(\TEMP1_inferred__4/i__carry__2_n_0 ),
-        .CO({\NLW_TEMP1_inferred__4/i__carry__3_CO_UNCONNECTED [3],\TEMP1_inferred__4/i__carry__3_n_1 ,\NLW_TEMP1_inferred__4/i__carry__3_CO_UNCONNECTED [1],\TEMP1_inferred__4/i__carry__3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_TEMP1_inferred__4/i__carry__3_O_UNCONNECTED [3:2],\TEMP1_inferred__4/i__carry__3_n_6 ,\TEMP1_inferred__4/i__carry__3_n_7 }),
-        .S({1'b0,1'b1,i__carry__2_i_1__0_n_0,i__carry__2_i_1__0_n_5}));
-  CARRY4 \TEMP1_inferred__5/i__carry 
-       (.CI(1'b0),
-        .CO({\TEMP1_inferred__5/i__carry_n_0 ,\TEMP1_inferred__5/i__carry_n_1 ,\TEMP1_inferred__5/i__carry_n_2 ,\TEMP1_inferred__5/i__carry_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,i__carry_i_1__5_n_4,i__carry_i_1__5_n_5,1'b0}),
-        .O({\TEMP1_inferred__5/i__carry_n_4 ,\TEMP1_inferred__5/i__carry_n_5 ,\TEMP1_inferred__5/i__carry_n_6 ,\TEMP1_inferred__5/i__carry_n_7 }),
-        .S({i__carry_i_2__5_n_7,i__carry_i_1_n_0,i__carry_i_2__3_n_0,O[1]}));
-  CARRY4 \TEMP1_inferred__5/i__carry__0 
-       (.CI(\TEMP1_inferred__5/i__carry_n_0 ),
-        .CO({\TEMP1_inferred__5/i__carry__0_n_0 ,\TEMP1_inferred__5/i__carry__0_n_1 ,\TEMP1_inferred__5/i__carry__0_n_2 ,\TEMP1_inferred__5/i__carry__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__5/i__carry__0_n_4 ,\TEMP1_inferred__5/i__carry__0_n_5 ,\TEMP1_inferred__5/i__carry__0_n_6 ,\TEMP1_inferred__5/i__carry__0_n_7 }),
-        .S({i__carry__0_i_1__1_n_7,i__carry_i_2__5_n_4,i__carry_i_2__5_n_5,i__carry_i_2__5_n_6}));
-  CARRY4 \TEMP1_inferred__5/i__carry__1 
-       (.CI(\TEMP1_inferred__5/i__carry__0_n_0 ),
-        .CO({\TEMP1_inferred__5/i__carry__1_n_0 ,\TEMP1_inferred__5/i__carry__1_n_1 ,\TEMP1_inferred__5/i__carry__1_n_2 ,\TEMP1_inferred__5/i__carry__1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__5/i__carry__1_n_4 ,\TEMP1_inferred__5/i__carry__1_n_5 ,\TEMP1_inferred__5/i__carry__1_n_6 ,\TEMP1_inferred__5/i__carry__1_n_7 }),
-        .S({i__carry__1_i_1__1_n_7,i__carry__0_i_1__1_n_4,i__carry__0_i_1__1_n_5,i__carry__0_i_1__1_n_6}));
-  CARRY4 \TEMP1_inferred__5/i__carry__2 
-       (.CI(\TEMP1_inferred__5/i__carry__1_n_0 ),
-        .CO({\TEMP1_inferred__5/i__carry__2_n_0 ,\TEMP1_inferred__5/i__carry__2_n_1 ,\TEMP1_inferred__5/i__carry__2_n_2 ,\TEMP1_inferred__5/i__carry__2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__5/i__carry__2_n_4 ,\TEMP1_inferred__5/i__carry__2_n_5 ,\TEMP1_inferred__5/i__carry__2_n_6 ,\TEMP1_inferred__5/i__carry__2_n_7 }),
-        .S({i__carry__2_i_1__0_n_7,i__carry__1_i_1__1_n_4,i__carry__1_i_1__1_n_5,i__carry__1_i_1__1_n_6}));
-  CARRY4 \TEMP1_inferred__5/i__carry__3 
-       (.CI(\TEMP1_inferred__5/i__carry__2_n_0 ),
-        .CO({\TEMP1_inferred__5/i__carry__3_n_0 ,\NLW_TEMP1_inferred__5/i__carry__3_CO_UNCONNECTED [2],\TEMP1_inferred__5/i__carry__3_n_2 ,\TEMP1_inferred__5/i__carry__3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_TEMP1_inferred__5/i__carry__3_O_UNCONNECTED [3],\TEMP1_inferred__5/i__carry__3_n_5 ,\TEMP1_inferred__5/i__carry__3_n_6 ,\TEMP1_inferred__5/i__carry__3_n_7 }),
-        .S({1'b1,i__carry__2_i_1__0_n_0,i__carry__2_i_1__0_n_5,i__carry__2_i_1__0_n_6}));
-  CARRY4 \TEMP1_inferred__6/i__carry 
-       (.CI(1'b0),
-        .CO({\TEMP1_inferred__6/i__carry_n_0 ,\TEMP1_inferred__6/i__carry_n_1 ,\TEMP1_inferred__6/i__carry_n_2 ,\TEMP1_inferred__6/i__carry_n_3 }),
-        .CYINIT(O[1]),
-        .DI({1'b0,1'b0,1'b0,i__carry_i_1__5_n_5}),
-        .O({\TEMP1_inferred__6/i__carry_n_4 ,\TEMP1_inferred__6/i__carry_n_5 ,\TEMP1_inferred__6/i__carry_n_6 ,\TEMP1_inferred__6/i__carry_n_7 }),
-        .S({i__carry_i_2__5_n_6,i__carry_i_2__5_n_7,i__carry_i_1__5_n_4,i__carry_i_1__2_n_0}));
-  CARRY4 \TEMP1_inferred__6/i__carry__0 
-       (.CI(\TEMP1_inferred__6/i__carry_n_0 ),
-        .CO({\TEMP1_inferred__6/i__carry__0_n_0 ,\TEMP1_inferred__6/i__carry__0_n_1 ,\TEMP1_inferred__6/i__carry__0_n_2 ,\TEMP1_inferred__6/i__carry__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__6/i__carry__0_n_4 ,\TEMP1_inferred__6/i__carry__0_n_5 ,\TEMP1_inferred__6/i__carry__0_n_6 ,\TEMP1_inferred__6/i__carry__0_n_7 }),
-        .S({i__carry__0_i_1__1_n_6,i__carry__0_i_1__1_n_7,i__carry_i_2__5_n_4,i__carry_i_2__5_n_5}));
-  CARRY4 \TEMP1_inferred__6/i__carry__1 
-       (.CI(\TEMP1_inferred__6/i__carry__0_n_0 ),
-        .CO({\TEMP1_inferred__6/i__carry__1_n_0 ,\TEMP1_inferred__6/i__carry__1_n_1 ,\TEMP1_inferred__6/i__carry__1_n_2 ,\TEMP1_inferred__6/i__carry__1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__6/i__carry__1_n_4 ,\TEMP1_inferred__6/i__carry__1_n_5 ,\TEMP1_inferred__6/i__carry__1_n_6 ,\TEMP1_inferred__6/i__carry__1_n_7 }),
-        .S({i__carry__1_i_1__1_n_6,i__carry__1_i_1__1_n_7,i__carry__0_i_1__1_n_4,i__carry__0_i_1__1_n_5}));
-  CARRY4 \TEMP1_inferred__6/i__carry__2 
-       (.CI(\TEMP1_inferred__6/i__carry__1_n_0 ),
-        .CO({\TEMP1_inferred__6/i__carry__2_n_0 ,\TEMP1_inferred__6/i__carry__2_n_1 ,\TEMP1_inferred__6/i__carry__2_n_2 ,\TEMP1_inferred__6/i__carry__2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__6/i__carry__2_n_4 ,\TEMP1_inferred__6/i__carry__2_n_5 ,\TEMP1_inferred__6/i__carry__2_n_6 ,\TEMP1_inferred__6/i__carry__2_n_7 }),
-        .S({i__carry__2_i_1__0_n_6,i__carry__2_i_1__0_n_7,i__carry__1_i_1__1_n_4,i__carry__1_i_1__1_n_5}));
-  CARRY4 \TEMP1_inferred__6/i__carry__3 
-       (.CI(\TEMP1_inferred__6/i__carry__2_n_0 ),
-        .CO({\NLW_TEMP1_inferred__6/i__carry__3_CO_UNCONNECTED [3],\TEMP1_inferred__6/i__carry__3_n_1 ,\NLW_TEMP1_inferred__6/i__carry__3_CO_UNCONNECTED [1],\TEMP1_inferred__6/i__carry__3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_TEMP1_inferred__6/i__carry__3_O_UNCONNECTED [3:2],\TEMP1_inferred__6/i__carry__3_n_6 ,\TEMP1_inferred__6/i__carry__3_n_7 }),
-        .S({1'b0,1'b1,i__carry__2_i_1__0_n_0,i__carry__2_i_1__0_n_5}));
-  CARRY4 \TEMP1_inferred__7/i__carry 
-       (.CI(1'b0),
-        .CO({\TEMP1_inferred__7/i__carry_n_0 ,\TEMP1_inferred__7/i__carry_n_1 ,\TEMP1_inferred__7/i__carry_n_2 ,\TEMP1_inferred__7/i__carry_n_3 }),
-        .CYINIT(1'b0),
-        .DI({mode_sFREQ[3:2],mode_sFREQ[3],1'b0}),
-        .O(TEMP1[5:2]),
-        .S({i__carry_i_1__8_n_0,i__carry_i_2__6_n_0,mode_sFREQ[3:2]}));
-  CARRY4 \TEMP1_inferred__7/i__carry__0 
-       (.CI(\TEMP1_inferred__7/i__carry_n_0 ),
-        .CO({\TEMP1_inferred__7/i__carry__0_n_0 ,\TEMP1_inferred__7/i__carry__0_n_1 ,\TEMP1_inferred__7/i__carry__0_n_2 ,\TEMP1_inferred__7/i__carry__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({i__carry__0_i_1_n_0,i__carry__0_i_2_n_0,i__carry__0_i_3_n_0,i__carry__0_i_4_n_0}),
-        .O(TEMP1[9:6]),
-        .S({i__carry__0_i_5__0_n_0,i__carry__0_i_6__0_n_0,i__carry__0_i_7__0_n_0,i__carry__0_i_8_n_0}));
-  CARRY4 \TEMP1_inferred__7/i__carry__1 
-       (.CI(\TEMP1_inferred__7/i__carry__0_n_0 ),
-        .CO({\TEMP1_inferred__7/i__carry__1_n_0 ,\TEMP1_inferred__7/i__carry__1_n_1 ,\TEMP1_inferred__7/i__carry__1_n_2 ,\TEMP1_inferred__7/i__carry__1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({i__carry__1_i_1_n_0,i__carry__1_i_2_n_0,i__carry__1_i_3_n_0,i__carry__1_i_4_n_0}),
-        .O(TEMP1[13:10]),
-        .S({i__carry__1_i_5__1_n_0,i__carry__1_i_6_n_0,i__carry__1_i_7_n_0,i__carry__1_i_8_n_0}));
-  CARRY4 \TEMP1_inferred__7/i__carry__2 
-       (.CI(\TEMP1_inferred__7/i__carry__1_n_0 ),
-        .CO({\TEMP1_inferred__7/i__carry__2_n_0 ,\TEMP1_inferred__7/i__carry__2_n_1 ,\TEMP1_inferred__7/i__carry__2_n_2 ,\TEMP1_inferred__7/i__carry__2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({i__carry__2_i_1_n_0,i__carry__2_i_2_n_0,i__carry__2_i_3_n_0,i__carry__2_i_4_n_0}),
-        .O(TEMP1[17:14]),
-        .S({i__carry__2_i_5_n_0,i__carry__2_i_6_n_0,i__carry__2_i_7_n_0,i__carry__2_i_8_n_0}));
-  CARRY4 \TEMP1_inferred__7/i__carry__3 
-       (.CI(\TEMP1_inferred__7/i__carry__2_n_0 ),
-        .CO({\TEMP1_inferred__7/i__carry__3_n_0 ,\TEMP1_inferred__7/i__carry__3_n_1 ,\TEMP1_inferred__7/i__carry__3_n_2 ,\TEMP1_inferred__7/i__carry__3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({i__carry__3_i_1_n_0,i__carry__3_i_2_n_0,i__carry__3_i_3_n_0,i__carry__3_i_4_n_0}),
-        .O(TEMP1[21:18]),
-        .S({i__carry__3_i_5_n_0,i__carry__3_i_6_n_0,i__carry__3_i_7_n_0,i__carry__3_i_8_n_0}));
-  CARRY4 \TEMP1_inferred__7/i__carry__4 
-       (.CI(\TEMP1_inferred__7/i__carry__3_n_0 ),
-        .CO({\NLW_TEMP1_inferred__7/i__carry__4_CO_UNCONNECTED [3],\TEMP1_inferred__7/i__carry__4_n_1 ,\TEMP1_inferred__7/i__carry__4_n_2 ,\TEMP1_inferred__7/i__carry__4_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,i__carry__4_i_1_n_0,i__carry__4_i_2_n_0,i__carry__4_i_3_n_0}),
-        .O(TEMP1[25:22]),
-        .S({i__carry__4_i_4_n_0,i__carry__4_i_5_n_0,i__carry__4_i_6_n_0,i__carry__4_i_7_n_0}));
-  CARRY4 \TEMP1_inferred__8/i__carry 
-       (.CI(1'b0),
-        .CO({\TEMP1_inferred__8/i__carry_n_0 ,\TEMP1_inferred__8/i__carry_n_1 ,\TEMP1_inferred__8/i__carry_n_2 ,\TEMP1_inferred__8/i__carry_n_3 }),
-        .CYINIT(TEMP1[3]),
-        .DI({1'b0,TEMP1[6],1'b0,1'b0}),
-        .O({\TEMP1_inferred__8/i__carry_n_4 ,\TEMP1_inferred__8/i__carry_n_5 ,\TEMP1_inferred__8/i__carry_n_6 ,\TEMP1_inferred__8/i__carry_n_7 }),
-        .S({TEMP1[7],i__carry_i_1__0_n_0,TEMP1[5:4]}));
-  CARRY4 \TEMP1_inferred__8/i__carry__0 
-       (.CI(\TEMP1_inferred__8/i__carry_n_0 ),
-        .CO({\TEMP1_inferred__8/i__carry__0_n_0 ,\TEMP1_inferred__8/i__carry__0_n_1 ,\TEMP1_inferred__8/i__carry__0_n_2 ,\TEMP1_inferred__8/i__carry__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__8/i__carry__0_n_4 ,\TEMP1_inferred__8/i__carry__0_n_5 ,\TEMP1_inferred__8/i__carry__0_n_6 ,\TEMP1_inferred__8/i__carry__0_n_7 }),
-        .S(TEMP1[11:8]));
-  CARRY4 \TEMP1_inferred__8/i__carry__1 
-       (.CI(\TEMP1_inferred__8/i__carry__0_n_0 ),
-        .CO({\TEMP1_inferred__8/i__carry__1_n_0 ,\TEMP1_inferred__8/i__carry__1_n_1 ,\TEMP1_inferred__8/i__carry__1_n_2 ,\TEMP1_inferred__8/i__carry__1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__8/i__carry__1_n_4 ,\TEMP1_inferred__8/i__carry__1_n_5 ,\TEMP1_inferred__8/i__carry__1_n_6 ,\TEMP1_inferred__8/i__carry__1_n_7 }),
-        .S(TEMP1[15:12]));
-  CARRY4 \TEMP1_inferred__8/i__carry__2 
-       (.CI(\TEMP1_inferred__8/i__carry__1_n_0 ),
-        .CO({\TEMP1_inferred__8/i__carry__2_n_0 ,\TEMP1_inferred__8/i__carry__2_n_1 ,\TEMP1_inferred__8/i__carry__2_n_2 ,\TEMP1_inferred__8/i__carry__2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__8/i__carry__2_n_4 ,\TEMP1_inferred__8/i__carry__2_n_5 ,\TEMP1_inferred__8/i__carry__2_n_6 ,\TEMP1_inferred__8/i__carry__2_n_7 }),
-        .S(TEMP1[19:16]));
-  CARRY4 \TEMP1_inferred__8/i__carry__3 
-       (.CI(\TEMP1_inferred__8/i__carry__2_n_0 ),
-        .CO({\TEMP1_inferred__8/i__carry__3_n_0 ,\TEMP1_inferred__8/i__carry__3_n_1 ,\TEMP1_inferred__8/i__carry__3_n_2 ,\TEMP1_inferred__8/i__carry__3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__8/i__carry__3_n_4 ,\TEMP1_inferred__8/i__carry__3_n_5 ,\TEMP1_inferred__8/i__carry__3_n_6 ,\TEMP1_inferred__8/i__carry__3_n_7 }),
-        .S(TEMP1[23:20]));
-  CARRY4 \TEMP1_inferred__8/i__carry__4 
-       (.CI(\TEMP1_inferred__8/i__carry__3_n_0 ),
-        .CO({\NLW_TEMP1_inferred__8/i__carry__4_CO_UNCONNECTED [3:1],\TEMP1_inferred__8/i__carry__4_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_TEMP1_inferred__8/i__carry__4_O_UNCONNECTED [3:2],\TEMP1_inferred__8/i__carry__4_n_6 ,\TEMP1_inferred__8/i__carry__4_n_7 }),
-        .S({1'b0,1'b0,TEMP1[25:24]}));
-  CARRY4 \TEMP1_inferred__9/i__carry 
-       (.CI(1'b0),
-        .CO({\TEMP1_inferred__9/i__carry_n_0 ,\TEMP1_inferred__9/i__carry_n_1 ,\TEMP1_inferred__9/i__carry_n_2 ,\TEMP1_inferred__9/i__carry_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,TEMP1[5:4],1'b0}),
-        .O({\TEMP1_inferred__9/i__carry_n_4 ,\TEMP1_inferred__9/i__carry_n_5 ,\TEMP1_inferred__9/i__carry_n_6 ,\TEMP1_inferred__9/i__carry_n_7 }),
-        .S({TEMP1[6],i__carry_i_1__1_n_0,i__carry_i_2__4_n_0,TEMP1[3]}));
-  CARRY4 \TEMP1_inferred__9/i__carry__0 
-       (.CI(\TEMP1_inferred__9/i__carry_n_0 ),
-        .CO({\TEMP1_inferred__9/i__carry__0_n_0 ,\TEMP1_inferred__9/i__carry__0_n_1 ,\TEMP1_inferred__9/i__carry__0_n_2 ,\TEMP1_inferred__9/i__carry__0_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__9/i__carry__0_n_4 ,\TEMP1_inferred__9/i__carry__0_n_5 ,\TEMP1_inferred__9/i__carry__0_n_6 ,\TEMP1_inferred__9/i__carry__0_n_7 }),
-        .S(TEMP1[10:7]));
-  CARRY4 \TEMP1_inferred__9/i__carry__1 
-       (.CI(\TEMP1_inferred__9/i__carry__0_n_0 ),
-        .CO({\TEMP1_inferred__9/i__carry__1_n_0 ,\TEMP1_inferred__9/i__carry__1_n_1 ,\TEMP1_inferred__9/i__carry__1_n_2 ,\TEMP1_inferred__9/i__carry__1_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__9/i__carry__1_n_4 ,\TEMP1_inferred__9/i__carry__1_n_5 ,\TEMP1_inferred__9/i__carry__1_n_6 ,\TEMP1_inferred__9/i__carry__1_n_7 }),
-        .S(TEMP1[14:11]));
-  CARRY4 \TEMP1_inferred__9/i__carry__2 
-       (.CI(\TEMP1_inferred__9/i__carry__1_n_0 ),
-        .CO({\TEMP1_inferred__9/i__carry__2_n_0 ,\TEMP1_inferred__9/i__carry__2_n_1 ,\TEMP1_inferred__9/i__carry__2_n_2 ,\TEMP1_inferred__9/i__carry__2_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__9/i__carry__2_n_4 ,\TEMP1_inferred__9/i__carry__2_n_5 ,\TEMP1_inferred__9/i__carry__2_n_6 ,\TEMP1_inferred__9/i__carry__2_n_7 }),
-        .S(TEMP1[18:15]));
-  CARRY4 \TEMP1_inferred__9/i__carry__3 
-       (.CI(\TEMP1_inferred__9/i__carry__2_n_0 ),
-        .CO({\TEMP1_inferred__9/i__carry__3_n_0 ,\TEMP1_inferred__9/i__carry__3_n_1 ,\TEMP1_inferred__9/i__carry__3_n_2 ,\TEMP1_inferred__9/i__carry__3_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\TEMP1_inferred__9/i__carry__3_n_4 ,\TEMP1_inferred__9/i__carry__3_n_5 ,\TEMP1_inferred__9/i__carry__3_n_6 ,\TEMP1_inferred__9/i__carry__3_n_7 }),
-        .S(TEMP1[22:19]));
-  CARRY4 \TEMP1_inferred__9/i__carry__4 
-       (.CI(\TEMP1_inferred__9/i__carry__3_n_0 ),
-        .CO({\NLW_TEMP1_inferred__9/i__carry__4_CO_UNCONNECTED [3:2],\TEMP1_inferred__9/i__carry__4_n_2 ,\TEMP1_inferred__9/i__carry__4_n_3 }),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({\NLW_TEMP1_inferred__9/i__carry__4_O_UNCONNECTED [3],\TEMP1_inferred__9/i__carry__4_n_5 ,\TEMP1_inferred__9/i__carry__4_n_6 ,\TEMP1_inferred__9/i__carry__4_n_7 }),
-        .S({1'b0,TEMP1[25:23]}));
   (* METHODOLOGY_DRC_VIOS = "{SYNTH-11 {cell *THIS*}}" *) 
   DSP48E1 #(
     .ACASCREG(0),
@@ -3147,7 +946,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_p05_accum
     .USE_PATTERN_DETECT("NO_PATDET"),
     .USE_SIMD("ONE48")) 
     accum_value0
-       (.A({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,p_0_in}),
+       (.A({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,p_0_in}),
         .ACIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .ACOUT(NLW_accum_value0_ACOUT_UNCONNECTED[29:0]),
         .ALUMODE({1'b0,1'b0,1'b0,1'b0}),
@@ -3197,194 +996,185 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_p05_accum
         .RSTP(1'b0),
         .UNDERFLOW(NLW_accum_value0_UNDERFLOW_UNCONNECTED));
   LUT5 #(
-    .INIT(32'hBABB8A88)) 
+    .INIT(32'hAAEFAA20)) 
     accum_value0_i_1
-       (.I0(adj_Pinc_byfreq0__352_carry__9_n_7),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__4_n_7),
-        .O(p_0_in[20]));
-  LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_10
-       (.I0(adj_Pinc_byfreq0__352_carry__6_n_4),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__1_n_4),
-        .O(p_0_in[11]));
-  LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_11
-       (.I0(adj_Pinc_byfreq0__352_carry__6_n_5),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__1_n_5),
-        .O(p_0_in[10]));
-  LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_12
-       (.I0(adj_Pinc_byfreq0__352_carry__6_n_6),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__1_n_6),
-        .O(p_0_in[9]));
-  LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_13
-       (.I0(adj_Pinc_byfreq0__352_carry__6_n_7),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__1_n_7),
-        .O(p_0_in[8]));
-  LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_14
-       (.I0(adj_Pinc_byfreq0__352_carry__5_n_4),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__0_n_4),
-        .O(p_0_in[7]));
-  LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_15
-       (.I0(adj_Pinc_byfreq0__352_carry__5_n_5),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__0_n_5),
-        .O(p_0_in[6]));
-  LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_16
-       (.I0(adj_Pinc_byfreq0__352_carry__5_n_6),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__0_n_6),
-        .O(p_0_in[5]));
-  LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_17
-       (.I0(adj_Pinc_byfreq0__352_carry__5_n_7),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__0_n_7),
-        .O(p_0_in[4]));
-  LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_18
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_4),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry_n_4),
-        .O(p_0_in[3]));
-  LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_19
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_5),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry_n_5),
-        .O(p_0_in[2]));
-  LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_2
-       (.I0(adj_Pinc_byfreq0__352_carry__8_n_4),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__3_n_4),
+       (.I0(adj_Pinc_byfreq0__234_carry__7_n_6),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__3_n_4),
         .O(p_0_in[19]));
   LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_20
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_6),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry_n_6),
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_10
+       (.I0(adj_Pinc_byfreq0__234_carry__5_n_7),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__1_n_5),
+        .O(p_0_in[10]));
+  LUT5 #(
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_11
+       (.I0(adj_Pinc_byfreq0__234_carry__4_n_4),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__1_n_6),
+        .O(p_0_in[9]));
+  LUT5 #(
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_12
+       (.I0(adj_Pinc_byfreq0__234_carry__4_n_5),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__1_n_7),
+        .O(p_0_in[8]));
+  LUT5 #(
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_13
+       (.I0(adj_Pinc_byfreq0__234_carry__4_n_6),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__0_n_4),
+        .O(p_0_in[7]));
+  LUT5 #(
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_14
+       (.I0(adj_Pinc_byfreq0__234_carry__4_n_7),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__0_n_5),
+        .O(p_0_in[6]));
+  LUT5 #(
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_15
+       (.I0(adj_Pinc_byfreq0__234_carry__3_n_4),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__0_n_6),
+        .O(p_0_in[5]));
+  LUT5 #(
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_16
+       (.I0(adj_Pinc_byfreq0__234_carry__3_n_5),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__0_n_7),
+        .O(p_0_in[4]));
+  LUT5 #(
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_17
+       (.I0(adj_Pinc_byfreq0__234_carry__3_n_6),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry_n_4),
+        .O(p_0_in[3]));
+  LUT5 #(
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_18
+       (.I0(adj_Pinc_byfreq0__234_carry__3_n_7),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry_n_5),
+        .O(p_0_in[2]));
+  LUT5 #(
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_19
+       (.I0(adj_Pinc_byfreq0__234_carry__2_n_4),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry_n_6),
         .O(p_0_in[1]));
   LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_21
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_7),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry_n_7),
-        .O(p_0_in[0]));
-  LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_3
-       (.I0(adj_Pinc_byfreq0__352_carry__8_n_5),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__3_n_5),
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_2
+       (.I0(adj_Pinc_byfreq0__234_carry__7_n_7),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__3_n_5),
         .O(p_0_in[18]));
   LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_4
-       (.I0(adj_Pinc_byfreq0__352_carry__8_n_6),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__3_n_6),
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_20
+       (.I0(adj_Pinc_byfreq0__234_carry__2_n_5),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry_n_7),
+        .O(p_0_in[0]));
+  LUT5 #(
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_3
+       (.I0(adj_Pinc_byfreq0__234_carry__6_n_4),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__3_n_6),
         .O(p_0_in[17]));
   LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_5
-       (.I0(adj_Pinc_byfreq0__352_carry__8_n_7),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__3_n_7),
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_4
+       (.I0(adj_Pinc_byfreq0__234_carry__6_n_5),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__3_n_7),
         .O(p_0_in[16]));
   LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_6
-       (.I0(adj_Pinc_byfreq0__352_carry__7_n_4),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__2_n_4),
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_5
+       (.I0(adj_Pinc_byfreq0__234_carry__6_n_6),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__2_n_4),
         .O(p_0_in[15]));
   LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_7
-       (.I0(adj_Pinc_byfreq0__352_carry__7_n_5),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__2_n_5),
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_6
+       (.I0(adj_Pinc_byfreq0__234_carry__6_n_7),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__2_n_5),
         .O(p_0_in[14]));
   LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_8
-       (.I0(adj_Pinc_byfreq0__352_carry__7_n_6),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__2_n_6),
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_7
+       (.I0(adj_Pinc_byfreq0__234_carry__5_n_4),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__2_n_6),
         .O(p_0_in[13]));
   LUT5 #(
-    .INIT(32'hBABB8A88)) 
-    accum_value0_i_9
-       (.I0(adj_Pinc_byfreq0__352_carry__7_n_7),
-        .I1(adj_Pinc_byfreq0__517_carry__5_n_3),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__566_carry__2_n_7),
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_8
+       (.I0(adj_Pinc_byfreq0__234_carry__5_n_5),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__2_n_7),
         .O(p_0_in[12]));
+  LUT5 #(
+    .INIT(32'hAAEFAA20)) 
+    accum_value0_i_9
+       (.I0(adj_Pinc_byfreq0__234_carry__5_n_6),
+        .I1(freq[25]),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__381_carry__4_n_1),
+        .I4(adj_Pinc_byfreq0__426_carry__1_n_4),
+        .O(p_0_in[11]));
   LUT1 #(
     .INIT(2'h1)) 
     \accum_value[27]_i_1 
@@ -3486,6200 +1276,3321 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_p05_accum
         .D(D[11]),
         .Q(Q[11]),
         .R(1'b0));
-  CARRY4 adj_Pinc_byfreq0__0_carry
-       (.CI(1'b0),
-        .CO({adj_Pinc_byfreq0__0_carry_n_0,adj_Pinc_byfreq0__0_carry_n_1,adj_Pinc_byfreq0__0_carry_n_2,adj_Pinc_byfreq0__0_carry_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__0_carry_i_1_n_0,adj_Pinc_byfreq0__0_carry_i_2_n_0,adj_Pinc_byfreq0__0_carry_i_3_n_0,1'b0}),
-        .O({adj_Pinc_byfreq0__0_carry_n_4,adj_Pinc_byfreq0__0_carry_n_5,NLW_adj_Pinc_byfreq0__0_carry_O_UNCONNECTED[1:0]}),
-        .S({adj_Pinc_byfreq0__0_carry_i_4_n_0,adj_Pinc_byfreq0__0_carry_i_5_n_0,adj_Pinc_byfreq0__0_carry_i_6_n_0,adj_Pinc_byfreq0__0_carry_i_7_n_0}));
-  CARRY4 adj_Pinc_byfreq0__0_carry__0
-       (.CI(adj_Pinc_byfreq0__0_carry_n_0),
-        .CO({adj_Pinc_byfreq0__0_carry__0_n_0,adj_Pinc_byfreq0__0_carry__0_n_1,adj_Pinc_byfreq0__0_carry__0_n_2,adj_Pinc_byfreq0__0_carry__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__0_carry__0_i_1_n_0,adj_Pinc_byfreq0__0_carry__0_i_2_n_0,adj_Pinc_byfreq0__0_carry__0_i_3_n_0,adj_Pinc_byfreq0__0_carry__0_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__0_carry__0_n_4,adj_Pinc_byfreq0__0_carry__0_n_5,adj_Pinc_byfreq0__0_carry__0_n_6,adj_Pinc_byfreq0__0_carry__0_n_7}),
-        .S({adj_Pinc_byfreq0__0_carry__0_i_5_n_0,adj_Pinc_byfreq0__0_carry__0_i_6_n_0,adj_Pinc_byfreq0__0_carry__0_i_7_n_0,adj_Pinc_byfreq0__0_carry__0_i_8_n_0}));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__0_i_1
-       (.I0(w_MODEfreq0__0_n_99),
-        .I1(w_MODEfreq0__0_n_101),
-        .I2(w_MODEfreq0__0_n_94),
-        .O(adj_Pinc_byfreq0__0_carry__0_i_1_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__0_i_2
-       (.I0(w_MODEfreq0__0_n_100),
-        .I1(w_MODEfreq0__0_n_102),
-        .I2(w_MODEfreq0__0_n_95),
-        .O(adj_Pinc_byfreq0__0_carry__0_i_2_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__0_i_3
-       (.I0(w_MODEfreq0__0_n_101),
-        .I1(w_MODEfreq0__0_n_103),
-        .I2(w_MODEfreq0__0_n_96),
-        .O(adj_Pinc_byfreq0__0_carry__0_i_3_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__0_i_4
-       (.I0(w_MODEfreq0__0_n_102),
-        .I1(w_MODEfreq0__0_n_104),
-        .I2(w_MODEfreq0__0_n_97),
-        .O(adj_Pinc_byfreq0__0_carry__0_i_4_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__0_i_5
-       (.I0(w_MODEfreq0__0_n_94),
-        .I1(w_MODEfreq0__0_n_101),
-        .I2(w_MODEfreq0__0_n_99),
-        .I3(w_MODEfreq0__0_n_100),
-        .I4(w_MODEfreq0__0_n_98),
-        .I5(w_MODEfreq0__0_n_93),
-        .O(adj_Pinc_byfreq0__0_carry__0_i_5_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__0_i_6
-       (.I0(w_MODEfreq0__0_n_95),
-        .I1(w_MODEfreq0__0_n_102),
-        .I2(w_MODEfreq0__0_n_100),
-        .I3(w_MODEfreq0__0_n_101),
-        .I4(w_MODEfreq0__0_n_99),
-        .I5(w_MODEfreq0__0_n_94),
-        .O(adj_Pinc_byfreq0__0_carry__0_i_6_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__0_i_7
-       (.I0(w_MODEfreq0__0_n_96),
-        .I1(w_MODEfreq0__0_n_103),
-        .I2(w_MODEfreq0__0_n_101),
-        .I3(w_MODEfreq0__0_n_102),
-        .I4(w_MODEfreq0__0_n_100),
-        .I5(w_MODEfreq0__0_n_95),
-        .O(adj_Pinc_byfreq0__0_carry__0_i_7_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__0_i_8
-       (.I0(w_MODEfreq0__0_n_97),
-        .I1(w_MODEfreq0__0_n_104),
-        .I2(w_MODEfreq0__0_n_102),
-        .I3(w_MODEfreq0__0_n_103),
-        .I4(w_MODEfreq0__0_n_101),
-        .I5(w_MODEfreq0__0_n_96),
-        .O(adj_Pinc_byfreq0__0_carry__0_i_8_n_0));
-  CARRY4 adj_Pinc_byfreq0__0_carry__1
-       (.CI(adj_Pinc_byfreq0__0_carry__0_n_0),
-        .CO({adj_Pinc_byfreq0__0_carry__1_n_0,adj_Pinc_byfreq0__0_carry__1_n_1,adj_Pinc_byfreq0__0_carry__1_n_2,adj_Pinc_byfreq0__0_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__0_carry__1_i_1_n_0,adj_Pinc_byfreq0__0_carry__1_i_2_n_0,adj_Pinc_byfreq0__0_carry__1_i_3_n_0,adj_Pinc_byfreq0__0_carry__1_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__0_carry__1_n_4,adj_Pinc_byfreq0__0_carry__1_n_5,adj_Pinc_byfreq0__0_carry__1_n_6,adj_Pinc_byfreq0__0_carry__1_n_7}),
-        .S({adj_Pinc_byfreq0__0_carry__1_i_5_n_0,adj_Pinc_byfreq0__0_carry__1_i_6_n_0,adj_Pinc_byfreq0__0_carry__1_i_7_n_0,adj_Pinc_byfreq0__0_carry__1_i_8_n_0}));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__1_i_1
-       (.I0(w_MODEfreq0__0_n_95),
-        .I1(w_MODEfreq0__0_n_97),
-        .I2(w_MODEfreq0__0_n_90),
-        .O(adj_Pinc_byfreq0__0_carry__1_i_1_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__1_i_2
-       (.I0(w_MODEfreq0__0_n_96),
-        .I1(w_MODEfreq0__0_n_98),
-        .I2(w_MODEfreq0__0_n_91),
-        .O(adj_Pinc_byfreq0__0_carry__1_i_2_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__1_i_3
-       (.I0(w_MODEfreq0__0_n_97),
-        .I1(w_MODEfreq0__0_n_99),
-        .I2(w_MODEfreq0__0_n_92),
-        .O(adj_Pinc_byfreq0__0_carry__1_i_3_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__1_i_4
-       (.I0(w_MODEfreq0__0_n_98),
-        .I1(w_MODEfreq0__0_n_100),
-        .I2(w_MODEfreq0__0_n_93),
-        .O(adj_Pinc_byfreq0__0_carry__1_i_4_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__1_i_5
-       (.I0(w_MODEfreq0__0_n_90),
-        .I1(w_MODEfreq0__0_n_97),
-        .I2(w_MODEfreq0__0_n_95),
-        .I3(w_MODEfreq0__0_n_96),
-        .I4(w_MODEfreq0__0_n_94),
-        .I5(w_MODEfreq0_carry_n_7),
-        .O(adj_Pinc_byfreq0__0_carry__1_i_5_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__1_i_6
-       (.I0(w_MODEfreq0__0_n_91),
-        .I1(w_MODEfreq0__0_n_98),
-        .I2(w_MODEfreq0__0_n_96),
-        .I3(w_MODEfreq0__0_n_97),
-        .I4(w_MODEfreq0__0_n_95),
-        .I5(w_MODEfreq0__0_n_90),
-        .O(adj_Pinc_byfreq0__0_carry__1_i_6_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__1_i_7
-       (.I0(w_MODEfreq0__0_n_92),
-        .I1(w_MODEfreq0__0_n_99),
-        .I2(w_MODEfreq0__0_n_97),
-        .I3(w_MODEfreq0__0_n_98),
-        .I4(w_MODEfreq0__0_n_96),
-        .I5(w_MODEfreq0__0_n_91),
-        .O(adj_Pinc_byfreq0__0_carry__1_i_7_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__1_i_8
-       (.I0(w_MODEfreq0__0_n_93),
-        .I1(w_MODEfreq0__0_n_100),
-        .I2(w_MODEfreq0__0_n_98),
-        .I3(w_MODEfreq0__0_n_99),
-        .I4(w_MODEfreq0__0_n_97),
-        .I5(w_MODEfreq0__0_n_92),
-        .O(adj_Pinc_byfreq0__0_carry__1_i_8_n_0));
-  CARRY4 adj_Pinc_byfreq0__0_carry__2
-       (.CI(adj_Pinc_byfreq0__0_carry__1_n_0),
-        .CO({adj_Pinc_byfreq0__0_carry__2_n_0,adj_Pinc_byfreq0__0_carry__2_n_1,adj_Pinc_byfreq0__0_carry__2_n_2,adj_Pinc_byfreq0__0_carry__2_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__0_carry__2_i_1_n_0,adj_Pinc_byfreq0__0_carry__2_i_2_n_0,adj_Pinc_byfreq0__0_carry__2_i_3_n_0,adj_Pinc_byfreq0__0_carry__2_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__0_carry__2_n_4,adj_Pinc_byfreq0__0_carry__2_n_5,adj_Pinc_byfreq0__0_carry__2_n_6,adj_Pinc_byfreq0__0_carry__2_n_7}),
-        .S({adj_Pinc_byfreq0__0_carry__2_i_5_n_0,adj_Pinc_byfreq0__0_carry__2_i_6_n_0,adj_Pinc_byfreq0__0_carry__2_i_7_n_0,adj_Pinc_byfreq0__0_carry__2_i_8_n_0}));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__2_i_1
-       (.I0(w_MODEfreq0__0_n_91),
-        .I1(w_MODEfreq0__0_n_93),
-        .I2(w_MODEfreq0_carry_n_4),
-        .O(adj_Pinc_byfreq0__0_carry__2_i_1_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__2_i_2
-       (.I0(w_MODEfreq0__0_n_92),
-        .I1(w_MODEfreq0__0_n_94),
-        .I2(w_MODEfreq0_carry_n_5),
-        .O(adj_Pinc_byfreq0__0_carry__2_i_2_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__2_i_3
-       (.I0(w_MODEfreq0__0_n_93),
-        .I1(w_MODEfreq0__0_n_95),
-        .I2(w_MODEfreq0_carry_n_6),
-        .O(adj_Pinc_byfreq0__0_carry__2_i_3_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__2_i_4
-       (.I0(w_MODEfreq0__0_n_94),
-        .I1(w_MODEfreq0__0_n_96),
-        .I2(w_MODEfreq0_carry_n_7),
-        .O(adj_Pinc_byfreq0__0_carry__2_i_4_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__2_i_5
-       (.I0(w_MODEfreq0_carry_n_4),
-        .I1(w_MODEfreq0__0_n_93),
-        .I2(w_MODEfreq0__0_n_91),
-        .I3(w_MODEfreq0__0_n_92),
-        .I4(w_MODEfreq0__0_n_90),
-        .I5(w_MODEfreq0_carry__0_n_7),
-        .O(adj_Pinc_byfreq0__0_carry__2_i_5_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__2_i_6
-       (.I0(w_MODEfreq0_carry_n_5),
-        .I1(w_MODEfreq0__0_n_94),
-        .I2(w_MODEfreq0__0_n_92),
-        .I3(w_MODEfreq0__0_n_93),
-        .I4(w_MODEfreq0__0_n_91),
-        .I5(w_MODEfreq0_carry_n_4),
-        .O(adj_Pinc_byfreq0__0_carry__2_i_6_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__2_i_7
-       (.I0(w_MODEfreq0_carry_n_6),
-        .I1(w_MODEfreq0__0_n_95),
-        .I2(w_MODEfreq0__0_n_93),
-        .I3(w_MODEfreq0__0_n_94),
-        .I4(w_MODEfreq0__0_n_92),
-        .I5(w_MODEfreq0_carry_n_5),
-        .O(adj_Pinc_byfreq0__0_carry__2_i_7_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__2_i_8
-       (.I0(w_MODEfreq0_carry_n_7),
-        .I1(w_MODEfreq0__0_n_96),
-        .I2(w_MODEfreq0__0_n_94),
-        .I3(w_MODEfreq0__0_n_95),
-        .I4(w_MODEfreq0__0_n_93),
-        .I5(w_MODEfreq0_carry_n_6),
-        .O(adj_Pinc_byfreq0__0_carry__2_i_8_n_0));
-  CARRY4 adj_Pinc_byfreq0__0_carry__3
-       (.CI(adj_Pinc_byfreq0__0_carry__2_n_0),
-        .CO({adj_Pinc_byfreq0__0_carry__3_n_0,adj_Pinc_byfreq0__0_carry__3_n_1,adj_Pinc_byfreq0__0_carry__3_n_2,adj_Pinc_byfreq0__0_carry__3_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__0_carry__3_i_1_n_0,adj_Pinc_byfreq0__0_carry__3_i_2_n_0,adj_Pinc_byfreq0__0_carry__3_i_3_n_0,adj_Pinc_byfreq0__0_carry__3_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__0_carry__3_n_4,adj_Pinc_byfreq0__0_carry__3_n_5,adj_Pinc_byfreq0__0_carry__3_n_6,adj_Pinc_byfreq0__0_carry__3_n_7}),
-        .S({adj_Pinc_byfreq0__0_carry__3_i_5_n_0,adj_Pinc_byfreq0__0_carry__3_i_6_n_0,adj_Pinc_byfreq0__0_carry__3_i_7_n_0,adj_Pinc_byfreq0__0_carry__3_i_8_n_0}));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__3_i_1
-       (.I0(w_MODEfreq0_carry_n_5),
-        .I1(w_MODEfreq0_carry_n_7),
-        .I2(w_MODEfreq0_carry__0_n_4),
-        .O(adj_Pinc_byfreq0__0_carry__3_i_1_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__3_i_2
-       (.I0(w_MODEfreq0_carry_n_6),
-        .I1(w_MODEfreq0__0_n_90),
-        .I2(w_MODEfreq0_carry__0_n_5),
-        .O(adj_Pinc_byfreq0__0_carry__3_i_2_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__3_i_3
-       (.I0(w_MODEfreq0_carry_n_7),
-        .I1(w_MODEfreq0__0_n_91),
-        .I2(w_MODEfreq0_carry__0_n_6),
-        .O(adj_Pinc_byfreq0__0_carry__3_i_3_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__3_i_4
-       (.I0(w_MODEfreq0__0_n_90),
-        .I1(w_MODEfreq0__0_n_92),
-        .I2(w_MODEfreq0_carry__0_n_7),
-        .O(adj_Pinc_byfreq0__0_carry__3_i_4_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__3_i_5
-       (.I0(w_MODEfreq0_carry__0_n_4),
-        .I1(w_MODEfreq0_carry_n_7),
-        .I2(w_MODEfreq0_carry_n_5),
-        .I3(w_MODEfreq0_carry_n_6),
-        .I4(w_MODEfreq0_carry_n_4),
-        .I5(w_MODEfreq0_carry__1_n_7),
-        .O(adj_Pinc_byfreq0__0_carry__3_i_5_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__3_i_6
-       (.I0(w_MODEfreq0_carry__0_n_5),
-        .I1(w_MODEfreq0__0_n_90),
-        .I2(w_MODEfreq0_carry_n_6),
-        .I3(w_MODEfreq0_carry_n_7),
-        .I4(w_MODEfreq0_carry_n_5),
-        .I5(w_MODEfreq0_carry__0_n_4),
-        .O(adj_Pinc_byfreq0__0_carry__3_i_6_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__3_i_7
-       (.I0(w_MODEfreq0_carry__0_n_6),
-        .I1(w_MODEfreq0__0_n_91),
-        .I2(w_MODEfreq0_carry_n_7),
-        .I3(w_MODEfreq0__0_n_90),
-        .I4(w_MODEfreq0_carry_n_6),
-        .I5(w_MODEfreq0_carry__0_n_5),
-        .O(adj_Pinc_byfreq0__0_carry__3_i_7_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__3_i_8
-       (.I0(w_MODEfreq0_carry__0_n_7),
-        .I1(w_MODEfreq0__0_n_92),
-        .I2(w_MODEfreq0__0_n_90),
-        .I3(w_MODEfreq0__0_n_91),
-        .I4(w_MODEfreq0_carry_n_7),
-        .I5(w_MODEfreq0_carry__0_n_6),
-        .O(adj_Pinc_byfreq0__0_carry__3_i_8_n_0));
-  CARRY4 adj_Pinc_byfreq0__0_carry__4
-       (.CI(adj_Pinc_byfreq0__0_carry__3_n_0),
-        .CO({adj_Pinc_byfreq0__0_carry__4_n_0,adj_Pinc_byfreq0__0_carry__4_n_1,adj_Pinc_byfreq0__0_carry__4_n_2,adj_Pinc_byfreq0__0_carry__4_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__0_carry__4_i_1_n_0,adj_Pinc_byfreq0__0_carry__4_i_2_n_0,adj_Pinc_byfreq0__0_carry__4_i_3_n_0,adj_Pinc_byfreq0__0_carry__4_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__0_carry__4_n_4,adj_Pinc_byfreq0__0_carry__4_n_5,adj_Pinc_byfreq0__0_carry__4_n_6,adj_Pinc_byfreq0__0_carry__4_n_7}),
-        .S({adj_Pinc_byfreq0__0_carry__4_i_5_n_0,adj_Pinc_byfreq0__0_carry__4_i_6_n_0,adj_Pinc_byfreq0__0_carry__4_i_7_n_0,adj_Pinc_byfreq0__0_carry__4_i_8_n_0}));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__0_carry__4_i_1
-       (.I0(w_MODEfreq0_carry__0_n_7),
-        .I1(w_MODEfreq0_carry__0_n_5),
-        .O(adj_Pinc_byfreq0__0_carry__4_i_1_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__4_i_2
-       (.I0(w_MODEfreq0_carry__0_n_6),
-        .I1(w_MODEfreq0_carry_n_4),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__0_carry__4_i_2_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__4_i_3
-       (.I0(w_MODEfreq0_carry__0_n_7),
-        .I1(w_MODEfreq0_carry_n_5),
-        .I2(w_MODEfreq0_carry__1_n_6),
-        .O(adj_Pinc_byfreq0__0_carry__4_i_3_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry__4_i_4
-       (.I0(w_MODEfreq0_carry_n_4),
-        .I1(w_MODEfreq0_carry_n_6),
-        .I2(w_MODEfreq0_carry__1_n_7),
-        .O(adj_Pinc_byfreq0__0_carry__4_i_4_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__0_carry__4_i_5
-       (.I0(w_MODEfreq0_carry__0_n_5),
-        .I1(w_MODEfreq0_carry__0_n_7),
-        .I2(w_MODEfreq0_carry__0_n_4),
-        .I3(w_MODEfreq0_carry__0_n_6),
-        .O(adj_Pinc_byfreq0__0_carry__4_i_5_n_0));
-  LUT5 #(
-    .INIT(32'h718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__4_i_6
-       (.I0(w_MODEfreq0_carry__1_n_5),
-        .I1(w_MODEfreq0_carry_n_4),
-        .I2(w_MODEfreq0_carry__0_n_6),
-        .I3(w_MODEfreq0_carry__0_n_5),
-        .I4(w_MODEfreq0_carry__0_n_7),
-        .O(adj_Pinc_byfreq0__0_carry__4_i_6_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__4_i_7
-       (.I0(w_MODEfreq0_carry__1_n_6),
-        .I1(w_MODEfreq0_carry_n_5),
-        .I2(w_MODEfreq0_carry__0_n_7),
-        .I3(w_MODEfreq0_carry_n_4),
-        .I4(w_MODEfreq0_carry__0_n_6),
-        .I5(w_MODEfreq0_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__0_carry__4_i_7_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry__4_i_8
-       (.I0(w_MODEfreq0_carry__1_n_7),
-        .I1(w_MODEfreq0_carry_n_6),
-        .I2(w_MODEfreq0_carry_n_4),
-        .I3(w_MODEfreq0_carry_n_5),
-        .I4(w_MODEfreq0_carry__0_n_7),
-        .I5(w_MODEfreq0_carry__1_n_6),
-        .O(adj_Pinc_byfreq0__0_carry__4_i_8_n_0));
-  CARRY4 adj_Pinc_byfreq0__0_carry__5
-       (.CI(adj_Pinc_byfreq0__0_carry__4_n_0),
-        .CO({adj_Pinc_byfreq0__0_carry__5_n_0,adj_Pinc_byfreq0__0_carry__5_n_1,adj_Pinc_byfreq0__0_carry__5_n_2,adj_Pinc_byfreq0__0_carry__5_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__0_carry__5_i_1_n_0,adj_Pinc_byfreq0__0_carry__5_i_2_n_0,adj_Pinc_byfreq0__0_carry__5_i_3_n_0,adj_Pinc_byfreq0__0_carry__5_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__0_carry__5_n_4,adj_Pinc_byfreq0__0_carry__5_n_5,adj_Pinc_byfreq0__0_carry__5_n_6,adj_Pinc_byfreq0__0_carry__5_n_7}),
-        .S({adj_Pinc_byfreq0__0_carry__5_i_5_n_0,adj_Pinc_byfreq0__0_carry__5_i_6_n_0,adj_Pinc_byfreq0__0_carry__5_i_7_n_0,adj_Pinc_byfreq0__0_carry__5_i_8_n_0}));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__0_carry__5_i_1
-       (.I0(w_MODEfreq0_carry__1_n_7),
-        .I1(w_MODEfreq0_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__0_carry__5_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__0_carry__5_i_2
-       (.I0(w_MODEfreq0_carry__0_n_4),
-        .I1(w_MODEfreq0_carry__1_n_6),
-        .O(adj_Pinc_byfreq0__0_carry__5_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__0_carry__5_i_3
-       (.I0(w_MODEfreq0_carry__0_n_5),
-        .I1(w_MODEfreq0_carry__1_n_7),
-        .O(adj_Pinc_byfreq0__0_carry__5_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__0_carry__5_i_4
-       (.I0(w_MODEfreq0_carry__0_n_6),
-        .I1(w_MODEfreq0_carry__0_n_4),
-        .O(adj_Pinc_byfreq0__0_carry__5_i_4_n_0));
-  LUT3 #(
-    .INIT(8'h4B)) 
-    adj_Pinc_byfreq0__0_carry__5_i_5
-       (.I0(w_MODEfreq0_carry__1_n_5),
-        .I1(w_MODEfreq0_carry__1_n_7),
-        .I2(w_MODEfreq0_carry__1_n_6),
-        .O(adj_Pinc_byfreq0__0_carry__5_i_5_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__0_carry__5_i_6
-       (.I0(w_MODEfreq0_carry__1_n_6),
-        .I1(w_MODEfreq0_carry__0_n_4),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .I3(w_MODEfreq0_carry__1_n_7),
-        .O(adj_Pinc_byfreq0__0_carry__5_i_6_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__0_carry__5_i_7
-       (.I0(w_MODEfreq0_carry__1_n_7),
-        .I1(w_MODEfreq0_carry__0_n_5),
-        .I2(w_MODEfreq0_carry__1_n_6),
-        .I3(w_MODEfreq0_carry__0_n_4),
-        .O(adj_Pinc_byfreq0__0_carry__5_i_7_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__0_carry__5_i_8
-       (.I0(w_MODEfreq0_carry__0_n_4),
-        .I1(w_MODEfreq0_carry__0_n_6),
-        .I2(w_MODEfreq0_carry__1_n_7),
-        .I3(w_MODEfreq0_carry__0_n_5),
-        .O(adj_Pinc_byfreq0__0_carry__5_i_8_n_0));
-  CARRY4 adj_Pinc_byfreq0__0_carry__6
-       (.CI(adj_Pinc_byfreq0__0_carry__5_n_0),
-        .CO({NLW_adj_Pinc_byfreq0__0_carry__6_CO_UNCONNECTED[3],adj_Pinc_byfreq0__0_carry__6_n_1,NLW_adj_Pinc_byfreq0__0_carry__6_CO_UNCONNECTED[1],adj_Pinc_byfreq0__0_carry__6_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,w_MODEfreq0_carry__1_n_5,w_MODEfreq0_carry__1_n_6}),
-        .O({NLW_adj_Pinc_byfreq0__0_carry__6_O_UNCONNECTED[3:2],adj_Pinc_byfreq0__0_carry__6_n_6,adj_Pinc_byfreq0__0_carry__6_n_7}),
-        .S({1'b0,1'b1,adj_Pinc_byfreq0__0_carry__6_i_1_n_0,adj_Pinc_byfreq0__0_carry__6_i_2_n_0}));
-  LUT1 #(
-    .INIT(2'h1)) 
-    adj_Pinc_byfreq0__0_carry__6_i_1
-       (.I0(w_MODEfreq0_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__0_carry__6_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__0_carry__6_i_2
-       (.I0(w_MODEfreq0_carry__1_n_6),
-        .I1(w_MODEfreq0_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__0_carry__6_i_2_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__0_carry_i_1
-       (.I0(w_MODEfreq0__0_n_103),
-        .I1(w_MODEfreq0__0_n_105),
-        .I2(w_MODEfreq0__0_n_98),
-        .O(adj_Pinc_byfreq0__0_carry_i_1_n_0));
-  LUT3 #(
-    .INIT(8'h69)) 
-    adj_Pinc_byfreq0__0_carry_i_2
-       (.I0(w_MODEfreq0__0_n_105),
-        .I1(w_MODEfreq0__0_n_103),
-        .I2(w_MODEfreq0__0_n_98),
-        .O(adj_Pinc_byfreq0__0_carry_i_2_n_0));
-  LUT2 #(
-    .INIT(4'hB)) 
-    adj_Pinc_byfreq0__0_carry_i_3
-       (.I0(w_MODEfreq0__0_n_100),
-        .I1(w_MODEfreq0__0_n_105),
-        .O(adj_Pinc_byfreq0__0_carry_i_3_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__0_carry_i_4
-       (.I0(w_MODEfreq0__0_n_98),
-        .I1(w_MODEfreq0__0_n_105),
-        .I2(w_MODEfreq0__0_n_103),
-        .I3(w_MODEfreq0__0_n_104),
-        .I4(w_MODEfreq0__0_n_102),
-        .I5(w_MODEfreq0__0_n_97),
-        .O(adj_Pinc_byfreq0__0_carry_i_4_n_0));
-  LUT5 #(
-    .INIT(32'h69966969)) 
-    adj_Pinc_byfreq0__0_carry_i_5
-       (.I0(w_MODEfreq0__0_n_105),
-        .I1(w_MODEfreq0__0_n_103),
-        .I2(w_MODEfreq0__0_n_98),
-        .I3(w_MODEfreq0__0_n_104),
-        .I4(w_MODEfreq0__0_n_99),
-        .O(adj_Pinc_byfreq0__0_carry_i_5_n_0));
-  LUT4 #(
-    .INIT(16'h2DD2)) 
-    adj_Pinc_byfreq0__0_carry_i_6
-       (.I0(w_MODEfreq0__0_n_105),
-        .I1(w_MODEfreq0__0_n_100),
-        .I2(w_MODEfreq0__0_n_104),
-        .I3(w_MODEfreq0__0_n_99),
-        .O(adj_Pinc_byfreq0__0_carry_i_6_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    adj_Pinc_byfreq0__0_carry_i_7
-       (.I0(w_MODEfreq0__0_n_100),
-        .I1(w_MODEfreq0__0_n_105),
-        .O(adj_Pinc_byfreq0__0_carry_i_7_n_0));
-  CARRY4 adj_Pinc_byfreq0__175_carry
-       (.CI(1'b0),
-        .CO({adj_Pinc_byfreq0__175_carry_n_0,adj_Pinc_byfreq0__175_carry_n_1,adj_Pinc_byfreq0__175_carry_n_2,adj_Pinc_byfreq0__175_carry_n_3}),
-        .CYINIT(1'b0),
-        .DI({w_MODEfreq0__0_n_105,1'b0,1'b0,1'b1}),
-        .O({adj_Pinc_byfreq0__175_carry_n_4,adj_Pinc_byfreq0__175_carry_n_5,adj_Pinc_byfreq0__175_carry_n_6,adj_Pinc_byfreq0__175_carry_n_7}),
-        .S({adj_Pinc_byfreq0__175_carry_i_1_n_0,adj_Pinc_byfreq0__175_carry_i_2_n_0,adj_Pinc_byfreq0__175_carry_i_3_n_0,w_MODEfreq0__0_n_105}));
-  CARRY4 adj_Pinc_byfreq0__175_carry__0
-       (.CI(adj_Pinc_byfreq0__175_carry_n_0),
-        .CO({adj_Pinc_byfreq0__175_carry__0_n_0,adj_Pinc_byfreq0__175_carry__0_n_1,adj_Pinc_byfreq0__175_carry__0_n_2,adj_Pinc_byfreq0__175_carry__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({w_MODEfreq0__0_n_101,w_MODEfreq0__0_n_102,w_MODEfreq0__0_n_103,w_MODEfreq0__0_n_104}),
-        .O({adj_Pinc_byfreq0__175_carry__0_n_4,adj_Pinc_byfreq0__175_carry__0_n_5,adj_Pinc_byfreq0__175_carry__0_n_6,adj_Pinc_byfreq0__175_carry__0_n_7}),
-        .S({adj_Pinc_byfreq0__175_carry__0_i_1_n_0,adj_Pinc_byfreq0__175_carry__0_i_2_n_0,adj_Pinc_byfreq0__175_carry__0_i_3_n_0,adj_Pinc_byfreq0__175_carry__0_i_4_n_0}));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__0_i_1
-       (.I0(w_MODEfreq0__0_n_101),
-        .I1(w_MODEfreq0__0_n_98),
-        .O(adj_Pinc_byfreq0__175_carry__0_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__0_i_2
-       (.I0(w_MODEfreq0__0_n_102),
-        .I1(w_MODEfreq0__0_n_99),
-        .O(adj_Pinc_byfreq0__175_carry__0_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__0_i_3
-       (.I0(w_MODEfreq0__0_n_103),
-        .I1(w_MODEfreq0__0_n_100),
-        .O(adj_Pinc_byfreq0__175_carry__0_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__0_i_4
-       (.I0(w_MODEfreq0__0_n_104),
-        .I1(w_MODEfreq0__0_n_101),
-        .O(adj_Pinc_byfreq0__175_carry__0_i_4_n_0));
-  CARRY4 adj_Pinc_byfreq0__175_carry__1
-       (.CI(adj_Pinc_byfreq0__175_carry__0_n_0),
-        .CO({adj_Pinc_byfreq0__175_carry__1_n_0,adj_Pinc_byfreq0__175_carry__1_n_1,adj_Pinc_byfreq0__175_carry__1_n_2,adj_Pinc_byfreq0__175_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({w_MODEfreq0__0_n_97,w_MODEfreq0__0_n_98,w_MODEfreq0__0_n_99,w_MODEfreq0__0_n_100}),
-        .O({adj_Pinc_byfreq0__175_carry__1_n_4,adj_Pinc_byfreq0__175_carry__1_n_5,adj_Pinc_byfreq0__175_carry__1_n_6,adj_Pinc_byfreq0__175_carry__1_n_7}),
-        .S({adj_Pinc_byfreq0__175_carry__1_i_1_n_0,adj_Pinc_byfreq0__175_carry__1_i_2_n_0,adj_Pinc_byfreq0__175_carry__1_i_3_n_0,adj_Pinc_byfreq0__175_carry__1_i_4_n_0}));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__1_i_1
-       (.I0(w_MODEfreq0__0_n_97),
-        .I1(w_MODEfreq0__0_n_94),
-        .O(adj_Pinc_byfreq0__175_carry__1_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__1_i_2
-       (.I0(w_MODEfreq0__0_n_98),
-        .I1(w_MODEfreq0__0_n_95),
-        .O(adj_Pinc_byfreq0__175_carry__1_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__1_i_3
-       (.I0(w_MODEfreq0__0_n_99),
-        .I1(w_MODEfreq0__0_n_96),
-        .O(adj_Pinc_byfreq0__175_carry__1_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__1_i_4
-       (.I0(w_MODEfreq0__0_n_100),
-        .I1(w_MODEfreq0__0_n_97),
-        .O(adj_Pinc_byfreq0__175_carry__1_i_4_n_0));
-  CARRY4 adj_Pinc_byfreq0__175_carry__2
-       (.CI(adj_Pinc_byfreq0__175_carry__1_n_0),
-        .CO({adj_Pinc_byfreq0__175_carry__2_n_0,adj_Pinc_byfreq0__175_carry__2_n_1,adj_Pinc_byfreq0__175_carry__2_n_2,adj_Pinc_byfreq0__175_carry__2_n_3}),
-        .CYINIT(1'b0),
-        .DI({w_MODEfreq0__0_n_93,w_MODEfreq0__0_n_94,w_MODEfreq0__0_n_95,w_MODEfreq0__0_n_96}),
-        .O({adj_Pinc_byfreq0__175_carry__2_n_4,adj_Pinc_byfreq0__175_carry__2_n_5,adj_Pinc_byfreq0__175_carry__2_n_6,adj_Pinc_byfreq0__175_carry__2_n_7}),
-        .S({adj_Pinc_byfreq0__175_carry__2_i_1_n_0,adj_Pinc_byfreq0__175_carry__2_i_2_n_0,adj_Pinc_byfreq0__175_carry__2_i_3_n_0,adj_Pinc_byfreq0__175_carry__2_i_4_n_0}));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__2_i_1
-       (.I0(w_MODEfreq0__0_n_93),
-        .I1(w_MODEfreq0__0_n_90),
-        .O(adj_Pinc_byfreq0__175_carry__2_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__2_i_2
-       (.I0(w_MODEfreq0__0_n_94),
-        .I1(w_MODEfreq0__0_n_91),
-        .O(adj_Pinc_byfreq0__175_carry__2_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__2_i_3
-       (.I0(w_MODEfreq0__0_n_95),
-        .I1(w_MODEfreq0__0_n_92),
-        .O(adj_Pinc_byfreq0__175_carry__2_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__2_i_4
-       (.I0(w_MODEfreq0__0_n_96),
-        .I1(w_MODEfreq0__0_n_93),
-        .O(adj_Pinc_byfreq0__175_carry__2_i_4_n_0));
-  CARRY4 adj_Pinc_byfreq0__175_carry__3
-       (.CI(adj_Pinc_byfreq0__175_carry__2_n_0),
-        .CO({adj_Pinc_byfreq0__175_carry__3_n_0,adj_Pinc_byfreq0__175_carry__3_n_1,adj_Pinc_byfreq0__175_carry__3_n_2,adj_Pinc_byfreq0__175_carry__3_n_3}),
-        .CYINIT(1'b0),
-        .DI({w_MODEfreq0_carry_n_7,w_MODEfreq0__0_n_90,w_MODEfreq0__0_n_91,w_MODEfreq0__0_n_92}),
-        .O({adj_Pinc_byfreq0__175_carry__3_n_4,adj_Pinc_byfreq0__175_carry__3_n_5,adj_Pinc_byfreq0__175_carry__3_n_6,adj_Pinc_byfreq0__175_carry__3_n_7}),
-        .S({adj_Pinc_byfreq0__175_carry__3_i_1_n_0,adj_Pinc_byfreq0__175_carry__3_i_2_n_0,adj_Pinc_byfreq0__175_carry__3_i_3_n_0,adj_Pinc_byfreq0__175_carry__3_i_4_n_0}));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__3_i_1
-       (.I0(w_MODEfreq0_carry_n_7),
-        .I1(w_MODEfreq0_carry_n_4),
-        .O(adj_Pinc_byfreq0__175_carry__3_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__3_i_2
-       (.I0(w_MODEfreq0__0_n_90),
-        .I1(w_MODEfreq0_carry_n_5),
-        .O(adj_Pinc_byfreq0__175_carry__3_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__3_i_3
-       (.I0(w_MODEfreq0__0_n_91),
-        .I1(w_MODEfreq0_carry_n_6),
-        .O(adj_Pinc_byfreq0__175_carry__3_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__3_i_4
-       (.I0(w_MODEfreq0__0_n_92),
-        .I1(w_MODEfreq0_carry_n_7),
-        .O(adj_Pinc_byfreq0__175_carry__3_i_4_n_0));
-  CARRY4 adj_Pinc_byfreq0__175_carry__4
-       (.CI(adj_Pinc_byfreq0__175_carry__3_n_0),
-        .CO({adj_Pinc_byfreq0__175_carry__4_n_0,adj_Pinc_byfreq0__175_carry__4_n_1,adj_Pinc_byfreq0__175_carry__4_n_2,adj_Pinc_byfreq0__175_carry__4_n_3}),
-        .CYINIT(1'b0),
-        .DI({w_MODEfreq0_carry__0_n_7,w_MODEfreq0_carry_n_4,w_MODEfreq0_carry_n_5,w_MODEfreq0_carry_n_6}),
-        .O({adj_Pinc_byfreq0__175_carry__4_n_4,adj_Pinc_byfreq0__175_carry__4_n_5,adj_Pinc_byfreq0__175_carry__4_n_6,adj_Pinc_byfreq0__175_carry__4_n_7}),
-        .S({adj_Pinc_byfreq0__175_carry__4_i_1_n_0,adj_Pinc_byfreq0__175_carry__4_i_2_n_0,adj_Pinc_byfreq0__175_carry__4_i_3_n_0,adj_Pinc_byfreq0__175_carry__4_i_4_n_0}));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__4_i_1
-       (.I0(w_MODEfreq0_carry__0_n_7),
-        .I1(w_MODEfreq0_carry__0_n_4),
-        .O(adj_Pinc_byfreq0__175_carry__4_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__4_i_2
-       (.I0(w_MODEfreq0_carry_n_4),
-        .I1(w_MODEfreq0_carry__0_n_5),
-        .O(adj_Pinc_byfreq0__175_carry__4_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__4_i_3
-       (.I0(w_MODEfreq0_carry_n_5),
-        .I1(w_MODEfreq0_carry__0_n_6),
-        .O(adj_Pinc_byfreq0__175_carry__4_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__4_i_4
-       (.I0(w_MODEfreq0_carry_n_6),
-        .I1(w_MODEfreq0_carry__0_n_7),
-        .O(adj_Pinc_byfreq0__175_carry__4_i_4_n_0));
-  CARRY4 adj_Pinc_byfreq0__175_carry__5
-       (.CI(adj_Pinc_byfreq0__175_carry__4_n_0),
-        .CO({adj_Pinc_byfreq0__175_carry__5_n_0,adj_Pinc_byfreq0__175_carry__5_n_1,adj_Pinc_byfreq0__175_carry__5_n_2,adj_Pinc_byfreq0__175_carry__5_n_3}),
-        .CYINIT(1'b0),
-        .DI({w_MODEfreq0_carry__1_n_7,w_MODEfreq0_carry__0_n_4,w_MODEfreq0_carry__0_n_5,w_MODEfreq0_carry__0_n_6}),
-        .O({adj_Pinc_byfreq0__175_carry__5_n_4,adj_Pinc_byfreq0__175_carry__5_n_5,adj_Pinc_byfreq0__175_carry__5_n_6,adj_Pinc_byfreq0__175_carry__5_n_7}),
-        .S({adj_Pinc_byfreq0__175_carry__5_i_1_n_0,adj_Pinc_byfreq0__175_carry__5_i_2_n_0,adj_Pinc_byfreq0__175_carry__5_i_3_n_0,adj_Pinc_byfreq0__175_carry__5_i_4_n_0}));
-  LUT1 #(
-    .INIT(2'h1)) 
-    adj_Pinc_byfreq0__175_carry__5_i_1
-       (.I0(w_MODEfreq0_carry__1_n_7),
-        .O(adj_Pinc_byfreq0__175_carry__5_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__5_i_2
-       (.I0(w_MODEfreq0_carry__0_n_4),
-        .I1(w_MODEfreq0_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__175_carry__5_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__5_i_3
-       (.I0(w_MODEfreq0_carry__0_n_5),
-        .I1(w_MODEfreq0_carry__1_n_6),
-        .O(adj_Pinc_byfreq0__175_carry__5_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry__5_i_4
-       (.I0(w_MODEfreq0_carry__0_n_6),
-        .I1(w_MODEfreq0_carry__1_n_7),
-        .O(adj_Pinc_byfreq0__175_carry__5_i_4_n_0));
-  CARRY4 adj_Pinc_byfreq0__175_carry__6
-       (.CI(adj_Pinc_byfreq0__175_carry__5_n_0),
-        .CO({NLW_adj_Pinc_byfreq0__175_carry__6_CO_UNCONNECTED[3],adj_Pinc_byfreq0__175_carry__6_n_1,NLW_adj_Pinc_byfreq0__175_carry__6_CO_UNCONNECTED[1],adj_Pinc_byfreq0__175_carry__6_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,w_MODEfreq0_carry__1_n_5,w_MODEfreq0_carry__1_n_6}),
-        .O({NLW_adj_Pinc_byfreq0__175_carry__6_O_UNCONNECTED[3:2],adj_Pinc_byfreq0__175_carry__6_n_6,adj_Pinc_byfreq0__175_carry__6_n_7}),
-        .S({1'b0,1'b1,adj_Pinc_byfreq0__175_carry__6_i_1_n_0,adj_Pinc_byfreq0__175_carry__6_i_2_n_0}));
-  LUT1 #(
-    .INIT(2'h1)) 
-    adj_Pinc_byfreq0__175_carry__6_i_1
-       (.I0(w_MODEfreq0_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__175_carry__6_i_1_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    adj_Pinc_byfreq0__175_carry__6_i_2
-       (.I0(w_MODEfreq0_carry__1_n_6),
-        .O(adj_Pinc_byfreq0__175_carry__6_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    adj_Pinc_byfreq0__175_carry_i_1
-       (.I0(w_MODEfreq0__0_n_105),
-        .I1(w_MODEfreq0__0_n_102),
-        .O(adj_Pinc_byfreq0__175_carry_i_1_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    adj_Pinc_byfreq0__175_carry_i_2
-       (.I0(w_MODEfreq0__0_n_103),
-        .O(adj_Pinc_byfreq0__175_carry_i_2_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    adj_Pinc_byfreq0__175_carry_i_3
-       (.I0(w_MODEfreq0__0_n_104),
-        .O(adj_Pinc_byfreq0__175_carry_i_3_n_0));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__261_carry
+  CARRY4 adj_Pinc_byfreq0__234_carry
        (.CI(1'b0),
-        .CO({adj_Pinc_byfreq0__261_carry_n_0,adj_Pinc_byfreq0__261_carry_n_1,adj_Pinc_byfreq0__261_carry_n_2,adj_Pinc_byfreq0__261_carry_n_3}),
+        .CO({adj_Pinc_byfreq0__234_carry_n_0,adj_Pinc_byfreq0__234_carry_n_1,adj_Pinc_byfreq0__234_carry_n_2,adj_Pinc_byfreq0__234_carry_n_3}),
         .CYINIT(1'b0),
-        .DI({w_MODEfreq0__0_n_103,w_MODEfreq0__0_n_104,w_MODEfreq0__0_n_105,1'b0}),
-        .O({adj_Pinc_byfreq0__261_carry_n_4,adj_Pinc_byfreq0__261_carry_n_5,adj_Pinc_byfreq0__261_carry_n_6,adj_Pinc_byfreq0__261_carry_n_7}),
-        .S({adj_Pinc_byfreq0__261_carry_i_1_n_0,adj_Pinc_byfreq0__261_carry_i_2_n_0,adj_Pinc_byfreq0__261_carry_i_3_n_0,adj_Pinc_byfreq0__0_carry__2_n_7}));
+        .DI({adj_Pinc_byfreq0__234_carry_i_1_n_0,adj_Pinc_byfreq0__234_carry_i_2_n_0,adj_Pinc_byfreq0__234_carry_i_3_n_0,adj_Pinc_byfreq0__234_carry_i_4_n_0}),
+        .O(NLW_adj_Pinc_byfreq0__234_carry_O_UNCONNECTED[3:0]),
+        .S({adj_Pinc_byfreq0__234_carry_i_5_n_0,adj_Pinc_byfreq0__234_carry_i_6_n_0,adj_Pinc_byfreq0__234_carry_i_7_n_0,adj_Pinc_byfreq0__234_carry_i_8_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__261_carry__0
-       (.CI(adj_Pinc_byfreq0__261_carry_n_0),
-        .CO({adj_Pinc_byfreq0__261_carry__0_n_0,adj_Pinc_byfreq0__261_carry__0_n_1,adj_Pinc_byfreq0__261_carry__0_n_2,adj_Pinc_byfreq0__261_carry__0_n_3}),
+  CARRY4 adj_Pinc_byfreq0__234_carry__0
+       (.CI(adj_Pinc_byfreq0__234_carry_n_0),
+        .CO({adj_Pinc_byfreq0__234_carry__0_n_0,adj_Pinc_byfreq0__234_carry__0_n_1,adj_Pinc_byfreq0__234_carry__0_n_2,adj_Pinc_byfreq0__234_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__261_carry__0_i_1_n_0,adj_Pinc_byfreq0__261_carry__0_i_2_n_0,adj_Pinc_byfreq0__261_carry__0_i_3_n_0,adj_Pinc_byfreq0__261_carry__0_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__261_carry__0_n_4,adj_Pinc_byfreq0__261_carry__0_n_5,adj_Pinc_byfreq0__261_carry__0_n_6,adj_Pinc_byfreq0__261_carry__0_n_7}),
-        .S({adj_Pinc_byfreq0__261_carry__0_i_5_n_0,adj_Pinc_byfreq0__261_carry__0_i_6_n_0,adj_Pinc_byfreq0__261_carry__0_i_7_n_0,adj_Pinc_byfreq0__261_carry__0_i_8_n_0}));
-  (* HLUTNM = "lutpair23" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__261_carry__0_i_1
-       (.I0(adj_Pinc_byfreq0__0_carry__3_n_5),
-        .I1(w_MODEfreq0__0_n_102),
-        .I2(w_MODEfreq0__0_n_100),
-        .O(adj_Pinc_byfreq0__261_carry__0_i_1_n_0));
-  (* HLUTNM = "lutpair22" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__261_carry__0_i_2
-       (.I0(adj_Pinc_byfreq0__0_carry__3_n_6),
-        .I1(w_MODEfreq0__0_n_103),
-        .I2(w_MODEfreq0__0_n_101),
-        .O(adj_Pinc_byfreq0__261_carry__0_i_2_n_0));
-  (* HLUTNM = "lutpair21" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__261_carry__0_i_3
-       (.I0(adj_Pinc_byfreq0__0_carry__3_n_7),
-        .I1(w_MODEfreq0__0_n_104),
-        .I2(w_MODEfreq0__0_n_102),
-        .O(adj_Pinc_byfreq0__261_carry__0_i_3_n_0));
+        .DI({adj_Pinc_byfreq0__234_carry__0_i_1_n_0,adj_Pinc_byfreq0__234_carry__0_i_2_n_0,adj_Pinc_byfreq0__234_carry__0_i_3_n_0,adj_Pinc_byfreq0__234_carry__0_i_4_n_0}),
+        .O(NLW_adj_Pinc_byfreq0__234_carry__0_O_UNCONNECTED[3:0]),
+        .S({adj_Pinc_byfreq0__234_carry__0_i_5_n_0,adj_Pinc_byfreq0__234_carry__0_i_6_n_0,adj_Pinc_byfreq0__234_carry__0_i_7_n_0,adj_Pinc_byfreq0__234_carry__0_i_8_n_0}));
   LUT3 #(
     .INIT(8'h96)) 
-    adj_Pinc_byfreq0__261_carry__0_i_4
-       (.I0(w_MODEfreq0__0_n_102),
-        .I1(adj_Pinc_byfreq0__0_carry__3_n_7),
-        .I2(w_MODEfreq0__0_n_104),
-        .O(adj_Pinc_byfreq0__261_carry__0_i_4_n_0));
-  (* HLUTNM = "lutpair24" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__261_carry__0_i_5
-       (.I0(adj_Pinc_byfreq0__0_carry__3_n_4),
-        .I1(w_MODEfreq0__0_n_101),
-        .I2(w_MODEfreq0__0_n_99),
-        .I3(adj_Pinc_byfreq0__261_carry__0_i_1_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__0_i_5_n_0));
-  (* HLUTNM = "lutpair23" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__261_carry__0_i_6
-       (.I0(adj_Pinc_byfreq0__0_carry__3_n_5),
-        .I1(w_MODEfreq0__0_n_102),
-        .I2(w_MODEfreq0__0_n_100),
-        .I3(adj_Pinc_byfreq0__261_carry__0_i_2_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__0_i_6_n_0));
-  (* HLUTNM = "lutpair22" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__261_carry__0_i_7
-       (.I0(adj_Pinc_byfreq0__0_carry__3_n_6),
-        .I1(w_MODEfreq0__0_n_103),
-        .I2(w_MODEfreq0__0_n_101),
-        .I3(adj_Pinc_byfreq0__261_carry__0_i_3_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__0_i_7_n_0));
-  (* HLUTNM = "lutpair21" *) 
-  LUT5 #(
-    .INIT(32'h69969696)) 
-    adj_Pinc_byfreq0__261_carry__0_i_8
-       (.I0(adj_Pinc_byfreq0__0_carry__3_n_7),
-        .I1(w_MODEfreq0__0_n_104),
-        .I2(w_MODEfreq0__0_n_102),
-        .I3(w_MODEfreq0__0_n_105),
-        .I4(adj_Pinc_byfreq0__0_carry__2_n_4),
-        .O(adj_Pinc_byfreq0__261_carry__0_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__261_carry__1
-       (.CI(adj_Pinc_byfreq0__261_carry__0_n_0),
-        .CO({adj_Pinc_byfreq0__261_carry__1_n_0,adj_Pinc_byfreq0__261_carry__1_n_1,adj_Pinc_byfreq0__261_carry__1_n_2,adj_Pinc_byfreq0__261_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__261_carry__1_i_1_n_0,adj_Pinc_byfreq0__261_carry__1_i_2_n_0,adj_Pinc_byfreq0__261_carry__1_i_3_n_0,adj_Pinc_byfreq0__261_carry__1_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__261_carry__1_n_4,adj_Pinc_byfreq0__261_carry__1_n_5,adj_Pinc_byfreq0__261_carry__1_n_6,adj_Pinc_byfreq0__261_carry__1_n_7}),
-        .S({adj_Pinc_byfreq0__261_carry__1_i_5_n_0,adj_Pinc_byfreq0__261_carry__1_i_6_n_0,adj_Pinc_byfreq0__261_carry__1_i_7_n_0,adj_Pinc_byfreq0__261_carry__1_i_8_n_0}));
-  (* HLUTNM = "lutpair27" *) 
+    adj_Pinc_byfreq0__234_carry__0_i_1
+       (.I0(adj_Pinc_byfreq0_carry__2_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__0_i_9_n_6),
+        .I2(adj_Pinc_byfreq0__67_carry__1_n_7),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_1_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__261_carry__1_i_1
-       (.I0(adj_Pinc_byfreq0__0_carry__4_n_5),
-        .I1(w_MODEfreq0__0_n_98),
-        .I2(w_MODEfreq0__0_n_96),
-        .O(adj_Pinc_byfreq0__261_carry__1_i_1_n_0));
-  (* HLUTNM = "lutpair26" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__261_carry__1_i_2
-       (.I0(adj_Pinc_byfreq0__0_carry__4_n_6),
-        .I1(w_MODEfreq0__0_n_99),
-        .I2(w_MODEfreq0__0_n_97),
-        .O(adj_Pinc_byfreq0__261_carry__1_i_2_n_0));
-  (* HLUTNM = "lutpair25" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__261_carry__1_i_3
-       (.I0(adj_Pinc_byfreq0__0_carry__4_n_7),
-        .I1(w_MODEfreq0__0_n_100),
-        .I2(w_MODEfreq0__0_n_98),
-        .O(adj_Pinc_byfreq0__261_carry__1_i_3_n_0));
-  (* HLUTNM = "lutpair24" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__261_carry__1_i_4
-       (.I0(adj_Pinc_byfreq0__0_carry__3_n_4),
-        .I1(w_MODEfreq0__0_n_101),
-        .I2(w_MODEfreq0__0_n_99),
-        .O(adj_Pinc_byfreq0__261_carry__1_i_4_n_0));
-  (* HLUTNM = "lutpair28" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__261_carry__1_i_5
-       (.I0(adj_Pinc_byfreq0__0_carry__4_n_4),
-        .I1(w_MODEfreq0__0_n_97),
-        .I2(w_MODEfreq0__0_n_95),
-        .I3(adj_Pinc_byfreq0__261_carry__1_i_1_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__1_i_5_n_0));
-  (* HLUTNM = "lutpair27" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__261_carry__1_i_6
-       (.I0(adj_Pinc_byfreq0__0_carry__4_n_5),
-        .I1(w_MODEfreq0__0_n_98),
-        .I2(w_MODEfreq0__0_n_96),
-        .I3(adj_Pinc_byfreq0__261_carry__1_i_2_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__1_i_6_n_0));
-  (* HLUTNM = "lutpair26" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__261_carry__1_i_7
-       (.I0(adj_Pinc_byfreq0__0_carry__4_n_6),
-        .I1(w_MODEfreq0__0_n_99),
-        .I2(w_MODEfreq0__0_n_97),
-        .I3(adj_Pinc_byfreq0__261_carry__1_i_3_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__1_i_7_n_0));
-  (* HLUTNM = "lutpair25" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__261_carry__1_i_8
-       (.I0(adj_Pinc_byfreq0__0_carry__4_n_7),
-        .I1(w_MODEfreq0__0_n_100),
-        .I2(w_MODEfreq0__0_n_98),
-        .I3(adj_Pinc_byfreq0__261_carry__1_i_4_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__1_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__261_carry__2
-       (.CI(adj_Pinc_byfreq0__261_carry__1_n_0),
-        .CO({adj_Pinc_byfreq0__261_carry__2_n_0,adj_Pinc_byfreq0__261_carry__2_n_1,adj_Pinc_byfreq0__261_carry__2_n_2,adj_Pinc_byfreq0__261_carry__2_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__261_carry__2_i_1_n_0,adj_Pinc_byfreq0__261_carry__2_i_2_n_0,adj_Pinc_byfreq0__261_carry__2_i_3_n_0,adj_Pinc_byfreq0__261_carry__2_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__261_carry__2_n_4,adj_Pinc_byfreq0__261_carry__2_n_5,adj_Pinc_byfreq0__261_carry__2_n_6,adj_Pinc_byfreq0__261_carry__2_n_7}),
-        .S({adj_Pinc_byfreq0__261_carry__2_i_5_n_0,adj_Pinc_byfreq0__261_carry__2_i_6_n_0,adj_Pinc_byfreq0__261_carry__2_i_7_n_0,adj_Pinc_byfreq0__261_carry__2_i_8_n_0}));
-  (* HLUTNM = "lutpair31" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__261_carry__2_i_1
-       (.I0(adj_Pinc_byfreq0__0_carry__5_n_5),
-        .I1(w_MODEfreq0__0_n_94),
-        .I2(w_MODEfreq0__0_n_92),
-        .O(adj_Pinc_byfreq0__261_carry__2_i_1_n_0));
-  (* HLUTNM = "lutpair30" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__261_carry__2_i_2
-       (.I0(adj_Pinc_byfreq0__0_carry__5_n_6),
-        .I1(w_MODEfreq0__0_n_95),
-        .I2(w_MODEfreq0__0_n_93),
-        .O(adj_Pinc_byfreq0__261_carry__2_i_2_n_0));
-  (* HLUTNM = "lutpair29" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__261_carry__2_i_3
-       (.I0(adj_Pinc_byfreq0__0_carry__5_n_7),
-        .I1(w_MODEfreq0__0_n_96),
-        .I2(w_MODEfreq0__0_n_94),
-        .O(adj_Pinc_byfreq0__261_carry__2_i_3_n_0));
-  (* HLUTNM = "lutpair28" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__261_carry__2_i_4
-       (.I0(adj_Pinc_byfreq0__0_carry__4_n_4),
-        .I1(w_MODEfreq0__0_n_97),
-        .I2(w_MODEfreq0__0_n_95),
-        .O(adj_Pinc_byfreq0__261_carry__2_i_4_n_0));
-  (* HLUTNM = "lutpair32" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__261_carry__2_i_5
-       (.I0(adj_Pinc_byfreq0__0_carry__5_n_4),
-        .I1(w_MODEfreq0__0_n_93),
-        .I2(w_MODEfreq0__0_n_91),
-        .I3(adj_Pinc_byfreq0__261_carry__2_i_1_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__2_i_5_n_0));
-  (* HLUTNM = "lutpair31" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__261_carry__2_i_6
-       (.I0(adj_Pinc_byfreq0__0_carry__5_n_5),
-        .I1(w_MODEfreq0__0_n_94),
-        .I2(w_MODEfreq0__0_n_92),
-        .I3(adj_Pinc_byfreq0__261_carry__2_i_2_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__2_i_6_n_0));
-  (* HLUTNM = "lutpair30" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__261_carry__2_i_7
-       (.I0(adj_Pinc_byfreq0__0_carry__5_n_6),
-        .I1(w_MODEfreq0__0_n_95),
-        .I2(w_MODEfreq0__0_n_93),
-        .I3(adj_Pinc_byfreq0__261_carry__2_i_3_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__2_i_7_n_0));
-  (* HLUTNM = "lutpair29" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__261_carry__2_i_8
-       (.I0(adj_Pinc_byfreq0__0_carry__5_n_7),
-        .I1(w_MODEfreq0__0_n_96),
-        .I2(w_MODEfreq0__0_n_94),
-        .I3(adj_Pinc_byfreq0__261_carry__2_i_4_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__2_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__261_carry__3
-       (.CI(adj_Pinc_byfreq0__261_carry__2_n_0),
-        .CO({adj_Pinc_byfreq0__261_carry__3_n_0,adj_Pinc_byfreq0__261_carry__3_n_1,adj_Pinc_byfreq0__261_carry__3_n_2,adj_Pinc_byfreq0__261_carry__3_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__261_carry__3_i_1_n_0,adj_Pinc_byfreq0__261_carry__3_i_2_n_0,adj_Pinc_byfreq0__261_carry__3_i_3_n_0,adj_Pinc_byfreq0__261_carry__3_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__261_carry__3_n_4,adj_Pinc_byfreq0__261_carry__3_n_5,adj_Pinc_byfreq0__261_carry__3_n_6,adj_Pinc_byfreq0__261_carry__3_n_7}),
-        .S({adj_Pinc_byfreq0__261_carry__3_i_5_n_0,adj_Pinc_byfreq0__261_carry__3_i_6_n_0,adj_Pinc_byfreq0__261_carry__3_i_7_n_0,adj_Pinc_byfreq0__261_carry__3_i_8_n_0}));
-  (* HLUTNM = "lutpair35" *) 
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__261_carry__3_i_1
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0__0_n_90),
-        .I2(w_MODEfreq0_carry_n_6),
-        .O(adj_Pinc_byfreq0__261_carry__3_i_1_n_0));
-  (* HLUTNM = "lutpair34" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__261_carry__3_i_2
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_6),
-        .I1(w_MODEfreq0__0_n_91),
-        .I2(w_MODEfreq0_carry_n_7),
-        .O(adj_Pinc_byfreq0__261_carry__3_i_2_n_0));
-  (* HLUTNM = "lutpair33" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__261_carry__3_i_3
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_7),
-        .I1(w_MODEfreq0__0_n_92),
-        .I2(w_MODEfreq0__0_n_90),
-        .O(adj_Pinc_byfreq0__261_carry__3_i_3_n_0));
-  (* HLUTNM = "lutpair32" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__261_carry__3_i_4
-       (.I0(adj_Pinc_byfreq0__0_carry__5_n_4),
-        .I1(w_MODEfreq0__0_n_93),
-        .I2(w_MODEfreq0__0_n_91),
-        .O(adj_Pinc_byfreq0__261_carry__3_i_4_n_0));
-  (* HLUTNM = "lutpair36" *) 
-  LUT4 #(
-    .INIT(16'h9669)) 
-    adj_Pinc_byfreq0__261_carry__3_i_5
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry_n_7),
-        .I2(w_MODEfreq0_carry_n_5),
-        .I3(adj_Pinc_byfreq0__261_carry__3_i_1_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__3_i_5_n_0));
-  (* HLUTNM = "lutpair35" *) 
-  LUT4 #(
-    .INIT(16'h9669)) 
-    adj_Pinc_byfreq0__261_carry__3_i_6
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0__0_n_90),
-        .I2(w_MODEfreq0_carry_n_6),
-        .I3(adj_Pinc_byfreq0__261_carry__3_i_2_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__3_i_6_n_0));
-  (* HLUTNM = "lutpair34" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__261_carry__3_i_7
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_6),
-        .I1(w_MODEfreq0__0_n_91),
-        .I2(w_MODEfreq0_carry_n_7),
-        .I3(adj_Pinc_byfreq0__261_carry__3_i_3_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__3_i_7_n_0));
-  (* HLUTNM = "lutpair33" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__261_carry__3_i_8
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_7),
-        .I1(w_MODEfreq0__0_n_92),
-        .I2(w_MODEfreq0__0_n_90),
-        .I3(adj_Pinc_byfreq0__261_carry__3_i_4_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__3_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__261_carry__4
-       (.CI(adj_Pinc_byfreq0__261_carry__3_n_0),
-        .CO({adj_Pinc_byfreq0__261_carry__4_n_0,adj_Pinc_byfreq0__261_carry__4_n_1,adj_Pinc_byfreq0__261_carry__4_n_2,adj_Pinc_byfreq0__261_carry__4_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__261_carry__4_i_1_n_0,adj_Pinc_byfreq0__261_carry__4_i_2_n_0,adj_Pinc_byfreq0__261_carry__4_i_3_n_0,adj_Pinc_byfreq0__261_carry__4_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__261_carry__4_n_4,adj_Pinc_byfreq0__261_carry__4_n_5,adj_Pinc_byfreq0__261_carry__4_n_6,adj_Pinc_byfreq0__261_carry__4_n_7}),
-        .S({adj_Pinc_byfreq0__261_carry__4_i_5_n_0,adj_Pinc_byfreq0__261_carry__4_i_6_n_0,adj_Pinc_byfreq0__261_carry__4_i_7_n_0,adj_Pinc_byfreq0__261_carry__4_i_8_n_0}));
-  (* HLUTNM = "lutpair39" *) 
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__261_carry__4_i_1
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry_n_4),
-        .I2(w_MODEfreq0_carry__0_n_6),
-        .O(adj_Pinc_byfreq0__261_carry__4_i_1_n_0));
-  (* HLUTNM = "lutpair38" *) 
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__261_carry__4_i_2
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry_n_5),
-        .I2(w_MODEfreq0_carry__0_n_7),
-        .O(adj_Pinc_byfreq0__261_carry__4_i_2_n_0));
-  (* HLUTNM = "lutpair37" *) 
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__261_carry__4_i_3
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry_n_6),
-        .I2(w_MODEfreq0_carry_n_4),
-        .O(adj_Pinc_byfreq0__261_carry__4_i_3_n_0));
-  (* HLUTNM = "lutpair36" *) 
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__261_carry__4_i_4
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry_n_7),
-        .I2(w_MODEfreq0_carry_n_5),
-        .O(adj_Pinc_byfreq0__261_carry__4_i_4_n_0));
-  (* HLUTNM = "lutpair40" *) 
-  LUT4 #(
-    .INIT(16'h9669)) 
-    adj_Pinc_byfreq0__261_carry__4_i_5
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry__0_n_7),
-        .I2(w_MODEfreq0_carry__0_n_5),
-        .I3(adj_Pinc_byfreq0__261_carry__4_i_1_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__4_i_5_n_0));
-  (* HLUTNM = "lutpair39" *) 
-  LUT4 #(
-    .INIT(16'h9669)) 
-    adj_Pinc_byfreq0__261_carry__4_i_6
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry_n_4),
-        .I2(w_MODEfreq0_carry__0_n_6),
-        .I3(adj_Pinc_byfreq0__261_carry__4_i_2_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__4_i_6_n_0));
-  (* HLUTNM = "lutpair38" *) 
-  LUT4 #(
-    .INIT(16'h9669)) 
-    adj_Pinc_byfreq0__261_carry__4_i_7
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry_n_5),
-        .I2(w_MODEfreq0_carry__0_n_7),
-        .I3(adj_Pinc_byfreq0__261_carry__4_i_3_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__4_i_7_n_0));
-  (* HLUTNM = "lutpair37" *) 
-  LUT4 #(
-    .INIT(16'h9669)) 
-    adj_Pinc_byfreq0__261_carry__4_i_8
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry_n_6),
-        .I2(w_MODEfreq0_carry_n_4),
-        .I3(adj_Pinc_byfreq0__261_carry__4_i_4_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__4_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__261_carry__5
-       (.CI(adj_Pinc_byfreq0__261_carry__4_n_0),
-        .CO({adj_Pinc_byfreq0__261_carry__5_n_0,adj_Pinc_byfreq0__261_carry__5_n_1,adj_Pinc_byfreq0__261_carry__5_n_2,adj_Pinc_byfreq0__261_carry__5_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__261_carry__5_i_1_n_0,adj_Pinc_byfreq0__261_carry__5_i_2_n_0,adj_Pinc_byfreq0__261_carry__5_i_3_n_0,adj_Pinc_byfreq0__261_carry__5_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__261_carry__5_n_4,adj_Pinc_byfreq0__261_carry__5_n_5,adj_Pinc_byfreq0__261_carry__5_n_6,adj_Pinc_byfreq0__261_carry__5_n_7}),
-        .S({adj_Pinc_byfreq0__261_carry__5_i_5_n_0,adj_Pinc_byfreq0__261_carry__5_i_6_n_0,adj_Pinc_byfreq0__261_carry__5_i_7_n_0,adj_Pinc_byfreq0__261_carry__5_i_8_n_0}));
-  (* HLUTNM = "lutpair43" *) 
-  LUT3 #(
-    .INIT(8'hB2)) 
-    adj_Pinc_byfreq0__261_carry__5_i_1
-       (.I0(w_MODEfreq0_carry__1_n_6),
-        .I1(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I2(w_MODEfreq0_carry__0_n_4),
-        .O(adj_Pinc_byfreq0__261_carry__5_i_1_n_0));
-  (* HLUTNM = "lutpair42" *) 
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__261_carry__5_i_2
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry__0_n_5),
-        .I2(w_MODEfreq0_carry__1_n_7),
-        .O(adj_Pinc_byfreq0__261_carry__5_i_2_n_0));
-  (* HLUTNM = "lutpair41" *) 
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__261_carry__5_i_3
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry__0_n_6),
-        .I2(w_MODEfreq0_carry__0_n_4),
-        .O(adj_Pinc_byfreq0__261_carry__5_i_3_n_0));
-  (* HLUTNM = "lutpair40" *) 
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__261_carry__5_i_4
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry__0_n_7),
-        .I2(w_MODEfreq0_carry__0_n_5),
-        .O(adj_Pinc_byfreq0__261_carry__5_i_4_n_0));
-  LUT4 #(
-    .INIT(16'h9669)) 
-    adj_Pinc_byfreq0__261_carry__5_i_5
-       (.I0(adj_Pinc_byfreq0__261_carry__5_i_1_n_0),
-        .I1(w_MODEfreq0_carry__1_n_7),
-        .I2(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I3(w_MODEfreq0_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__261_carry__5_i_5_n_0));
-  (* HLUTNM = "lutpair43" *) 
-  LUT4 #(
-    .INIT(16'h9669)) 
-    adj_Pinc_byfreq0__261_carry__5_i_6
-       (.I0(w_MODEfreq0_carry__1_n_6),
-        .I1(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I2(w_MODEfreq0_carry__0_n_4),
-        .I3(adj_Pinc_byfreq0__261_carry__5_i_2_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__5_i_6_n_0));
-  (* HLUTNM = "lutpair42" *) 
-  LUT4 #(
-    .INIT(16'h9669)) 
-    adj_Pinc_byfreq0__261_carry__5_i_7
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry__0_n_5),
-        .I2(w_MODEfreq0_carry__1_n_7),
-        .I3(adj_Pinc_byfreq0__261_carry__5_i_3_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__5_i_7_n_0));
-  (* HLUTNM = "lutpair41" *) 
-  LUT4 #(
-    .INIT(16'h9669)) 
-    adj_Pinc_byfreq0__261_carry__5_i_8
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry__0_n_6),
-        .I2(w_MODEfreq0_carry__0_n_4),
-        .I3(adj_Pinc_byfreq0__261_carry__5_i_4_n_0),
-        .O(adj_Pinc_byfreq0__261_carry__5_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__261_carry__6
-       (.CI(adj_Pinc_byfreq0__261_carry__5_n_0),
-        .CO({NLW_adj_Pinc_byfreq0__261_carry__6_CO_UNCONNECTED[3:2],adj_Pinc_byfreq0__261_carry__6_n_2,adj_Pinc_byfreq0__261_carry__6_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,adj_Pinc_byfreq0__261_carry__6_i_1_n_0,adj_Pinc_byfreq0__261_carry__6_i_2_n_0}),
-        .O({NLW_adj_Pinc_byfreq0__261_carry__6_O_UNCONNECTED[3],adj_Pinc_byfreq0__261_carry__6_n_5,adj_Pinc_byfreq0__261_carry__6_n_6,adj_Pinc_byfreq0__261_carry__6_n_7}),
-        .S({1'b0,adj_Pinc_byfreq0__261_carry__6_i_3_n_0,adj_Pinc_byfreq0__261_carry__6_i_4_n_0,adj_Pinc_byfreq0__261_carry__6_i_5_n_0}));
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__0_i_10
+       (.I0(freq[3]),
+        .I1(freq[6]),
+        .I2(freq[8]),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_10_n_0));
   LUT2 #(
     .INIT(4'h2)) 
-    adj_Pinc_byfreq0__261_carry__6_i_1
-       (.I0(w_MODEfreq0_carry__1_n_6),
-        .I1(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .O(adj_Pinc_byfreq0__261_carry__6_i_1_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__261_carry__6_i_2
-       (.I0(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I1(w_MODEfreq0_carry__1_n_7),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__261_carry__6_i_2_n_0));
+    adj_Pinc_byfreq0__234_carry__0_i_11
+       (.I0(freq[5]),
+        .I1(freq[7]),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_11_n_0));
   LUT2 #(
-    .INIT(4'h1)) 
-    adj_Pinc_byfreq0__261_carry__6_i_3
-       (.I0(w_MODEfreq0_carry__1_n_5),
-        .I1(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .O(adj_Pinc_byfreq0__261_carry__6_i_3_n_0));
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__234_carry__0_i_12
+       (.I0(freq[4]),
+        .I1(freq[6]),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_12_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0__234_carry__0_i_13
+       (.I0(freq[6]),
+        .I1(freq[4]),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_13_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__0_i_14
+       (.I0(freq[8]),
+        .I1(freq[6]),
+        .I2(freq[3]),
+        .I3(freq[9]),
+        .I4(freq[4]),
+        .I5(freq[7]),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_14_n_0));
+  LUT5 #(
+    .INIT(32'h2DD2D22D)) 
+    adj_Pinc_byfreq0__234_carry__0_i_15
+       (.I0(freq[5]),
+        .I1(freq[7]),
+        .I2(freq[8]),
+        .I3(freq[3]),
+        .I4(freq[6]),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_15_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__234_carry__0_i_16
+       (.I0(freq[6]),
+        .I1(freq[4]),
+        .I2(freq[7]),
+        .I3(freq[5]),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_16_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0__234_carry__0_i_17
+       (.I0(freq[6]),
+        .I1(freq[4]),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_17_n_0));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    adj_Pinc_byfreq0__234_carry__0_i_2
+       (.I0(adj_Pinc_byfreq0_carry__1_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry_i_9_n_4),
+        .I2(adj_Pinc_byfreq0__67_carry__0_n_5),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_2_n_0));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    adj_Pinc_byfreq0__234_carry__0_i_3
+       (.I0(adj_Pinc_byfreq0_carry__1_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry_i_9_n_5),
+        .I2(adj_Pinc_byfreq0__67_carry__0_n_6),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_3_n_0));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    adj_Pinc_byfreq0__234_carry__0_i_4
+       (.I0(adj_Pinc_byfreq0_carry__1_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry_i_9_n_6),
+        .I2(adj_Pinc_byfreq0__67_carry__0_n_7),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h6969699669969696)) 
+    adj_Pinc_byfreq0__234_carry__0_i_5
+       (.I0(adj_Pinc_byfreq0__67_carry__1_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__0_i_9_n_6),
+        .I2(adj_Pinc_byfreq0_carry__2_n_7),
+        .I3(adj_Pinc_byfreq0__67_carry__0_n_4),
+        .I4(adj_Pinc_byfreq0__234_carry__0_i_9_n_7),
+        .I5(adj_Pinc_byfreq0_carry__1_n_4),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_5_n_0));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    adj_Pinc_byfreq0__234_carry__0_i_6
+       (.I0(adj_Pinc_byfreq0__234_carry__0_i_2_n_0),
+        .I1(adj_Pinc_byfreq0__67_carry__0_n_4),
+        .I2(adj_Pinc_byfreq0__234_carry__0_i_9_n_7),
+        .I3(adj_Pinc_byfreq0_carry__1_n_4),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_6_n_0));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    adj_Pinc_byfreq0__234_carry__0_i_7
+       (.I0(adj_Pinc_byfreq0_carry__1_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry_i_9_n_4),
+        .I2(adj_Pinc_byfreq0__67_carry__0_n_5),
+        .I3(adj_Pinc_byfreq0__234_carry__0_i_3_n_0),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_7_n_0));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    adj_Pinc_byfreq0__234_carry__0_i_8
+       (.I0(adj_Pinc_byfreq0_carry__1_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry_i_9_n_5),
+        .I2(adj_Pinc_byfreq0__67_carry__0_n_6),
+        .I3(adj_Pinc_byfreq0__234_carry__0_i_4_n_0),
+        .O(adj_Pinc_byfreq0__234_carry__0_i_8_n_0));
+  CARRY4 adj_Pinc_byfreq0__234_carry__0_i_9
+       (.CI(adj_Pinc_byfreq0__234_carry_i_9_n_0),
+        .CO({adj_Pinc_byfreq0__234_carry__0_i_9_n_0,adj_Pinc_byfreq0__234_carry__0_i_9_n_1,adj_Pinc_byfreq0__234_carry__0_i_9_n_2,adj_Pinc_byfreq0__234_carry__0_i_9_n_3}),
+        .CYINIT(1'b0),
+        .DI({adj_Pinc_byfreq0__234_carry__0_i_10_n_0,adj_Pinc_byfreq0__234_carry__0_i_11_n_0,adj_Pinc_byfreq0__234_carry__0_i_12_n_0,adj_Pinc_byfreq0__234_carry__0_i_13_n_0}),
+        .O({adj_Pinc_byfreq0__234_carry__0_i_9_n_4,adj_Pinc_byfreq0__234_carry__0_i_9_n_5,adj_Pinc_byfreq0__234_carry__0_i_9_n_6,adj_Pinc_byfreq0__234_carry__0_i_9_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__0_i_14_n_0,adj_Pinc_byfreq0__234_carry__0_i_15_n_0,adj_Pinc_byfreq0__234_carry__0_i_16_n_0,adj_Pinc_byfreq0__234_carry__0_i_17_n_0}));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 adj_Pinc_byfreq0__234_carry__1
+       (.CI(adj_Pinc_byfreq0__234_carry__0_n_0),
+        .CO({adj_Pinc_byfreq0__234_carry__1_n_0,adj_Pinc_byfreq0__234_carry__1_n_1,adj_Pinc_byfreq0__234_carry__1_n_2,adj_Pinc_byfreq0__234_carry__1_n_3}),
+        .CYINIT(1'b0),
+        .DI({adj_Pinc_byfreq0__234_carry__1_i_1_n_0,adj_Pinc_byfreq0__234_carry__1_i_2_n_0,adj_Pinc_byfreq0__234_carry__1_i_3_n_0,adj_Pinc_byfreq0__234_carry__1_i_4_n_0}),
+        .O(NLW_adj_Pinc_byfreq0__234_carry__1_O_UNCONNECTED[3:0]),
+        .S({adj_Pinc_byfreq0__234_carry__1_i_5_n_0,adj_Pinc_byfreq0__234_carry__1_i_6_n_0,adj_Pinc_byfreq0__234_carry__1_i_7_n_0,adj_Pinc_byfreq0__234_carry__1_i_8_n_0}));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    adj_Pinc_byfreq0__234_carry__1_i_1
+       (.I0(adj_Pinc_byfreq0__67_carry__1_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__0_i_9_n_4),
+        .I2(adj_Pinc_byfreq0_carry__2_n_5),
+        .I3(freq[3]),
+        .I4(adj_Pinc_byfreq0__234_carry__1_i_9_n_0),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_1_n_0));
+  LUT3 #(
+    .INIT(8'h96)) 
+    adj_Pinc_byfreq0__234_carry__1_i_10
+       (.I0(adj_Pinc_byfreq0_carry__3_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__1_i_11_n_6),
+        .I2(adj_Pinc_byfreq0__67_carry__2_n_7),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_10_n_0));
+  CARRY4 adj_Pinc_byfreq0__234_carry__1_i_11
+       (.CI(adj_Pinc_byfreq0__234_carry__0_i_9_n_0),
+        .CO({adj_Pinc_byfreq0__234_carry__1_i_11_n_0,adj_Pinc_byfreq0__234_carry__1_i_11_n_1,adj_Pinc_byfreq0__234_carry__1_i_11_n_2,adj_Pinc_byfreq0__234_carry__1_i_11_n_3}),
+        .CYINIT(1'b0),
+        .DI({adj_Pinc_byfreq0__234_carry__1_i_13_n_0,adj_Pinc_byfreq0__234_carry__1_i_14_n_0,adj_Pinc_byfreq0__234_carry__1_i_15_n_0,adj_Pinc_byfreq0__234_carry__1_i_16_n_0}),
+        .O({adj_Pinc_byfreq0__234_carry__1_i_11_n_4,adj_Pinc_byfreq0__234_carry__1_i_11_n_5,adj_Pinc_byfreq0__234_carry__1_i_11_n_6,adj_Pinc_byfreq0__234_carry__1_i_11_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__1_i_17_n_0,adj_Pinc_byfreq0__234_carry__1_i_18_n_0,adj_Pinc_byfreq0__234_carry__1_i_19_n_0,adj_Pinc_byfreq0__234_carry__1_i_20_n_0}));
+  LUT3 #(
+    .INIT(8'h96)) 
+    adj_Pinc_byfreq0__234_carry__1_i_12
+       (.I0(adj_Pinc_byfreq0_carry__2_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__0_i_9_n_4),
+        .I2(adj_Pinc_byfreq0__67_carry__1_n_5),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_12_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__1_i_13
+       (.I0(freq[7]),
+        .I1(freq[10]),
+        .I2(freq[12]),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_13_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__1_i_14
+       (.I0(freq[9]),
+        .I1(freq[6]),
+        .I2(freq[11]),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_14_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__1_i_15
+       (.I0(freq[8]),
+        .I1(freq[5]),
+        .I2(freq[10]),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_15_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__1_i_16
+       (.I0(freq[4]),
+        .I1(freq[7]),
+        .I2(freq[9]),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_16_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__1_i_17
+       (.I0(freq[12]),
+        .I1(freq[10]),
+        .I2(freq[7]),
+        .I3(freq[13]),
+        .I4(freq[8]),
+        .I5(freq[11]),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_17_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__1_i_18
+       (.I0(freq[11]),
+        .I1(freq[6]),
+        .I2(freq[9]),
+        .I3(freq[12]),
+        .I4(freq[7]),
+        .I5(freq[10]),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_18_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__1_i_19
+       (.I0(freq[10]),
+        .I1(freq[5]),
+        .I2(freq[8]),
+        .I3(freq[11]),
+        .I4(freq[6]),
+        .I5(freq[9]),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_19_n_0));
+  LUT6 #(
+    .INIT(64'h9696960096000000)) 
+    adj_Pinc_byfreq0__234_carry__1_i_2
+       (.I0(adj_Pinc_byfreq0__67_carry__1_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__0_i_9_n_4),
+        .I2(adj_Pinc_byfreq0_carry__2_n_5),
+        .I3(adj_Pinc_byfreq0__67_carry__1_n_6),
+        .I4(adj_Pinc_byfreq0__234_carry__0_i_9_n_5),
+        .I5(adj_Pinc_byfreq0_carry__2_n_6),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_2_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__1_i_20
+       (.I0(freq[9]),
+        .I1(freq[7]),
+        .I2(freq[4]),
+        .I3(freq[10]),
+        .I4(freq[5]),
+        .I5(freq[8]),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_20_n_0));
+  LUT6 #(
+    .INIT(64'h9696960096000000)) 
+    adj_Pinc_byfreq0__234_carry__1_i_3
+       (.I0(adj_Pinc_byfreq0__67_carry__1_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__0_i_9_n_5),
+        .I2(adj_Pinc_byfreq0_carry__2_n_6),
+        .I3(adj_Pinc_byfreq0__67_carry__1_n_7),
+        .I4(adj_Pinc_byfreq0__234_carry__0_i_9_n_6),
+        .I5(adj_Pinc_byfreq0_carry__2_n_7),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h17E8E817E81717E8)) 
+    adj_Pinc_byfreq0__234_carry__1_i_4
+       (.I0(adj_Pinc_byfreq0__67_carry__1_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__0_i_9_n_6),
+        .I2(adj_Pinc_byfreq0_carry__2_n_7),
+        .I3(adj_Pinc_byfreq0__67_carry__1_n_6),
+        .I4(adj_Pinc_byfreq0__234_carry__0_i_9_n_5),
+        .I5(adj_Pinc_byfreq0_carry__2_n_6),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h6969699669969696)) 
+    adj_Pinc_byfreq0__234_carry__1_i_5
+       (.I0(adj_Pinc_byfreq0__234_carry__1_i_1_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__1_i_10_n_0),
+        .I2(freq[4]),
+        .I3(adj_Pinc_byfreq0_carry__2_n_4),
+        .I4(adj_Pinc_byfreq0__234_carry__1_i_11_n_7),
+        .I5(adj_Pinc_byfreq0__67_carry__1_n_4),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_5_n_0));
+  LUT6 #(
+    .INIT(64'h6969699669969696)) 
+    adj_Pinc_byfreq0__234_carry__1_i_6
+       (.I0(adj_Pinc_byfreq0__234_carry__1_i_2_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__1_i_9_n_0),
+        .I2(freq[3]),
+        .I3(adj_Pinc_byfreq0_carry__2_n_5),
+        .I4(adj_Pinc_byfreq0__234_carry__0_i_9_n_4),
+        .I5(adj_Pinc_byfreq0__67_carry__1_n_5),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_6_n_0));
+  LUT5 #(
+    .INIT(32'h99969666)) 
+    adj_Pinc_byfreq0__234_carry__1_i_7
+       (.I0(adj_Pinc_byfreq0__234_carry__1_i_3_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__1_i_12_n_0),
+        .I2(adj_Pinc_byfreq0_carry__2_n_6),
+        .I3(adj_Pinc_byfreq0__234_carry__0_i_9_n_5),
+        .I4(adj_Pinc_byfreq0__67_carry__1_n_6),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_7_n_0));
+  LUT6 #(
+    .INIT(64'h17E8E817E81717E8)) 
+    adj_Pinc_byfreq0__234_carry__1_i_8
+       (.I0(adj_Pinc_byfreq0__67_carry__1_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__0_i_9_n_6),
+        .I2(adj_Pinc_byfreq0_carry__2_n_7),
+        .I3(adj_Pinc_byfreq0__67_carry__1_n_6),
+        .I4(adj_Pinc_byfreq0__234_carry__0_i_9_n_5),
+        .I5(adj_Pinc_byfreq0_carry__2_n_6),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_8_n_0));
+  LUT3 #(
+    .INIT(8'h96)) 
+    adj_Pinc_byfreq0__234_carry__1_i_9
+       (.I0(adj_Pinc_byfreq0_carry__2_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__1_i_11_n_7),
+        .I2(adj_Pinc_byfreq0__67_carry__1_n_4),
+        .O(adj_Pinc_byfreq0__234_carry__1_i_9_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 adj_Pinc_byfreq0__234_carry__2
+       (.CI(adj_Pinc_byfreq0__234_carry__1_n_0),
+        .CO({adj_Pinc_byfreq0__234_carry__2_n_0,adj_Pinc_byfreq0__234_carry__2_n_1,adj_Pinc_byfreq0__234_carry__2_n_2,adj_Pinc_byfreq0__234_carry__2_n_3}),
+        .CYINIT(1'b0),
+        .DI({adj_Pinc_byfreq0__234_carry__2_i_1_n_0,adj_Pinc_byfreq0__234_carry__2_i_2_n_0,adj_Pinc_byfreq0__234_carry__2_i_3_n_0,adj_Pinc_byfreq0__234_carry__2_i_4_n_0}),
+        .O({adj_Pinc_byfreq0__234_carry__2_n_4,adj_Pinc_byfreq0__234_carry__2_n_5,NLW_adj_Pinc_byfreq0__234_carry__2_O_UNCONNECTED[1:0]}),
+        .S({adj_Pinc_byfreq0__234_carry__2_i_5_n_0,adj_Pinc_byfreq0__234_carry__2_i_6_n_0,adj_Pinc_byfreq0__234_carry__2_i_7_n_0,adj_Pinc_byfreq0__234_carry__2_i_8_n_0}));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    adj_Pinc_byfreq0__234_carry__2_i_1
+       (.I0(adj_Pinc_byfreq0__67_carry__2_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__1_i_11_n_4),
+        .I2(adj_Pinc_byfreq0_carry__3_n_5),
+        .I3(freq[7]),
+        .I4(adj_Pinc_byfreq0__234_carry__2_i_9_n_0),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_1_n_0));
+  LUT3 #(
+    .INIT(8'h96)) 
+    adj_Pinc_byfreq0__234_carry__2_i_10
+       (.I0(adj_Pinc_byfreq0_carry__3_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__1_i_11_n_4),
+        .I2(adj_Pinc_byfreq0__67_carry__2_n_5),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_10_n_0));
+  LUT3 #(
+    .INIT(8'h96)) 
+    adj_Pinc_byfreq0__234_carry__2_i_11
+       (.I0(adj_Pinc_byfreq0_carry__3_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__1_i_11_n_5),
+        .I2(adj_Pinc_byfreq0__67_carry__2_n_6),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_11_n_0));
+  LUT3 #(
+    .INIT(8'h96)) 
+    adj_Pinc_byfreq0__234_carry__2_i_12
+       (.I0(adj_Pinc_byfreq0_carry__4_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__2_i_13_n_6),
+        .I2(adj_Pinc_byfreq0__67_carry__3_n_7),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_12_n_0));
+  CARRY4 adj_Pinc_byfreq0__234_carry__2_i_13
+       (.CI(adj_Pinc_byfreq0__234_carry__1_i_11_n_0),
+        .CO({adj_Pinc_byfreq0__234_carry__2_i_13_n_0,adj_Pinc_byfreq0__234_carry__2_i_13_n_1,adj_Pinc_byfreq0__234_carry__2_i_13_n_2,adj_Pinc_byfreq0__234_carry__2_i_13_n_3}),
+        .CYINIT(1'b0),
+        .DI({adj_Pinc_byfreq0__234_carry__2_i_14_n_0,adj_Pinc_byfreq0__234_carry__2_i_15_n_0,adj_Pinc_byfreq0__234_carry__2_i_16_n_0,adj_Pinc_byfreq0__234_carry__2_i_17_n_0}),
+        .O({adj_Pinc_byfreq0__234_carry__2_i_13_n_4,adj_Pinc_byfreq0__234_carry__2_i_13_n_5,adj_Pinc_byfreq0__234_carry__2_i_13_n_6,adj_Pinc_byfreq0__234_carry__2_i_13_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__2_i_18_n_0,adj_Pinc_byfreq0__234_carry__2_i_19_n_0,adj_Pinc_byfreq0__234_carry__2_i_20_n_0,adj_Pinc_byfreq0__234_carry__2_i_21_n_0}));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__2_i_14
+       (.I0(freq[11]),
+        .I1(freq[14]),
+        .I2(freq[16]),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_14_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__2_i_15
+       (.I0(freq[13]),
+        .I1(freq[10]),
+        .I2(freq[15]),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_15_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__2_i_16
+       (.I0(freq[12]),
+        .I1(freq[9]),
+        .I2(freq[14]),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_16_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__2_i_17
+       (.I0(freq[8]),
+        .I1(freq[11]),
+        .I2(freq[13]),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_17_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__2_i_18
+       (.I0(freq[16]),
+        .I1(freq[14]),
+        .I2(freq[11]),
+        .I3(freq[17]),
+        .I4(freq[12]),
+        .I5(freq[15]),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_18_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__2_i_19
+       (.I0(freq[15]),
+        .I1(freq[10]),
+        .I2(freq[13]),
+        .I3(freq[16]),
+        .I4(freq[11]),
+        .I5(freq[14]),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_19_n_0));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    adj_Pinc_byfreq0__234_carry__2_i_2
+       (.I0(adj_Pinc_byfreq0__67_carry__2_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__1_i_11_n_5),
+        .I2(adj_Pinc_byfreq0_carry__3_n_6),
+        .I3(freq[6]),
+        .I4(adj_Pinc_byfreq0__234_carry__2_i_10_n_0),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_2_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__2_i_20
+       (.I0(freq[14]),
+        .I1(freq[9]),
+        .I2(freq[12]),
+        .I3(freq[15]),
+        .I4(freq[10]),
+        .I5(freq[13]),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_20_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__2_i_21
+       (.I0(freq[13]),
+        .I1(freq[11]),
+        .I2(freq[8]),
+        .I3(freq[14]),
+        .I4(freq[9]),
+        .I5(freq[12]),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_21_n_0));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    adj_Pinc_byfreq0__234_carry__2_i_3
+       (.I0(adj_Pinc_byfreq0__67_carry__2_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__1_i_11_n_6),
+        .I2(adj_Pinc_byfreq0_carry__3_n_7),
+        .I3(freq[5]),
+        .I4(adj_Pinc_byfreq0__234_carry__2_i_11_n_0),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_3_n_0));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    adj_Pinc_byfreq0__234_carry__2_i_4
+       (.I0(adj_Pinc_byfreq0__67_carry__1_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__1_i_11_n_7),
+        .I2(adj_Pinc_byfreq0_carry__2_n_4),
+        .I3(freq[4]),
+        .I4(adj_Pinc_byfreq0__234_carry__1_i_10_n_0),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h6969699669969696)) 
+    adj_Pinc_byfreq0__234_carry__2_i_5
+       (.I0(adj_Pinc_byfreq0__234_carry__2_i_1_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__2_i_12_n_0),
+        .I2(freq[8]),
+        .I3(adj_Pinc_byfreq0_carry__3_n_4),
+        .I4(adj_Pinc_byfreq0__234_carry__2_i_13_n_7),
+        .I5(adj_Pinc_byfreq0__67_carry__2_n_4),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_5_n_0));
+  LUT6 #(
+    .INIT(64'h6969699669969696)) 
+    adj_Pinc_byfreq0__234_carry__2_i_6
+       (.I0(adj_Pinc_byfreq0__234_carry__2_i_2_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__2_i_9_n_0),
+        .I2(freq[7]),
+        .I3(adj_Pinc_byfreq0_carry__3_n_5),
+        .I4(adj_Pinc_byfreq0__234_carry__1_i_11_n_4),
+        .I5(adj_Pinc_byfreq0__67_carry__2_n_5),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_6_n_0));
+  LUT6 #(
+    .INIT(64'h6969699669969696)) 
+    adj_Pinc_byfreq0__234_carry__2_i_7
+       (.I0(adj_Pinc_byfreq0__234_carry__2_i_3_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__2_i_10_n_0),
+        .I2(freq[6]),
+        .I3(adj_Pinc_byfreq0_carry__3_n_6),
+        .I4(adj_Pinc_byfreq0__234_carry__1_i_11_n_5),
+        .I5(adj_Pinc_byfreq0__67_carry__2_n_6),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_7_n_0));
+  LUT6 #(
+    .INIT(64'h6969699669969696)) 
+    adj_Pinc_byfreq0__234_carry__2_i_8
+       (.I0(adj_Pinc_byfreq0__234_carry__2_i_4_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__2_i_11_n_0),
+        .I2(freq[5]),
+        .I3(adj_Pinc_byfreq0_carry__3_n_7),
+        .I4(adj_Pinc_byfreq0__234_carry__1_i_11_n_6),
+        .I5(adj_Pinc_byfreq0__67_carry__2_n_7),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_8_n_0));
+  LUT3 #(
+    .INIT(8'h96)) 
+    adj_Pinc_byfreq0__234_carry__2_i_9
+       (.I0(adj_Pinc_byfreq0_carry__3_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__2_i_13_n_7),
+        .I2(adj_Pinc_byfreq0__67_carry__2_n_4),
+        .O(adj_Pinc_byfreq0__234_carry__2_i_9_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 adj_Pinc_byfreq0__234_carry__3
+       (.CI(adj_Pinc_byfreq0__234_carry__2_n_0),
+        .CO({adj_Pinc_byfreq0__234_carry__3_n_0,adj_Pinc_byfreq0__234_carry__3_n_1,adj_Pinc_byfreq0__234_carry__3_n_2,adj_Pinc_byfreq0__234_carry__3_n_3}),
+        .CYINIT(1'b0),
+        .DI({adj_Pinc_byfreq0__234_carry__3_i_1_n_0,adj_Pinc_byfreq0__234_carry__3_i_2_n_0,adj_Pinc_byfreq0__234_carry__3_i_3_n_0,adj_Pinc_byfreq0__234_carry__3_i_4_n_0}),
+        .O({adj_Pinc_byfreq0__234_carry__3_n_4,adj_Pinc_byfreq0__234_carry__3_n_5,adj_Pinc_byfreq0__234_carry__3_n_6,adj_Pinc_byfreq0__234_carry__3_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__3_i_5_n_0,adj_Pinc_byfreq0__234_carry__3_i_6_n_0,adj_Pinc_byfreq0__234_carry__3_i_7_n_0,adj_Pinc_byfreq0__234_carry__3_i_8_n_0}));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    adj_Pinc_byfreq0__234_carry__3_i_1
+       (.I0(adj_Pinc_byfreq0__67_carry__3_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__2_i_13_n_4),
+        .I2(adj_Pinc_byfreq0_carry__4_n_5),
+        .I3(freq[11]),
+        .I4(adj_Pinc_byfreq0__234_carry__3_i_9_n_0),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_1_n_0));
+  LUT3 #(
+    .INIT(8'h96)) 
+    adj_Pinc_byfreq0__234_carry__3_i_10
+       (.I0(adj_Pinc_byfreq0_carry__4_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__2_i_13_n_4),
+        .I2(adj_Pinc_byfreq0__67_carry__3_n_5),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_10_n_0));
+  LUT3 #(
+    .INIT(8'h96)) 
+    adj_Pinc_byfreq0__234_carry__3_i_11
+       (.I0(adj_Pinc_byfreq0_carry__4_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__2_i_13_n_5),
+        .I2(adj_Pinc_byfreq0__67_carry__3_n_6),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_11_n_0));
+  LUT3 #(
+    .INIT(8'h96)) 
+    adj_Pinc_byfreq0__234_carry__3_i_12
+       (.I0(adj_Pinc_byfreq0_carry__5_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__3_i_13_n_6),
+        .I2(adj_Pinc_byfreq0__67_carry__4_n_7),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_12_n_0));
+  CARRY4 adj_Pinc_byfreq0__234_carry__3_i_13
+       (.CI(adj_Pinc_byfreq0__234_carry__2_i_13_n_0),
+        .CO({adj_Pinc_byfreq0__234_carry__3_i_13_n_0,adj_Pinc_byfreq0__234_carry__3_i_13_n_1,adj_Pinc_byfreq0__234_carry__3_i_13_n_2,adj_Pinc_byfreq0__234_carry__3_i_13_n_3}),
+        .CYINIT(1'b0),
+        .DI({adj_Pinc_byfreq0__234_carry__3_i_14_n_0,adj_Pinc_byfreq0__234_carry__3_i_15_n_0,adj_Pinc_byfreq0__234_carry__3_i_16_n_0,adj_Pinc_byfreq0__234_carry__3_i_17_n_0}),
+        .O({adj_Pinc_byfreq0__234_carry__3_i_13_n_4,adj_Pinc_byfreq0__234_carry__3_i_13_n_5,adj_Pinc_byfreq0__234_carry__3_i_13_n_6,adj_Pinc_byfreq0__234_carry__3_i_13_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__3_i_18_n_0,adj_Pinc_byfreq0__234_carry__3_i_19_n_0,adj_Pinc_byfreq0__234_carry__3_i_20_n_0,adj_Pinc_byfreq0__234_carry__3_i_21_n_0}));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__3_i_14
+       (.I0(freq[15]),
+        .I1(freq[18]),
+        .I2(freq[20]),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_14_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__3_i_15
+       (.I0(freq[17]),
+        .I1(freq[14]),
+        .I2(freq[19]),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_15_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__3_i_16
+       (.I0(freq[16]),
+        .I1(freq[13]),
+        .I2(freq[18]),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_16_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__3_i_17
+       (.I0(freq[12]),
+        .I1(freq[15]),
+        .I2(freq[17]),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_17_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__3_i_18
+       (.I0(freq[20]),
+        .I1(freq[18]),
+        .I2(freq[15]),
+        .I3(freq[21]),
+        .I4(freq[16]),
+        .I5(freq[19]),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_18_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__3_i_19
+       (.I0(freq[19]),
+        .I1(freq[14]),
+        .I2(freq[17]),
+        .I3(freq[20]),
+        .I4(freq[15]),
+        .I5(freq[18]),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_19_n_0));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    adj_Pinc_byfreq0__234_carry__3_i_2
+       (.I0(adj_Pinc_byfreq0__67_carry__3_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__2_i_13_n_5),
+        .I2(adj_Pinc_byfreq0_carry__4_n_6),
+        .I3(freq[10]),
+        .I4(adj_Pinc_byfreq0__234_carry__3_i_10_n_0),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_2_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__3_i_20
+       (.I0(freq[18]),
+        .I1(freq[13]),
+        .I2(freq[16]),
+        .I3(freq[19]),
+        .I4(freq[14]),
+        .I5(freq[17]),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_20_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__3_i_21
+       (.I0(freq[17]),
+        .I1(freq[15]),
+        .I2(freq[12]),
+        .I3(freq[18]),
+        .I4(freq[13]),
+        .I5(freq[16]),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_21_n_0));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    adj_Pinc_byfreq0__234_carry__3_i_3
+       (.I0(adj_Pinc_byfreq0__67_carry__3_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__2_i_13_n_6),
+        .I2(adj_Pinc_byfreq0_carry__4_n_7),
+        .I3(freq[9]),
+        .I4(adj_Pinc_byfreq0__234_carry__3_i_11_n_0),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_3_n_0));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    adj_Pinc_byfreq0__234_carry__3_i_4
+       (.I0(adj_Pinc_byfreq0__67_carry__2_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__2_i_13_n_7),
+        .I2(adj_Pinc_byfreq0_carry__3_n_4),
+        .I3(freq[8]),
+        .I4(adj_Pinc_byfreq0__234_carry__2_i_12_n_0),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h6969699669969696)) 
+    adj_Pinc_byfreq0__234_carry__3_i_5
+       (.I0(adj_Pinc_byfreq0__234_carry__3_i_1_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__3_i_12_n_0),
+        .I2(freq[12]),
+        .I3(adj_Pinc_byfreq0_carry__4_n_4),
+        .I4(adj_Pinc_byfreq0__234_carry__3_i_13_n_7),
+        .I5(adj_Pinc_byfreq0__67_carry__3_n_4),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_5_n_0));
+  LUT6 #(
+    .INIT(64'h6969699669969696)) 
+    adj_Pinc_byfreq0__234_carry__3_i_6
+       (.I0(adj_Pinc_byfreq0__234_carry__3_i_2_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__3_i_9_n_0),
+        .I2(freq[11]),
+        .I3(adj_Pinc_byfreq0_carry__4_n_5),
+        .I4(adj_Pinc_byfreq0__234_carry__2_i_13_n_4),
+        .I5(adj_Pinc_byfreq0__67_carry__3_n_5),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_6_n_0));
+  LUT6 #(
+    .INIT(64'h6969699669969696)) 
+    adj_Pinc_byfreq0__234_carry__3_i_7
+       (.I0(adj_Pinc_byfreq0__234_carry__3_i_3_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__3_i_10_n_0),
+        .I2(freq[10]),
+        .I3(adj_Pinc_byfreq0_carry__4_n_6),
+        .I4(adj_Pinc_byfreq0__234_carry__2_i_13_n_5),
+        .I5(adj_Pinc_byfreq0__67_carry__3_n_6),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_7_n_0));
+  LUT6 #(
+    .INIT(64'h6969699669969696)) 
+    adj_Pinc_byfreq0__234_carry__3_i_8
+       (.I0(adj_Pinc_byfreq0__234_carry__3_i_4_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__3_i_11_n_0),
+        .I2(freq[9]),
+        .I3(adj_Pinc_byfreq0_carry__4_n_7),
+        .I4(adj_Pinc_byfreq0__234_carry__2_i_13_n_6),
+        .I5(adj_Pinc_byfreq0__67_carry__3_n_7),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_8_n_0));
+  LUT3 #(
+    .INIT(8'h96)) 
+    adj_Pinc_byfreq0__234_carry__3_i_9
+       (.I0(adj_Pinc_byfreq0_carry__4_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__3_i_13_n_7),
+        .I2(adj_Pinc_byfreq0__67_carry__3_n_4),
+        .O(adj_Pinc_byfreq0__234_carry__3_i_9_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 adj_Pinc_byfreq0__234_carry__4
+       (.CI(adj_Pinc_byfreq0__234_carry__3_n_0),
+        .CO({adj_Pinc_byfreq0__234_carry__4_n_0,adj_Pinc_byfreq0__234_carry__4_n_1,adj_Pinc_byfreq0__234_carry__4_n_2,adj_Pinc_byfreq0__234_carry__4_n_3}),
+        .CYINIT(1'b0),
+        .DI({adj_Pinc_byfreq0__234_carry__4_i_1_n_0,adj_Pinc_byfreq0__234_carry__4_i_2_n_0,adj_Pinc_byfreq0__234_carry__4_i_3_n_0,adj_Pinc_byfreq0__234_carry__4_i_4_n_0}),
+        .O({adj_Pinc_byfreq0__234_carry__4_n_4,adj_Pinc_byfreq0__234_carry__4_n_5,adj_Pinc_byfreq0__234_carry__4_n_6,adj_Pinc_byfreq0__234_carry__4_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__4_i_5_n_0,adj_Pinc_byfreq0__234_carry__4_i_6_n_0,adj_Pinc_byfreq0__234_carry__4_i_7_n_0,adj_Pinc_byfreq0__234_carry__4_i_8_n_0}));
+  LUT6 #(
+    .INIT(64'h80F8F880FEE0E0FE)) 
+    adj_Pinc_byfreq0__234_carry__4_i_1
+       (.I0(adj_Pinc_byfreq0__67_carry__4_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__3_i_13_n_4),
+        .I2(freq[15]),
+        .I3(adj_Pinc_byfreq0__234_carry__4_i_9_n_7),
+        .I4(adj_Pinc_byfreq0__67_carry__4_n_4),
+        .I5(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'h69)) 
+    adj_Pinc_byfreq0__234_carry__4_i_10
+       (.I0(adj_Pinc_byfreq0__234_carry__3_i_13_n_4),
+        .I1(adj_Pinc_byfreq0__67_carry__4_n_5),
+        .I2(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_10_n_0));
+  LUT3 #(
+    .INIT(8'h96)) 
+    adj_Pinc_byfreq0__234_carry__4_i_11
+       (.I0(adj_Pinc_byfreq0_carry__5_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__3_i_13_n_5),
+        .I2(adj_Pinc_byfreq0__67_carry__4_n_6),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_11_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'h69)) 
+    adj_Pinc_byfreq0__234_carry__4_i_12
+       (.I0(adj_Pinc_byfreq0__234_carry__4_i_9_n_6),
+        .I1(adj_Pinc_byfreq0__67_carry__5_n_7),
+        .I2(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_12_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  LUT3 #(
+    .INIT(8'h69)) 
+    adj_Pinc_byfreq0__234_carry__4_i_13
+       (.I0(adj_Pinc_byfreq0__234_carry__4_i_9_n_7),
+        .I1(adj_Pinc_byfreq0__67_carry__4_n_4),
+        .I2(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_13_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__4_i_14
+       (.I0(freq[22]),
+        .I1(freq[19]),
+        .I2(freq[24]),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_14_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__4_i_15
+       (.I0(freq[18]),
+        .I1(freq[21]),
+        .I2(freq[23]),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_15_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__4_i_16
+       (.I0(freq[17]),
+        .I1(freq[20]),
+        .I2(freq[22]),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_16_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__4_i_17
+       (.I0(freq[16]),
+        .I1(freq[19]),
+        .I2(freq[21]),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_17_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__4_i_18
+       (.I0(freq[24]),
+        .I1(freq[19]),
+        .I2(freq[22]),
+        .I3(freq[25]),
+        .I4(freq[20]),
+        .I5(freq[23]),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_18_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__4_i_19
+       (.I0(freq[23]),
+        .I1(freq[21]),
+        .I2(freq[18]),
+        .I3(freq[24]),
+        .I4(freq[19]),
+        .I5(freq[22]),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_19_n_0));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    adj_Pinc_byfreq0__234_carry__4_i_2
+       (.I0(adj_Pinc_byfreq0__67_carry__4_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__3_i_13_n_5),
+        .I2(adj_Pinc_byfreq0_carry__5_n_6),
+        .I3(freq[14]),
+        .I4(adj_Pinc_byfreq0__234_carry__4_i_10_n_0),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_2_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__4_i_20
+       (.I0(freq[22]),
+        .I1(freq[20]),
+        .I2(freq[17]),
+        .I3(freq[23]),
+        .I4(freq[18]),
+        .I5(freq[21]),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_20_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__4_i_21
+       (.I0(freq[21]),
+        .I1(freq[19]),
+        .I2(freq[16]),
+        .I3(freq[22]),
+        .I4(freq[17]),
+        .I5(freq[20]),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_21_n_0));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    adj_Pinc_byfreq0__234_carry__4_i_3
+       (.I0(adj_Pinc_byfreq0__67_carry__4_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__3_i_13_n_6),
+        .I2(adj_Pinc_byfreq0_carry__5_n_7),
+        .I3(freq[13]),
+        .I4(adj_Pinc_byfreq0__234_carry__4_i_11_n_0),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_3_n_0));
+  LUT5 #(
+    .INIT(32'hFFE8E800)) 
+    adj_Pinc_byfreq0__234_carry__4_i_4
+       (.I0(adj_Pinc_byfreq0__67_carry__3_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__3_i_13_n_7),
+        .I2(adj_Pinc_byfreq0_carry__4_n_4),
+        .I3(freq[12]),
+        .I4(adj_Pinc_byfreq0__234_carry__3_i_12_n_0),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h6969966996699696)) 
+    adj_Pinc_byfreq0__234_carry__4_i_5
+       (.I0(adj_Pinc_byfreq0__234_carry__4_i_1_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__4_i_12_n_0),
+        .I2(freq[16]),
+        .I3(adj_Pinc_byfreq0_carry__5_n_1),
+        .I4(adj_Pinc_byfreq0__234_carry__4_i_9_n_7),
+        .I5(adj_Pinc_byfreq0__67_carry__4_n_4),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_5_n_0));
+  LUT6 #(
+    .INIT(64'h6969966996699696)) 
+    adj_Pinc_byfreq0__234_carry__4_i_6
+       (.I0(adj_Pinc_byfreq0__234_carry__4_i_2_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__4_i_13_n_0),
+        .I2(freq[15]),
+        .I3(adj_Pinc_byfreq0_carry__5_n_1),
+        .I4(adj_Pinc_byfreq0__234_carry__3_i_13_n_4),
+        .I5(adj_Pinc_byfreq0__67_carry__4_n_5),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_6_n_0));
+  LUT6 #(
+    .INIT(64'h6969699669969696)) 
+    adj_Pinc_byfreq0__234_carry__4_i_7
+       (.I0(adj_Pinc_byfreq0__234_carry__4_i_3_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__4_i_10_n_0),
+        .I2(freq[14]),
+        .I3(adj_Pinc_byfreq0_carry__5_n_6),
+        .I4(adj_Pinc_byfreq0__234_carry__3_i_13_n_5),
+        .I5(adj_Pinc_byfreq0__67_carry__4_n_6),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_7_n_0));
+  LUT6 #(
+    .INIT(64'h6969699669969696)) 
+    adj_Pinc_byfreq0__234_carry__4_i_8
+       (.I0(adj_Pinc_byfreq0__234_carry__4_i_4_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__4_i_11_n_0),
+        .I2(freq[13]),
+        .I3(adj_Pinc_byfreq0_carry__5_n_7),
+        .I4(adj_Pinc_byfreq0__234_carry__3_i_13_n_6),
+        .I5(adj_Pinc_byfreq0__67_carry__4_n_7),
+        .O(adj_Pinc_byfreq0__234_carry__4_i_8_n_0));
+  CARRY4 adj_Pinc_byfreq0__234_carry__4_i_9
+       (.CI(adj_Pinc_byfreq0__234_carry__3_i_13_n_0),
+        .CO({adj_Pinc_byfreq0__234_carry__4_i_9_n_0,adj_Pinc_byfreq0__234_carry__4_i_9_n_1,adj_Pinc_byfreq0__234_carry__4_i_9_n_2,adj_Pinc_byfreq0__234_carry__4_i_9_n_3}),
+        .CYINIT(1'b0),
+        .DI({adj_Pinc_byfreq0__234_carry__4_i_14_n_0,adj_Pinc_byfreq0__234_carry__4_i_15_n_0,adj_Pinc_byfreq0__234_carry__4_i_16_n_0,adj_Pinc_byfreq0__234_carry__4_i_17_n_0}),
+        .O({adj_Pinc_byfreq0__234_carry__4_i_9_n_4,adj_Pinc_byfreq0__234_carry__4_i_9_n_5,adj_Pinc_byfreq0__234_carry__4_i_9_n_6,adj_Pinc_byfreq0__234_carry__4_i_9_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__4_i_18_n_0,adj_Pinc_byfreq0__234_carry__4_i_19_n_0,adj_Pinc_byfreq0__234_carry__4_i_20_n_0,adj_Pinc_byfreq0__234_carry__4_i_21_n_0}));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 adj_Pinc_byfreq0__234_carry__5
+       (.CI(adj_Pinc_byfreq0__234_carry__4_n_0),
+        .CO({adj_Pinc_byfreq0__234_carry__5_n_0,adj_Pinc_byfreq0__234_carry__5_n_1,adj_Pinc_byfreq0__234_carry__5_n_2,adj_Pinc_byfreq0__234_carry__5_n_3}),
+        .CYINIT(1'b0),
+        .DI({adj_Pinc_byfreq0__234_carry__5_i_1_n_0,adj_Pinc_byfreq0__234_carry__5_i_2_n_0,adj_Pinc_byfreq0__234_carry__5_i_3_n_0,adj_Pinc_byfreq0__234_carry__5_i_4_n_0}),
+        .O({adj_Pinc_byfreq0__234_carry__5_n_4,adj_Pinc_byfreq0__234_carry__5_n_5,adj_Pinc_byfreq0__234_carry__5_n_6,adj_Pinc_byfreq0__234_carry__5_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__5_i_5_n_0,adj_Pinc_byfreq0__234_carry__5_i_6_n_0,adj_Pinc_byfreq0__234_carry__5_i_7_n_0,adj_Pinc_byfreq0__234_carry__5_i_8_n_0}));
+  LUT6 #(
+    .INIT(64'h80F8F880FEE0E0FE)) 
+    adj_Pinc_byfreq0__234_carry__5_i_1
+       (.I0(adj_Pinc_byfreq0__67_carry__5_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__4_i_9_n_4),
+        .I2(freq[19]),
+        .I3(adj_Pinc_byfreq0__234_carry__5_i_9_n_7),
+        .I4(adj_Pinc_byfreq0__67_carry__5_n_4),
+        .I5(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_1_n_0));
+  LUT3 #(
+    .INIT(8'h96)) 
+    adj_Pinc_byfreq0__234_carry__5_i_10
+       (.I0(adj_Pinc_byfreq0__234_carry__6_i_9_n_3),
+        .I1(adj_Pinc_byfreq0__234_carry__5_i_9_n_6),
+        .I2(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_10_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'h69)) 
+    adj_Pinc_byfreq0__234_carry__5_i_11
+       (.I0(adj_Pinc_byfreq0__234_carry__5_i_9_n_7),
+        .I1(adj_Pinc_byfreq0__67_carry__5_n_4),
+        .I2(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_11_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'h69)) 
+    adj_Pinc_byfreq0__234_carry__5_i_12
+       (.I0(adj_Pinc_byfreq0__234_carry__4_i_9_n_4),
+        .I1(adj_Pinc_byfreq0__67_carry__5_n_5),
+        .I2(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_12_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT3 #(
+    .INIT(8'h69)) 
+    adj_Pinc_byfreq0__234_carry__5_i_13
+       (.I0(adj_Pinc_byfreq0__234_carry__4_i_9_n_5),
+        .I1(adj_Pinc_byfreq0__67_carry__5_n_6),
+        .I2(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_13_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    adj_Pinc_byfreq0__234_carry__5_i_14
+       (.I0(freq[25]),
+        .I1(freq[22]),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_14_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    adj_Pinc_byfreq0__234_carry__5_i_15
+       (.I0(freq[24]),
+        .I1(freq[21]),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_15_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__234_carry__5_i_16
+       (.I0(freq[23]),
+        .I1(freq[20]),
+        .I2(freq[25]),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_16_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0__234_carry__5_i_17
+       (.I0(freq[23]),
+        .I1(freq[24]),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_17_n_0));
   LUT3 #(
     .INIT(8'hE1)) 
-    adj_Pinc_byfreq0__261_carry__6_i_4
-       (.I0(w_MODEfreq0_carry__1_n_6),
-        .I1(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__261_carry__6_i_4_n_0));
+    adj_Pinc_byfreq0__234_carry__5_i_18
+       (.I0(freq[22]),
+        .I1(freq[25]),
+        .I2(freq[23]),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_18_n_0));
   LUT4 #(
-    .INIT(16'h7E81)) 
-    adj_Pinc_byfreq0__261_carry__6_i_5
-       (.I0(w_MODEfreq0_carry__1_n_5),
-        .I1(w_MODEfreq0_carry__1_n_7),
-        .I2(adj_Pinc_byfreq0__0_carry__6_n_1),
-        .I3(w_MODEfreq0_carry__1_n_6),
-        .O(adj_Pinc_byfreq0__261_carry__6_i_5_n_0));
-  LUT3 #(
-    .INIT(8'h96)) 
-    adj_Pinc_byfreq0__261_carry_i_1
-       (.I0(adj_Pinc_byfreq0__0_carry__2_n_4),
-        .I1(w_MODEfreq0__0_n_105),
-        .I2(w_MODEfreq0__0_n_103),
-        .O(adj_Pinc_byfreq0__261_carry_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    adj_Pinc_byfreq0__261_carry_i_2
-       (.I0(w_MODEfreq0__0_n_104),
-        .I1(adj_Pinc_byfreq0__0_carry__2_n_5),
-        .O(adj_Pinc_byfreq0__261_carry_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    adj_Pinc_byfreq0__261_carry_i_3
-       (.I0(w_MODEfreq0__0_n_105),
-        .I1(adj_Pinc_byfreq0__0_carry__2_n_6),
-        .O(adj_Pinc_byfreq0__261_carry_i_3_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__352_carry
-       (.CI(1'b0),
-        .CO({adj_Pinc_byfreq0__352_carry_n_0,adj_Pinc_byfreq0__352_carry_n_1,adj_Pinc_byfreq0__352_carry_n_2,adj_Pinc_byfreq0__352_carry_n_3}),
+    .INIT(16'h1EE1)) 
+    adj_Pinc_byfreq0__234_carry__5_i_19
+       (.I0(freq[21]),
+        .I1(freq[24]),
+        .I2(freq[22]),
+        .I3(freq[25]),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_19_n_0));
+  LUT6 #(
+    .INIT(64'h80F8F880FEE0E0FE)) 
+    adj_Pinc_byfreq0__234_carry__5_i_2
+       (.I0(adj_Pinc_byfreq0__67_carry__5_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__4_i_9_n_5),
+        .I2(freq[18]),
+        .I3(adj_Pinc_byfreq0__234_carry__4_i_9_n_4),
+        .I4(adj_Pinc_byfreq0__67_carry__5_n_5),
+        .I5(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_2_n_0));
+  LUT5 #(
+    .INIT(32'h2BD4D42B)) 
+    adj_Pinc_byfreq0__234_carry__5_i_20
+       (.I0(freq[25]),
+        .I1(freq[20]),
+        .I2(freq[23]),
+        .I3(freq[21]),
+        .I4(freq[24]),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_20_n_0));
+  LUT6 #(
+    .INIT(64'h80F8F880FEE0E0FE)) 
+    adj_Pinc_byfreq0__234_carry__5_i_3
+       (.I0(adj_Pinc_byfreq0__67_carry__5_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__4_i_9_n_6),
+        .I2(freq[17]),
+        .I3(adj_Pinc_byfreq0__234_carry__4_i_9_n_5),
+        .I4(adj_Pinc_byfreq0__67_carry__5_n_6),
+        .I5(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h80F8F880FEE0E0FE)) 
+    adj_Pinc_byfreq0__234_carry__5_i_4
+       (.I0(adj_Pinc_byfreq0__67_carry__4_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__4_i_9_n_7),
+        .I2(freq[16]),
+        .I3(adj_Pinc_byfreq0__234_carry__4_i_9_n_6),
+        .I4(adj_Pinc_byfreq0__67_carry__5_n_7),
+        .I5(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h6969966996699696)) 
+    adj_Pinc_byfreq0__234_carry__5_i_5
+       (.I0(adj_Pinc_byfreq0__234_carry__5_i_1_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__5_i_10_n_0),
+        .I2(freq[20]),
+        .I3(adj_Pinc_byfreq0_carry__5_n_1),
+        .I4(adj_Pinc_byfreq0__234_carry__5_i_9_n_7),
+        .I5(adj_Pinc_byfreq0__67_carry__5_n_4),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_5_n_0));
+  LUT6 #(
+    .INIT(64'h6969966996699696)) 
+    adj_Pinc_byfreq0__234_carry__5_i_6
+       (.I0(adj_Pinc_byfreq0__234_carry__5_i_2_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__5_i_11_n_0),
+        .I2(freq[19]),
+        .I3(adj_Pinc_byfreq0_carry__5_n_1),
+        .I4(adj_Pinc_byfreq0__234_carry__4_i_9_n_4),
+        .I5(adj_Pinc_byfreq0__67_carry__5_n_5),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_6_n_0));
+  LUT6 #(
+    .INIT(64'h6969966996699696)) 
+    adj_Pinc_byfreq0__234_carry__5_i_7
+       (.I0(adj_Pinc_byfreq0__234_carry__5_i_3_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__5_i_12_n_0),
+        .I2(freq[18]),
+        .I3(adj_Pinc_byfreq0_carry__5_n_1),
+        .I4(adj_Pinc_byfreq0__234_carry__4_i_9_n_5),
+        .I5(adj_Pinc_byfreq0__67_carry__5_n_6),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_7_n_0));
+  LUT6 #(
+    .INIT(64'h6969966996699696)) 
+    adj_Pinc_byfreq0__234_carry__5_i_8
+       (.I0(adj_Pinc_byfreq0__234_carry__5_i_4_n_0),
+        .I1(adj_Pinc_byfreq0__234_carry__5_i_13_n_0),
+        .I2(freq[17]),
+        .I3(adj_Pinc_byfreq0_carry__5_n_1),
+        .I4(adj_Pinc_byfreq0__234_carry__4_i_9_n_6),
+        .I5(adj_Pinc_byfreq0__67_carry__5_n_7),
+        .O(adj_Pinc_byfreq0__234_carry__5_i_8_n_0));
+  CARRY4 adj_Pinc_byfreq0__234_carry__5_i_9
+       (.CI(adj_Pinc_byfreq0__234_carry__4_i_9_n_0),
+        .CO({adj_Pinc_byfreq0__234_carry__5_i_9_n_0,adj_Pinc_byfreq0__234_carry__5_i_9_n_1,adj_Pinc_byfreq0__234_carry__5_i_9_n_2,adj_Pinc_byfreq0__234_carry__5_i_9_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__352_carry_i_1_n_0,adj_Pinc_byfreq0__352_carry_i_2_n_0,adj_Pinc_byfreq0__352_carry_i_3_n_0,1'b0}),
-        .O(NLW_adj_Pinc_byfreq0__352_carry_O_UNCONNECTED[3:0]),
-        .S({adj_Pinc_byfreq0__352_carry_i_4_n_0,adj_Pinc_byfreq0__352_carry_i_5_n_0,adj_Pinc_byfreq0__352_carry_i_6_n_0,adj_Pinc_byfreq0__352_carry_i_7_n_0}));
+        .DI({freq[23],adj_Pinc_byfreq0__234_carry__5_i_14_n_0,adj_Pinc_byfreq0__234_carry__5_i_15_n_0,adj_Pinc_byfreq0__234_carry__5_i_16_n_0}),
+        .O({adj_Pinc_byfreq0__234_carry__5_i_9_n_4,adj_Pinc_byfreq0__234_carry__5_i_9_n_5,adj_Pinc_byfreq0__234_carry__5_i_9_n_6,adj_Pinc_byfreq0__234_carry__5_i_9_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__5_i_17_n_0,adj_Pinc_byfreq0__234_carry__5_i_18_n_0,adj_Pinc_byfreq0__234_carry__5_i_19_n_0,adj_Pinc_byfreq0__234_carry__5_i_20_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__352_carry__0
-       (.CI(adj_Pinc_byfreq0__352_carry_n_0),
-        .CO({adj_Pinc_byfreq0__352_carry__0_n_0,adj_Pinc_byfreq0__352_carry__0_n_1,adj_Pinc_byfreq0__352_carry__0_n_2,adj_Pinc_byfreq0__352_carry__0_n_3}),
+  CARRY4 adj_Pinc_byfreq0__234_carry__6
+       (.CI(adj_Pinc_byfreq0__234_carry__5_n_0),
+        .CO({adj_Pinc_byfreq0__234_carry__6_n_0,adj_Pinc_byfreq0__234_carry__6_n_1,adj_Pinc_byfreq0__234_carry__6_n_2,adj_Pinc_byfreq0__234_carry__6_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__352_carry__0_i_1_n_0,adj_Pinc_byfreq0__352_carry__0_i_2_n_0,adj_Pinc_byfreq0__352_carry__0_i_3_n_0,adj_Pinc_byfreq0__352_carry__0_i_4_n_0}),
-        .O(NLW_adj_Pinc_byfreq0__352_carry__0_O_UNCONNECTED[3:0]),
-        .S({adj_Pinc_byfreq0__352_carry__0_i_5_n_0,adj_Pinc_byfreq0__352_carry__0_i_6_n_0,adj_Pinc_byfreq0__352_carry__0_i_7_n_0,adj_Pinc_byfreq0__352_carry__0_i_8_n_0}));
-  (* HLUTNM = "lutpair45" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__0_i_1
-       (.I0(adj_Pinc_byfreq0__0_carry__1_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry_n_6),
-        .I2(adj_Pinc_byfreq0__89_carry__0_n_6),
-        .O(adj_Pinc_byfreq0__352_carry__0_i_1_n_0));
-  (* HLUTNM = "lutpair44" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__0_i_2
-       (.I0(adj_Pinc_byfreq0__0_carry__0_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry_n_7),
-        .I2(adj_Pinc_byfreq0__89_carry__0_n_7),
-        .O(adj_Pinc_byfreq0__352_carry__0_i_2_n_0));
-  (* HLUTNM = "lutpair70" *) 
+        .DI({adj_Pinc_byfreq0__234_carry__6_i_1_n_0,adj_Pinc_byfreq0__234_carry__6_i_2_n_0,adj_Pinc_byfreq0__234_carry__6_i_3_n_0,adj_Pinc_byfreq0__234_carry__6_i_4_n_0}),
+        .O({adj_Pinc_byfreq0__234_carry__6_n_4,adj_Pinc_byfreq0__234_carry__6_n_5,adj_Pinc_byfreq0__234_carry__6_n_6,adj_Pinc_byfreq0__234_carry__6_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__6_i_5_n_0,adj_Pinc_byfreq0__234_carry__6_i_6_n_0,adj_Pinc_byfreq0__234_carry__6_i_7_n_0,adj_Pinc_byfreq0__234_carry__6_i_8_n_0}));
+  LUT5 #(
+    .INIT(32'hC80E8FEC)) 
+    adj_Pinc_byfreq0__234_carry__6_i_1
+       (.I0(adj_Pinc_byfreq0__234_carry__5_i_9_n_4),
+        .I1(freq[23]),
+        .I2(adj_Pinc_byfreq0__234_carry__6_i_9_n_3),
+        .I3(adj_Pinc_byfreq0__234_carry__6_i_10_n_7),
+        .I4(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__6_i_1_n_0));
+  CARRY4 adj_Pinc_byfreq0__234_carry__6_i_10
+       (.CI(adj_Pinc_byfreq0__234_carry__5_i_9_n_0),
+        .CO({NLW_adj_Pinc_byfreq0__234_carry__6_i_10_CO_UNCONNECTED[3],adj_Pinc_byfreq0__234_carry__6_i_10_n_1,NLW_adj_Pinc_byfreq0__234_carry__6_i_10_CO_UNCONNECTED[1],adj_Pinc_byfreq0__234_carry__6_i_10_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,freq[25:24]}),
+        .O({NLW_adj_Pinc_byfreq0__234_carry__6_i_10_O_UNCONNECTED[3:2],adj_Pinc_byfreq0__234_carry__6_i_10_n_6,adj_Pinc_byfreq0__234_carry__6_i_10_n_7}),
+        .S({1'b0,1'b1,adj_Pinc_byfreq0__234_carry__6_i_11_n_0,adj_Pinc_byfreq0__234_carry__6_i_12_n_0}));
+  LUT1 #(
+    .INIT(2'h1)) 
+    adj_Pinc_byfreq0__234_carry__6_i_11
+       (.I0(freq[25]),
+        .O(adj_Pinc_byfreq0__234_carry__6_i_11_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0__234_carry__6_i_12
+       (.I0(freq[24]),
+        .I1(freq[25]),
+        .O(adj_Pinc_byfreq0__234_carry__6_i_12_n_0));
+  LUT5 #(
+    .INIT(32'hC80E8FEC)) 
+    adj_Pinc_byfreq0__234_carry__6_i_2
+       (.I0(adj_Pinc_byfreq0__234_carry__5_i_9_n_5),
+        .I1(freq[22]),
+        .I2(adj_Pinc_byfreq0__234_carry__6_i_9_n_3),
+        .I3(adj_Pinc_byfreq0__234_carry__5_i_9_n_4),
+        .I4(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__6_i_2_n_0));
+  LUT5 #(
+    .INIT(32'hC80E8FEC)) 
+    adj_Pinc_byfreq0__234_carry__6_i_3
+       (.I0(adj_Pinc_byfreq0__234_carry__5_i_9_n_6),
+        .I1(freq[21]),
+        .I2(adj_Pinc_byfreq0__234_carry__6_i_9_n_3),
+        .I3(adj_Pinc_byfreq0__234_carry__5_i_9_n_5),
+        .I4(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__6_i_3_n_0));
+  LUT6 #(
+    .INIT(64'hF88080F8E0FEFEE0)) 
+    adj_Pinc_byfreq0__234_carry__6_i_4
+       (.I0(adj_Pinc_byfreq0__67_carry__5_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__5_i_9_n_7),
+        .I2(freq[20]),
+        .I3(adj_Pinc_byfreq0__234_carry__6_i_9_n_3),
+        .I4(adj_Pinc_byfreq0__234_carry__5_i_9_n_6),
+        .I5(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__6_i_4_n_0));
+  LUT6 #(
+    .INIT(64'hA5965A69965A69A5)) 
+    adj_Pinc_byfreq0__234_carry__6_i_5
+       (.I0(adj_Pinc_byfreq0__234_carry__6_i_1_n_0),
+        .I1(adj_Pinc_byfreq0_carry__5_n_1),
+        .I2(adj_Pinc_byfreq0__234_carry__6_i_10_n_6),
+        .I3(adj_Pinc_byfreq0__234_carry__6_i_9_n_3),
+        .I4(freq[24]),
+        .I5(adj_Pinc_byfreq0__234_carry__6_i_10_n_7),
+        .O(adj_Pinc_byfreq0__234_carry__6_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hA5965A69965A69A5)) 
+    adj_Pinc_byfreq0__234_carry__6_i_6
+       (.I0(adj_Pinc_byfreq0__234_carry__6_i_2_n_0),
+        .I1(adj_Pinc_byfreq0_carry__5_n_1),
+        .I2(adj_Pinc_byfreq0__234_carry__6_i_10_n_7),
+        .I3(adj_Pinc_byfreq0__234_carry__6_i_9_n_3),
+        .I4(freq[23]),
+        .I5(adj_Pinc_byfreq0__234_carry__5_i_9_n_4),
+        .O(adj_Pinc_byfreq0__234_carry__6_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hA5965A69965A69A5)) 
+    adj_Pinc_byfreq0__234_carry__6_i_7
+       (.I0(adj_Pinc_byfreq0__234_carry__6_i_3_n_0),
+        .I1(adj_Pinc_byfreq0_carry__5_n_1),
+        .I2(adj_Pinc_byfreq0__234_carry__5_i_9_n_4),
+        .I3(adj_Pinc_byfreq0__234_carry__6_i_9_n_3),
+        .I4(freq[22]),
+        .I5(adj_Pinc_byfreq0__234_carry__5_i_9_n_5),
+        .O(adj_Pinc_byfreq0__234_carry__6_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hA5965A69965A69A5)) 
+    adj_Pinc_byfreq0__234_carry__6_i_8
+       (.I0(adj_Pinc_byfreq0__234_carry__6_i_4_n_0),
+        .I1(adj_Pinc_byfreq0_carry__5_n_1),
+        .I2(adj_Pinc_byfreq0__234_carry__5_i_9_n_5),
+        .I3(adj_Pinc_byfreq0__234_carry__6_i_9_n_3),
+        .I4(freq[21]),
+        .I5(adj_Pinc_byfreq0__234_carry__5_i_9_n_6),
+        .O(adj_Pinc_byfreq0__234_carry__6_i_8_n_0));
+  CARRY4 adj_Pinc_byfreq0__234_carry__6_i_9
+       (.CI(adj_Pinc_byfreq0__67_carry__5_n_0),
+        .CO({NLW_adj_Pinc_byfreq0__234_carry__6_i_9_CO_UNCONNECTED[3:1],adj_Pinc_byfreq0__234_carry__6_i_9_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O(NLW_adj_Pinc_byfreq0__234_carry__6_i_9_O_UNCONNECTED[3:0]),
+        .S({1'b0,1'b0,1'b0,1'b1}));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 adj_Pinc_byfreq0__234_carry__7
+       (.CI(adj_Pinc_byfreq0__234_carry__6_n_0),
+        .CO({NLW_adj_Pinc_byfreq0__234_carry__7_CO_UNCONNECTED[3:1],adj_Pinc_byfreq0__234_carry__7_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,adj_Pinc_byfreq0__234_carry__7_i_1_n_0}),
+        .O({NLW_adj_Pinc_byfreq0__234_carry__7_O_UNCONNECTED[3:2],adj_Pinc_byfreq0__234_carry__7_n_6,adj_Pinc_byfreq0__234_carry__7_n_7}),
+        .S({1'b0,1'b0,adj_Pinc_byfreq0__234_carry__7_i_2_n_0,adj_Pinc_byfreq0__234_carry__7_i_3_n_0}));
+  LUT5 #(
+    .INIT(32'hC80E8FEC)) 
+    adj_Pinc_byfreq0__234_carry__7_i_1
+       (.I0(adj_Pinc_byfreq0__234_carry__6_i_10_n_7),
+        .I1(freq[24]),
+        .I2(adj_Pinc_byfreq0__234_carry__6_i_9_n_3),
+        .I3(adj_Pinc_byfreq0__234_carry__6_i_10_n_6),
+        .I4(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__7_i_1_n_0));
+  LUT5 #(
+    .INIT(32'h0517175F)) 
+    adj_Pinc_byfreq0__234_carry__7_i_2
+       (.I0(freq[25]),
+        .I1(adj_Pinc_byfreq0__234_carry__6_i_10_n_6),
+        .I2(adj_Pinc_byfreq0__234_carry__6_i_10_n_1),
+        .I3(adj_Pinc_byfreq0__234_carry__6_i_9_n_3),
+        .I4(adj_Pinc_byfreq0_carry__5_n_1),
+        .O(adj_Pinc_byfreq0__234_carry__7_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h56A9A9566A95956A)) 
+    adj_Pinc_byfreq0__234_carry__7_i_3
+       (.I0(adj_Pinc_byfreq0__234_carry__7_i_1_n_0),
+        .I1(adj_Pinc_byfreq0_carry__5_n_1),
+        .I2(adj_Pinc_byfreq0__234_carry__6_i_9_n_3),
+        .I3(adj_Pinc_byfreq0__234_carry__6_i_10_n_1),
+        .I4(freq[25]),
+        .I5(adj_Pinc_byfreq0__234_carry__6_i_10_n_6),
+        .O(adj_Pinc_byfreq0__234_carry__7_i_3_n_0));
+  (* HLUTNM = "lutpair0" *) 
   LUT2 #(
     .INIT(4'h8)) 
-    adj_Pinc_byfreq0__352_carry__0_i_3
-       (.I0(adj_Pinc_byfreq0__0_carry__0_n_5),
-        .I1(adj_Pinc_byfreq0__89_carry_n_4),
-        .O(adj_Pinc_byfreq0__352_carry__0_i_3_n_0));
+    adj_Pinc_byfreq0__234_carry_i_1
+       (.I0(adj_Pinc_byfreq0__67_carry_n_4),
+        .I1(adj_Pinc_byfreq0_carry__0_n_4),
+        .O(adj_Pinc_byfreq0__234_carry_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0__234_carry_i_10
+       (.I0(freq[5]),
+        .I1(freq[3]),
+        .O(adj_Pinc_byfreq0__234_carry_i_10_n_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    adj_Pinc_byfreq0__234_carry_i_11
+       (.I0(freq[4]),
+        .O(adj_Pinc_byfreq0__234_carry_i_11_n_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    adj_Pinc_byfreq0__234_carry_i_12
+       (.I0(freq[3]),
+        .O(adj_Pinc_byfreq0__234_carry_i_12_n_0));
   LUT2 #(
     .INIT(4'h8)) 
-    adj_Pinc_byfreq0__352_carry__0_i_4
-       (.I0(adj_Pinc_byfreq0__89_carry_n_5),
-        .I1(adj_Pinc_byfreq0__0_carry__0_n_6),
-        .O(adj_Pinc_byfreq0__352_carry__0_i_4_n_0));
-  (* HLUTNM = "lutpair46" *) 
+    adj_Pinc_byfreq0__234_carry_i_2
+       (.I0(adj_Pinc_byfreq0__67_carry_n_5),
+        .I1(adj_Pinc_byfreq0_carry__0_n_5),
+        .O(adj_Pinc_byfreq0__234_carry_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h8)) 
+    adj_Pinc_byfreq0__234_carry_i_3
+       (.I0(adj_Pinc_byfreq0__67_carry_n_6),
+        .I1(adj_Pinc_byfreq0_carry__0_n_6),
+        .O(adj_Pinc_byfreq0__234_carry_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h8)) 
+    adj_Pinc_byfreq0__234_carry_i_4
+       (.I0(adj_Pinc_byfreq0__67_carry_n_7),
+        .I1(adj_Pinc_byfreq0_carry__0_n_7),
+        .O(adj_Pinc_byfreq0__234_carry_i_4_n_0));
   LUT4 #(
     .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__0_i_5
-       (.I0(adj_Pinc_byfreq0__0_carry__1_n_6),
-        .I1(adj_Pinc_byfreq0__175_carry_n_5),
-        .I2(adj_Pinc_byfreq0__89_carry__0_n_5),
-        .I3(adj_Pinc_byfreq0__352_carry__0_i_1_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__0_i_5_n_0));
-  (* HLUTNM = "lutpair45" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__0_i_6
-       (.I0(adj_Pinc_byfreq0__0_carry__1_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry_n_6),
-        .I2(adj_Pinc_byfreq0__89_carry__0_n_6),
-        .I3(adj_Pinc_byfreq0__352_carry__0_i_2_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__0_i_6_n_0));
-  (* HLUTNM = "lutpair44" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__0_i_7
-       (.I0(adj_Pinc_byfreq0__0_carry__0_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry_n_7),
-        .I2(adj_Pinc_byfreq0__89_carry__0_n_7),
-        .I3(adj_Pinc_byfreq0__352_carry__0_i_3_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__0_i_7_n_0));
-  (* HLUTNM = "lutpair70" *) 
+    adj_Pinc_byfreq0__234_carry_i_5
+       (.I0(adj_Pinc_byfreq0_carry__1_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry_i_9_n_6),
+        .I2(adj_Pinc_byfreq0__67_carry__0_n_7),
+        .I3(adj_Pinc_byfreq0__234_carry_i_1_n_0),
+        .O(adj_Pinc_byfreq0__234_carry_i_5_n_0));
+  (* HLUTNM = "lutpair0" *) 
   LUT4 #(
     .INIT(16'h9666)) 
-    adj_Pinc_byfreq0__352_carry__0_i_8
-       (.I0(adj_Pinc_byfreq0__0_carry__0_n_5),
-        .I1(adj_Pinc_byfreq0__89_carry_n_4),
-        .I2(adj_Pinc_byfreq0__89_carry_n_5),
-        .I3(adj_Pinc_byfreq0__0_carry__0_n_6),
-        .O(adj_Pinc_byfreq0__352_carry__0_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__352_carry__1
-       (.CI(adj_Pinc_byfreq0__352_carry__0_n_0),
-        .CO({adj_Pinc_byfreq0__352_carry__1_n_0,adj_Pinc_byfreq0__352_carry__1_n_1,adj_Pinc_byfreq0__352_carry__1_n_2,adj_Pinc_byfreq0__352_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__352_carry__1_i_1_n_0,adj_Pinc_byfreq0__352_carry__1_i_2_n_0,adj_Pinc_byfreq0__352_carry__1_i_3_n_0,adj_Pinc_byfreq0__352_carry__1_i_4_n_0}),
-        .O(NLW_adj_Pinc_byfreq0__352_carry__1_O_UNCONNECTED[3:0]),
-        .S({adj_Pinc_byfreq0__352_carry__1_i_5_n_0,adj_Pinc_byfreq0__352_carry__1_i_6_n_0,adj_Pinc_byfreq0__352_carry__1_i_7_n_0,adj_Pinc_byfreq0__352_carry__1_i_8_n_0}));
-  (* HLUTNM = "lutpair49" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__1_i_1
-       (.I0(adj_Pinc_byfreq0__261_carry_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry__0_n_6),
-        .I2(adj_Pinc_byfreq0__89_carry__1_n_6),
-        .O(adj_Pinc_byfreq0__352_carry__1_i_1_n_0));
-  (* HLUTNM = "lutpair48" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__1_i_2
-       (.I0(adj_Pinc_byfreq0__0_carry__1_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry__0_n_7),
-        .I2(adj_Pinc_byfreq0__89_carry__1_n_7),
-        .O(adj_Pinc_byfreq0__352_carry__1_i_2_n_0));
-  (* HLUTNM = "lutpair47" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__1_i_3
-       (.I0(adj_Pinc_byfreq0__0_carry__1_n_5),
-        .I1(adj_Pinc_byfreq0__175_carry_n_4),
-        .I2(adj_Pinc_byfreq0__89_carry__0_n_4),
-        .O(adj_Pinc_byfreq0__352_carry__1_i_3_n_0));
-  (* HLUTNM = "lutpair46" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__1_i_4
-       (.I0(adj_Pinc_byfreq0__0_carry__1_n_6),
-        .I1(adj_Pinc_byfreq0__175_carry_n_5),
-        .I2(adj_Pinc_byfreq0__89_carry__0_n_5),
-        .O(adj_Pinc_byfreq0__352_carry__1_i_4_n_0));
-  (* HLUTNM = "lutpair50" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__1_i_5
-       (.I0(adj_Pinc_byfreq0__261_carry_n_6),
-        .I1(adj_Pinc_byfreq0__175_carry__0_n_5),
-        .I2(adj_Pinc_byfreq0__89_carry__1_n_5),
-        .I3(adj_Pinc_byfreq0__352_carry__1_i_1_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__1_i_5_n_0));
-  (* HLUTNM = "lutpair49" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__1_i_6
-       (.I0(adj_Pinc_byfreq0__261_carry_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry__0_n_6),
-        .I2(adj_Pinc_byfreq0__89_carry__1_n_6),
-        .I3(adj_Pinc_byfreq0__352_carry__1_i_2_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__1_i_6_n_0));
-  (* HLUTNM = "lutpair48" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__1_i_7
-       (.I0(adj_Pinc_byfreq0__0_carry__1_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry__0_n_7),
-        .I2(adj_Pinc_byfreq0__89_carry__1_n_7),
-        .I3(adj_Pinc_byfreq0__352_carry__1_i_3_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__1_i_7_n_0));
-  (* HLUTNM = "lutpair47" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__1_i_8
-       (.I0(adj_Pinc_byfreq0__0_carry__1_n_5),
-        .I1(adj_Pinc_byfreq0__175_carry_n_4),
-        .I2(adj_Pinc_byfreq0__89_carry__0_n_4),
-        .I3(adj_Pinc_byfreq0__352_carry__1_i_4_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__1_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__352_carry__2
-       (.CI(adj_Pinc_byfreq0__352_carry__1_n_0),
-        .CO({adj_Pinc_byfreq0__352_carry__2_n_0,adj_Pinc_byfreq0__352_carry__2_n_1,adj_Pinc_byfreq0__352_carry__2_n_2,adj_Pinc_byfreq0__352_carry__2_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__352_carry__2_i_1_n_0,adj_Pinc_byfreq0__352_carry__2_i_2_n_0,adj_Pinc_byfreq0__352_carry__2_i_3_n_0,adj_Pinc_byfreq0__352_carry__2_i_4_n_0}),
-        .O(NLW_adj_Pinc_byfreq0__352_carry__2_O_UNCONNECTED[3:0]),
-        .S({adj_Pinc_byfreq0__352_carry__2_i_5_n_0,adj_Pinc_byfreq0__352_carry__2_i_6_n_0,adj_Pinc_byfreq0__352_carry__2_i_7_n_0,adj_Pinc_byfreq0__352_carry__2_i_8_n_0}));
-  (* HLUTNM = "lutpair53" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__2_i_1
-       (.I0(adj_Pinc_byfreq0__261_carry__0_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry__1_n_6),
-        .I2(adj_Pinc_byfreq0__89_carry__2_n_6),
-        .O(adj_Pinc_byfreq0__352_carry__2_i_1_n_0));
-  (* HLUTNM = "lutpair52" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__2_i_2
-       (.I0(adj_Pinc_byfreq0__261_carry_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry__1_n_7),
-        .I2(adj_Pinc_byfreq0__89_carry__2_n_7),
-        .O(adj_Pinc_byfreq0__352_carry__2_i_2_n_0));
-  (* HLUTNM = "lutpair51" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__2_i_3
-       (.I0(adj_Pinc_byfreq0__261_carry_n_5),
-        .I1(adj_Pinc_byfreq0__175_carry__0_n_4),
-        .I2(adj_Pinc_byfreq0__89_carry__1_n_4),
-        .O(adj_Pinc_byfreq0__352_carry__2_i_3_n_0));
-  (* HLUTNM = "lutpair50" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__2_i_4
-       (.I0(adj_Pinc_byfreq0__261_carry_n_6),
-        .I1(adj_Pinc_byfreq0__175_carry__0_n_5),
-        .I2(adj_Pinc_byfreq0__89_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__352_carry__2_i_4_n_0));
-  (* HLUTNM = "lutpair54" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__2_i_5
-       (.I0(adj_Pinc_byfreq0__261_carry__0_n_6),
-        .I1(adj_Pinc_byfreq0__175_carry__1_n_5),
-        .I2(adj_Pinc_byfreq0__89_carry__2_n_5),
-        .I3(adj_Pinc_byfreq0__352_carry__2_i_1_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__2_i_5_n_0));
-  (* HLUTNM = "lutpair53" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__2_i_6
-       (.I0(adj_Pinc_byfreq0__261_carry__0_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry__1_n_6),
-        .I2(adj_Pinc_byfreq0__89_carry__2_n_6),
-        .I3(adj_Pinc_byfreq0__352_carry__2_i_2_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__2_i_6_n_0));
-  (* HLUTNM = "lutpair52" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__2_i_7
-       (.I0(adj_Pinc_byfreq0__261_carry_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry__1_n_7),
-        .I2(adj_Pinc_byfreq0__89_carry__2_n_7),
-        .I3(adj_Pinc_byfreq0__352_carry__2_i_3_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__2_i_7_n_0));
-  (* HLUTNM = "lutpair51" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__2_i_8
-       (.I0(adj_Pinc_byfreq0__261_carry_n_5),
-        .I1(adj_Pinc_byfreq0__175_carry__0_n_4),
-        .I2(adj_Pinc_byfreq0__89_carry__1_n_4),
-        .I3(adj_Pinc_byfreq0__352_carry__2_i_4_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__2_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__352_carry__3
-       (.CI(adj_Pinc_byfreq0__352_carry__2_n_0),
-        .CO({adj_Pinc_byfreq0__352_carry__3_n_0,adj_Pinc_byfreq0__352_carry__3_n_1,adj_Pinc_byfreq0__352_carry__3_n_2,adj_Pinc_byfreq0__352_carry__3_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__352_carry__3_i_1_n_0,adj_Pinc_byfreq0__352_carry__3_i_2_n_0,adj_Pinc_byfreq0__352_carry__3_i_3_n_0,adj_Pinc_byfreq0__352_carry__3_i_4_n_0}),
-        .O(NLW_adj_Pinc_byfreq0__352_carry__3_O_UNCONNECTED[3:0]),
-        .S({adj_Pinc_byfreq0__352_carry__3_i_5_n_0,adj_Pinc_byfreq0__352_carry__3_i_6_n_0,adj_Pinc_byfreq0__352_carry__3_i_7_n_0,adj_Pinc_byfreq0__352_carry__3_i_8_n_0}));
-  (* HLUTNM = "lutpair57" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__3_i_1
-       (.I0(adj_Pinc_byfreq0__261_carry__1_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry__2_n_6),
-        .I2(adj_Pinc_byfreq0__89_carry__3_n_6),
-        .O(adj_Pinc_byfreq0__352_carry__3_i_1_n_0));
-  (* HLUTNM = "lutpair56" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__3_i_2
-       (.I0(adj_Pinc_byfreq0__261_carry__0_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry__2_n_7),
-        .I2(adj_Pinc_byfreq0__89_carry__3_n_7),
-        .O(adj_Pinc_byfreq0__352_carry__3_i_2_n_0));
-  (* HLUTNM = "lutpair55" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__3_i_3
-       (.I0(adj_Pinc_byfreq0__261_carry__0_n_5),
-        .I1(adj_Pinc_byfreq0__175_carry__1_n_4),
-        .I2(adj_Pinc_byfreq0__89_carry__2_n_4),
-        .O(adj_Pinc_byfreq0__352_carry__3_i_3_n_0));
-  (* HLUTNM = "lutpair54" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__3_i_4
-       (.I0(adj_Pinc_byfreq0__261_carry__0_n_6),
-        .I1(adj_Pinc_byfreq0__175_carry__1_n_5),
-        .I2(adj_Pinc_byfreq0__89_carry__2_n_5),
-        .O(adj_Pinc_byfreq0__352_carry__3_i_4_n_0));
-  (* HLUTNM = "lutpair58" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__3_i_5
-       (.I0(adj_Pinc_byfreq0__261_carry__1_n_6),
-        .I1(adj_Pinc_byfreq0__175_carry__2_n_5),
-        .I2(adj_Pinc_byfreq0__89_carry__3_n_5),
-        .I3(adj_Pinc_byfreq0__352_carry__3_i_1_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__3_i_5_n_0));
-  (* HLUTNM = "lutpair57" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__3_i_6
-       (.I0(adj_Pinc_byfreq0__261_carry__1_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry__2_n_6),
-        .I2(adj_Pinc_byfreq0__89_carry__3_n_6),
-        .I3(adj_Pinc_byfreq0__352_carry__3_i_2_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__3_i_6_n_0));
-  (* HLUTNM = "lutpair56" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__3_i_7
-       (.I0(adj_Pinc_byfreq0__261_carry__0_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry__2_n_7),
-        .I2(adj_Pinc_byfreq0__89_carry__3_n_7),
-        .I3(adj_Pinc_byfreq0__352_carry__3_i_3_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__3_i_7_n_0));
-  (* HLUTNM = "lutpair55" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__3_i_8
-       (.I0(adj_Pinc_byfreq0__261_carry__0_n_5),
-        .I1(adj_Pinc_byfreq0__175_carry__1_n_4),
-        .I2(adj_Pinc_byfreq0__89_carry__2_n_4),
-        .I3(adj_Pinc_byfreq0__352_carry__3_i_4_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__3_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__352_carry__4
-       (.CI(adj_Pinc_byfreq0__352_carry__3_n_0),
-        .CO({adj_Pinc_byfreq0__352_carry__4_n_0,adj_Pinc_byfreq0__352_carry__4_n_1,adj_Pinc_byfreq0__352_carry__4_n_2,adj_Pinc_byfreq0__352_carry__4_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__352_carry__4_i_1_n_0,adj_Pinc_byfreq0__352_carry__4_i_2_n_0,adj_Pinc_byfreq0__352_carry__4_i_3_n_0,adj_Pinc_byfreq0__352_carry__4_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__352_carry__4_n_4,adj_Pinc_byfreq0__352_carry__4_n_5,adj_Pinc_byfreq0__352_carry__4_n_6,adj_Pinc_byfreq0__352_carry__4_n_7}),
-        .S({adj_Pinc_byfreq0__352_carry__4_i_5_n_0,adj_Pinc_byfreq0__352_carry__4_i_6_n_0,adj_Pinc_byfreq0__352_carry__4_i_7_n_0,adj_Pinc_byfreq0__352_carry__4_i_8_n_0}));
-  (* HLUTNM = "lutpair61" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__4_i_1
-       (.I0(adj_Pinc_byfreq0__261_carry__2_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry__3_n_6),
-        .I2(adj_Pinc_byfreq0__89_carry__4_n_6),
-        .O(adj_Pinc_byfreq0__352_carry__4_i_1_n_0));
-  (* HLUTNM = "lutpair60" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__4_i_2
-       (.I0(adj_Pinc_byfreq0__261_carry__1_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry__3_n_7),
-        .I2(adj_Pinc_byfreq0__89_carry__4_n_7),
-        .O(adj_Pinc_byfreq0__352_carry__4_i_2_n_0));
-  (* HLUTNM = "lutpair59" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__4_i_3
-       (.I0(adj_Pinc_byfreq0__261_carry__1_n_5),
-        .I1(adj_Pinc_byfreq0__175_carry__2_n_4),
-        .I2(adj_Pinc_byfreq0__89_carry__3_n_4),
-        .O(adj_Pinc_byfreq0__352_carry__4_i_3_n_0));
-  (* HLUTNM = "lutpair58" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__4_i_4
-       (.I0(adj_Pinc_byfreq0__261_carry__1_n_6),
-        .I1(adj_Pinc_byfreq0__175_carry__2_n_5),
-        .I2(adj_Pinc_byfreq0__89_carry__3_n_5),
-        .O(adj_Pinc_byfreq0__352_carry__4_i_4_n_0));
-  (* HLUTNM = "lutpair62" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__4_i_5
-       (.I0(adj_Pinc_byfreq0__261_carry__2_n_6),
-        .I1(adj_Pinc_byfreq0__175_carry__3_n_5),
-        .I2(adj_Pinc_byfreq0__89_carry__4_n_5),
-        .I3(adj_Pinc_byfreq0__352_carry__4_i_1_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__4_i_5_n_0));
-  (* HLUTNM = "lutpair61" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__4_i_6
-       (.I0(adj_Pinc_byfreq0__261_carry__2_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry__3_n_6),
-        .I2(adj_Pinc_byfreq0__89_carry__4_n_6),
-        .I3(adj_Pinc_byfreq0__352_carry__4_i_2_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__4_i_6_n_0));
-  (* HLUTNM = "lutpair60" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__4_i_7
-       (.I0(adj_Pinc_byfreq0__261_carry__1_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry__3_n_7),
-        .I2(adj_Pinc_byfreq0__89_carry__4_n_7),
-        .I3(adj_Pinc_byfreq0__352_carry__4_i_3_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__4_i_7_n_0));
-  (* HLUTNM = "lutpair59" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__4_i_8
-       (.I0(adj_Pinc_byfreq0__261_carry__1_n_5),
-        .I1(adj_Pinc_byfreq0__175_carry__2_n_4),
-        .I2(adj_Pinc_byfreq0__89_carry__3_n_4),
-        .I3(adj_Pinc_byfreq0__352_carry__4_i_4_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__4_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__352_carry__5
-       (.CI(adj_Pinc_byfreq0__352_carry__4_n_0),
-        .CO({adj_Pinc_byfreq0__352_carry__5_n_0,adj_Pinc_byfreq0__352_carry__5_n_1,adj_Pinc_byfreq0__352_carry__5_n_2,adj_Pinc_byfreq0__352_carry__5_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__352_carry__5_i_1_n_0,adj_Pinc_byfreq0__352_carry__5_i_2_n_0,adj_Pinc_byfreq0__352_carry__5_i_3_n_0,adj_Pinc_byfreq0__352_carry__5_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__352_carry__5_n_4,adj_Pinc_byfreq0__352_carry__5_n_5,adj_Pinc_byfreq0__352_carry__5_n_6,adj_Pinc_byfreq0__352_carry__5_n_7}),
-        .S({adj_Pinc_byfreq0__352_carry__5_i_5_n_0,adj_Pinc_byfreq0__352_carry__5_i_6_n_0,adj_Pinc_byfreq0__352_carry__5_i_7_n_0,adj_Pinc_byfreq0__352_carry__5_i_8_n_0}));
-  (* HLUTNM = "lutpair65" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__5_i_1
-       (.I0(adj_Pinc_byfreq0__261_carry__3_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry__4_n_6),
-        .I2(adj_Pinc_byfreq0__89_carry__5_n_6),
-        .O(adj_Pinc_byfreq0__352_carry__5_i_1_n_0));
-  (* HLUTNM = "lutpair64" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__5_i_2
-       (.I0(adj_Pinc_byfreq0__261_carry__2_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry__4_n_7),
-        .I2(adj_Pinc_byfreq0__89_carry__5_n_7),
-        .O(adj_Pinc_byfreq0__352_carry__5_i_2_n_0));
-  (* HLUTNM = "lutpair63" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__5_i_3
-       (.I0(adj_Pinc_byfreq0__261_carry__2_n_5),
-        .I1(adj_Pinc_byfreq0__175_carry__3_n_4),
-        .I2(adj_Pinc_byfreq0__89_carry__4_n_4),
-        .O(adj_Pinc_byfreq0__352_carry__5_i_3_n_0));
-  (* HLUTNM = "lutpair62" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__5_i_4
-       (.I0(adj_Pinc_byfreq0__261_carry__2_n_6),
-        .I1(adj_Pinc_byfreq0__175_carry__3_n_5),
-        .I2(adj_Pinc_byfreq0__89_carry__4_n_5),
-        .O(adj_Pinc_byfreq0__352_carry__5_i_4_n_0));
-  (* HLUTNM = "lutpair66" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__5_i_5
-       (.I0(adj_Pinc_byfreq0__261_carry__3_n_6),
-        .I1(adj_Pinc_byfreq0__175_carry__4_n_5),
-        .I2(adj_Pinc_byfreq0__89_carry__5_n_5),
-        .I3(adj_Pinc_byfreq0__352_carry__5_i_1_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__5_i_5_n_0));
-  (* HLUTNM = "lutpair65" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__5_i_6
-       (.I0(adj_Pinc_byfreq0__261_carry__3_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry__4_n_6),
-        .I2(adj_Pinc_byfreq0__89_carry__5_n_6),
-        .I3(adj_Pinc_byfreq0__352_carry__5_i_2_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__5_i_6_n_0));
-  (* HLUTNM = "lutpair64" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__5_i_7
-       (.I0(adj_Pinc_byfreq0__261_carry__2_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry__4_n_7),
-        .I2(adj_Pinc_byfreq0__89_carry__5_n_7),
-        .I3(adj_Pinc_byfreq0__352_carry__5_i_3_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__5_i_7_n_0));
-  (* HLUTNM = "lutpair63" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__5_i_8
-       (.I0(adj_Pinc_byfreq0__261_carry__2_n_5),
-        .I1(adj_Pinc_byfreq0__175_carry__3_n_4),
-        .I2(adj_Pinc_byfreq0__89_carry__4_n_4),
-        .I3(adj_Pinc_byfreq0__352_carry__5_i_4_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__5_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__352_carry__6
-       (.CI(adj_Pinc_byfreq0__352_carry__5_n_0),
-        .CO({adj_Pinc_byfreq0__352_carry__6_n_0,adj_Pinc_byfreq0__352_carry__6_n_1,adj_Pinc_byfreq0__352_carry__6_n_2,adj_Pinc_byfreq0__352_carry__6_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__352_carry__6_i_1_n_0,adj_Pinc_byfreq0__352_carry__6_i_2_n_0,adj_Pinc_byfreq0__352_carry__6_i_3_n_0,adj_Pinc_byfreq0__352_carry__6_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__352_carry__6_n_4,adj_Pinc_byfreq0__352_carry__6_n_5,adj_Pinc_byfreq0__352_carry__6_n_6,adj_Pinc_byfreq0__352_carry__6_n_7}),
-        .S({adj_Pinc_byfreq0__352_carry__6_i_5_n_0,adj_Pinc_byfreq0__352_carry__6_i_6_n_0,adj_Pinc_byfreq0__352_carry__6_i_7_n_0,adj_Pinc_byfreq0__352_carry__6_i_8_n_0}));
-  (* HLUTNM = "lutpair69" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__6_i_1
-       (.I0(adj_Pinc_byfreq0__261_carry__4_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry__5_n_6),
-        .I2(adj_Pinc_byfreq0__89_carry__6_n_6),
-        .O(adj_Pinc_byfreq0__352_carry__6_i_1_n_0));
-  (* HLUTNM = "lutpair68" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__6_i_2
-       (.I0(adj_Pinc_byfreq0__261_carry__3_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry__5_n_7),
-        .I2(adj_Pinc_byfreq0__89_carry__6_n_7),
-        .O(adj_Pinc_byfreq0__352_carry__6_i_2_n_0));
-  (* HLUTNM = "lutpair67" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__6_i_3
-       (.I0(adj_Pinc_byfreq0__261_carry__3_n_5),
-        .I1(adj_Pinc_byfreq0__175_carry__4_n_4),
-        .I2(adj_Pinc_byfreq0__89_carry__5_n_4),
-        .O(adj_Pinc_byfreq0__352_carry__6_i_3_n_0));
-  (* HLUTNM = "lutpair66" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__6_i_4
-       (.I0(adj_Pinc_byfreq0__261_carry__3_n_6),
-        .I1(adj_Pinc_byfreq0__175_carry__4_n_5),
-        .I2(adj_Pinc_byfreq0__89_carry__5_n_5),
-        .O(adj_Pinc_byfreq0__352_carry__6_i_4_n_0));
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__6_i_5
-       (.I0(adj_Pinc_byfreq0__352_carry__6_i_1_n_0),
-        .I1(adj_Pinc_byfreq0__175_carry__5_n_5),
-        .I2(adj_Pinc_byfreq0__261_carry__4_n_6),
-        .I3(adj_Pinc_byfreq0__89_carry__6_n_1),
-        .O(adj_Pinc_byfreq0__352_carry__6_i_5_n_0));
-  (* HLUTNM = "lutpair69" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__6_i_6
-       (.I0(adj_Pinc_byfreq0__261_carry__4_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry__5_n_6),
-        .I2(adj_Pinc_byfreq0__89_carry__6_n_6),
-        .I3(adj_Pinc_byfreq0__352_carry__6_i_2_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__6_i_6_n_0));
-  (* HLUTNM = "lutpair68" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__6_i_7
-       (.I0(adj_Pinc_byfreq0__261_carry__3_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry__5_n_7),
-        .I2(adj_Pinc_byfreq0__89_carry__6_n_7),
-        .I3(adj_Pinc_byfreq0__352_carry__6_i_3_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__6_i_7_n_0));
-  (* HLUTNM = "lutpair67" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__352_carry__6_i_8
-       (.I0(adj_Pinc_byfreq0__261_carry__3_n_5),
-        .I1(adj_Pinc_byfreq0__175_carry__4_n_4),
-        .I2(adj_Pinc_byfreq0__89_carry__5_n_4),
-        .I3(adj_Pinc_byfreq0__352_carry__6_i_4_n_0),
-        .O(adj_Pinc_byfreq0__352_carry__6_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__352_carry__7
-       (.CI(adj_Pinc_byfreq0__352_carry__6_n_0),
-        .CO({adj_Pinc_byfreq0__352_carry__7_n_0,adj_Pinc_byfreq0__352_carry__7_n_1,adj_Pinc_byfreq0__352_carry__7_n_2,adj_Pinc_byfreq0__352_carry__7_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__352_carry__7_i_1_n_0,adj_Pinc_byfreq0__352_carry__7_i_2_n_0,adj_Pinc_byfreq0__352_carry__7_i_3_n_0,adj_Pinc_byfreq0__352_carry__7_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__352_carry__7_n_4,adj_Pinc_byfreq0__352_carry__7_n_5,adj_Pinc_byfreq0__352_carry__7_n_6,adj_Pinc_byfreq0__352_carry__7_n_7}),
-        .S({adj_Pinc_byfreq0__352_carry__7_i_5_n_0,adj_Pinc_byfreq0__352_carry__7_i_6_n_0,adj_Pinc_byfreq0__352_carry__7_i_7_n_0,adj_Pinc_byfreq0__352_carry__7_i_8_n_0}));
-  LUT2 #(
-    .INIT(4'h8)) 
-    adj_Pinc_byfreq0__352_carry__7_i_1
-       (.I0(adj_Pinc_byfreq0__175_carry__6_n_6),
-        .I1(adj_Pinc_byfreq0__261_carry__5_n_7),
-        .O(adj_Pinc_byfreq0__352_carry__7_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    adj_Pinc_byfreq0__352_carry__7_i_2
-       (.I0(adj_Pinc_byfreq0__175_carry__6_n_7),
-        .I1(adj_Pinc_byfreq0__261_carry__4_n_4),
-        .O(adj_Pinc_byfreq0__352_carry__7_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    adj_Pinc_byfreq0__352_carry__7_i_3
-       (.I0(adj_Pinc_byfreq0__175_carry__5_n_4),
-        .I1(adj_Pinc_byfreq0__261_carry__4_n_5),
-        .O(adj_Pinc_byfreq0__352_carry__7_i_3_n_0));
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__352_carry__7_i_4
-       (.I0(adj_Pinc_byfreq0__261_carry__4_n_6),
-        .I1(adj_Pinc_byfreq0__175_carry__5_n_5),
-        .I2(adj_Pinc_byfreq0__89_carry__6_n_1),
-        .O(adj_Pinc_byfreq0__352_carry__7_i_4_n_0));
-  LUT4 #(
-    .INIT(16'h7887)) 
-    adj_Pinc_byfreq0__352_carry__7_i_5
-       (.I0(adj_Pinc_byfreq0__175_carry__6_n_6),
-        .I1(adj_Pinc_byfreq0__261_carry__5_n_7),
-        .I2(adj_Pinc_byfreq0__261_carry__5_n_6),
-        .I3(adj_Pinc_byfreq0__175_carry__6_n_1),
-        .O(adj_Pinc_byfreq0__352_carry__7_i_5_n_0));
+    adj_Pinc_byfreq0__234_carry_i_6
+       (.I0(adj_Pinc_byfreq0__67_carry_n_4),
+        .I1(adj_Pinc_byfreq0_carry__0_n_4),
+        .I2(adj_Pinc_byfreq0_carry__0_n_5),
+        .I3(adj_Pinc_byfreq0__67_carry_n_5),
+        .O(adj_Pinc_byfreq0__234_carry_i_6_n_0));
   LUT4 #(
     .INIT(16'h8778)) 
-    adj_Pinc_byfreq0__352_carry__7_i_6
-       (.I0(adj_Pinc_byfreq0__175_carry__6_n_7),
-        .I1(adj_Pinc_byfreq0__261_carry__4_n_4),
-        .I2(adj_Pinc_byfreq0__261_carry__5_n_7),
-        .I3(adj_Pinc_byfreq0__175_carry__6_n_6),
-        .O(adj_Pinc_byfreq0__352_carry__7_i_6_n_0));
+    adj_Pinc_byfreq0__234_carry_i_7
+       (.I0(adj_Pinc_byfreq0_carry__0_n_6),
+        .I1(adj_Pinc_byfreq0__67_carry_n_6),
+        .I2(adj_Pinc_byfreq0__67_carry_n_5),
+        .I3(adj_Pinc_byfreq0_carry__0_n_5),
+        .O(adj_Pinc_byfreq0__234_carry_i_7_n_0));
   LUT4 #(
     .INIT(16'h8778)) 
-    adj_Pinc_byfreq0__352_carry__7_i_7
-       (.I0(adj_Pinc_byfreq0__175_carry__5_n_4),
-        .I1(adj_Pinc_byfreq0__261_carry__4_n_5),
-        .I2(adj_Pinc_byfreq0__261_carry__4_n_4),
-        .I3(adj_Pinc_byfreq0__175_carry__6_n_7),
-        .O(adj_Pinc_byfreq0__352_carry__7_i_7_n_0));
-  LUT5 #(
-    .INIT(32'hE81717E8)) 
-    adj_Pinc_byfreq0__352_carry__7_i_8
-       (.I0(adj_Pinc_byfreq0__89_carry__6_n_1),
-        .I1(adj_Pinc_byfreq0__175_carry__5_n_5),
-        .I2(adj_Pinc_byfreq0__261_carry__4_n_6),
-        .I3(adj_Pinc_byfreq0__261_carry__4_n_5),
-        .I4(adj_Pinc_byfreq0__175_carry__5_n_4),
-        .O(adj_Pinc_byfreq0__352_carry__7_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__352_carry__8
-       (.CI(adj_Pinc_byfreq0__352_carry__7_n_0),
-        .CO({adj_Pinc_byfreq0__352_carry__8_n_0,adj_Pinc_byfreq0__352_carry__8_n_1,adj_Pinc_byfreq0__352_carry__8_n_2,adj_Pinc_byfreq0__352_carry__8_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__352_carry__8_i_1_n_0,adj_Pinc_byfreq0__352_carry__8_i_2_n_0,adj_Pinc_byfreq0__352_carry__8_i_3_n_0,adj_Pinc_byfreq0__352_carry__8_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__352_carry__8_n_4,adj_Pinc_byfreq0__352_carry__8_n_5,adj_Pinc_byfreq0__352_carry__8_n_6,adj_Pinc_byfreq0__352_carry__8_n_7}),
-        .S({adj_Pinc_byfreq0__352_carry__8_i_5_n_0,adj_Pinc_byfreq0__352_carry__8_i_6_n_0,adj_Pinc_byfreq0__352_carry__8_i_7_n_0,adj_Pinc_byfreq0__352_carry__8_i_8_n_0}));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__352_carry__8_i_1
-       (.I0(adj_Pinc_byfreq0__261_carry__6_n_7),
-        .I1(adj_Pinc_byfreq0__175_carry__6_n_1),
-        .O(adj_Pinc_byfreq0__352_carry__8_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__352_carry__8_i_2
-       (.I0(adj_Pinc_byfreq0__261_carry__5_n_4),
-        .I1(adj_Pinc_byfreq0__175_carry__6_n_1),
-        .O(adj_Pinc_byfreq0__352_carry__8_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__352_carry__8_i_3
-       (.I0(adj_Pinc_byfreq0__261_carry__5_n_5),
-        .I1(adj_Pinc_byfreq0__175_carry__6_n_1),
-        .O(adj_Pinc_byfreq0__352_carry__8_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__352_carry__8_i_4
-       (.I0(adj_Pinc_byfreq0__261_carry__5_n_6),
-        .I1(adj_Pinc_byfreq0__175_carry__6_n_1),
-        .O(adj_Pinc_byfreq0__352_carry__8_i_4_n_0));
-  LUT3 #(
-    .INIT(8'hC9)) 
-    adj_Pinc_byfreq0__352_carry__8_i_5
-       (.I0(adj_Pinc_byfreq0__261_carry__6_n_7),
-        .I1(adj_Pinc_byfreq0__261_carry__6_n_6),
-        .I2(adj_Pinc_byfreq0__175_carry__6_n_1),
-        .O(adj_Pinc_byfreq0__352_carry__8_i_5_n_0));
-  LUT3 #(
-    .INIT(8'hC9)) 
-    adj_Pinc_byfreq0__352_carry__8_i_6
-       (.I0(adj_Pinc_byfreq0__261_carry__5_n_4),
-        .I1(adj_Pinc_byfreq0__261_carry__6_n_7),
-        .I2(adj_Pinc_byfreq0__175_carry__6_n_1),
-        .O(adj_Pinc_byfreq0__352_carry__8_i_6_n_0));
-  LUT3 #(
-    .INIT(8'hC9)) 
-    adj_Pinc_byfreq0__352_carry__8_i_7
-       (.I0(adj_Pinc_byfreq0__261_carry__5_n_5),
-        .I1(adj_Pinc_byfreq0__261_carry__5_n_4),
-        .I2(adj_Pinc_byfreq0__175_carry__6_n_1),
-        .O(adj_Pinc_byfreq0__352_carry__8_i_7_n_0));
-  LUT3 #(
-    .INIT(8'hC9)) 
-    adj_Pinc_byfreq0__352_carry__8_i_8
-       (.I0(adj_Pinc_byfreq0__261_carry__5_n_6),
-        .I1(adj_Pinc_byfreq0__261_carry__5_n_5),
-        .I2(adj_Pinc_byfreq0__175_carry__6_n_1),
-        .O(adj_Pinc_byfreq0__352_carry__8_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__352_carry__9
-       (.CI(adj_Pinc_byfreq0__352_carry__8_n_0),
-        .CO(NLW_adj_Pinc_byfreq0__352_carry__9_CO_UNCONNECTED[3:0]),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({NLW_adj_Pinc_byfreq0__352_carry__9_O_UNCONNECTED[3:1],adj_Pinc_byfreq0__352_carry__9_n_7}),
-        .S({1'b0,1'b0,1'b0,adj_Pinc_byfreq0__352_carry__9_i_1_n_0}));
-  LUT3 #(
-    .INIT(8'hC9)) 
-    adj_Pinc_byfreq0__352_carry__9_i_1
-       (.I0(adj_Pinc_byfreq0__261_carry__6_n_6),
-        .I1(adj_Pinc_byfreq0__261_carry__6_n_5),
-        .I2(adj_Pinc_byfreq0__175_carry__6_n_1),
-        .O(adj_Pinc_byfreq0__352_carry__9_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    adj_Pinc_byfreq0__352_carry_i_1
-       (.I0(adj_Pinc_byfreq0__89_carry_n_6),
-        .I1(adj_Pinc_byfreq0__0_carry__0_n_7),
-        .O(adj_Pinc_byfreq0__352_carry_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    adj_Pinc_byfreq0__352_carry_i_2
-       (.I0(adj_Pinc_byfreq0__89_carry_n_7),
-        .I1(adj_Pinc_byfreq0__0_carry_n_4),
-        .O(adj_Pinc_byfreq0__352_carry_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h8)) 
-    adj_Pinc_byfreq0__352_carry_i_3
-       (.I0(w_MODEfreq0__0_n_105),
-        .I1(adj_Pinc_byfreq0__0_carry_n_5),
-        .O(adj_Pinc_byfreq0__352_carry_i_3_n_0));
-  LUT4 #(
-    .INIT(16'h8778)) 
-    adj_Pinc_byfreq0__352_carry_i_4
-       (.I0(adj_Pinc_byfreq0__89_carry_n_6),
-        .I1(adj_Pinc_byfreq0__0_carry__0_n_7),
-        .I2(adj_Pinc_byfreq0__0_carry__0_n_6),
-        .I3(adj_Pinc_byfreq0__89_carry_n_5),
-        .O(adj_Pinc_byfreq0__352_carry_i_4_n_0));
-  LUT4 #(
-    .INIT(16'h8778)) 
-    adj_Pinc_byfreq0__352_carry_i_5
-       (.I0(adj_Pinc_byfreq0__89_carry_n_7),
-        .I1(adj_Pinc_byfreq0__0_carry_n_4),
-        .I2(adj_Pinc_byfreq0__0_carry__0_n_7),
-        .I3(adj_Pinc_byfreq0__89_carry_n_6),
-        .O(adj_Pinc_byfreq0__352_carry_i_5_n_0));
-  LUT4 #(
-    .INIT(16'h8778)) 
-    adj_Pinc_byfreq0__352_carry_i_6
-       (.I0(w_MODEfreq0__0_n_105),
-        .I1(adj_Pinc_byfreq0__0_carry_n_5),
-        .I2(adj_Pinc_byfreq0__0_carry_n_4),
-        .I3(adj_Pinc_byfreq0__89_carry_n_7),
-        .O(adj_Pinc_byfreq0__352_carry_i_6_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    adj_Pinc_byfreq0__352_carry_i_7
-       (.I0(w_MODEfreq0__0_n_105),
-        .I1(adj_Pinc_byfreq0__0_carry_n_5),
-        .O(adj_Pinc_byfreq0__352_carry_i_7_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__453_carry
+    adj_Pinc_byfreq0__234_carry_i_8
+       (.I0(adj_Pinc_byfreq0_carry__0_n_7),
+        .I1(adj_Pinc_byfreq0__67_carry_n_7),
+        .I2(adj_Pinc_byfreq0__67_carry_n_6),
+        .I3(adj_Pinc_byfreq0_carry__0_n_6),
+        .O(adj_Pinc_byfreq0__234_carry_i_8_n_0));
+  CARRY4 adj_Pinc_byfreq0__234_carry_i_9
        (.CI(1'b0),
-        .CO({adj_Pinc_byfreq0__453_carry_n_0,adj_Pinc_byfreq0__453_carry_n_1,adj_Pinc_byfreq0__453_carry_n_2,adj_Pinc_byfreq0__453_carry_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__453_carry_i_1_n_0,adj_Pinc_byfreq0__453_carry_i_2_n_0,adj_Pinc_byfreq0__453_carry_i_3_n_0,1'b0}),
-        .O({adj_Pinc_byfreq0__453_carry_n_4,adj_Pinc_byfreq0__453_carry_n_5,adj_Pinc_byfreq0__453_carry_n_6,adj_Pinc_byfreq0__453_carry_n_7}),
-        .S({adj_Pinc_byfreq0__453_carry_i_4_n_0,adj_Pinc_byfreq0__453_carry_i_5_n_0,adj_Pinc_byfreq0__453_carry_i_6_n_0,adj_Pinc_byfreq0__453_carry_i_7_n_0}));
+        .CO({adj_Pinc_byfreq0__234_carry_i_9_n_0,adj_Pinc_byfreq0__234_carry_i_9_n_1,adj_Pinc_byfreq0__234_carry_i_9_n_2,adj_Pinc_byfreq0__234_carry_i_9_n_3}),
+        .CYINIT(1'b1),
+        .DI({freq[3],1'b0,1'b0,1'b0}),
+        .O({adj_Pinc_byfreq0__234_carry_i_9_n_4,adj_Pinc_byfreq0__234_carry_i_9_n_5,adj_Pinc_byfreq0__234_carry_i_9_n_6,NLW_adj_Pinc_byfreq0__234_carry_i_9_O_UNCONNECTED[0]}),
+        .S({adj_Pinc_byfreq0__234_carry_i_10_n_0,adj_Pinc_byfreq0__234_carry_i_11_n_0,adj_Pinc_byfreq0__234_carry_i_12_n_0,1'b1}));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__453_carry__0
-       (.CI(adj_Pinc_byfreq0__453_carry_n_0),
-        .CO({adj_Pinc_byfreq0__453_carry__0_n_0,adj_Pinc_byfreq0__453_carry__0_n_1,adj_Pinc_byfreq0__453_carry__0_n_2,adj_Pinc_byfreq0__453_carry__0_n_3}),
+  CARRY4 adj_Pinc_byfreq0__320_carry
+       (.CI(1'b0),
+        .CO({adj_Pinc_byfreq0__320_carry_n_0,adj_Pinc_byfreq0__320_carry_n_1,adj_Pinc_byfreq0__320_carry_n_2,adj_Pinc_byfreq0__320_carry_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__453_carry__0_i_1_n_0,adj_Pinc_byfreq0__453_carry__0_i_2_n_0,adj_Pinc_byfreq0__453_carry__0_i_3_n_0,adj_Pinc_byfreq0__453_carry__0_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__453_carry__0_n_4,adj_Pinc_byfreq0__453_carry__0_n_5,adj_Pinc_byfreq0__453_carry__0_n_6,adj_Pinc_byfreq0__453_carry__0_n_7}),
-        .S({adj_Pinc_byfreq0__453_carry__0_i_5_n_0,adj_Pinc_byfreq0__453_carry__0_i_6_n_0,adj_Pinc_byfreq0__453_carry__0_i_7_n_0,adj_Pinc_byfreq0__453_carry__0_i_8_n_0}));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__0_i_1
-       (.I0(adj_Pinc_byfreq0__352_carry__5_n_5),
-        .I1(adj_Pinc_byfreq0__352_carry__5_n_7),
-        .I2(adj_Pinc_byfreq0__352_carry__6_n_6),
-        .O(adj_Pinc_byfreq0__453_carry__0_i_1_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__0_i_2
-       (.I0(adj_Pinc_byfreq0__352_carry__5_n_6),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_4),
-        .I2(adj_Pinc_byfreq0__352_carry__6_n_7),
-        .O(adj_Pinc_byfreq0__453_carry__0_i_2_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__0_i_3
-       (.I0(adj_Pinc_byfreq0__352_carry__5_n_7),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_5),
-        .I2(adj_Pinc_byfreq0__352_carry__5_n_4),
-        .O(adj_Pinc_byfreq0__453_carry__0_i_3_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__0_i_4
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_4),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_6),
-        .I2(adj_Pinc_byfreq0__352_carry__5_n_5),
-        .O(adj_Pinc_byfreq0__453_carry__0_i_4_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__0_i_5
-       (.I0(adj_Pinc_byfreq0__352_carry__6_n_6),
-        .I1(adj_Pinc_byfreq0__352_carry__5_n_7),
-        .I2(adj_Pinc_byfreq0__352_carry__5_n_5),
-        .I3(adj_Pinc_byfreq0__352_carry__5_n_6),
-        .I4(adj_Pinc_byfreq0__352_carry__5_n_4),
-        .I5(adj_Pinc_byfreq0__352_carry__6_n_5),
-        .O(adj_Pinc_byfreq0__453_carry__0_i_5_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__0_i_6
-       (.I0(adj_Pinc_byfreq0__352_carry__6_n_7),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_4),
-        .I2(adj_Pinc_byfreq0__352_carry__5_n_6),
-        .I3(adj_Pinc_byfreq0__352_carry__5_n_7),
-        .I4(adj_Pinc_byfreq0__352_carry__5_n_5),
-        .I5(adj_Pinc_byfreq0__352_carry__6_n_6),
-        .O(adj_Pinc_byfreq0__453_carry__0_i_6_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__0_i_7
-       (.I0(adj_Pinc_byfreq0__352_carry__5_n_4),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_5),
-        .I2(adj_Pinc_byfreq0__352_carry__5_n_7),
-        .I3(adj_Pinc_byfreq0__352_carry__4_n_4),
-        .I4(adj_Pinc_byfreq0__352_carry__5_n_6),
-        .I5(adj_Pinc_byfreq0__352_carry__6_n_7),
-        .O(adj_Pinc_byfreq0__453_carry__0_i_7_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__0_i_8
-       (.I0(adj_Pinc_byfreq0__352_carry__5_n_5),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_6),
-        .I2(adj_Pinc_byfreq0__352_carry__4_n_4),
-        .I3(adj_Pinc_byfreq0__352_carry__4_n_5),
-        .I4(adj_Pinc_byfreq0__352_carry__5_n_7),
-        .I5(adj_Pinc_byfreq0__352_carry__5_n_4),
-        .O(adj_Pinc_byfreq0__453_carry__0_i_8_n_0));
+        .DI({adj_Pinc_byfreq0__320_carry_i_1_n_0,adj_Pinc_byfreq0__320_carry_i_2_n_0,adj_Pinc_byfreq0__320_carry_i_3_n_0,1'b0}),
+        .O({adj_Pinc_byfreq0__320_carry_n_4,adj_Pinc_byfreq0__320_carry_n_5,adj_Pinc_byfreq0__320_carry_n_6,adj_Pinc_byfreq0__320_carry_n_7}),
+        .S({adj_Pinc_byfreq0__320_carry_i_4_n_0,adj_Pinc_byfreq0__320_carry_i_5_n_0,adj_Pinc_byfreq0__320_carry_i_6_n_0,adj_Pinc_byfreq0__320_carry_i_7_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__453_carry__1
-       (.CI(adj_Pinc_byfreq0__453_carry__0_n_0),
-        .CO({adj_Pinc_byfreq0__453_carry__1_n_0,adj_Pinc_byfreq0__453_carry__1_n_1,adj_Pinc_byfreq0__453_carry__1_n_2,adj_Pinc_byfreq0__453_carry__1_n_3}),
+  CARRY4 adj_Pinc_byfreq0__320_carry__0
+       (.CI(adj_Pinc_byfreq0__320_carry_n_0),
+        .CO({adj_Pinc_byfreq0__320_carry__0_n_0,adj_Pinc_byfreq0__320_carry__0_n_1,adj_Pinc_byfreq0__320_carry__0_n_2,adj_Pinc_byfreq0__320_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__453_carry__1_i_1_n_0,adj_Pinc_byfreq0__453_carry__1_i_2_n_0,adj_Pinc_byfreq0__453_carry__1_i_3_n_0,adj_Pinc_byfreq0__453_carry__1_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__453_carry__1_n_4,adj_Pinc_byfreq0__453_carry__1_n_5,adj_Pinc_byfreq0__453_carry__1_n_6,adj_Pinc_byfreq0__453_carry__1_n_7}),
-        .S({adj_Pinc_byfreq0__453_carry__1_i_5_n_0,adj_Pinc_byfreq0__453_carry__1_i_6_n_0,adj_Pinc_byfreq0__453_carry__1_i_7_n_0,adj_Pinc_byfreq0__453_carry__1_i_8_n_0}));
+        .DI({adj_Pinc_byfreq0__320_carry__0_i_1_n_0,adj_Pinc_byfreq0__320_carry__0_i_2_n_0,adj_Pinc_byfreq0__320_carry__0_i_3_n_0,adj_Pinc_byfreq0__320_carry__0_i_4_n_0}),
+        .O({adj_Pinc_byfreq0__320_carry__0_n_4,adj_Pinc_byfreq0__320_carry__0_n_5,adj_Pinc_byfreq0__320_carry__0_n_6,adj_Pinc_byfreq0__320_carry__0_n_7}),
+        .S({adj_Pinc_byfreq0__320_carry__0_i_5_n_0,adj_Pinc_byfreq0__320_carry__0_i_6_n_0,adj_Pinc_byfreq0__320_carry__0_i_7_n_0,adj_Pinc_byfreq0__320_carry__0_i_8_n_0}));
   LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__1_i_1
-       (.I0(adj_Pinc_byfreq0__352_carry__6_n_5),
-        .I1(adj_Pinc_byfreq0__352_carry__6_n_7),
-        .I2(adj_Pinc_byfreq0__352_carry__7_n_6),
-        .O(adj_Pinc_byfreq0__453_carry__1_i_1_n_0));
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry__0_i_1
+       (.I0(adj_Pinc_byfreq0__234_carry__4_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__3_n_5),
+        .I2(adj_Pinc_byfreq0__234_carry__4_n_7),
+        .O(adj_Pinc_byfreq0__320_carry__0_i_1_n_0));
   LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__1_i_2
-       (.I0(adj_Pinc_byfreq0__352_carry__6_n_6),
-        .I1(adj_Pinc_byfreq0__352_carry__5_n_4),
-        .I2(adj_Pinc_byfreq0__352_carry__7_n_7),
-        .O(adj_Pinc_byfreq0__453_carry__1_i_2_n_0));
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry__0_i_2
+       (.I0(adj_Pinc_byfreq0__234_carry__4_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__3_n_6),
+        .I2(adj_Pinc_byfreq0__234_carry__3_n_4),
+        .O(adj_Pinc_byfreq0__320_carry__0_i_2_n_0));
   LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__1_i_3
-       (.I0(adj_Pinc_byfreq0__352_carry__6_n_7),
-        .I1(adj_Pinc_byfreq0__352_carry__5_n_5),
-        .I2(adj_Pinc_byfreq0__352_carry__6_n_4),
-        .O(adj_Pinc_byfreq0__453_carry__1_i_3_n_0));
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry__0_i_3
+       (.I0(adj_Pinc_byfreq0__234_carry__4_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__3_n_7),
+        .I2(adj_Pinc_byfreq0__234_carry__3_n_5),
+        .O(adj_Pinc_byfreq0__320_carry__0_i_3_n_0));
   LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__1_i_4
-       (.I0(adj_Pinc_byfreq0__352_carry__5_n_4),
-        .I1(adj_Pinc_byfreq0__352_carry__5_n_6),
-        .I2(adj_Pinc_byfreq0__352_carry__6_n_5),
-        .O(adj_Pinc_byfreq0__453_carry__1_i_4_n_0));
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry__0_i_4
+       (.I0(adj_Pinc_byfreq0__234_carry__4_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__2_n_4),
+        .I2(adj_Pinc_byfreq0__234_carry__3_n_6),
+        .O(adj_Pinc_byfreq0__320_carry__0_i_4_n_0));
   LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__1_i_5
-       (.I0(adj_Pinc_byfreq0__352_carry__7_n_6),
-        .I1(adj_Pinc_byfreq0__352_carry__6_n_7),
-        .I2(adj_Pinc_byfreq0__352_carry__6_n_5),
-        .I3(adj_Pinc_byfreq0__352_carry__6_n_6),
-        .I4(adj_Pinc_byfreq0__352_carry__6_n_4),
-        .I5(adj_Pinc_byfreq0__352_carry__7_n_5),
-        .O(adj_Pinc_byfreq0__453_carry__1_i_5_n_0));
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry__0_i_5
+       (.I0(adj_Pinc_byfreq0__234_carry__4_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__3_n_5),
+        .I2(adj_Pinc_byfreq0__234_carry__4_n_4),
+        .I3(adj_Pinc_byfreq0__234_carry__4_n_6),
+        .I4(adj_Pinc_byfreq0__234_carry__3_n_4),
+        .I5(adj_Pinc_byfreq0__234_carry__5_n_7),
+        .O(adj_Pinc_byfreq0__320_carry__0_i_5_n_0));
   LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__1_i_6
-       (.I0(adj_Pinc_byfreq0__352_carry__7_n_7),
-        .I1(adj_Pinc_byfreq0__352_carry__5_n_4),
-        .I2(adj_Pinc_byfreq0__352_carry__6_n_6),
-        .I3(adj_Pinc_byfreq0__352_carry__6_n_7),
-        .I4(adj_Pinc_byfreq0__352_carry__6_n_5),
-        .I5(adj_Pinc_byfreq0__352_carry__7_n_6),
-        .O(adj_Pinc_byfreq0__453_carry__1_i_6_n_0));
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry__0_i_6
+       (.I0(adj_Pinc_byfreq0__234_carry__3_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__3_n_6),
+        .I2(adj_Pinc_byfreq0__234_carry__4_n_5),
+        .I3(adj_Pinc_byfreq0__234_carry__4_n_7),
+        .I4(adj_Pinc_byfreq0__234_carry__3_n_5),
+        .I5(adj_Pinc_byfreq0__234_carry__4_n_4),
+        .O(adj_Pinc_byfreq0__320_carry__0_i_6_n_0));
   LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__1_i_7
-       (.I0(adj_Pinc_byfreq0__352_carry__6_n_4),
-        .I1(adj_Pinc_byfreq0__352_carry__5_n_5),
-        .I2(adj_Pinc_byfreq0__352_carry__6_n_7),
-        .I3(adj_Pinc_byfreq0__352_carry__5_n_4),
-        .I4(adj_Pinc_byfreq0__352_carry__6_n_6),
-        .I5(adj_Pinc_byfreq0__352_carry__7_n_7),
-        .O(adj_Pinc_byfreq0__453_carry__1_i_7_n_0));
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry__0_i_7
+       (.I0(adj_Pinc_byfreq0__234_carry__3_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__3_n_7),
+        .I2(adj_Pinc_byfreq0__234_carry__4_n_6),
+        .I3(adj_Pinc_byfreq0__234_carry__3_n_4),
+        .I4(adj_Pinc_byfreq0__234_carry__3_n_6),
+        .I5(adj_Pinc_byfreq0__234_carry__4_n_5),
+        .O(adj_Pinc_byfreq0__320_carry__0_i_7_n_0));
   LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__1_i_8
-       (.I0(adj_Pinc_byfreq0__352_carry__6_n_5),
-        .I1(adj_Pinc_byfreq0__352_carry__5_n_6),
-        .I2(adj_Pinc_byfreq0__352_carry__5_n_4),
-        .I3(adj_Pinc_byfreq0__352_carry__5_n_5),
-        .I4(adj_Pinc_byfreq0__352_carry__6_n_7),
-        .I5(adj_Pinc_byfreq0__352_carry__6_n_4),
-        .O(adj_Pinc_byfreq0__453_carry__1_i_8_n_0));
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry__0_i_8
+       (.I0(adj_Pinc_byfreq0__234_carry__3_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__2_n_4),
+        .I2(adj_Pinc_byfreq0__234_carry__4_n_7),
+        .I3(adj_Pinc_byfreq0__234_carry__3_n_5),
+        .I4(adj_Pinc_byfreq0__234_carry__3_n_7),
+        .I5(adj_Pinc_byfreq0__234_carry__4_n_6),
+        .O(adj_Pinc_byfreq0__320_carry__0_i_8_n_0));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__453_carry__2
-       (.CI(adj_Pinc_byfreq0__453_carry__1_n_0),
-        .CO({adj_Pinc_byfreq0__453_carry__2_n_0,adj_Pinc_byfreq0__453_carry__2_n_1,adj_Pinc_byfreq0__453_carry__2_n_2,adj_Pinc_byfreq0__453_carry__2_n_3}),
+  CARRY4 adj_Pinc_byfreq0__320_carry__1
+       (.CI(adj_Pinc_byfreq0__320_carry__0_n_0),
+        .CO({adj_Pinc_byfreq0__320_carry__1_n_0,adj_Pinc_byfreq0__320_carry__1_n_1,adj_Pinc_byfreq0__320_carry__1_n_2,adj_Pinc_byfreq0__320_carry__1_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__453_carry__2_i_1_n_0,adj_Pinc_byfreq0__453_carry__2_i_2_n_0,adj_Pinc_byfreq0__453_carry__2_i_3_n_0,adj_Pinc_byfreq0__453_carry__2_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__453_carry__2_n_4,adj_Pinc_byfreq0__453_carry__2_n_5,adj_Pinc_byfreq0__453_carry__2_n_6,adj_Pinc_byfreq0__453_carry__2_n_7}),
-        .S({adj_Pinc_byfreq0__453_carry__2_i_5_n_0,adj_Pinc_byfreq0__453_carry__2_i_6_n_0,adj_Pinc_byfreq0__453_carry__2_i_7_n_0,adj_Pinc_byfreq0__453_carry__2_i_8_n_0}));
+        .DI({adj_Pinc_byfreq0__320_carry__1_i_1_n_0,adj_Pinc_byfreq0__320_carry__1_i_2_n_0,adj_Pinc_byfreq0__320_carry__1_i_3_n_0,adj_Pinc_byfreq0__320_carry__1_i_4_n_0}),
+        .O({adj_Pinc_byfreq0__320_carry__1_n_4,adj_Pinc_byfreq0__320_carry__1_n_5,adj_Pinc_byfreq0__320_carry__1_n_6,adj_Pinc_byfreq0__320_carry__1_n_7}),
+        .S({adj_Pinc_byfreq0__320_carry__1_i_5_n_0,adj_Pinc_byfreq0__320_carry__1_i_6_n_0,adj_Pinc_byfreq0__320_carry__1_i_7_n_0,adj_Pinc_byfreq0__320_carry__1_i_8_n_0}));
   LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__2_i_1
-       (.I0(adj_Pinc_byfreq0__352_carry__7_n_5),
-        .I1(adj_Pinc_byfreq0__352_carry__7_n_7),
-        .I2(adj_Pinc_byfreq0__352_carry__8_n_6),
-        .O(adj_Pinc_byfreq0__453_carry__2_i_1_n_0));
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry__1_i_1
+       (.I0(adj_Pinc_byfreq0__234_carry__5_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__4_n_5),
+        .I2(adj_Pinc_byfreq0__234_carry__5_n_7),
+        .O(adj_Pinc_byfreq0__320_carry__1_i_1_n_0));
   LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__2_i_2
-       (.I0(adj_Pinc_byfreq0__352_carry__7_n_6),
-        .I1(adj_Pinc_byfreq0__352_carry__6_n_4),
-        .I2(adj_Pinc_byfreq0__352_carry__8_n_7),
-        .O(adj_Pinc_byfreq0__453_carry__2_i_2_n_0));
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry__1_i_2
+       (.I0(adj_Pinc_byfreq0__234_carry__5_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__4_n_6),
+        .I2(adj_Pinc_byfreq0__234_carry__4_n_4),
+        .O(adj_Pinc_byfreq0__320_carry__1_i_2_n_0));
   LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__2_i_3
-       (.I0(adj_Pinc_byfreq0__352_carry__7_n_7),
-        .I1(adj_Pinc_byfreq0__352_carry__6_n_5),
-        .I2(adj_Pinc_byfreq0__352_carry__7_n_4),
-        .O(adj_Pinc_byfreq0__453_carry__2_i_3_n_0));
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry__1_i_3
+       (.I0(adj_Pinc_byfreq0__234_carry__5_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__4_n_7),
+        .I2(adj_Pinc_byfreq0__234_carry__4_n_5),
+        .O(adj_Pinc_byfreq0__320_carry__1_i_3_n_0));
   LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__2_i_4
-       (.I0(adj_Pinc_byfreq0__352_carry__6_n_4),
-        .I1(adj_Pinc_byfreq0__352_carry__6_n_6),
-        .I2(adj_Pinc_byfreq0__352_carry__7_n_5),
-        .O(adj_Pinc_byfreq0__453_carry__2_i_4_n_0));
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry__1_i_4
+       (.I0(adj_Pinc_byfreq0__234_carry__5_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__3_n_4),
+        .I2(adj_Pinc_byfreq0__234_carry__4_n_6),
+        .O(adj_Pinc_byfreq0__320_carry__1_i_4_n_0));
   LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__2_i_5
-       (.I0(adj_Pinc_byfreq0__352_carry__8_n_6),
-        .I1(adj_Pinc_byfreq0__352_carry__7_n_7),
-        .I2(adj_Pinc_byfreq0__352_carry__7_n_5),
-        .I3(adj_Pinc_byfreq0__352_carry__7_n_6),
-        .I4(adj_Pinc_byfreq0__352_carry__7_n_4),
-        .I5(adj_Pinc_byfreq0__352_carry__8_n_5),
-        .O(adj_Pinc_byfreq0__453_carry__2_i_5_n_0));
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry__1_i_5
+       (.I0(adj_Pinc_byfreq0__234_carry__5_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__4_n_5),
+        .I2(adj_Pinc_byfreq0__234_carry__5_n_4),
+        .I3(adj_Pinc_byfreq0__234_carry__5_n_6),
+        .I4(adj_Pinc_byfreq0__234_carry__4_n_4),
+        .I5(adj_Pinc_byfreq0__234_carry__6_n_7),
+        .O(adj_Pinc_byfreq0__320_carry__1_i_5_n_0));
   LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__2_i_6
-       (.I0(adj_Pinc_byfreq0__352_carry__8_n_7),
-        .I1(adj_Pinc_byfreq0__352_carry__6_n_4),
-        .I2(adj_Pinc_byfreq0__352_carry__7_n_6),
-        .I3(adj_Pinc_byfreq0__352_carry__7_n_7),
-        .I4(adj_Pinc_byfreq0__352_carry__7_n_5),
-        .I5(adj_Pinc_byfreq0__352_carry__8_n_6),
-        .O(adj_Pinc_byfreq0__453_carry__2_i_6_n_0));
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry__1_i_6
+       (.I0(adj_Pinc_byfreq0__234_carry__4_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__4_n_6),
+        .I2(adj_Pinc_byfreq0__234_carry__5_n_5),
+        .I3(adj_Pinc_byfreq0__234_carry__5_n_7),
+        .I4(adj_Pinc_byfreq0__234_carry__4_n_5),
+        .I5(adj_Pinc_byfreq0__234_carry__5_n_4),
+        .O(adj_Pinc_byfreq0__320_carry__1_i_6_n_0));
   LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__2_i_7
-       (.I0(adj_Pinc_byfreq0__352_carry__7_n_4),
-        .I1(adj_Pinc_byfreq0__352_carry__6_n_5),
-        .I2(adj_Pinc_byfreq0__352_carry__7_n_7),
-        .I3(adj_Pinc_byfreq0__352_carry__6_n_4),
-        .I4(adj_Pinc_byfreq0__352_carry__7_n_6),
-        .I5(adj_Pinc_byfreq0__352_carry__8_n_7),
-        .O(adj_Pinc_byfreq0__453_carry__2_i_7_n_0));
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry__1_i_7
+       (.I0(adj_Pinc_byfreq0__234_carry__4_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__4_n_7),
+        .I2(adj_Pinc_byfreq0__234_carry__5_n_6),
+        .I3(adj_Pinc_byfreq0__234_carry__4_n_4),
+        .I4(adj_Pinc_byfreq0__234_carry__4_n_6),
+        .I5(adj_Pinc_byfreq0__234_carry__5_n_5),
+        .O(adj_Pinc_byfreq0__320_carry__1_i_7_n_0));
   LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__2_i_8
-       (.I0(adj_Pinc_byfreq0__352_carry__7_n_5),
-        .I1(adj_Pinc_byfreq0__352_carry__6_n_6),
-        .I2(adj_Pinc_byfreq0__352_carry__6_n_4),
-        .I3(adj_Pinc_byfreq0__352_carry__6_n_5),
-        .I4(adj_Pinc_byfreq0__352_carry__7_n_7),
-        .I5(adj_Pinc_byfreq0__352_carry__7_n_4),
-        .O(adj_Pinc_byfreq0__453_carry__2_i_8_n_0));
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry__1_i_8
+       (.I0(adj_Pinc_byfreq0__234_carry__4_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__3_n_4),
+        .I2(adj_Pinc_byfreq0__234_carry__5_n_7),
+        .I3(adj_Pinc_byfreq0__234_carry__4_n_5),
+        .I4(adj_Pinc_byfreq0__234_carry__4_n_7),
+        .I5(adj_Pinc_byfreq0__234_carry__5_n_6),
+        .O(adj_Pinc_byfreq0__320_carry__1_i_8_n_0));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__453_carry__3
-       (.CI(adj_Pinc_byfreq0__453_carry__2_n_0),
-        .CO({adj_Pinc_byfreq0__453_carry__3_n_0,adj_Pinc_byfreq0__453_carry__3_n_1,adj_Pinc_byfreq0__453_carry__3_n_2,adj_Pinc_byfreq0__453_carry__3_n_3}),
+  CARRY4 adj_Pinc_byfreq0__320_carry__2
+       (.CI(adj_Pinc_byfreq0__320_carry__1_n_0),
+        .CO({adj_Pinc_byfreq0__320_carry__2_n_0,adj_Pinc_byfreq0__320_carry__2_n_1,adj_Pinc_byfreq0__320_carry__2_n_2,adj_Pinc_byfreq0__320_carry__2_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__453_carry__3_i_1_n_0,adj_Pinc_byfreq0__453_carry__3_i_2_n_0,adj_Pinc_byfreq0__453_carry__3_i_3_n_0,adj_Pinc_byfreq0__453_carry__3_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__453_carry__3_n_4,adj_Pinc_byfreq0__453_carry__3_n_5,adj_Pinc_byfreq0__453_carry__3_n_6,adj_Pinc_byfreq0__453_carry__3_n_7}),
-        .S({adj_Pinc_byfreq0__453_carry__3_i_5_n_0,adj_Pinc_byfreq0__453_carry__3_i_6_n_0,adj_Pinc_byfreq0__453_carry__3_i_7_n_0,adj_Pinc_byfreq0__453_carry__3_i_8_n_0}));
+        .DI({adj_Pinc_byfreq0__320_carry__2_i_1_n_0,adj_Pinc_byfreq0__320_carry__2_i_2_n_0,adj_Pinc_byfreq0__320_carry__2_i_3_n_0,adj_Pinc_byfreq0__320_carry__2_i_4_n_0}),
+        .O({adj_Pinc_byfreq0__320_carry__2_n_4,adj_Pinc_byfreq0__320_carry__2_n_5,adj_Pinc_byfreq0__320_carry__2_n_6,adj_Pinc_byfreq0__320_carry__2_n_7}),
+        .S({adj_Pinc_byfreq0__320_carry__2_i_5_n_0,adj_Pinc_byfreq0__320_carry__2_i_6_n_0,adj_Pinc_byfreq0__320_carry__2_i_7_n_0,adj_Pinc_byfreq0__320_carry__2_i_8_n_0}));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry__2_i_1
+       (.I0(adj_Pinc_byfreq0__234_carry__6_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__5_n_5),
+        .I2(adj_Pinc_byfreq0__234_carry__6_n_7),
+        .O(adj_Pinc_byfreq0__320_carry__2_i_1_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry__2_i_2
+       (.I0(adj_Pinc_byfreq0__234_carry__6_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__5_n_6),
+        .I2(adj_Pinc_byfreq0__234_carry__5_n_4),
+        .O(adj_Pinc_byfreq0__320_carry__2_i_2_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry__2_i_3
+       (.I0(adj_Pinc_byfreq0__234_carry__6_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__5_n_7),
+        .I2(adj_Pinc_byfreq0__234_carry__5_n_5),
+        .O(adj_Pinc_byfreq0__320_carry__2_i_3_n_0));
+  LUT3 #(
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry__2_i_4
+       (.I0(adj_Pinc_byfreq0__234_carry__6_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__4_n_4),
+        .I2(adj_Pinc_byfreq0__234_carry__5_n_6),
+        .O(adj_Pinc_byfreq0__320_carry__2_i_4_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry__2_i_5
+       (.I0(adj_Pinc_byfreq0__234_carry__6_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__5_n_5),
+        .I2(adj_Pinc_byfreq0__234_carry__6_n_4),
+        .I3(adj_Pinc_byfreq0__234_carry__6_n_6),
+        .I4(adj_Pinc_byfreq0__234_carry__5_n_4),
+        .I5(adj_Pinc_byfreq0__234_carry__7_n_7),
+        .O(adj_Pinc_byfreq0__320_carry__2_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry__2_i_6
+       (.I0(adj_Pinc_byfreq0__234_carry__5_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__5_n_6),
+        .I2(adj_Pinc_byfreq0__234_carry__6_n_5),
+        .I3(adj_Pinc_byfreq0__234_carry__6_n_7),
+        .I4(adj_Pinc_byfreq0__234_carry__5_n_5),
+        .I5(adj_Pinc_byfreq0__234_carry__6_n_4),
+        .O(adj_Pinc_byfreq0__320_carry__2_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry__2_i_7
+       (.I0(adj_Pinc_byfreq0__234_carry__5_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__5_n_7),
+        .I2(adj_Pinc_byfreq0__234_carry__6_n_6),
+        .I3(adj_Pinc_byfreq0__234_carry__5_n_4),
+        .I4(adj_Pinc_byfreq0__234_carry__5_n_6),
+        .I5(adj_Pinc_byfreq0__234_carry__6_n_5),
+        .O(adj_Pinc_byfreq0__320_carry__2_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry__2_i_8
+       (.I0(adj_Pinc_byfreq0__234_carry__5_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__4_n_4),
+        .I2(adj_Pinc_byfreq0__234_carry__6_n_7),
+        .I3(adj_Pinc_byfreq0__234_carry__5_n_5),
+        .I4(adj_Pinc_byfreq0__234_carry__5_n_7),
+        .I5(adj_Pinc_byfreq0__234_carry__6_n_6),
+        .O(adj_Pinc_byfreq0__320_carry__2_i_8_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 adj_Pinc_byfreq0__320_carry__3
+       (.CI(adj_Pinc_byfreq0__320_carry__2_n_0),
+        .CO({adj_Pinc_byfreq0__320_carry__3_n_0,adj_Pinc_byfreq0__320_carry__3_n_1,adj_Pinc_byfreq0__320_carry__3_n_2,adj_Pinc_byfreq0__320_carry__3_n_3}),
+        .CYINIT(1'b0),
+        .DI({adj_Pinc_byfreq0__320_carry__3_i_1_n_0,adj_Pinc_byfreq0__320_carry__3_i_2_n_0,adj_Pinc_byfreq0__320_carry__3_i_3_n_0,adj_Pinc_byfreq0__320_carry__3_i_4_n_0}),
+        .O({adj_Pinc_byfreq0__320_carry__3_n_4,adj_Pinc_byfreq0__320_carry__3_n_5,adj_Pinc_byfreq0__320_carry__3_n_6,adj_Pinc_byfreq0__320_carry__3_n_7}),
+        .S({adj_Pinc_byfreq0__320_carry__3_i_5_n_0,adj_Pinc_byfreq0__320_carry__3_i_6_n_0,adj_Pinc_byfreq0__320_carry__3_i_7_n_0,adj_Pinc_byfreq0__320_carry__3_i_8_n_0}));
   LUT2 #(
     .INIT(4'h2)) 
-    adj_Pinc_byfreq0__453_carry__3_i_1
-       (.I0(adj_Pinc_byfreq0__352_carry__8_n_7),
-        .I1(adj_Pinc_byfreq0__352_carry__8_n_5),
-        .O(adj_Pinc_byfreq0__453_carry__3_i_1_n_0));
+    adj_Pinc_byfreq0__320_carry__3_i_1
+       (.I0(adj_Pinc_byfreq0__234_carry__6_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__7_n_7),
+        .O(adj_Pinc_byfreq0__320_carry__3_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__320_carry__3_i_2
+       (.I0(adj_Pinc_byfreq0__234_carry__6_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__6_n_4),
+        .O(adj_Pinc_byfreq0__320_carry__3_i_2_n_0));
   LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__3_i_2
-       (.I0(adj_Pinc_byfreq0__352_carry__8_n_6),
-        .I1(adj_Pinc_byfreq0__352_carry__7_n_4),
-        .I2(adj_Pinc_byfreq0__352_carry__9_n_7),
-        .O(adj_Pinc_byfreq0__453_carry__3_i_2_n_0));
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry__3_i_3
+       (.I0(adj_Pinc_byfreq0__234_carry__7_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__6_n_7),
+        .I2(adj_Pinc_byfreq0__234_carry__6_n_5),
+        .O(adj_Pinc_byfreq0__320_carry__3_i_3_n_0));
   LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__3_i_3
-       (.I0(adj_Pinc_byfreq0__352_carry__8_n_7),
-        .I1(adj_Pinc_byfreq0__352_carry__7_n_5),
-        .I2(adj_Pinc_byfreq0__352_carry__8_n_4),
-        .O(adj_Pinc_byfreq0__453_carry__3_i_3_n_0));
-  LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry__3_i_4
-       (.I0(adj_Pinc_byfreq0__352_carry__7_n_4),
-        .I1(adj_Pinc_byfreq0__352_carry__7_n_6),
-        .I2(adj_Pinc_byfreq0__352_carry__8_n_5),
-        .O(adj_Pinc_byfreq0__453_carry__3_i_4_n_0));
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry__3_i_4
+       (.I0(adj_Pinc_byfreq0__234_carry__7_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__5_n_4),
+        .I2(adj_Pinc_byfreq0__234_carry__6_n_6),
+        .O(adj_Pinc_byfreq0__320_carry__3_i_4_n_0));
   LUT4 #(
     .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__453_carry__3_i_5
-       (.I0(adj_Pinc_byfreq0__352_carry__8_n_5),
-        .I1(adj_Pinc_byfreq0__352_carry__8_n_7),
-        .I2(adj_Pinc_byfreq0__352_carry__8_n_4),
-        .I3(adj_Pinc_byfreq0__352_carry__8_n_6),
-        .O(adj_Pinc_byfreq0__453_carry__3_i_5_n_0));
+    adj_Pinc_byfreq0__320_carry__3_i_5
+       (.I0(adj_Pinc_byfreq0__234_carry__7_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__6_n_5),
+        .I2(adj_Pinc_byfreq0__234_carry__7_n_6),
+        .I3(adj_Pinc_byfreq0__234_carry__6_n_4),
+        .O(adj_Pinc_byfreq0__320_carry__3_i_5_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__320_carry__3_i_6
+       (.I0(adj_Pinc_byfreq0__234_carry__6_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__6_n_6),
+        .I2(adj_Pinc_byfreq0__234_carry__7_n_7),
+        .I3(adj_Pinc_byfreq0__234_carry__6_n_5),
+        .O(adj_Pinc_byfreq0__320_carry__3_i_6_n_0));
   LUT5 #(
-    .INIT(32'h718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__3_i_6
-       (.I0(adj_Pinc_byfreq0__352_carry__9_n_7),
-        .I1(adj_Pinc_byfreq0__352_carry__7_n_4),
-        .I2(adj_Pinc_byfreq0__352_carry__8_n_6),
-        .I3(adj_Pinc_byfreq0__352_carry__8_n_5),
-        .I4(adj_Pinc_byfreq0__352_carry__8_n_7),
-        .O(adj_Pinc_byfreq0__453_carry__3_i_6_n_0));
+    .INIT(32'h2BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry__3_i_7
+       (.I0(adj_Pinc_byfreq0__234_carry__6_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__6_n_7),
+        .I2(adj_Pinc_byfreq0__234_carry__7_n_6),
+        .I3(adj_Pinc_byfreq0__234_carry__6_n_4),
+        .I4(adj_Pinc_byfreq0__234_carry__6_n_6),
+        .O(adj_Pinc_byfreq0__320_carry__3_i_7_n_0));
   LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__3_i_7
-       (.I0(adj_Pinc_byfreq0__352_carry__8_n_4),
-        .I1(adj_Pinc_byfreq0__352_carry__7_n_5),
-        .I2(adj_Pinc_byfreq0__352_carry__8_n_7),
-        .I3(adj_Pinc_byfreq0__352_carry__7_n_4),
-        .I4(adj_Pinc_byfreq0__352_carry__8_n_6),
-        .I5(adj_Pinc_byfreq0__352_carry__9_n_7),
-        .O(adj_Pinc_byfreq0__453_carry__3_i_7_n_0));
-  LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry__3_i_8
-       (.I0(adj_Pinc_byfreq0__352_carry__8_n_5),
-        .I1(adj_Pinc_byfreq0__352_carry__7_n_6),
-        .I2(adj_Pinc_byfreq0__352_carry__7_n_4),
-        .I3(adj_Pinc_byfreq0__352_carry__7_n_5),
-        .I4(adj_Pinc_byfreq0__352_carry__8_n_7),
-        .I5(adj_Pinc_byfreq0__352_carry__8_n_4),
-        .O(adj_Pinc_byfreq0__453_carry__3_i_8_n_0));
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry__3_i_8
+       (.I0(adj_Pinc_byfreq0__234_carry__6_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__5_n_4),
+        .I2(adj_Pinc_byfreq0__234_carry__7_n_7),
+        .I3(adj_Pinc_byfreq0__234_carry__6_n_5),
+        .I4(adj_Pinc_byfreq0__234_carry__6_n_7),
+        .I5(adj_Pinc_byfreq0__234_carry__7_n_6),
+        .O(adj_Pinc_byfreq0__320_carry__3_i_8_n_0));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__453_carry__4
-       (.CI(adj_Pinc_byfreq0__453_carry__3_n_0),
-        .CO({NLW_adj_Pinc_byfreq0__453_carry__4_CO_UNCONNECTED[3:1],adj_Pinc_byfreq0__453_carry__4_n_3}),
+  CARRY4 adj_Pinc_byfreq0__320_carry__4
+       (.CI(adj_Pinc_byfreq0__320_carry__3_n_0),
+        .CO(NLW_adj_Pinc_byfreq0__320_carry__4_CO_UNCONNECTED[3:0]),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,adj_Pinc_byfreq0__453_carry__4_i_1_n_0}),
-        .O({NLW_adj_Pinc_byfreq0__453_carry__4_O_UNCONNECTED[3:2],adj_Pinc_byfreq0__453_carry__4_n_6,adj_Pinc_byfreq0__453_carry__4_n_7}),
-        .S({1'b0,1'b0,adj_Pinc_byfreq0__453_carry__4_i_2_n_0,adj_Pinc_byfreq0__453_carry__4_i_3_n_0}));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__453_carry__4_i_1
-       (.I0(adj_Pinc_byfreq0__352_carry__8_n_6),
-        .I1(adj_Pinc_byfreq0__352_carry__8_n_4),
-        .O(adj_Pinc_byfreq0__453_carry__4_i_1_n_0));
+        .DI({1'b0,1'b0,1'b0,1'b0}),
+        .O({NLW_adj_Pinc_byfreq0__320_carry__4_O_UNCONNECTED[3:1],adj_Pinc_byfreq0__320_carry__4_n_7}),
+        .S({1'b0,1'b0,1'b0,adj_Pinc_byfreq0__320_carry__4_i_1_n_0}));
   LUT3 #(
     .INIT(8'h4B)) 
-    adj_Pinc_byfreq0__453_carry__4_i_2
-       (.I0(adj_Pinc_byfreq0__352_carry__9_n_7),
-        .I1(adj_Pinc_byfreq0__352_carry__8_n_5),
-        .I2(adj_Pinc_byfreq0__352_carry__8_n_4),
-        .O(adj_Pinc_byfreq0__453_carry__4_i_2_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__453_carry__4_i_3
-       (.I0(adj_Pinc_byfreq0__352_carry__8_n_4),
-        .I1(adj_Pinc_byfreq0__352_carry__8_n_6),
-        .I2(adj_Pinc_byfreq0__352_carry__9_n_7),
-        .I3(adj_Pinc_byfreq0__352_carry__8_n_5),
-        .O(adj_Pinc_byfreq0__453_carry__4_i_3_n_0));
+    adj_Pinc_byfreq0__320_carry__4_i_1
+       (.I0(adj_Pinc_byfreq0__234_carry__7_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__6_n_4),
+        .I2(adj_Pinc_byfreq0__234_carry__7_n_7),
+        .O(adj_Pinc_byfreq0__320_carry__4_i_1_n_0));
   LUT3 #(
-    .INIT(8'hD4)) 
-    adj_Pinc_byfreq0__453_carry_i_1
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_5),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_7),
-        .I2(adj_Pinc_byfreq0__352_carry__5_n_6),
-        .O(adj_Pinc_byfreq0__453_carry_i_1_n_0));
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__320_carry_i_1
+       (.I0(adj_Pinc_byfreq0__234_carry__3_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__2_n_5),
+        .I2(adj_Pinc_byfreq0__234_carry__3_n_7),
+        .O(adj_Pinc_byfreq0__320_carry_i_1_n_0));
   LUT3 #(
     .INIT(8'h69)) 
-    adj_Pinc_byfreq0__453_carry_i_2
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_7),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_5),
-        .I2(adj_Pinc_byfreq0__352_carry__5_n_6),
-        .O(adj_Pinc_byfreq0__453_carry_i_2_n_0));
+    adj_Pinc_byfreq0__320_carry_i_2
+       (.I0(adj_Pinc_byfreq0__234_carry__3_n_4),
+        .I1(adj_Pinc_byfreq0__234_carry__2_n_5),
+        .I2(adj_Pinc_byfreq0__234_carry__3_n_7),
+        .O(adj_Pinc_byfreq0__320_carry_i_2_n_0));
   LUT2 #(
     .INIT(4'hB)) 
-    adj_Pinc_byfreq0__453_carry_i_3
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_4),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_7),
-        .O(adj_Pinc_byfreq0__453_carry_i_3_n_0));
+    adj_Pinc_byfreq0__320_carry_i_3
+       (.I0(adj_Pinc_byfreq0__234_carry__3_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__2_n_5),
+        .O(adj_Pinc_byfreq0__320_carry_i_3_n_0));
   LUT6 #(
-    .INIT(64'h8E71718E718E8E71)) 
-    adj_Pinc_byfreq0__453_carry_i_4
-       (.I0(adj_Pinc_byfreq0__352_carry__5_n_6),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_7),
-        .I2(adj_Pinc_byfreq0__352_carry__4_n_5),
-        .I3(adj_Pinc_byfreq0__352_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__352_carry__4_n_4),
-        .I5(adj_Pinc_byfreq0__352_carry__5_n_5),
-        .O(adj_Pinc_byfreq0__453_carry_i_4_n_0));
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__320_carry_i_4
+       (.I0(adj_Pinc_byfreq0__234_carry__3_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__2_n_5),
+        .I2(adj_Pinc_byfreq0__234_carry__3_n_4),
+        .I3(adj_Pinc_byfreq0__234_carry__3_n_6),
+        .I4(adj_Pinc_byfreq0__234_carry__2_n_4),
+        .I5(adj_Pinc_byfreq0__234_carry__4_n_7),
+        .O(adj_Pinc_byfreq0__320_carry_i_4_n_0));
   LUT5 #(
     .INIT(32'h69966969)) 
-    adj_Pinc_byfreq0__453_carry_i_5
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_7),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_5),
-        .I2(adj_Pinc_byfreq0__352_carry__5_n_6),
-        .I3(adj_Pinc_byfreq0__352_carry__4_n_6),
-        .I4(adj_Pinc_byfreq0__352_carry__5_n_7),
-        .O(adj_Pinc_byfreq0__453_carry_i_5_n_0));
+    adj_Pinc_byfreq0__320_carry_i_5
+       (.I0(adj_Pinc_byfreq0__234_carry__3_n_7),
+        .I1(adj_Pinc_byfreq0__234_carry__2_n_5),
+        .I2(adj_Pinc_byfreq0__234_carry__3_n_4),
+        .I3(adj_Pinc_byfreq0__234_carry__2_n_4),
+        .I4(adj_Pinc_byfreq0__234_carry__3_n_5),
+        .O(adj_Pinc_byfreq0__320_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'h2DD2)) 
-    adj_Pinc_byfreq0__453_carry_i_6
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_7),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_4),
-        .I2(adj_Pinc_byfreq0__352_carry__4_n_6),
-        .I3(adj_Pinc_byfreq0__352_carry__5_n_7),
-        .O(adj_Pinc_byfreq0__453_carry_i_6_n_0));
+    adj_Pinc_byfreq0__320_carry_i_6
+       (.I0(adj_Pinc_byfreq0__234_carry__2_n_5),
+        .I1(adj_Pinc_byfreq0__234_carry__3_n_6),
+        .I2(adj_Pinc_byfreq0__234_carry__2_n_4),
+        .I3(adj_Pinc_byfreq0__234_carry__3_n_5),
+        .O(adj_Pinc_byfreq0__320_carry_i_6_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    adj_Pinc_byfreq0__453_carry_i_7
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_4),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_7),
-        .O(adj_Pinc_byfreq0__453_carry_i_7_n_0));
+    adj_Pinc_byfreq0__320_carry_i_7
+       (.I0(adj_Pinc_byfreq0__234_carry__3_n_6),
+        .I1(adj_Pinc_byfreq0__234_carry__2_n_5),
+        .O(adj_Pinc_byfreq0__320_carry_i_7_n_0));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__517_carry
+  CARRY4 adj_Pinc_byfreq0__381_carry
        (.CI(1'b0),
-        .CO({adj_Pinc_byfreq0__517_carry_n_0,adj_Pinc_byfreq0__517_carry_n_1,adj_Pinc_byfreq0__517_carry_n_2,adj_Pinc_byfreq0__517_carry_n_3}),
+        .CO({adj_Pinc_byfreq0__381_carry_n_0,adj_Pinc_byfreq0__381_carry_n_1,adj_Pinc_byfreq0__381_carry_n_2,adj_Pinc_byfreq0__381_carry_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__517_carry_i_1_n_0,adj_Pinc_byfreq0__517_carry_i_2_n_0,adj_Pinc_byfreq0__517_carry_i_3_n_0,1'b0}),
-        .O(NLW_adj_Pinc_byfreq0__517_carry_O_UNCONNECTED[3:0]),
-        .S({adj_Pinc_byfreq0__517_carry_i_4_n_0,adj_Pinc_byfreq0__517_carry_i_5_n_0,adj_Pinc_byfreq0__517_carry_i_6_n_0,adj_Pinc_byfreq0__517_carry_i_7_n_0}));
+        .DI({adj_Pinc_byfreq0__381_carry_i_1_n_0,adj_Pinc_byfreq0__381_carry_i_2_n_0,adj_Pinc_byfreq0__381_carry_i_3_n_0,1'b1}),
+        .O(NLW_adj_Pinc_byfreq0__381_carry_O_UNCONNECTED[3:0]),
+        .S({adj_Pinc_byfreq0__381_carry_i_4_n_0,adj_Pinc_byfreq0__381_carry_i_5_n_0,adj_Pinc_byfreq0__381_carry_i_6_n_0,adj_Pinc_byfreq0__381_carry_i_7_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__517_carry__0
-       (.CI(adj_Pinc_byfreq0__517_carry_n_0),
-        .CO({adj_Pinc_byfreq0__517_carry__0_n_0,adj_Pinc_byfreq0__517_carry__0_n_1,adj_Pinc_byfreq0__517_carry__0_n_2,adj_Pinc_byfreq0__517_carry__0_n_3}),
+  CARRY4 adj_Pinc_byfreq0__381_carry__0
+       (.CI(adj_Pinc_byfreq0__381_carry_n_0),
+        .CO({adj_Pinc_byfreq0__381_carry__0_n_0,adj_Pinc_byfreq0__381_carry__0_n_1,adj_Pinc_byfreq0__381_carry__0_n_2,adj_Pinc_byfreq0__381_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__517_carry__0_i_1_n_0,adj_Pinc_byfreq0__517_carry__0_i_2_n_0,adj_Pinc_byfreq0__517_carry__0_i_3_n_0,adj_Pinc_byfreq0__517_carry__0_i_4_n_0}),
-        .O(NLW_adj_Pinc_byfreq0__517_carry__0_O_UNCONNECTED[3:0]),
-        .S({adj_Pinc_byfreq0__517_carry__0_i_5_n_0,adj_Pinc_byfreq0__517_carry__0_i_6_n_0,adj_Pinc_byfreq0__517_carry__0_i_7_n_0,adj_Pinc_byfreq0__517_carry__0_i_8_n_0}));
+        .DI({adj_Pinc_byfreq0__381_carry__0_i_1_n_0,adj_Pinc_byfreq0__381_carry__0_i_2_n_0,adj_Pinc_byfreq0__381_carry__0_i_3_n_0,adj_Pinc_byfreq0__381_carry__0_i_4_n_0}),
+        .O(NLW_adj_Pinc_byfreq0__381_carry__0_O_UNCONNECTED[3:0]),
+        .S({adj_Pinc_byfreq0__381_carry__0_i_5_n_0,adj_Pinc_byfreq0__381_carry__0_i_6_n_0,adj_Pinc_byfreq0__381_carry__0_i_7_n_0,adj_Pinc_byfreq0__381_carry__0_i_8_n_0}));
   LUT2 #(
     .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__0_i_1
-       (.I0(adj_Pinc_byfreq0__453_carry_n_4),
-        .I1(w_MODEfreq0__0_n_97),
-        .O(adj_Pinc_byfreq0__517_carry__0_i_1_n_0));
+    adj_Pinc_byfreq0__381_carry__0_i_1
+       (.I0(adj_Pinc_byfreq0__320_carry__0_n_7),
+        .I1(freq[9]),
+        .O(adj_Pinc_byfreq0__381_carry__0_i_1_n_0));
   LUT2 #(
     .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__0_i_2
-       (.I0(adj_Pinc_byfreq0__453_carry_n_5),
-        .I1(w_MODEfreq0__0_n_98),
-        .O(adj_Pinc_byfreq0__517_carry__0_i_2_n_0));
+    adj_Pinc_byfreq0__381_carry__0_i_2
+       (.I0(adj_Pinc_byfreq0__320_carry_n_4),
+        .I1(freq[8]),
+        .O(adj_Pinc_byfreq0__381_carry__0_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__0_i_3
+       (.I0(adj_Pinc_byfreq0__320_carry_n_5),
+        .I1(freq[7]),
+        .O(adj_Pinc_byfreq0__381_carry__0_i_3_n_0));
   LUT2 #(
     .INIT(4'hB)) 
-    adj_Pinc_byfreq0__517_carry__0_i_3
-       (.I0(adj_Pinc_byfreq0__453_carry_n_6),
-        .I1(w_MODEfreq0__0_n_99),
-        .O(adj_Pinc_byfreq0__517_carry__0_i_3_n_0));
-  LUT2 #(
-    .INIT(4'hB)) 
-    adj_Pinc_byfreq0__517_carry__0_i_4
-       (.I0(adj_Pinc_byfreq0__453_carry_n_7),
-        .I1(w_MODEfreq0__0_n_100),
-        .O(adj_Pinc_byfreq0__517_carry__0_i_4_n_0));
+    adj_Pinc_byfreq0__381_carry__0_i_4
+       (.I0(adj_Pinc_byfreq0__320_carry_n_6),
+        .I1(freq[6]),
+        .O(adj_Pinc_byfreq0__381_carry__0_i_4_n_0));
   LUT4 #(
     .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__0_i_5
-       (.I0(w_MODEfreq0__0_n_97),
-        .I1(adj_Pinc_byfreq0__453_carry_n_4),
-        .I2(adj_Pinc_byfreq0__453_carry__0_n_7),
-        .I3(w_MODEfreq0__0_n_96),
-        .O(adj_Pinc_byfreq0__517_carry__0_i_5_n_0));
+    adj_Pinc_byfreq0__381_carry__0_i_5
+       (.I0(freq[9]),
+        .I1(adj_Pinc_byfreq0__320_carry__0_n_7),
+        .I2(adj_Pinc_byfreq0__320_carry__0_n_6),
+        .I3(freq[10]),
+        .O(adj_Pinc_byfreq0__381_carry__0_i_5_n_0));
   LUT4 #(
     .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__0_i_6
-       (.I0(w_MODEfreq0__0_n_98),
-        .I1(adj_Pinc_byfreq0__453_carry_n_5),
-        .I2(adj_Pinc_byfreq0__453_carry_n_4),
-        .I3(w_MODEfreq0__0_n_97),
-        .O(adj_Pinc_byfreq0__517_carry__0_i_6_n_0));
+    adj_Pinc_byfreq0__381_carry__0_i_6
+       (.I0(freq[8]),
+        .I1(adj_Pinc_byfreq0__320_carry_n_4),
+        .I2(adj_Pinc_byfreq0__320_carry__0_n_7),
+        .I3(freq[9]),
+        .O(adj_Pinc_byfreq0__381_carry__0_i_6_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__0_i_7
+       (.I0(freq[7]),
+        .I1(adj_Pinc_byfreq0__320_carry_n_5),
+        .I2(adj_Pinc_byfreq0__320_carry_n_4),
+        .I3(freq[8]),
+        .O(adj_Pinc_byfreq0__381_carry__0_i_7_n_0));
   LUT4 #(
     .INIT(16'h2DD2)) 
-    adj_Pinc_byfreq0__517_carry__0_i_7
-       (.I0(w_MODEfreq0__0_n_99),
-        .I1(adj_Pinc_byfreq0__453_carry_n_6),
-        .I2(adj_Pinc_byfreq0__453_carry_n_5),
-        .I3(w_MODEfreq0__0_n_98),
-        .O(adj_Pinc_byfreq0__517_carry__0_i_7_n_0));
+    adj_Pinc_byfreq0__381_carry__0_i_8
+       (.I0(freq[6]),
+        .I1(adj_Pinc_byfreq0__320_carry_n_6),
+        .I2(adj_Pinc_byfreq0__320_carry_n_5),
+        .I3(freq[7]),
+        .O(adj_Pinc_byfreq0__381_carry__0_i_8_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 adj_Pinc_byfreq0__381_carry__1
+       (.CI(adj_Pinc_byfreq0__381_carry__0_n_0),
+        .CO({adj_Pinc_byfreq0__381_carry__1_n_0,adj_Pinc_byfreq0__381_carry__1_n_1,adj_Pinc_byfreq0__381_carry__1_n_2,adj_Pinc_byfreq0__381_carry__1_n_3}),
+        .CYINIT(1'b0),
+        .DI({adj_Pinc_byfreq0__381_carry__1_i_1_n_0,adj_Pinc_byfreq0__381_carry__1_i_2_n_0,adj_Pinc_byfreq0__381_carry__1_i_3_n_0,adj_Pinc_byfreq0__381_carry__1_i_4_n_0}),
+        .O(NLW_adj_Pinc_byfreq0__381_carry__1_O_UNCONNECTED[3:0]),
+        .S({adj_Pinc_byfreq0__381_carry__1_i_5_n_0,adj_Pinc_byfreq0__381_carry__1_i_6_n_0,adj_Pinc_byfreq0__381_carry__1_i_7_n_0,adj_Pinc_byfreq0__381_carry__1_i_8_n_0}));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__1_i_1
+       (.I0(adj_Pinc_byfreq0__320_carry__1_n_7),
+        .I1(freq[13]),
+        .O(adj_Pinc_byfreq0__381_carry__1_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__1_i_2
+       (.I0(adj_Pinc_byfreq0__320_carry__0_n_4),
+        .I1(freq[12]),
+        .O(adj_Pinc_byfreq0__381_carry__1_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__1_i_3
+       (.I0(adj_Pinc_byfreq0__320_carry__0_n_5),
+        .I1(freq[11]),
+        .O(adj_Pinc_byfreq0__381_carry__1_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__1_i_4
+       (.I0(adj_Pinc_byfreq0__320_carry__0_n_6),
+        .I1(freq[10]),
+        .O(adj_Pinc_byfreq0__381_carry__1_i_4_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__1_i_5
+       (.I0(freq[13]),
+        .I1(adj_Pinc_byfreq0__320_carry__1_n_7),
+        .I2(adj_Pinc_byfreq0__320_carry__1_n_6),
+        .I3(freq[14]),
+        .O(adj_Pinc_byfreq0__381_carry__1_i_5_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__1_i_6
+       (.I0(freq[12]),
+        .I1(adj_Pinc_byfreq0__320_carry__0_n_4),
+        .I2(adj_Pinc_byfreq0__320_carry__1_n_7),
+        .I3(freq[13]),
+        .O(adj_Pinc_byfreq0__381_carry__1_i_6_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__1_i_7
+       (.I0(freq[11]),
+        .I1(adj_Pinc_byfreq0__320_carry__0_n_5),
+        .I2(adj_Pinc_byfreq0__320_carry__0_n_4),
+        .I3(freq[12]),
+        .O(adj_Pinc_byfreq0__381_carry__1_i_7_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__1_i_8
+       (.I0(freq[10]),
+        .I1(adj_Pinc_byfreq0__320_carry__0_n_6),
+        .I2(adj_Pinc_byfreq0__320_carry__0_n_5),
+        .I3(freq[11]),
+        .O(adj_Pinc_byfreq0__381_carry__1_i_8_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 adj_Pinc_byfreq0__381_carry__2
+       (.CI(adj_Pinc_byfreq0__381_carry__1_n_0),
+        .CO({adj_Pinc_byfreq0__381_carry__2_n_0,adj_Pinc_byfreq0__381_carry__2_n_1,adj_Pinc_byfreq0__381_carry__2_n_2,adj_Pinc_byfreq0__381_carry__2_n_3}),
+        .CYINIT(1'b0),
+        .DI({adj_Pinc_byfreq0__381_carry__2_i_1_n_0,adj_Pinc_byfreq0__381_carry__2_i_2_n_0,adj_Pinc_byfreq0__381_carry__2_i_3_n_0,adj_Pinc_byfreq0__381_carry__2_i_4_n_0}),
+        .O(NLW_adj_Pinc_byfreq0__381_carry__2_O_UNCONNECTED[3:0]),
+        .S({adj_Pinc_byfreq0__381_carry__2_i_5_n_0,adj_Pinc_byfreq0__381_carry__2_i_6_n_0,adj_Pinc_byfreq0__381_carry__2_i_7_n_0,adj_Pinc_byfreq0__381_carry__2_i_8_n_0}));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__2_i_1
+       (.I0(adj_Pinc_byfreq0__320_carry__2_n_7),
+        .I1(freq[17]),
+        .O(adj_Pinc_byfreq0__381_carry__2_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__2_i_2
+       (.I0(adj_Pinc_byfreq0__320_carry__1_n_4),
+        .I1(freq[16]),
+        .O(adj_Pinc_byfreq0__381_carry__2_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__2_i_3
+       (.I0(adj_Pinc_byfreq0__320_carry__1_n_5),
+        .I1(freq[15]),
+        .O(adj_Pinc_byfreq0__381_carry__2_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__2_i_4
+       (.I0(adj_Pinc_byfreq0__320_carry__1_n_6),
+        .I1(freq[14]),
+        .O(adj_Pinc_byfreq0__381_carry__2_i_4_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__2_i_5
+       (.I0(freq[17]),
+        .I1(adj_Pinc_byfreq0__320_carry__2_n_7),
+        .I2(adj_Pinc_byfreq0__320_carry__2_n_6),
+        .I3(freq[18]),
+        .O(adj_Pinc_byfreq0__381_carry__2_i_5_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__2_i_6
+       (.I0(freq[16]),
+        .I1(adj_Pinc_byfreq0__320_carry__1_n_4),
+        .I2(adj_Pinc_byfreq0__320_carry__2_n_7),
+        .I3(freq[17]),
+        .O(adj_Pinc_byfreq0__381_carry__2_i_6_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__2_i_7
+       (.I0(freq[15]),
+        .I1(adj_Pinc_byfreq0__320_carry__1_n_5),
+        .I2(adj_Pinc_byfreq0__320_carry__1_n_4),
+        .I3(freq[16]),
+        .O(adj_Pinc_byfreq0__381_carry__2_i_7_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__2_i_8
+       (.I0(freq[14]),
+        .I1(adj_Pinc_byfreq0__320_carry__1_n_6),
+        .I2(adj_Pinc_byfreq0__320_carry__1_n_5),
+        .I3(freq[15]),
+        .O(adj_Pinc_byfreq0__381_carry__2_i_8_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 adj_Pinc_byfreq0__381_carry__3
+       (.CI(adj_Pinc_byfreq0__381_carry__2_n_0),
+        .CO({adj_Pinc_byfreq0__381_carry__3_n_0,adj_Pinc_byfreq0__381_carry__3_n_1,adj_Pinc_byfreq0__381_carry__3_n_2,adj_Pinc_byfreq0__381_carry__3_n_3}),
+        .CYINIT(1'b0),
+        .DI({adj_Pinc_byfreq0__381_carry__3_i_1_n_0,adj_Pinc_byfreq0__381_carry__3_i_2_n_0,adj_Pinc_byfreq0__381_carry__3_i_3_n_0,adj_Pinc_byfreq0__381_carry__3_i_4_n_0}),
+        .O(NLW_adj_Pinc_byfreq0__381_carry__3_O_UNCONNECTED[3:0]),
+        .S({adj_Pinc_byfreq0__381_carry__3_i_5_n_0,adj_Pinc_byfreq0__381_carry__3_i_6_n_0,adj_Pinc_byfreq0__381_carry__3_i_7_n_0,adj_Pinc_byfreq0__381_carry__3_i_8_n_0}));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__3_i_1
+       (.I0(adj_Pinc_byfreq0__320_carry__3_n_7),
+        .I1(freq[21]),
+        .O(adj_Pinc_byfreq0__381_carry__3_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__3_i_2
+       (.I0(adj_Pinc_byfreq0__320_carry__2_n_4),
+        .I1(freq[20]),
+        .O(adj_Pinc_byfreq0__381_carry__3_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__3_i_3
+       (.I0(adj_Pinc_byfreq0__320_carry__2_n_5),
+        .I1(freq[19]),
+        .O(adj_Pinc_byfreq0__381_carry__3_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__3_i_4
+       (.I0(adj_Pinc_byfreq0__320_carry__2_n_6),
+        .I1(freq[18]),
+        .O(adj_Pinc_byfreq0__381_carry__3_i_4_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__3_i_5
+       (.I0(freq[21]),
+        .I1(adj_Pinc_byfreq0__320_carry__3_n_7),
+        .I2(adj_Pinc_byfreq0__320_carry__3_n_6),
+        .I3(freq[22]),
+        .O(adj_Pinc_byfreq0__381_carry__3_i_5_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__3_i_6
+       (.I0(freq[20]),
+        .I1(adj_Pinc_byfreq0__320_carry__2_n_4),
+        .I2(adj_Pinc_byfreq0__320_carry__3_n_7),
+        .I3(freq[21]),
+        .O(adj_Pinc_byfreq0__381_carry__3_i_6_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__3_i_7
+       (.I0(freq[19]),
+        .I1(adj_Pinc_byfreq0__320_carry__2_n_5),
+        .I2(adj_Pinc_byfreq0__320_carry__2_n_4),
+        .I3(freq[20]),
+        .O(adj_Pinc_byfreq0__381_carry__3_i_7_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__3_i_8
+       (.I0(freq[18]),
+        .I1(adj_Pinc_byfreq0__320_carry__2_n_6),
+        .I2(adj_Pinc_byfreq0__320_carry__2_n_5),
+        .I3(freq[19]),
+        .O(adj_Pinc_byfreq0__381_carry__3_i_8_n_0));
+  (* ADDER_THRESHOLD = "35" *) 
+  CARRY4 adj_Pinc_byfreq0__381_carry__4
+       (.CI(adj_Pinc_byfreq0__381_carry__3_n_0),
+        .CO({NLW_adj_Pinc_byfreq0__381_carry__4_CO_UNCONNECTED[3],adj_Pinc_byfreq0__381_carry__4_n_1,adj_Pinc_byfreq0__381_carry__4_n_2,adj_Pinc_byfreq0__381_carry__4_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,adj_Pinc_byfreq0__381_carry__4_i_1_n_0,adj_Pinc_byfreq0__381_carry__4_i_2_n_0,adj_Pinc_byfreq0__381_carry__4_i_3_n_0}),
+        .O(NLW_adj_Pinc_byfreq0__381_carry__4_O_UNCONNECTED[3:0]),
+        .S({1'b0,adj_Pinc_byfreq0__381_carry__4_i_4_n_0,adj_Pinc_byfreq0__381_carry__4_i_5_n_0,adj_Pinc_byfreq0__381_carry__4_i_6_n_0}));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__4_i_1
+       (.I0(adj_Pinc_byfreq0__320_carry__3_n_4),
+        .I1(freq[24]),
+        .O(adj_Pinc_byfreq0__381_carry__4_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__4_i_2
+       (.I0(adj_Pinc_byfreq0__320_carry__3_n_5),
+        .I1(freq[23]),
+        .O(adj_Pinc_byfreq0__381_carry__4_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry__4_i_3
+       (.I0(adj_Pinc_byfreq0__320_carry__3_n_6),
+        .I1(freq[22]),
+        .O(adj_Pinc_byfreq0__381_carry__4_i_3_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__4_i_4
+       (.I0(freq[24]),
+        .I1(adj_Pinc_byfreq0__320_carry__3_n_4),
+        .I2(adj_Pinc_byfreq0__320_carry__4_n_7),
+        .I3(freq[25]),
+        .O(adj_Pinc_byfreq0__381_carry__4_i_4_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__4_i_5
+       (.I0(freq[23]),
+        .I1(adj_Pinc_byfreq0__320_carry__3_n_5),
+        .I2(adj_Pinc_byfreq0__320_carry__3_n_4),
+        .I3(freq[24]),
+        .O(adj_Pinc_byfreq0__381_carry__4_i_5_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__381_carry__4_i_6
+       (.I0(freq[22]),
+        .I1(adj_Pinc_byfreq0__320_carry__3_n_6),
+        .I2(adj_Pinc_byfreq0__320_carry__3_n_5),
+        .I3(freq[23]),
+        .O(adj_Pinc_byfreq0__381_carry__4_i_6_n_0));
+  LUT2 #(
+    .INIT(4'hB)) 
+    adj_Pinc_byfreq0__381_carry_i_1
+       (.I0(adj_Pinc_byfreq0__320_carry_n_7),
+        .I1(freq[5]),
+        .O(adj_Pinc_byfreq0__381_carry_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry_i_2
+       (.I0(adj_Pinc_byfreq0__234_carry__3_n_7),
+        .I1(freq[4]),
+        .O(adj_Pinc_byfreq0__381_carry_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__381_carry_i_3
+       (.I0(adj_Pinc_byfreq0__234_carry__2_n_4),
+        .I1(freq[3]),
+        .O(adj_Pinc_byfreq0__381_carry_i_3_n_0));
   LUT4 #(
     .INIT(16'hD22D)) 
-    adj_Pinc_byfreq0__517_carry__0_i_8
-       (.I0(w_MODEfreq0__0_n_100),
-        .I1(adj_Pinc_byfreq0__453_carry_n_7),
-        .I2(adj_Pinc_byfreq0__453_carry_n_6),
-        .I3(w_MODEfreq0__0_n_99),
-        .O(adj_Pinc_byfreq0__517_carry__0_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__517_carry__1
-       (.CI(adj_Pinc_byfreq0__517_carry__0_n_0),
-        .CO({adj_Pinc_byfreq0__517_carry__1_n_0,adj_Pinc_byfreq0__517_carry__1_n_1,adj_Pinc_byfreq0__517_carry__1_n_2,adj_Pinc_byfreq0__517_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__517_carry__1_i_1_n_0,adj_Pinc_byfreq0__517_carry__1_i_2_n_0,adj_Pinc_byfreq0__517_carry__1_i_3_n_0,adj_Pinc_byfreq0__517_carry__1_i_4_n_0}),
-        .O(NLW_adj_Pinc_byfreq0__517_carry__1_O_UNCONNECTED[3:0]),
-        .S({adj_Pinc_byfreq0__517_carry__1_i_5_n_0,adj_Pinc_byfreq0__517_carry__1_i_6_n_0,adj_Pinc_byfreq0__517_carry__1_i_7_n_0,adj_Pinc_byfreq0__517_carry__1_i_8_n_0}));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__1_i_1
-       (.I0(adj_Pinc_byfreq0__453_carry__0_n_4),
-        .I1(w_MODEfreq0__0_n_93),
-        .O(adj_Pinc_byfreq0__517_carry__1_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__1_i_2
-       (.I0(adj_Pinc_byfreq0__453_carry__0_n_5),
-        .I1(w_MODEfreq0__0_n_94),
-        .O(adj_Pinc_byfreq0__517_carry__1_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__1_i_3
-       (.I0(adj_Pinc_byfreq0__453_carry__0_n_6),
-        .I1(w_MODEfreq0__0_n_95),
-        .O(adj_Pinc_byfreq0__517_carry__1_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__1_i_4
-       (.I0(adj_Pinc_byfreq0__453_carry__0_n_7),
-        .I1(w_MODEfreq0__0_n_96),
-        .O(adj_Pinc_byfreq0__517_carry__1_i_4_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__1_i_5
-       (.I0(w_MODEfreq0__0_n_93),
-        .I1(adj_Pinc_byfreq0__453_carry__0_n_4),
-        .I2(adj_Pinc_byfreq0__453_carry__1_n_7),
-        .I3(w_MODEfreq0__0_n_92),
-        .O(adj_Pinc_byfreq0__517_carry__1_i_5_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__1_i_6
-       (.I0(w_MODEfreq0__0_n_94),
-        .I1(adj_Pinc_byfreq0__453_carry__0_n_5),
-        .I2(adj_Pinc_byfreq0__453_carry__0_n_4),
-        .I3(w_MODEfreq0__0_n_93),
-        .O(adj_Pinc_byfreq0__517_carry__1_i_6_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__1_i_7
-       (.I0(w_MODEfreq0__0_n_95),
-        .I1(adj_Pinc_byfreq0__453_carry__0_n_6),
-        .I2(adj_Pinc_byfreq0__453_carry__0_n_5),
-        .I3(w_MODEfreq0__0_n_94),
-        .O(adj_Pinc_byfreq0__517_carry__1_i_7_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__1_i_8
-       (.I0(w_MODEfreq0__0_n_96),
-        .I1(adj_Pinc_byfreq0__453_carry__0_n_7),
-        .I2(adj_Pinc_byfreq0__453_carry__0_n_6),
-        .I3(w_MODEfreq0__0_n_95),
-        .O(adj_Pinc_byfreq0__517_carry__1_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__517_carry__2
-       (.CI(adj_Pinc_byfreq0__517_carry__1_n_0),
-        .CO({adj_Pinc_byfreq0__517_carry__2_n_0,adj_Pinc_byfreq0__517_carry__2_n_1,adj_Pinc_byfreq0__517_carry__2_n_2,adj_Pinc_byfreq0__517_carry__2_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__517_carry__2_i_1_n_0,adj_Pinc_byfreq0__517_carry__2_i_2_n_0,adj_Pinc_byfreq0__517_carry__2_i_3_n_0,adj_Pinc_byfreq0__517_carry__2_i_4_n_0}),
-        .O(NLW_adj_Pinc_byfreq0__517_carry__2_O_UNCONNECTED[3:0]),
-        .S({adj_Pinc_byfreq0__517_carry__2_i_5_n_0,adj_Pinc_byfreq0__517_carry__2_i_6_n_0,adj_Pinc_byfreq0__517_carry__2_i_7_n_0,adj_Pinc_byfreq0__517_carry__2_i_8_n_0}));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__2_i_1
-       (.I0(adj_Pinc_byfreq0__453_carry__1_n_4),
-        .I1(w_MODEfreq0_carry_n_7),
-        .O(adj_Pinc_byfreq0__517_carry__2_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__2_i_2
-       (.I0(adj_Pinc_byfreq0__453_carry__1_n_5),
-        .I1(w_MODEfreq0__0_n_90),
-        .O(adj_Pinc_byfreq0__517_carry__2_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__2_i_3
-       (.I0(adj_Pinc_byfreq0__453_carry__1_n_6),
-        .I1(w_MODEfreq0__0_n_91),
-        .O(adj_Pinc_byfreq0__517_carry__2_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__2_i_4
-       (.I0(adj_Pinc_byfreq0__453_carry__1_n_7),
-        .I1(w_MODEfreq0__0_n_92),
-        .O(adj_Pinc_byfreq0__517_carry__2_i_4_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__2_i_5
-       (.I0(w_MODEfreq0_carry_n_7),
-        .I1(adj_Pinc_byfreq0__453_carry__1_n_4),
-        .I2(adj_Pinc_byfreq0__453_carry__2_n_7),
-        .I3(w_MODEfreq0_carry_n_6),
-        .O(adj_Pinc_byfreq0__517_carry__2_i_5_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__2_i_6
-       (.I0(w_MODEfreq0__0_n_90),
-        .I1(adj_Pinc_byfreq0__453_carry__1_n_5),
-        .I2(adj_Pinc_byfreq0__453_carry__1_n_4),
-        .I3(w_MODEfreq0_carry_n_7),
-        .O(adj_Pinc_byfreq0__517_carry__2_i_6_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__2_i_7
-       (.I0(w_MODEfreq0__0_n_91),
-        .I1(adj_Pinc_byfreq0__453_carry__1_n_6),
-        .I2(adj_Pinc_byfreq0__453_carry__1_n_5),
-        .I3(w_MODEfreq0__0_n_90),
-        .O(adj_Pinc_byfreq0__517_carry__2_i_7_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__2_i_8
-       (.I0(w_MODEfreq0__0_n_92),
-        .I1(adj_Pinc_byfreq0__453_carry__1_n_7),
-        .I2(adj_Pinc_byfreq0__453_carry__1_n_6),
-        .I3(w_MODEfreq0__0_n_91),
-        .O(adj_Pinc_byfreq0__517_carry__2_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__517_carry__3
-       (.CI(adj_Pinc_byfreq0__517_carry__2_n_0),
-        .CO({adj_Pinc_byfreq0__517_carry__3_n_0,adj_Pinc_byfreq0__517_carry__3_n_1,adj_Pinc_byfreq0__517_carry__3_n_2,adj_Pinc_byfreq0__517_carry__3_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__517_carry__3_i_1_n_0,adj_Pinc_byfreq0__517_carry__3_i_2_n_0,adj_Pinc_byfreq0__517_carry__3_i_3_n_0,adj_Pinc_byfreq0__517_carry__3_i_4_n_0}),
-        .O(NLW_adj_Pinc_byfreq0__517_carry__3_O_UNCONNECTED[3:0]),
-        .S({adj_Pinc_byfreq0__517_carry__3_i_5_n_0,adj_Pinc_byfreq0__517_carry__3_i_6_n_0,adj_Pinc_byfreq0__517_carry__3_i_7_n_0,adj_Pinc_byfreq0__517_carry__3_i_8_n_0}));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__3_i_1
-       (.I0(adj_Pinc_byfreq0__453_carry__2_n_4),
-        .I1(w_MODEfreq0_carry__0_n_7),
-        .O(adj_Pinc_byfreq0__517_carry__3_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__3_i_2
-       (.I0(adj_Pinc_byfreq0__453_carry__2_n_5),
-        .I1(w_MODEfreq0_carry_n_4),
-        .O(adj_Pinc_byfreq0__517_carry__3_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__3_i_3
-       (.I0(adj_Pinc_byfreq0__453_carry__2_n_6),
-        .I1(w_MODEfreq0_carry_n_5),
-        .O(adj_Pinc_byfreq0__517_carry__3_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__3_i_4
-       (.I0(adj_Pinc_byfreq0__453_carry__2_n_7),
-        .I1(w_MODEfreq0_carry_n_6),
-        .O(adj_Pinc_byfreq0__517_carry__3_i_4_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__3_i_5
-       (.I0(w_MODEfreq0_carry__0_n_7),
-        .I1(adj_Pinc_byfreq0__453_carry__2_n_4),
-        .I2(adj_Pinc_byfreq0__453_carry__3_n_7),
-        .I3(w_MODEfreq0_carry__0_n_6),
-        .O(adj_Pinc_byfreq0__517_carry__3_i_5_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__3_i_6
-       (.I0(w_MODEfreq0_carry_n_4),
-        .I1(adj_Pinc_byfreq0__453_carry__2_n_5),
-        .I2(adj_Pinc_byfreq0__453_carry__2_n_4),
-        .I3(w_MODEfreq0_carry__0_n_7),
-        .O(adj_Pinc_byfreq0__517_carry__3_i_6_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__3_i_7
-       (.I0(w_MODEfreq0_carry_n_5),
-        .I1(adj_Pinc_byfreq0__453_carry__2_n_6),
-        .I2(adj_Pinc_byfreq0__453_carry__2_n_5),
-        .I3(w_MODEfreq0_carry_n_4),
-        .O(adj_Pinc_byfreq0__517_carry__3_i_7_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__3_i_8
-       (.I0(w_MODEfreq0_carry_n_6),
-        .I1(adj_Pinc_byfreq0__453_carry__2_n_7),
-        .I2(adj_Pinc_byfreq0__453_carry__2_n_6),
-        .I3(w_MODEfreq0_carry_n_5),
-        .O(adj_Pinc_byfreq0__517_carry__3_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__517_carry__4
-       (.CI(adj_Pinc_byfreq0__517_carry__3_n_0),
-        .CO({adj_Pinc_byfreq0__517_carry__4_n_0,adj_Pinc_byfreq0__517_carry__4_n_1,adj_Pinc_byfreq0__517_carry__4_n_2,adj_Pinc_byfreq0__517_carry__4_n_3}),
-        .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__517_carry__4_i_1_n_0,adj_Pinc_byfreq0__517_carry__4_i_2_n_0,adj_Pinc_byfreq0__517_carry__4_i_3_n_0,adj_Pinc_byfreq0__517_carry__4_i_4_n_0}),
-        .O(NLW_adj_Pinc_byfreq0__517_carry__4_O_UNCONNECTED[3:0]),
-        .S({adj_Pinc_byfreq0__517_carry__4_i_5_n_0,adj_Pinc_byfreq0__517_carry__4_i_6_n_0,adj_Pinc_byfreq0__517_carry__4_i_7_n_0,adj_Pinc_byfreq0__517_carry__4_i_8_n_0}));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__4_i_1
-       (.I0(adj_Pinc_byfreq0__453_carry__3_n_4),
-        .I1(w_MODEfreq0_carry__1_n_7),
-        .O(adj_Pinc_byfreq0__517_carry__4_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__4_i_2
-       (.I0(adj_Pinc_byfreq0__453_carry__3_n_5),
-        .I1(w_MODEfreq0_carry__0_n_4),
-        .O(adj_Pinc_byfreq0__517_carry__4_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__4_i_3
-       (.I0(adj_Pinc_byfreq0__453_carry__3_n_6),
-        .I1(w_MODEfreq0_carry__0_n_5),
-        .O(adj_Pinc_byfreq0__517_carry__4_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__4_i_4
-       (.I0(adj_Pinc_byfreq0__453_carry__3_n_7),
-        .I1(w_MODEfreq0_carry__0_n_6),
-        .O(adj_Pinc_byfreq0__517_carry__4_i_4_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__4_i_5
-       (.I0(w_MODEfreq0_carry__1_n_7),
-        .I1(adj_Pinc_byfreq0__453_carry__3_n_4),
-        .I2(adj_Pinc_byfreq0__453_carry__4_n_7),
-        .I3(w_MODEfreq0_carry__1_n_6),
-        .O(adj_Pinc_byfreq0__517_carry__4_i_5_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__4_i_6
-       (.I0(w_MODEfreq0_carry__0_n_4),
-        .I1(adj_Pinc_byfreq0__453_carry__3_n_5),
-        .I2(adj_Pinc_byfreq0__453_carry__3_n_4),
-        .I3(w_MODEfreq0_carry__1_n_7),
-        .O(adj_Pinc_byfreq0__517_carry__4_i_6_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__4_i_7
-       (.I0(w_MODEfreq0_carry__0_n_5),
-        .I1(adj_Pinc_byfreq0__453_carry__3_n_6),
-        .I2(adj_Pinc_byfreq0__453_carry__3_n_5),
-        .I3(w_MODEfreq0_carry__0_n_4),
-        .O(adj_Pinc_byfreq0__517_carry__4_i_7_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__4_i_8
-       (.I0(w_MODEfreq0_carry__0_n_6),
-        .I1(adj_Pinc_byfreq0__453_carry__3_n_7),
-        .I2(adj_Pinc_byfreq0__453_carry__3_n_6),
-        .I3(w_MODEfreq0_carry__0_n_5),
-        .O(adj_Pinc_byfreq0__517_carry__4_i_8_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__517_carry__5
-       (.CI(adj_Pinc_byfreq0__517_carry__4_n_0),
-        .CO({NLW_adj_Pinc_byfreq0__517_carry__5_CO_UNCONNECTED[3:1],adj_Pinc_byfreq0__517_carry__5_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,adj_Pinc_byfreq0__517_carry__5_i_1_n_0}),
-        .O(NLW_adj_Pinc_byfreq0__517_carry__5_O_UNCONNECTED[3:0]),
-        .S({1'b0,1'b0,1'b0,adj_Pinc_byfreq0__517_carry__5_i_2_n_0}));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry__5_i_1
-       (.I0(adj_Pinc_byfreq0__453_carry__4_n_7),
-        .I1(w_MODEfreq0_carry__1_n_6),
-        .O(adj_Pinc_byfreq0__517_carry__5_i_1_n_0));
-  LUT4 #(
-    .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry__5_i_2
-       (.I0(w_MODEfreq0_carry__1_n_6),
-        .I1(adj_Pinc_byfreq0__453_carry__4_n_7),
-        .I2(adj_Pinc_byfreq0__453_carry__4_n_6),
-        .I3(w_MODEfreq0_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__517_carry__5_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry_i_1
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_5),
-        .I1(w_MODEfreq0__0_n_101),
-        .O(adj_Pinc_byfreq0__517_carry_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
-    adj_Pinc_byfreq0__517_carry_i_2
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_6),
-        .I1(w_MODEfreq0__0_n_102),
-        .O(adj_Pinc_byfreq0__517_carry_i_2_n_0));
-  LUT2 #(
-    .INIT(4'hB)) 
-    adj_Pinc_byfreq0__517_carry_i_3
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_7),
-        .I1(w_MODEfreq0__0_n_103),
-        .O(adj_Pinc_byfreq0__517_carry_i_3_n_0));
+    adj_Pinc_byfreq0__381_carry_i_4
+       (.I0(freq[5]),
+        .I1(adj_Pinc_byfreq0__320_carry_n_7),
+        .I2(adj_Pinc_byfreq0__320_carry_n_6),
+        .I3(freq[6]),
+        .O(adj_Pinc_byfreq0__381_carry_i_4_n_0));
   LUT4 #(
     .INIT(16'h4BB4)) 
-    adj_Pinc_byfreq0__517_carry_i_4
-       (.I0(w_MODEfreq0__0_n_101),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_5),
-        .I2(adj_Pinc_byfreq0__453_carry_n_7),
-        .I3(w_MODEfreq0__0_n_100),
-        .O(adj_Pinc_byfreq0__517_carry_i_4_n_0));
+    adj_Pinc_byfreq0__381_carry_i_5
+       (.I0(freq[4]),
+        .I1(adj_Pinc_byfreq0__234_carry__3_n_7),
+        .I2(adj_Pinc_byfreq0__320_carry_n_7),
+        .I3(freq[5]),
+        .O(adj_Pinc_byfreq0__381_carry_i_5_n_0));
   LUT4 #(
     .INIT(16'hB44B)) 
-    adj_Pinc_byfreq0__517_carry_i_5
-       (.I0(w_MODEfreq0__0_n_102),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_6),
-        .I2(adj_Pinc_byfreq0__352_carry__4_n_5),
-        .I3(w_MODEfreq0__0_n_101),
-        .O(adj_Pinc_byfreq0__517_carry_i_5_n_0));
-  LUT4 #(
-    .INIT(16'h2DD2)) 
-    adj_Pinc_byfreq0__517_carry_i_6
-       (.I0(w_MODEfreq0__0_n_103),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_7),
-        .I2(adj_Pinc_byfreq0__352_carry__4_n_6),
-        .I3(w_MODEfreq0__0_n_102),
-        .O(adj_Pinc_byfreq0__517_carry_i_6_n_0));
+    adj_Pinc_byfreq0__381_carry_i_6
+       (.I0(freq[3]),
+        .I1(adj_Pinc_byfreq0__234_carry__2_n_4),
+        .I2(adj_Pinc_byfreq0__234_carry__3_n_7),
+        .I3(freq[4]),
+        .O(adj_Pinc_byfreq0__381_carry_i_6_n_0));
   LUT2 #(
     .INIT(4'h6)) 
-    adj_Pinc_byfreq0__517_carry_i_7
-       (.I0(w_MODEfreq0__0_n_103),
-        .I1(adj_Pinc_byfreq0__352_carry__4_n_7),
-        .O(adj_Pinc_byfreq0__517_carry_i_7_n_0));
+    adj_Pinc_byfreq0__381_carry_i_7
+       (.I0(freq[3]),
+        .I1(adj_Pinc_byfreq0__234_carry__2_n_4),
+        .O(adj_Pinc_byfreq0__381_carry_i_7_n_0));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__566_carry
+  CARRY4 adj_Pinc_byfreq0__426_carry
        (.CI(1'b0),
-        .CO({adj_Pinc_byfreq0__566_carry_n_0,adj_Pinc_byfreq0__566_carry_n_1,adj_Pinc_byfreq0__566_carry_n_2,adj_Pinc_byfreq0__566_carry_n_3}),
+        .CO({adj_Pinc_byfreq0__426_carry_n_0,adj_Pinc_byfreq0__426_carry_n_1,adj_Pinc_byfreq0__426_carry_n_2,adj_Pinc_byfreq0__426_carry_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b1}),
-        .O({adj_Pinc_byfreq0__566_carry_n_4,adj_Pinc_byfreq0__566_carry_n_5,adj_Pinc_byfreq0__566_carry_n_6,adj_Pinc_byfreq0__566_carry_n_7}),
-        .S({adj_Pinc_byfreq0__352_carry__4_n_4,adj_Pinc_byfreq0__352_carry__4_n_5,adj_Pinc_byfreq0__352_carry__4_n_6,adj_Pinc_byfreq0__566_carry_i_1_n_0}));
+        .O({adj_Pinc_byfreq0__426_carry_n_4,adj_Pinc_byfreq0__426_carry_n_5,adj_Pinc_byfreq0__426_carry_n_6,adj_Pinc_byfreq0__426_carry_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__3_n_6,adj_Pinc_byfreq0__234_carry__3_n_7,adj_Pinc_byfreq0__234_carry__2_n_4,adj_Pinc_byfreq0__426_carry_i_1_n_0}));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__566_carry__0
-       (.CI(adj_Pinc_byfreq0__566_carry_n_0),
-        .CO({adj_Pinc_byfreq0__566_carry__0_n_0,adj_Pinc_byfreq0__566_carry__0_n_1,adj_Pinc_byfreq0__566_carry__0_n_2,adj_Pinc_byfreq0__566_carry__0_n_3}),
+  CARRY4 adj_Pinc_byfreq0__426_carry__0
+       (.CI(adj_Pinc_byfreq0__426_carry_n_0),
+        .CO({adj_Pinc_byfreq0__426_carry__0_n_0,adj_Pinc_byfreq0__426_carry__0_n_1,adj_Pinc_byfreq0__426_carry__0_n_2,adj_Pinc_byfreq0__426_carry__0_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({adj_Pinc_byfreq0__566_carry__0_n_4,adj_Pinc_byfreq0__566_carry__0_n_5,adj_Pinc_byfreq0__566_carry__0_n_6,adj_Pinc_byfreq0__566_carry__0_n_7}),
-        .S({adj_Pinc_byfreq0__352_carry__5_n_4,adj_Pinc_byfreq0__352_carry__5_n_5,adj_Pinc_byfreq0__352_carry__5_n_6,adj_Pinc_byfreq0__352_carry__5_n_7}));
+        .O({adj_Pinc_byfreq0__426_carry__0_n_4,adj_Pinc_byfreq0__426_carry__0_n_5,adj_Pinc_byfreq0__426_carry__0_n_6,adj_Pinc_byfreq0__426_carry__0_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__4_n_6,adj_Pinc_byfreq0__234_carry__4_n_7,adj_Pinc_byfreq0__234_carry__3_n_4,adj_Pinc_byfreq0__234_carry__3_n_5}));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__566_carry__1
-       (.CI(adj_Pinc_byfreq0__566_carry__0_n_0),
-        .CO({adj_Pinc_byfreq0__566_carry__1_n_0,adj_Pinc_byfreq0__566_carry__1_n_1,adj_Pinc_byfreq0__566_carry__1_n_2,adj_Pinc_byfreq0__566_carry__1_n_3}),
+  CARRY4 adj_Pinc_byfreq0__426_carry__1
+       (.CI(adj_Pinc_byfreq0__426_carry__0_n_0),
+        .CO({adj_Pinc_byfreq0__426_carry__1_n_0,adj_Pinc_byfreq0__426_carry__1_n_1,adj_Pinc_byfreq0__426_carry__1_n_2,adj_Pinc_byfreq0__426_carry__1_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({adj_Pinc_byfreq0__566_carry__1_n_4,adj_Pinc_byfreq0__566_carry__1_n_5,adj_Pinc_byfreq0__566_carry__1_n_6,adj_Pinc_byfreq0__566_carry__1_n_7}),
-        .S({adj_Pinc_byfreq0__352_carry__6_n_4,adj_Pinc_byfreq0__352_carry__6_n_5,adj_Pinc_byfreq0__352_carry__6_n_6,adj_Pinc_byfreq0__352_carry__6_n_7}));
+        .O({adj_Pinc_byfreq0__426_carry__1_n_4,adj_Pinc_byfreq0__426_carry__1_n_5,adj_Pinc_byfreq0__426_carry__1_n_6,adj_Pinc_byfreq0__426_carry__1_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__5_n_6,adj_Pinc_byfreq0__234_carry__5_n_7,adj_Pinc_byfreq0__234_carry__4_n_4,adj_Pinc_byfreq0__234_carry__4_n_5}));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__566_carry__2
-       (.CI(adj_Pinc_byfreq0__566_carry__1_n_0),
-        .CO({adj_Pinc_byfreq0__566_carry__2_n_0,adj_Pinc_byfreq0__566_carry__2_n_1,adj_Pinc_byfreq0__566_carry__2_n_2,adj_Pinc_byfreq0__566_carry__2_n_3}),
+  CARRY4 adj_Pinc_byfreq0__426_carry__2
+       (.CI(adj_Pinc_byfreq0__426_carry__1_n_0),
+        .CO({adj_Pinc_byfreq0__426_carry__2_n_0,adj_Pinc_byfreq0__426_carry__2_n_1,adj_Pinc_byfreq0__426_carry__2_n_2,adj_Pinc_byfreq0__426_carry__2_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({adj_Pinc_byfreq0__566_carry__2_n_4,adj_Pinc_byfreq0__566_carry__2_n_5,adj_Pinc_byfreq0__566_carry__2_n_6,adj_Pinc_byfreq0__566_carry__2_n_7}),
-        .S({adj_Pinc_byfreq0__352_carry__7_n_4,adj_Pinc_byfreq0__352_carry__7_n_5,adj_Pinc_byfreq0__352_carry__7_n_6,adj_Pinc_byfreq0__352_carry__7_n_7}));
+        .O({adj_Pinc_byfreq0__426_carry__2_n_4,adj_Pinc_byfreq0__426_carry__2_n_5,adj_Pinc_byfreq0__426_carry__2_n_6,adj_Pinc_byfreq0__426_carry__2_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__6_n_6,adj_Pinc_byfreq0__234_carry__6_n_7,adj_Pinc_byfreq0__234_carry__5_n_4,adj_Pinc_byfreq0__234_carry__5_n_5}));
   (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__566_carry__3
-       (.CI(adj_Pinc_byfreq0__566_carry__2_n_0),
-        .CO({adj_Pinc_byfreq0__566_carry__3_n_0,adj_Pinc_byfreq0__566_carry__3_n_1,adj_Pinc_byfreq0__566_carry__3_n_2,adj_Pinc_byfreq0__566_carry__3_n_3}),
+  CARRY4 adj_Pinc_byfreq0__426_carry__3
+       (.CI(adj_Pinc_byfreq0__426_carry__2_n_0),
+        .CO({NLW_adj_Pinc_byfreq0__426_carry__3_CO_UNCONNECTED[3],adj_Pinc_byfreq0__426_carry__3_n_1,adj_Pinc_byfreq0__426_carry__3_n_2,adj_Pinc_byfreq0__426_carry__3_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({adj_Pinc_byfreq0__566_carry__3_n_4,adj_Pinc_byfreq0__566_carry__3_n_5,adj_Pinc_byfreq0__566_carry__3_n_6,adj_Pinc_byfreq0__566_carry__3_n_7}),
-        .S({adj_Pinc_byfreq0__352_carry__8_n_4,adj_Pinc_byfreq0__352_carry__8_n_5,adj_Pinc_byfreq0__352_carry__8_n_6,adj_Pinc_byfreq0__352_carry__8_n_7}));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 adj_Pinc_byfreq0__566_carry__4
-       (.CI(adj_Pinc_byfreq0__566_carry__3_n_0),
-        .CO(NLW_adj_Pinc_byfreq0__566_carry__4_CO_UNCONNECTED[3:0]),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({NLW_adj_Pinc_byfreq0__566_carry__4_O_UNCONNECTED[3:1],adj_Pinc_byfreq0__566_carry__4_n_7}),
-        .S({1'b0,1'b0,1'b0,adj_Pinc_byfreq0__352_carry__9_n_7}));
+        .O({adj_Pinc_byfreq0__426_carry__3_n_4,adj_Pinc_byfreq0__426_carry__3_n_5,adj_Pinc_byfreq0__426_carry__3_n_6,adj_Pinc_byfreq0__426_carry__3_n_7}),
+        .S({adj_Pinc_byfreq0__234_carry__7_n_6,adj_Pinc_byfreq0__234_carry__7_n_7,adj_Pinc_byfreq0__234_carry__6_n_4,adj_Pinc_byfreq0__234_carry__6_n_5}));
   LUT1 #(
     .INIT(2'h1)) 
-    adj_Pinc_byfreq0__566_carry_i_1
-       (.I0(adj_Pinc_byfreq0__352_carry__4_n_7),
-        .O(adj_Pinc_byfreq0__566_carry_i_1_n_0));
-  CARRY4 adj_Pinc_byfreq0__89_carry
+    adj_Pinc_byfreq0__426_carry_i_1
+       (.I0(adj_Pinc_byfreq0__234_carry__2_n_5),
+        .O(adj_Pinc_byfreq0__426_carry_i_1_n_0));
+  CARRY4 adj_Pinc_byfreq0__67_carry
        (.CI(1'b0),
-        .CO({adj_Pinc_byfreq0__89_carry_n_0,adj_Pinc_byfreq0__89_carry_n_1,adj_Pinc_byfreq0__89_carry_n_2,adj_Pinc_byfreq0__89_carry_n_3}),
+        .CO({adj_Pinc_byfreq0__67_carry_n_0,adj_Pinc_byfreq0__67_carry_n_1,adj_Pinc_byfreq0__67_carry_n_2,adj_Pinc_byfreq0__67_carry_n_3}),
         .CYINIT(1'b0),
-        .DI({w_MODEfreq0__0_n_101,w_MODEfreq0__0_n_102,w_MODEfreq0__0_n_103,1'b0}),
-        .O({adj_Pinc_byfreq0__89_carry_n_4,adj_Pinc_byfreq0__89_carry_n_5,adj_Pinc_byfreq0__89_carry_n_6,adj_Pinc_byfreq0__89_carry_n_7}),
-        .S({adj_Pinc_byfreq0__89_carry_i_1_n_0,adj_Pinc_byfreq0__89_carry_i_2_n_0,adj_Pinc_byfreq0__89_carry_i_3_n_0,w_MODEfreq0__0_n_104}));
-  CARRY4 adj_Pinc_byfreq0__89_carry__0
-       (.CI(adj_Pinc_byfreq0__89_carry_n_0),
-        .CO({adj_Pinc_byfreq0__89_carry__0_n_0,adj_Pinc_byfreq0__89_carry__0_n_1,adj_Pinc_byfreq0__89_carry__0_n_2,adj_Pinc_byfreq0__89_carry__0_n_3}),
+        .DI({adj_Pinc_byfreq0__67_carry_i_1_n_0,freq[4:3],1'b1}),
+        .O({adj_Pinc_byfreq0__67_carry_n_4,adj_Pinc_byfreq0__67_carry_n_5,adj_Pinc_byfreq0__67_carry_n_6,adj_Pinc_byfreq0__67_carry_n_7}),
+        .S({adj_Pinc_byfreq0__67_carry_i_2_n_0,adj_Pinc_byfreq0__67_carry_i_3_n_0,adj_Pinc_byfreq0__67_carry_i_4_n_0,freq[3]}));
+  CARRY4 adj_Pinc_byfreq0__67_carry__0
+       (.CI(adj_Pinc_byfreq0__67_carry_n_0),
+        .CO({adj_Pinc_byfreq0__67_carry__0_n_0,adj_Pinc_byfreq0__67_carry__0_n_1,adj_Pinc_byfreq0__67_carry__0_n_2,adj_Pinc_byfreq0__67_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__89_carry__0_i_1_n_0,adj_Pinc_byfreq0__89_carry__0_i_2_n_0,adj_Pinc_byfreq0__89_carry__0_i_3_n_0,adj_Pinc_byfreq0__89_carry__0_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__89_carry__0_n_4,adj_Pinc_byfreq0__89_carry__0_n_5,adj_Pinc_byfreq0__89_carry__0_n_6,adj_Pinc_byfreq0__89_carry__0_n_7}),
-        .S({adj_Pinc_byfreq0__89_carry__0_i_5_n_0,adj_Pinc_byfreq0__89_carry__0_i_6_n_0,adj_Pinc_byfreq0__89_carry__0_i_7_n_0,adj_Pinc_byfreq0__89_carry__0_i_8_n_0}));
-  (* HLUTNM = "lutpair2" *) 
+        .DI({adj_Pinc_byfreq0__67_carry__0_i_1_n_0,adj_Pinc_byfreq0__67_carry__0_i_2_n_0,adj_Pinc_byfreq0__67_carry__0_i_3_n_0,adj_Pinc_byfreq0__67_carry__0_i_4_n_0}),
+        .O({adj_Pinc_byfreq0__67_carry__0_n_4,adj_Pinc_byfreq0__67_carry__0_n_5,adj_Pinc_byfreq0__67_carry__0_n_6,adj_Pinc_byfreq0__67_carry__0_n_7}),
+        .S({adj_Pinc_byfreq0__67_carry__0_i_5_n_0,adj_Pinc_byfreq0__67_carry__0_i_6_n_0,adj_Pinc_byfreq0__67_carry__0_i_7_n_0,adj_Pinc_byfreq0__67_carry__0_i_8_n_0}));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__0_i_1
-       (.I0(w_MODEfreq0__0_n_102),
-        .I1(w_MODEfreq0__0_n_100),
-        .I2(w_MODEfreq0__0_n_98),
-        .O(adj_Pinc_byfreq0__89_carry__0_i_1_n_0));
-  (* HLUTNM = "lutpair1" *) 
+    .INIT(8'hD4)) 
+    adj_Pinc_byfreq0__67_carry__0_i_1
+       (.I0(freq[7]),
+        .I1(freq[5]),
+        .I2(freq[9]),
+        .O(adj_Pinc_byfreq0__67_carry__0_i_1_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__0_i_2
-       (.I0(w_MODEfreq0__0_n_103),
-        .I1(w_MODEfreq0__0_n_101),
-        .I2(w_MODEfreq0__0_n_99),
-        .O(adj_Pinc_byfreq0__89_carry__0_i_2_n_0));
-  (* HLUTNM = "lutpair0" *) 
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__67_carry__0_i_2
+       (.I0(freq[4]),
+        .I1(freq[8]),
+        .I2(freq[6]),
+        .O(adj_Pinc_byfreq0__67_carry__0_i_2_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__0_i_3
-       (.I0(w_MODEfreq0__0_n_104),
-        .I1(w_MODEfreq0__0_n_102),
-        .I2(w_MODEfreq0__0_n_100),
-        .O(adj_Pinc_byfreq0__89_carry__0_i_3_n_0));
-  LUT3 #(
-    .INIT(8'h96)) 
-    adj_Pinc_byfreq0__89_carry__0_i_4
-       (.I0(w_MODEfreq0__0_n_100),
-        .I1(w_MODEfreq0__0_n_104),
-        .I2(w_MODEfreq0__0_n_102),
-        .O(adj_Pinc_byfreq0__89_carry__0_i_4_n_0));
-  (* HLUTNM = "lutpair3" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__0_i_5
-       (.I0(w_MODEfreq0__0_n_101),
-        .I1(w_MODEfreq0__0_n_99),
-        .I2(w_MODEfreq0__0_n_97),
-        .I3(adj_Pinc_byfreq0__89_carry__0_i_1_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__0_i_5_n_0));
-  (* HLUTNM = "lutpair2" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__0_i_6
-       (.I0(w_MODEfreq0__0_n_102),
-        .I1(w_MODEfreq0__0_n_100),
-        .I2(w_MODEfreq0__0_n_98),
-        .I3(adj_Pinc_byfreq0__89_carry__0_i_2_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__0_i_6_n_0));
-  (* HLUTNM = "lutpair1" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__0_i_7
-       (.I0(w_MODEfreq0__0_n_103),
-        .I1(w_MODEfreq0__0_n_101),
-        .I2(w_MODEfreq0__0_n_99),
-        .I3(adj_Pinc_byfreq0__89_carry__0_i_3_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__0_i_7_n_0));
-  (* HLUTNM = "lutpair0" *) 
+    .INIT(8'hB2)) 
+    adj_Pinc_byfreq0__67_carry__0_i_3
+       (.I0(freq[3]),
+        .I1(freq[5]),
+        .I2(freq[7]),
+        .O(adj_Pinc_byfreq0__67_carry__0_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__67_carry__0_i_4
+       (.I0(freq[6]),
+        .I1(freq[4]),
+        .O(adj_Pinc_byfreq0__67_carry__0_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h8E71718E718E8E71)) 
+    adj_Pinc_byfreq0__67_carry__0_i_5
+       (.I0(freq[9]),
+        .I1(freq[5]),
+        .I2(freq[7]),
+        .I3(freq[8]),
+        .I4(freq[6]),
+        .I5(freq[10]),
+        .O(adj_Pinc_byfreq0__67_carry__0_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__67_carry__0_i_6
+       (.I0(freq[6]),
+        .I1(freq[8]),
+        .I2(freq[4]),
+        .I3(freq[5]),
+        .I4(freq[7]),
+        .I5(freq[9]),
+        .O(adj_Pinc_byfreq0__67_carry__0_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hB24D4DB24DB2B24D)) 
+    adj_Pinc_byfreq0__67_carry__0_i_7
+       (.I0(freq[7]),
+        .I1(freq[5]),
+        .I2(freq[3]),
+        .I3(freq[4]),
+        .I4(freq[6]),
+        .I5(freq[8]),
+        .O(adj_Pinc_byfreq0__67_carry__0_i_7_n_0));
   LUT5 #(
-    .INIT(32'h69969696)) 
-    adj_Pinc_byfreq0__89_carry__0_i_8
-       (.I0(w_MODEfreq0__0_n_104),
-        .I1(w_MODEfreq0__0_n_102),
-        .I2(w_MODEfreq0__0_n_100),
-        .I3(w_MODEfreq0__0_n_103),
-        .I4(w_MODEfreq0__0_n_105),
-        .O(adj_Pinc_byfreq0__89_carry__0_i_8_n_0));
-  CARRY4 adj_Pinc_byfreq0__89_carry__1
-       (.CI(adj_Pinc_byfreq0__89_carry__0_n_0),
-        .CO({adj_Pinc_byfreq0__89_carry__1_n_0,adj_Pinc_byfreq0__89_carry__1_n_1,adj_Pinc_byfreq0__89_carry__1_n_2,adj_Pinc_byfreq0__89_carry__1_n_3}),
+    .INIT(32'h4BB4B44B)) 
+    adj_Pinc_byfreq0__67_carry__0_i_8
+       (.I0(freq[4]),
+        .I1(freq[6]),
+        .I2(freq[3]),
+        .I3(freq[5]),
+        .I4(freq[7]),
+        .O(adj_Pinc_byfreq0__67_carry__0_i_8_n_0));
+  CARRY4 adj_Pinc_byfreq0__67_carry__1
+       (.CI(adj_Pinc_byfreq0__67_carry__0_n_0),
+        .CO({adj_Pinc_byfreq0__67_carry__1_n_0,adj_Pinc_byfreq0__67_carry__1_n_1,adj_Pinc_byfreq0__67_carry__1_n_2,adj_Pinc_byfreq0__67_carry__1_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__89_carry__1_i_1_n_0,adj_Pinc_byfreq0__89_carry__1_i_2_n_0,adj_Pinc_byfreq0__89_carry__1_i_3_n_0,adj_Pinc_byfreq0__89_carry__1_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__89_carry__1_n_4,adj_Pinc_byfreq0__89_carry__1_n_5,adj_Pinc_byfreq0__89_carry__1_n_6,adj_Pinc_byfreq0__89_carry__1_n_7}),
-        .S({adj_Pinc_byfreq0__89_carry__1_i_5_n_0,adj_Pinc_byfreq0__89_carry__1_i_6_n_0,adj_Pinc_byfreq0__89_carry__1_i_7_n_0,adj_Pinc_byfreq0__89_carry__1_i_8_n_0}));
-  (* HLUTNM = "lutpair6" *) 
+        .DI({adj_Pinc_byfreq0__67_carry__1_i_1_n_0,adj_Pinc_byfreq0__67_carry__1_i_2_n_0,adj_Pinc_byfreq0__67_carry__1_i_3_n_0,adj_Pinc_byfreq0__67_carry__1_i_4_n_0}),
+        .O({adj_Pinc_byfreq0__67_carry__1_n_4,adj_Pinc_byfreq0__67_carry__1_n_5,adj_Pinc_byfreq0__67_carry__1_n_6,adj_Pinc_byfreq0__67_carry__1_n_7}),
+        .S({adj_Pinc_byfreq0__67_carry__1_i_5_n_0,adj_Pinc_byfreq0__67_carry__1_i_6_n_0,adj_Pinc_byfreq0__67_carry__1_i_7_n_0,adj_Pinc_byfreq0__67_carry__1_i_8_n_0}));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__1_i_1
-       (.I0(w_MODEfreq0__0_n_98),
-        .I1(w_MODEfreq0__0_n_96),
-        .I2(w_MODEfreq0__0_n_94),
-        .O(adj_Pinc_byfreq0__89_carry__1_i_1_n_0));
-  (* HLUTNM = "lutpair5" *) 
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__67_carry__1_i_1
+       (.I0(freq[9]),
+        .I1(freq[13]),
+        .I2(freq[11]),
+        .O(adj_Pinc_byfreq0__67_carry__1_i_1_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__1_i_2
-       (.I0(w_MODEfreq0__0_n_99),
-        .I1(w_MODEfreq0__0_n_97),
-        .I2(w_MODEfreq0__0_n_95),
-        .O(adj_Pinc_byfreq0__89_carry__1_i_2_n_0));
-  (* HLUTNM = "lutpair4" *) 
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__67_carry__1_i_2
+       (.I0(freq[8]),
+        .I1(freq[12]),
+        .I2(freq[10]),
+        .O(adj_Pinc_byfreq0__67_carry__1_i_2_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__1_i_3
-       (.I0(w_MODEfreq0__0_n_100),
-        .I1(w_MODEfreq0__0_n_98),
-        .I2(w_MODEfreq0__0_n_96),
-        .O(adj_Pinc_byfreq0__89_carry__1_i_3_n_0));
-  (* HLUTNM = "lutpair3" *) 
+    .INIT(8'hB2)) 
+    adj_Pinc_byfreq0__67_carry__1_i_3
+       (.I0(freq[11]),
+        .I1(freq[9]),
+        .I2(freq[7]),
+        .O(adj_Pinc_byfreq0__67_carry__1_i_3_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__1_i_4
-       (.I0(w_MODEfreq0__0_n_101),
-        .I1(w_MODEfreq0__0_n_99),
-        .I2(w_MODEfreq0__0_n_97),
-        .O(adj_Pinc_byfreq0__89_carry__1_i_4_n_0));
-  (* HLUTNM = "lutpair7" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__1_i_5
-       (.I0(w_MODEfreq0__0_n_97),
-        .I1(w_MODEfreq0__0_n_95),
-        .I2(w_MODEfreq0__0_n_93),
-        .I3(adj_Pinc_byfreq0__89_carry__1_i_1_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__1_i_5_n_0));
-  (* HLUTNM = "lutpair6" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__1_i_6
-       (.I0(w_MODEfreq0__0_n_98),
-        .I1(w_MODEfreq0__0_n_96),
-        .I2(w_MODEfreq0__0_n_94),
-        .I3(adj_Pinc_byfreq0__89_carry__1_i_2_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__1_i_6_n_0));
-  (* HLUTNM = "lutpair5" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__1_i_7
-       (.I0(w_MODEfreq0__0_n_99),
-        .I1(w_MODEfreq0__0_n_97),
-        .I2(w_MODEfreq0__0_n_95),
-        .I3(adj_Pinc_byfreq0__89_carry__1_i_3_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__1_i_7_n_0));
-  (* HLUTNM = "lutpair4" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__1_i_8
-       (.I0(w_MODEfreq0__0_n_100),
-        .I1(w_MODEfreq0__0_n_98),
-        .I2(w_MODEfreq0__0_n_96),
-        .I3(adj_Pinc_byfreq0__89_carry__1_i_4_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__1_i_8_n_0));
-  CARRY4 adj_Pinc_byfreq0__89_carry__2
-       (.CI(adj_Pinc_byfreq0__89_carry__1_n_0),
-        .CO({adj_Pinc_byfreq0__89_carry__2_n_0,adj_Pinc_byfreq0__89_carry__2_n_1,adj_Pinc_byfreq0__89_carry__2_n_2,adj_Pinc_byfreq0__89_carry__2_n_3}),
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__67_carry__1_i_4
+       (.I0(freq[10]),
+        .I1(freq[6]),
+        .I2(freq[8]),
+        .O(adj_Pinc_byfreq0__67_carry__1_i_4_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__67_carry__1_i_5
+       (.I0(freq[11]),
+        .I1(freq[13]),
+        .I2(freq[9]),
+        .I3(freq[12]),
+        .I4(freq[10]),
+        .I5(freq[14]),
+        .O(adj_Pinc_byfreq0__67_carry__1_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__67_carry__1_i_6
+       (.I0(freq[10]),
+        .I1(freq[12]),
+        .I2(freq[8]),
+        .I3(freq[9]),
+        .I4(freq[11]),
+        .I5(freq[13]),
+        .O(adj_Pinc_byfreq0__67_carry__1_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hB24D4DB24DB2B24D)) 
+    adj_Pinc_byfreq0__67_carry__1_i_7
+       (.I0(freq[7]),
+        .I1(freq[9]),
+        .I2(freq[11]),
+        .I3(freq[8]),
+        .I4(freq[10]),
+        .I5(freq[12]),
+        .O(adj_Pinc_byfreq0__67_carry__1_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__67_carry__1_i_8
+       (.I0(freq[8]),
+        .I1(freq[6]),
+        .I2(freq[10]),
+        .I3(freq[9]),
+        .I4(freq[7]),
+        .I5(freq[11]),
+        .O(adj_Pinc_byfreq0__67_carry__1_i_8_n_0));
+  CARRY4 adj_Pinc_byfreq0__67_carry__2
+       (.CI(adj_Pinc_byfreq0__67_carry__1_n_0),
+        .CO({adj_Pinc_byfreq0__67_carry__2_n_0,adj_Pinc_byfreq0__67_carry__2_n_1,adj_Pinc_byfreq0__67_carry__2_n_2,adj_Pinc_byfreq0__67_carry__2_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__89_carry__2_i_1_n_0,adj_Pinc_byfreq0__89_carry__2_i_2_n_0,adj_Pinc_byfreq0__89_carry__2_i_3_n_0,adj_Pinc_byfreq0__89_carry__2_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__89_carry__2_n_4,adj_Pinc_byfreq0__89_carry__2_n_5,adj_Pinc_byfreq0__89_carry__2_n_6,adj_Pinc_byfreq0__89_carry__2_n_7}),
-        .S({adj_Pinc_byfreq0__89_carry__2_i_5_n_0,adj_Pinc_byfreq0__89_carry__2_i_6_n_0,adj_Pinc_byfreq0__89_carry__2_i_7_n_0,adj_Pinc_byfreq0__89_carry__2_i_8_n_0}));
-  (* HLUTNM = "lutpair10" *) 
+        .DI({adj_Pinc_byfreq0__67_carry__2_i_1_n_0,adj_Pinc_byfreq0__67_carry__2_i_2_n_0,adj_Pinc_byfreq0__67_carry__2_i_3_n_0,adj_Pinc_byfreq0__67_carry__2_i_4_n_0}),
+        .O({adj_Pinc_byfreq0__67_carry__2_n_4,adj_Pinc_byfreq0__67_carry__2_n_5,adj_Pinc_byfreq0__67_carry__2_n_6,adj_Pinc_byfreq0__67_carry__2_n_7}),
+        .S({adj_Pinc_byfreq0__67_carry__2_i_5_n_0,adj_Pinc_byfreq0__67_carry__2_i_6_n_0,adj_Pinc_byfreq0__67_carry__2_i_7_n_0,adj_Pinc_byfreq0__67_carry__2_i_8_n_0}));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__2_i_1
-       (.I0(w_MODEfreq0__0_n_94),
-        .I1(w_MODEfreq0__0_n_92),
-        .I2(w_MODEfreq0__0_n_90),
-        .O(adj_Pinc_byfreq0__89_carry__2_i_1_n_0));
-  (* HLUTNM = "lutpair9" *) 
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__67_carry__2_i_1
+       (.I0(freq[13]),
+        .I1(freq[17]),
+        .I2(freq[15]),
+        .O(adj_Pinc_byfreq0__67_carry__2_i_1_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__2_i_2
-       (.I0(w_MODEfreq0__0_n_95),
-        .I1(w_MODEfreq0__0_n_93),
-        .I2(w_MODEfreq0__0_n_91),
-        .O(adj_Pinc_byfreq0__89_carry__2_i_2_n_0));
-  (* HLUTNM = "lutpair8" *) 
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__67_carry__2_i_2
+       (.I0(freq[12]),
+        .I1(freq[16]),
+        .I2(freq[14]),
+        .O(adj_Pinc_byfreq0__67_carry__2_i_2_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__2_i_3
-       (.I0(w_MODEfreq0__0_n_96),
-        .I1(w_MODEfreq0__0_n_94),
-        .I2(w_MODEfreq0__0_n_92),
-        .O(adj_Pinc_byfreq0__89_carry__2_i_3_n_0));
-  (* HLUTNM = "lutpair7" *) 
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__67_carry__2_i_3
+       (.I0(freq[15]),
+        .I1(freq[11]),
+        .I2(freq[13]),
+        .O(adj_Pinc_byfreq0__67_carry__2_i_3_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__2_i_4
-       (.I0(w_MODEfreq0__0_n_97),
-        .I1(w_MODEfreq0__0_n_95),
-        .I2(w_MODEfreq0__0_n_93),
-        .O(adj_Pinc_byfreq0__89_carry__2_i_4_n_0));
-  (* HLUTNM = "lutpair11" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__2_i_5
-       (.I0(w_MODEfreq0__0_n_93),
-        .I1(w_MODEfreq0__0_n_91),
-        .I2(w_MODEfreq0_carry_n_7),
-        .I3(adj_Pinc_byfreq0__89_carry__2_i_1_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__2_i_5_n_0));
-  (* HLUTNM = "lutpair10" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__2_i_6
-       (.I0(w_MODEfreq0__0_n_94),
-        .I1(w_MODEfreq0__0_n_92),
-        .I2(w_MODEfreq0__0_n_90),
-        .I3(adj_Pinc_byfreq0__89_carry__2_i_2_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__2_i_6_n_0));
-  (* HLUTNM = "lutpair9" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__2_i_7
-       (.I0(w_MODEfreq0__0_n_95),
-        .I1(w_MODEfreq0__0_n_93),
-        .I2(w_MODEfreq0__0_n_91),
-        .I3(adj_Pinc_byfreq0__89_carry__2_i_3_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__2_i_7_n_0));
-  (* HLUTNM = "lutpair8" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__2_i_8
-       (.I0(w_MODEfreq0__0_n_96),
-        .I1(w_MODEfreq0__0_n_94),
-        .I2(w_MODEfreq0__0_n_92),
-        .I3(adj_Pinc_byfreq0__89_carry__2_i_4_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__2_i_8_n_0));
-  CARRY4 adj_Pinc_byfreq0__89_carry__3
-       (.CI(adj_Pinc_byfreq0__89_carry__2_n_0),
-        .CO({adj_Pinc_byfreq0__89_carry__3_n_0,adj_Pinc_byfreq0__89_carry__3_n_1,adj_Pinc_byfreq0__89_carry__3_n_2,adj_Pinc_byfreq0__89_carry__3_n_3}),
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__67_carry__2_i_4
+       (.I0(freq[14]),
+        .I1(freq[10]),
+        .I2(freq[12]),
+        .O(adj_Pinc_byfreq0__67_carry__2_i_4_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__67_carry__2_i_5
+       (.I0(freq[15]),
+        .I1(freq[17]),
+        .I2(freq[13]),
+        .I3(freq[16]),
+        .I4(freq[14]),
+        .I5(freq[18]),
+        .O(adj_Pinc_byfreq0__67_carry__2_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__67_carry__2_i_6
+       (.I0(freq[14]),
+        .I1(freq[16]),
+        .I2(freq[12]),
+        .I3(freq[13]),
+        .I4(freq[15]),
+        .I5(freq[17]),
+        .O(adj_Pinc_byfreq0__67_carry__2_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__67_carry__2_i_7
+       (.I0(freq[13]),
+        .I1(freq[11]),
+        .I2(freq[15]),
+        .I3(freq[12]),
+        .I4(freq[14]),
+        .I5(freq[16]),
+        .O(adj_Pinc_byfreq0__67_carry__2_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__67_carry__2_i_8
+       (.I0(freq[12]),
+        .I1(freq[10]),
+        .I2(freq[14]),
+        .I3(freq[13]),
+        .I4(freq[11]),
+        .I5(freq[15]),
+        .O(adj_Pinc_byfreq0__67_carry__2_i_8_n_0));
+  CARRY4 adj_Pinc_byfreq0__67_carry__3
+       (.CI(adj_Pinc_byfreq0__67_carry__2_n_0),
+        .CO({adj_Pinc_byfreq0__67_carry__3_n_0,adj_Pinc_byfreq0__67_carry__3_n_1,adj_Pinc_byfreq0__67_carry__3_n_2,adj_Pinc_byfreq0__67_carry__3_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__89_carry__3_i_1_n_0,adj_Pinc_byfreq0__89_carry__3_i_2_n_0,adj_Pinc_byfreq0__89_carry__3_i_3_n_0,adj_Pinc_byfreq0__89_carry__3_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__89_carry__3_n_4,adj_Pinc_byfreq0__89_carry__3_n_5,adj_Pinc_byfreq0__89_carry__3_n_6,adj_Pinc_byfreq0__89_carry__3_n_7}),
-        .S({adj_Pinc_byfreq0__89_carry__3_i_5_n_0,adj_Pinc_byfreq0__89_carry__3_i_6_n_0,adj_Pinc_byfreq0__89_carry__3_i_7_n_0,adj_Pinc_byfreq0__89_carry__3_i_8_n_0}));
-  (* HLUTNM = "lutpair14" *) 
+        .DI({adj_Pinc_byfreq0__67_carry__3_i_1_n_0,adj_Pinc_byfreq0__67_carry__3_i_2_n_0,adj_Pinc_byfreq0__67_carry__3_i_3_n_0,adj_Pinc_byfreq0__67_carry__3_i_4_n_0}),
+        .O({adj_Pinc_byfreq0__67_carry__3_n_4,adj_Pinc_byfreq0__67_carry__3_n_5,adj_Pinc_byfreq0__67_carry__3_n_6,adj_Pinc_byfreq0__67_carry__3_n_7}),
+        .S({adj_Pinc_byfreq0__67_carry__3_i_5_n_0,adj_Pinc_byfreq0__67_carry__3_i_6_n_0,adj_Pinc_byfreq0__67_carry__3_i_7_n_0,adj_Pinc_byfreq0__67_carry__3_i_8_n_0}));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__3_i_1
-       (.I0(w_MODEfreq0__0_n_90),
-        .I1(w_MODEfreq0_carry_n_6),
-        .I2(w_MODEfreq0_carry_n_4),
-        .O(adj_Pinc_byfreq0__89_carry__3_i_1_n_0));
-  (* HLUTNM = "lutpair13" *) 
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__67_carry__3_i_1
+       (.I0(freq[17]),
+        .I1(freq[21]),
+        .I2(freq[19]),
+        .O(adj_Pinc_byfreq0__67_carry__3_i_1_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__3_i_2
-       (.I0(w_MODEfreq0__0_n_91),
-        .I1(w_MODEfreq0_carry_n_7),
-        .I2(w_MODEfreq0_carry_n_5),
-        .O(adj_Pinc_byfreq0__89_carry__3_i_2_n_0));
-  (* HLUTNM = "lutpair12" *) 
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__67_carry__3_i_2
+       (.I0(freq[16]),
+        .I1(freq[20]),
+        .I2(freq[18]),
+        .O(adj_Pinc_byfreq0__67_carry__3_i_2_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__3_i_3
-       (.I0(w_MODEfreq0__0_n_92),
-        .I1(w_MODEfreq0__0_n_90),
-        .I2(w_MODEfreq0_carry_n_6),
-        .O(adj_Pinc_byfreq0__89_carry__3_i_3_n_0));
-  (* HLUTNM = "lutpair11" *) 
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__67_carry__3_i_3
+       (.I0(freq[19]),
+        .I1(freq[15]),
+        .I2(freq[17]),
+        .O(adj_Pinc_byfreq0__67_carry__3_i_3_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__3_i_4
-       (.I0(w_MODEfreq0__0_n_93),
-        .I1(w_MODEfreq0__0_n_91),
-        .I2(w_MODEfreq0_carry_n_7),
-        .O(adj_Pinc_byfreq0__89_carry__3_i_4_n_0));
-  (* HLUTNM = "lutpair15" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__3_i_5
-       (.I0(w_MODEfreq0_carry_n_7),
-        .I1(w_MODEfreq0_carry_n_5),
-        .I2(w_MODEfreq0_carry__0_n_7),
-        .I3(adj_Pinc_byfreq0__89_carry__3_i_1_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__3_i_5_n_0));
-  (* HLUTNM = "lutpair14" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__3_i_6
-       (.I0(w_MODEfreq0__0_n_90),
-        .I1(w_MODEfreq0_carry_n_6),
-        .I2(w_MODEfreq0_carry_n_4),
-        .I3(adj_Pinc_byfreq0__89_carry__3_i_2_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__3_i_6_n_0));
-  (* HLUTNM = "lutpair13" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__3_i_7
-       (.I0(w_MODEfreq0__0_n_91),
-        .I1(w_MODEfreq0_carry_n_7),
-        .I2(w_MODEfreq0_carry_n_5),
-        .I3(adj_Pinc_byfreq0__89_carry__3_i_3_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__3_i_7_n_0));
-  (* HLUTNM = "lutpair12" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__3_i_8
-       (.I0(w_MODEfreq0__0_n_92),
-        .I1(w_MODEfreq0__0_n_90),
-        .I2(w_MODEfreq0_carry_n_6),
-        .I3(adj_Pinc_byfreq0__89_carry__3_i_4_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__3_i_8_n_0));
-  CARRY4 adj_Pinc_byfreq0__89_carry__4
-       (.CI(adj_Pinc_byfreq0__89_carry__3_n_0),
-        .CO({adj_Pinc_byfreq0__89_carry__4_n_0,adj_Pinc_byfreq0__89_carry__4_n_1,adj_Pinc_byfreq0__89_carry__4_n_2,adj_Pinc_byfreq0__89_carry__4_n_3}),
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__67_carry__3_i_4
+       (.I0(freq[18]),
+        .I1(freq[14]),
+        .I2(freq[16]),
+        .O(adj_Pinc_byfreq0__67_carry__3_i_4_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__67_carry__3_i_5
+       (.I0(freq[19]),
+        .I1(freq[21]),
+        .I2(freq[17]),
+        .I3(freq[20]),
+        .I4(freq[18]),
+        .I5(freq[22]),
+        .O(adj_Pinc_byfreq0__67_carry__3_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__67_carry__3_i_6
+       (.I0(freq[18]),
+        .I1(freq[20]),
+        .I2(freq[16]),
+        .I3(freq[17]),
+        .I4(freq[19]),
+        .I5(freq[21]),
+        .O(adj_Pinc_byfreq0__67_carry__3_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__67_carry__3_i_7
+       (.I0(freq[17]),
+        .I1(freq[15]),
+        .I2(freq[19]),
+        .I3(freq[16]),
+        .I4(freq[18]),
+        .I5(freq[20]),
+        .O(adj_Pinc_byfreq0__67_carry__3_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__67_carry__3_i_8
+       (.I0(freq[16]),
+        .I1(freq[14]),
+        .I2(freq[18]),
+        .I3(freq[17]),
+        .I4(freq[15]),
+        .I5(freq[19]),
+        .O(adj_Pinc_byfreq0__67_carry__3_i_8_n_0));
+  CARRY4 adj_Pinc_byfreq0__67_carry__4
+       (.CI(adj_Pinc_byfreq0__67_carry__3_n_0),
+        .CO({adj_Pinc_byfreq0__67_carry__4_n_0,adj_Pinc_byfreq0__67_carry__4_n_1,adj_Pinc_byfreq0__67_carry__4_n_2,adj_Pinc_byfreq0__67_carry__4_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__89_carry__4_i_1_n_0,adj_Pinc_byfreq0__89_carry__4_i_2_n_0,adj_Pinc_byfreq0__89_carry__4_i_3_n_0,adj_Pinc_byfreq0__89_carry__4_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__89_carry__4_n_4,adj_Pinc_byfreq0__89_carry__4_n_5,adj_Pinc_byfreq0__89_carry__4_n_6,adj_Pinc_byfreq0__89_carry__4_n_7}),
-        .S({adj_Pinc_byfreq0__89_carry__4_i_5_n_0,adj_Pinc_byfreq0__89_carry__4_i_6_n_0,adj_Pinc_byfreq0__89_carry__4_i_7_n_0,adj_Pinc_byfreq0__89_carry__4_i_8_n_0}));
-  (* HLUTNM = "lutpair18" *) 
+        .DI({adj_Pinc_byfreq0__67_carry__4_i_1_n_0,adj_Pinc_byfreq0__67_carry__4_i_2_n_0,adj_Pinc_byfreq0__67_carry__4_i_3_n_0,adj_Pinc_byfreq0__67_carry__4_i_4_n_0}),
+        .O({adj_Pinc_byfreq0__67_carry__4_n_4,adj_Pinc_byfreq0__67_carry__4_n_5,adj_Pinc_byfreq0__67_carry__4_n_6,adj_Pinc_byfreq0__67_carry__4_n_7}),
+        .S({adj_Pinc_byfreq0__67_carry__4_i_5_n_0,adj_Pinc_byfreq0__67_carry__4_i_6_n_0,adj_Pinc_byfreq0__67_carry__4_i_7_n_0,adj_Pinc_byfreq0__67_carry__4_i_8_n_0}));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__4_i_1
-       (.I0(w_MODEfreq0_carry_n_4),
-        .I1(w_MODEfreq0_carry__0_n_6),
-        .I2(w_MODEfreq0_carry__0_n_4),
-        .O(adj_Pinc_byfreq0__89_carry__4_i_1_n_0));
-  (* HLUTNM = "lutpair17" *) 
+    .INIT(8'hB2)) 
+    adj_Pinc_byfreq0__67_carry__4_i_1
+       (.I0(freq[25]),
+        .I1(freq[23]),
+        .I2(freq[21]),
+        .O(adj_Pinc_byfreq0__67_carry__4_i_1_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__4_i_2
-       (.I0(w_MODEfreq0_carry_n_5),
-        .I1(w_MODEfreq0_carry__0_n_7),
-        .I2(w_MODEfreq0_carry__0_n_5),
-        .O(adj_Pinc_byfreq0__89_carry__4_i_2_n_0));
-  (* HLUTNM = "lutpair16" *) 
+    .INIT(8'hB2)) 
+    adj_Pinc_byfreq0__67_carry__4_i_2
+       (.I0(freq[24]),
+        .I1(freq[22]),
+        .I2(freq[20]),
+        .O(adj_Pinc_byfreq0__67_carry__4_i_2_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__4_i_3
-       (.I0(w_MODEfreq0_carry_n_6),
-        .I1(w_MODEfreq0_carry_n_4),
-        .I2(w_MODEfreq0_carry__0_n_6),
-        .O(adj_Pinc_byfreq0__89_carry__4_i_3_n_0));
-  (* HLUTNM = "lutpair15" *) 
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__67_carry__4_i_3
+       (.I0(freq[23]),
+        .I1(freq[19]),
+        .I2(freq[21]),
+        .O(adj_Pinc_byfreq0__67_carry__4_i_3_n_0));
   LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__4_i_4
-       (.I0(w_MODEfreq0_carry_n_7),
-        .I1(w_MODEfreq0_carry_n_5),
-        .I2(w_MODEfreq0_carry__0_n_7),
-        .O(adj_Pinc_byfreq0__89_carry__4_i_4_n_0));
-  (* HLUTNM = "lutpair19" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__4_i_5
-       (.I0(w_MODEfreq0_carry__0_n_7),
-        .I1(w_MODEfreq0_carry__0_n_5),
-        .I2(w_MODEfreq0_carry__1_n_7),
-        .I3(adj_Pinc_byfreq0__89_carry__4_i_1_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__4_i_5_n_0));
-  (* HLUTNM = "lutpair18" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__4_i_6
-       (.I0(w_MODEfreq0_carry_n_4),
-        .I1(w_MODEfreq0_carry__0_n_6),
-        .I2(w_MODEfreq0_carry__0_n_4),
-        .I3(adj_Pinc_byfreq0__89_carry__4_i_2_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__4_i_6_n_0));
-  (* HLUTNM = "lutpair17" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__4_i_7
-       (.I0(w_MODEfreq0_carry_n_5),
-        .I1(w_MODEfreq0_carry__0_n_7),
-        .I2(w_MODEfreq0_carry__0_n_5),
-        .I3(adj_Pinc_byfreq0__89_carry__4_i_3_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__4_i_7_n_0));
-  (* HLUTNM = "lutpair16" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__4_i_8
-       (.I0(w_MODEfreq0_carry_n_6),
-        .I1(w_MODEfreq0_carry_n_4),
-        .I2(w_MODEfreq0_carry__0_n_6),
-        .I3(adj_Pinc_byfreq0__89_carry__4_i_4_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__4_i_8_n_0));
-  CARRY4 adj_Pinc_byfreq0__89_carry__5
-       (.CI(adj_Pinc_byfreq0__89_carry__4_n_0),
-        .CO({adj_Pinc_byfreq0__89_carry__5_n_0,adj_Pinc_byfreq0__89_carry__5_n_1,adj_Pinc_byfreq0__89_carry__5_n_2,adj_Pinc_byfreq0__89_carry__5_n_3}),
+    .INIT(8'h8E)) 
+    adj_Pinc_byfreq0__67_carry__4_i_4
+       (.I0(freq[22]),
+        .I1(freq[18]),
+        .I2(freq[20]),
+        .O(adj_Pinc_byfreq0__67_carry__4_i_4_n_0));
+  LUT5 #(
+    .INIT(32'h4DB2B24D)) 
+    adj_Pinc_byfreq0__67_carry__4_i_5
+       (.I0(freq[21]),
+        .I1(freq[23]),
+        .I2(freq[25]),
+        .I3(freq[24]),
+        .I4(freq[22]),
+        .O(adj_Pinc_byfreq0__67_carry__4_i_5_n_0));
+  LUT6 #(
+    .INIT(64'hB24D4DB24DB2B24D)) 
+    adj_Pinc_byfreq0__67_carry__4_i_6
+       (.I0(freq[20]),
+        .I1(freq[22]),
+        .I2(freq[24]),
+        .I3(freq[23]),
+        .I4(freq[21]),
+        .I5(freq[25]),
+        .O(adj_Pinc_byfreq0__67_carry__4_i_6_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__67_carry__4_i_7
+       (.I0(freq[21]),
+        .I1(freq[19]),
+        .I2(freq[23]),
+        .I3(freq[22]),
+        .I4(freq[20]),
+        .I5(freq[24]),
+        .O(adj_Pinc_byfreq0__67_carry__4_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hD42B2BD42BD4D42B)) 
+    adj_Pinc_byfreq0__67_carry__4_i_8
+       (.I0(freq[20]),
+        .I1(freq[18]),
+        .I2(freq[22]),
+        .I3(freq[21]),
+        .I4(freq[19]),
+        .I5(freq[23]),
+        .O(adj_Pinc_byfreq0__67_carry__4_i_8_n_0));
+  CARRY4 adj_Pinc_byfreq0__67_carry__5
+       (.CI(adj_Pinc_byfreq0__67_carry__4_n_0),
+        .CO({adj_Pinc_byfreq0__67_carry__5_n_0,adj_Pinc_byfreq0__67_carry__5_n_1,adj_Pinc_byfreq0__67_carry__5_n_2,adj_Pinc_byfreq0__67_carry__5_n_3}),
         .CYINIT(1'b0),
-        .DI({adj_Pinc_byfreq0__89_carry__5_i_1_n_0,adj_Pinc_byfreq0__89_carry__5_i_2_n_0,adj_Pinc_byfreq0__89_carry__5_i_3_n_0,adj_Pinc_byfreq0__89_carry__5_i_4_n_0}),
-        .O({adj_Pinc_byfreq0__89_carry__5_n_4,adj_Pinc_byfreq0__89_carry__5_n_5,adj_Pinc_byfreq0__89_carry__5_n_6,adj_Pinc_byfreq0__89_carry__5_n_7}),
-        .S({adj_Pinc_byfreq0__89_carry__5_i_5_n_0,adj_Pinc_byfreq0__89_carry__5_i_6_n_0,adj_Pinc_byfreq0__89_carry__5_i_7_n_0,adj_Pinc_byfreq0__89_carry__5_i_8_n_0}));
+        .DI({freq[25:24],adj_Pinc_byfreq0__67_carry__5_i_1_n_0,adj_Pinc_byfreq0__67_carry__5_i_2_n_0}),
+        .O({adj_Pinc_byfreq0__67_carry__5_n_4,adj_Pinc_byfreq0__67_carry__5_n_5,adj_Pinc_byfreq0__67_carry__5_n_6,adj_Pinc_byfreq0__67_carry__5_n_7}),
+        .S({adj_Pinc_byfreq0__67_carry__5_i_3_n_0,adj_Pinc_byfreq0__67_carry__5_i_4_n_0,adj_Pinc_byfreq0__67_carry__5_i_5_n_0,adj_Pinc_byfreq0__67_carry__5_i_6_n_0}));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__67_carry__5_i_1
+       (.I0(freq[23]),
+        .I1(freq[25]),
+        .O(adj_Pinc_byfreq0__67_carry__5_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__67_carry__5_i_2
+       (.I0(freq[22]),
+        .I1(freq[24]),
+        .O(adj_Pinc_byfreq0__67_carry__5_i_2_n_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    adj_Pinc_byfreq0__67_carry__5_i_3
+       (.I0(freq[25]),
+        .O(adj_Pinc_byfreq0__67_carry__5_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0__67_carry__5_i_4
+       (.I0(freq[24]),
+        .I1(freq[25]),
+        .O(adj_Pinc_byfreq0__67_carry__5_i_4_n_0));
+  LUT3 #(
+    .INIT(8'h4B)) 
+    adj_Pinc_byfreq0__67_carry__5_i_5
+       (.I0(freq[25]),
+        .I1(freq[23]),
+        .I2(freq[24]),
+        .O(adj_Pinc_byfreq0__67_carry__5_i_5_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__67_carry__5_i_6
+       (.I0(freq[24]),
+        .I1(freq[22]),
+        .I2(freq[25]),
+        .I3(freq[23]),
+        .O(adj_Pinc_byfreq0__67_carry__5_i_6_n_0));
+  LUT2 #(
+    .INIT(4'h2)) 
+    adj_Pinc_byfreq0__67_carry_i_1
+       (.I0(freq[5]),
+        .I1(freq[3]),
+        .O(adj_Pinc_byfreq0__67_carry_i_1_n_0));
+  LUT4 #(
+    .INIT(16'hB44B)) 
+    adj_Pinc_byfreq0__67_carry_i_2
+       (.I0(freq[3]),
+        .I1(freq[5]),
+        .I2(freq[6]),
+        .I3(freq[4]),
+        .O(adj_Pinc_byfreq0__67_carry_i_2_n_0));
+  LUT3 #(
+    .INIT(8'h69)) 
+    adj_Pinc_byfreq0__67_carry_i_3
+       (.I0(freq[4]),
+        .I1(freq[5]),
+        .I2(freq[3]),
+        .O(adj_Pinc_byfreq0__67_carry_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0__67_carry_i_4
+       (.I0(freq[4]),
+        .I1(freq[3]),
+        .O(adj_Pinc_byfreq0__67_carry_i_4_n_0));
+  CARRY4 adj_Pinc_byfreq0_carry
+       (.CI(1'b0),
+        .CO({adj_Pinc_byfreq0_carry_n_0,adj_Pinc_byfreq0_carry_n_1,adj_Pinc_byfreq0_carry_n_2,adj_Pinc_byfreq0_carry_n_3}),
+        .CYINIT(1'b1),
+        .DI({freq[3],1'b0,1'b0,1'b0}),
+        .O(NLW_adj_Pinc_byfreq0_carry_O_UNCONNECTED[3:0]),
+        .S({adj_Pinc_byfreq0_carry_i_1_n_0,adj_Pinc_byfreq0_carry_i_2_n_0,adj_Pinc_byfreq0_carry_i_3_n_0,adj_Pinc_byfreq0_carry_i_4_n_0}));
+  CARRY4 adj_Pinc_byfreq0_carry__0
+       (.CI(adj_Pinc_byfreq0_carry_n_0),
+        .CO({adj_Pinc_byfreq0_carry__0_n_0,adj_Pinc_byfreq0_carry__0_n_1,adj_Pinc_byfreq0_carry__0_n_2,adj_Pinc_byfreq0_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI(freq[7:4]),
+        .O({adj_Pinc_byfreq0_carry__0_n_4,adj_Pinc_byfreq0_carry__0_n_5,adj_Pinc_byfreq0_carry__0_n_6,adj_Pinc_byfreq0_carry__0_n_7}),
+        .S({adj_Pinc_byfreq0_carry__0_i_1_n_0,adj_Pinc_byfreq0_carry__0_i_2_n_0,adj_Pinc_byfreq0_carry__0_i_3_n_0,adj_Pinc_byfreq0_carry__0_i_4_n_0}));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__0_i_1
+       (.I0(freq[7]),
+        .I1(freq[10]),
+        .O(adj_Pinc_byfreq0_carry__0_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__0_i_2
+       (.I0(freq[6]),
+        .I1(freq[9]),
+        .O(adj_Pinc_byfreq0_carry__0_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__0_i_3
+       (.I0(freq[5]),
+        .I1(freq[8]),
+        .O(adj_Pinc_byfreq0_carry__0_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__0_i_4
+       (.I0(freq[4]),
+        .I1(freq[7]),
+        .O(adj_Pinc_byfreq0_carry__0_i_4_n_0));
+  CARRY4 adj_Pinc_byfreq0_carry__1
+       (.CI(adj_Pinc_byfreq0_carry__0_n_0),
+        .CO({adj_Pinc_byfreq0_carry__1_n_0,adj_Pinc_byfreq0_carry__1_n_1,adj_Pinc_byfreq0_carry__1_n_2,adj_Pinc_byfreq0_carry__1_n_3}),
+        .CYINIT(1'b0),
+        .DI(freq[11:8]),
+        .O({adj_Pinc_byfreq0_carry__1_n_4,adj_Pinc_byfreq0_carry__1_n_5,adj_Pinc_byfreq0_carry__1_n_6,adj_Pinc_byfreq0_carry__1_n_7}),
+        .S({adj_Pinc_byfreq0_carry__1_i_1_n_0,adj_Pinc_byfreq0_carry__1_i_2_n_0,adj_Pinc_byfreq0_carry__1_i_3_n_0,adj_Pinc_byfreq0_carry__1_i_4_n_0}));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__1_i_1
+       (.I0(freq[11]),
+        .I1(freq[14]),
+        .O(adj_Pinc_byfreq0_carry__1_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__1_i_2
+       (.I0(freq[10]),
+        .I1(freq[13]),
+        .O(adj_Pinc_byfreq0_carry__1_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__1_i_3
+       (.I0(freq[9]),
+        .I1(freq[12]),
+        .O(adj_Pinc_byfreq0_carry__1_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__1_i_4
+       (.I0(freq[8]),
+        .I1(freq[11]),
+        .O(adj_Pinc_byfreq0_carry__1_i_4_n_0));
+  CARRY4 adj_Pinc_byfreq0_carry__2
+       (.CI(adj_Pinc_byfreq0_carry__1_n_0),
+        .CO({adj_Pinc_byfreq0_carry__2_n_0,adj_Pinc_byfreq0_carry__2_n_1,adj_Pinc_byfreq0_carry__2_n_2,adj_Pinc_byfreq0_carry__2_n_3}),
+        .CYINIT(1'b0),
+        .DI(freq[15:12]),
+        .O({adj_Pinc_byfreq0_carry__2_n_4,adj_Pinc_byfreq0_carry__2_n_5,adj_Pinc_byfreq0_carry__2_n_6,adj_Pinc_byfreq0_carry__2_n_7}),
+        .S({adj_Pinc_byfreq0_carry__2_i_1_n_0,adj_Pinc_byfreq0_carry__2_i_2_n_0,adj_Pinc_byfreq0_carry__2_i_3_n_0,adj_Pinc_byfreq0_carry__2_i_4_n_0}));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__2_i_1
+       (.I0(freq[15]),
+        .I1(freq[18]),
+        .O(adj_Pinc_byfreq0_carry__2_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__2_i_2
+       (.I0(freq[14]),
+        .I1(freq[17]),
+        .O(adj_Pinc_byfreq0_carry__2_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__2_i_3
+       (.I0(freq[13]),
+        .I1(freq[16]),
+        .O(adj_Pinc_byfreq0_carry__2_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__2_i_4
+       (.I0(freq[12]),
+        .I1(freq[15]),
+        .O(adj_Pinc_byfreq0_carry__2_i_4_n_0));
+  CARRY4 adj_Pinc_byfreq0_carry__3
+       (.CI(adj_Pinc_byfreq0_carry__2_n_0),
+        .CO({adj_Pinc_byfreq0_carry__3_n_0,adj_Pinc_byfreq0_carry__3_n_1,adj_Pinc_byfreq0_carry__3_n_2,adj_Pinc_byfreq0_carry__3_n_3}),
+        .CYINIT(1'b0),
+        .DI(freq[19:16]),
+        .O({adj_Pinc_byfreq0_carry__3_n_4,adj_Pinc_byfreq0_carry__3_n_5,adj_Pinc_byfreq0_carry__3_n_6,adj_Pinc_byfreq0_carry__3_n_7}),
+        .S({adj_Pinc_byfreq0_carry__3_i_1_n_0,adj_Pinc_byfreq0_carry__3_i_2_n_0,adj_Pinc_byfreq0_carry__3_i_3_n_0,adj_Pinc_byfreq0_carry__3_i_4_n_0}));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__3_i_1
+       (.I0(freq[19]),
+        .I1(freq[22]),
+        .O(adj_Pinc_byfreq0_carry__3_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__3_i_2
+       (.I0(freq[18]),
+        .I1(freq[21]),
+        .O(adj_Pinc_byfreq0_carry__3_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__3_i_3
+       (.I0(freq[17]),
+        .I1(freq[20]),
+        .O(adj_Pinc_byfreq0_carry__3_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__3_i_4
+       (.I0(freq[16]),
+        .I1(freq[19]),
+        .O(adj_Pinc_byfreq0_carry__3_i_4_n_0));
+  CARRY4 adj_Pinc_byfreq0_carry__4
+       (.CI(adj_Pinc_byfreq0_carry__3_n_0),
+        .CO({adj_Pinc_byfreq0_carry__4_n_0,adj_Pinc_byfreq0_carry__4_n_1,adj_Pinc_byfreq0_carry__4_n_2,adj_Pinc_byfreq0_carry__4_n_3}),
+        .CYINIT(1'b0),
+        .DI(freq[23:20]),
+        .O({adj_Pinc_byfreq0_carry__4_n_4,adj_Pinc_byfreq0_carry__4_n_5,adj_Pinc_byfreq0_carry__4_n_6,adj_Pinc_byfreq0_carry__4_n_7}),
+        .S({adj_Pinc_byfreq0_carry__4_i_1_n_0,adj_Pinc_byfreq0_carry__4_i_2_n_0,adj_Pinc_byfreq0_carry__4_i_3_n_0,adj_Pinc_byfreq0_carry__4_i_4_n_0}));
+  LUT1 #(
+    .INIT(2'h1)) 
+    adj_Pinc_byfreq0_carry__4_i_1
+       (.I0(freq[23]),
+        .O(adj_Pinc_byfreq0_carry__4_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__4_i_2
+       (.I0(freq[22]),
+        .I1(freq[25]),
+        .O(adj_Pinc_byfreq0_carry__4_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__4_i_3
+       (.I0(freq[21]),
+        .I1(freq[24]),
+        .O(adj_Pinc_byfreq0_carry__4_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry__4_i_4
+       (.I0(freq[20]),
+        .I1(freq[23]),
+        .O(adj_Pinc_byfreq0_carry__4_i_4_n_0));
+  CARRY4 adj_Pinc_byfreq0_carry__5
+       (.CI(adj_Pinc_byfreq0_carry__4_n_0),
+        .CO({NLW_adj_Pinc_byfreq0_carry__5_CO_UNCONNECTED[3],adj_Pinc_byfreq0_carry__5_n_1,NLW_adj_Pinc_byfreq0_carry__5_CO_UNCONNECTED[1],adj_Pinc_byfreq0_carry__5_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,freq[25:24]}),
+        .O({NLW_adj_Pinc_byfreq0_carry__5_O_UNCONNECTED[3:2],adj_Pinc_byfreq0_carry__5_n_6,adj_Pinc_byfreq0_carry__5_n_7}),
+        .S({1'b0,1'b1,adj_Pinc_byfreq0_carry__5_i_1_n_0,adj_Pinc_byfreq0_carry__5_i_2_n_0}));
+  LUT1 #(
+    .INIT(2'h1)) 
+    adj_Pinc_byfreq0_carry__5_i_1
+       (.I0(freq[25]),
+        .O(adj_Pinc_byfreq0_carry__5_i_1_n_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    adj_Pinc_byfreq0_carry__5_i_2
+       (.I0(freq[24]),
+        .O(adj_Pinc_byfreq0_carry__5_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h9)) 
+    adj_Pinc_byfreq0_carry_i_1
+       (.I0(freq[3]),
+        .I1(freq[6]),
+        .O(adj_Pinc_byfreq0_carry_i_1_n_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    adj_Pinc_byfreq0_carry_i_2
+       (.I0(freq[5]),
+        .O(adj_Pinc_byfreq0_carry_i_2_n_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    adj_Pinc_byfreq0_carry_i_3
+       (.I0(freq[4]),
+        .O(adj_Pinc_byfreq0_carry_i_3_n_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    adj_Pinc_byfreq0_carry_i_4
+       (.I0(freq[3]),
+        .O(adj_Pinc_byfreq0_carry_i_4_n_0));
+  CARRY4 w_MODEfreq0__4_carry
+       (.CI(1'b0),
+        .CO({w_MODEfreq0__4_carry_n_0,w_MODEfreq0__4_carry_n_1,w_MODEfreq0__4_carry_n_2,w_MODEfreq0__4_carry_n_3}),
+        .CYINIT(1'b0),
+        .DI({w_MODEfreq0__4_carry_i_1_n_0,w_MODEfreq0__4_carry_i_2_n_0,w_MODEfreq0__4_carry_i_3_n_0,1'b0}),
+        .O(freq[6:3]),
+        .S({w_MODEfreq0__4_carry_i_4_n_0,w_MODEfreq0__4_carry_i_5_n_0,w_MODEfreq0__4_carry_i_6_n_0,w_MODEfreq0__4_carry_i_7_n_0}));
+  CARRY4 w_MODEfreq0__4_carry__0
+       (.CI(w_MODEfreq0__4_carry_n_0),
+        .CO({w_MODEfreq0__4_carry__0_n_0,w_MODEfreq0__4_carry__0_n_1,w_MODEfreq0__4_carry__0_n_2,w_MODEfreq0__4_carry__0_n_3}),
+        .CYINIT(1'b0),
+        .DI({w_MODEfreq0__4_carry__0_i_1_n_0,w_MODEfreq0__4_carry__0_i_2_n_0,w_MODEfreq0__4_carry__0_i_3_n_0,w_MODEfreq0__4_carry__0_i_4_n_0}),
+        .O(freq[10:7]),
+        .S({w_MODEfreq0__4_carry__0_i_5_n_0,w_MODEfreq0__4_carry__0_i_6_n_0,w_MODEfreq0__4_carry__0_i_7_n_0,w_MODEfreq0__4_carry__0_i_8_n_0}));
+  LUT6 #(
+    .INIT(64'hFFFF066F066F0000)) 
+    w_MODEfreq0__4_carry__0_i_1
+       (.I0(mode_sFREQ[3]),
+        .I1(mode_sFREQ[2]),
+        .I2(mode_sFREQ[5]),
+        .I3(mode_sFREQ[1]),
+        .I4(mode_sFREQ[6]),
+        .I5(w_MODEfreq0__4_carry__0_i_9_n_0),
+        .O(w_MODEfreq0__4_carry__0_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'hBF0BBFBF)) 
+    w_MODEfreq0__4_carry__0_i_10
+       (.I0(mode_sFREQ[5]),
+        .I1(mode_sFREQ[4]),
+        .I2(mode_sFREQ[2]),
+        .I3(mode_sFREQ[1]),
+        .I4(mode_sFREQ[0]),
+        .O(w_MODEfreq0__4_carry__0_i_10_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    w_MODEfreq0__4_carry__0_i_11
+       (.I0(mode_sFREQ[6]),
+        .I1(mode_sFREQ[7]),
+        .O(w_MODEfreq0__4_carry__0_i_11_n_0));
+  LUT6 #(
+    .INIT(64'h6FF6066006600660)) 
+    w_MODEfreq0__4_carry__0_i_12
+       (.I0(mode_sFREQ[1]),
+        .I1(mode_sFREQ[0]),
+        .I2(mode_sFREQ[4]),
+        .I3(mode_sFREQ[5]),
+        .I4(mode_sFREQ[2]),
+        .I5(mode_sFREQ[3]),
+        .O(w_MODEfreq0__4_carry__0_i_12_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    w_MODEfreq0__4_carry__0_i_13
+       (.I0(mode_sFREQ[4]),
+        .I1(mode_sFREQ[5]),
+        .O(w_MODEfreq0__4_carry__0_i_13_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT4 #(
+    .INIT(16'h1771)) 
+    w_MODEfreq0__4_carry__0_i_14
+       (.I0(mode_sFREQ[1]),
+        .I1(mode_sFREQ[5]),
+        .I2(mode_sFREQ[2]),
+        .I3(mode_sFREQ[3]),
+        .O(w_MODEfreq0__4_carry__0_i_14_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT5 #(
+    .INIT(32'h96696996)) 
+    w_MODEfreq0__4_carry__0_i_15
+       (.I0(mode_sFREQ[4]),
+        .I1(mode_sFREQ[5]),
+        .I2(mode_sFREQ[1]),
+        .I3(mode_sFREQ[7]),
+        .I4(mode_sFREQ[6]),
+        .O(w_MODEfreq0__4_carry__0_i_15_n_0));
   LUT2 #(
     .INIT(4'h8)) 
-    adj_Pinc_byfreq0__89_carry__5_i_1
-       (.I0(w_MODEfreq0_carry__1_n_6),
-        .I1(w_MODEfreq0_carry__0_n_4),
-        .O(adj_Pinc_byfreq0__89_carry__5_i_1_n_0));
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__5_i_2
-       (.I0(w_MODEfreq0_carry__0_n_5),
-        .I1(w_MODEfreq0_carry__1_n_7),
-        .I2(w_MODEfreq0_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__89_carry__5_i_2_n_0));
-  (* HLUTNM = "lutpair20" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__5_i_3
-       (.I0(w_MODEfreq0_carry__0_n_6),
-        .I1(w_MODEfreq0_carry__0_n_4),
-        .I2(w_MODEfreq0_carry__1_n_6),
-        .O(adj_Pinc_byfreq0__89_carry__5_i_3_n_0));
-  (* HLUTNM = "lutpair19" *) 
-  LUT3 #(
-    .INIT(8'hE8)) 
-    adj_Pinc_byfreq0__89_carry__5_i_4
-       (.I0(w_MODEfreq0_carry__0_n_7),
-        .I1(w_MODEfreq0_carry__0_n_5),
-        .I2(w_MODEfreq0_carry__1_n_7),
-        .O(adj_Pinc_byfreq0__89_carry__5_i_4_n_0));
+    w_MODEfreq0__4_carry__0_i_16
+       (.I0(mode_sFREQ[2]),
+        .I1(mode_sFREQ[3]),
+        .O(w_MODEfreq0__4_carry__0_i_16_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    w_MODEfreq0__4_carry__0_i_17
+       (.I0(mode_sFREQ[2]),
+        .I1(mode_sFREQ[3]),
+        .O(w_MODEfreq0__4_carry__0_i_17_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h22D2DD2D)) 
+    w_MODEfreq0__4_carry__0_i_18
+       (.I0(mode_sFREQ[0]),
+        .I1(mode_sFREQ[1]),
+        .I2(mode_sFREQ[4]),
+        .I3(mode_sFREQ[5]),
+        .I4(mode_sFREQ[2]),
+        .O(w_MODEfreq0__4_carry__0_i_18_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    w_MODEfreq0__4_carry__0_i_19
+       (.I0(mode_sFREQ[0]),
+        .I1(mode_sFREQ[1]),
+        .O(w_MODEfreq0__4_carry__0_i_19_n_0));
+  LUT6 #(
+    .INIT(64'h4DD4D44DD44D4DD4)) 
+    w_MODEfreq0__4_carry__0_i_2
+       (.I0(mode_sFREQ[7]),
+        .I1(w_MODEfreq0__4_carry__0_i_10_n_0),
+        .I2(mode_sFREQ[5]),
+        .I3(mode_sFREQ[2]),
+        .I4(mode_sFREQ[3]),
+        .I5(mode_sFREQ[1]),
+        .O(w_MODEfreq0__4_carry__0_i_2_n_0));
+  LUT6 #(
+    .INIT(64'hDD4D44D444D4DD4D)) 
+    w_MODEfreq0__4_carry__0_i_3
+       (.I0(w_MODEfreq0__4_carry__0_i_11_n_0),
+        .I1(w_MODEfreq0__4_carry__0_i_12_n_0),
+        .I2(mode_sFREQ[0]),
+        .I3(mode_sFREQ[1]),
+        .I4(w_MODEfreq0__4_carry__0_i_13_n_0),
+        .I5(mode_sFREQ[2]),
+        .O(w_MODEfreq0__4_carry__0_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h6696996999696696)) 
+    w_MODEfreq0__4_carry__0_i_4
+       (.I0(w_MODEfreq0__4_carry__0_i_12_n_0),
+        .I1(w_MODEfreq0__4_carry__0_i_11_n_0),
+        .I2(mode_sFREQ[0]),
+        .I3(mode_sFREQ[1]),
+        .I4(w_MODEfreq0__4_carry__0_i_13_n_0),
+        .I5(mode_sFREQ[2]),
+        .O(w_MODEfreq0__4_carry__0_i_4_n_0));
+  LUT6 #(
+    .INIT(64'hE187871E871E1E78)) 
+    w_MODEfreq0__4_carry__0_i_5
+       (.I0(mode_sFREQ[6]),
+        .I1(w_MODEfreq0__4_carry__0_i_14_n_0),
+        .I2(w_MODEfreq0__4_carry__0_i_15_n_0),
+        .I3(mode_sFREQ[0]),
+        .I4(mode_sFREQ[4]),
+        .I5(w_MODEfreq0__4_carry__0_i_16_n_0),
+        .O(w_MODEfreq0__4_carry__0_i_5_n_0));
+  LUT6 #(
+    .INIT(64'h9669696996969669)) 
+    w_MODEfreq0__4_carry__0_i_6
+       (.I0(w_MODEfreq0__4_carry__0_i_2_n_0),
+        .I1(w_MODEfreq0__4_carry__0_i_9_n_0),
+        .I2(mode_sFREQ[6]),
+        .I3(mode_sFREQ[1]),
+        .I4(mode_sFREQ[5]),
+        .I5(w_MODEfreq0__4_carry__0_i_17_n_0),
+        .O(w_MODEfreq0__4_carry__0_i_6_n_0));
+  LUT6 #(
+    .INIT(64'h9669699669969669)) 
+    w_MODEfreq0__4_carry__0_i_7
+       (.I0(w_MODEfreq0__4_carry__0_i_3_n_0),
+        .I1(mode_sFREQ[1]),
+        .I2(w_MODEfreq0__4_carry__0_i_17_n_0),
+        .I3(mode_sFREQ[5]),
+        .I4(mode_sFREQ[7]),
+        .I5(w_MODEfreq0__4_carry__0_i_10_n_0),
+        .O(w_MODEfreq0__4_carry__0_i_7_n_0));
+  LUT6 #(
+    .INIT(64'hA9956AA99556A995)) 
+    w_MODEfreq0__4_carry__0_i_8
+       (.I0(w_MODEfreq0__4_carry__0_i_18_n_0),
+        .I1(w_MODEfreq0__4_carry__0_i_19_n_0),
+        .I2(w_MODEfreq0__4_carry_i_8_n_0),
+        .I3(w_MODEfreq0__4_carry__0_i_16_n_0),
+        .I4(mode_sFREQ[6]),
+        .I5(mode_sFREQ[7]),
+        .O(w_MODEfreq0__4_carry__0_i_8_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
-    .INIT(16'h8778)) 
-    adj_Pinc_byfreq0__89_carry__5_i_5
-       (.I0(w_MODEfreq0_carry__1_n_6),
-        .I1(w_MODEfreq0_carry__0_n_4),
-        .I2(w_MODEfreq0_carry__1_n_7),
-        .I3(w_MODEfreq0_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__89_carry__5_i_5_n_0));
+    .INIT(16'h9666)) 
+    w_MODEfreq0__4_carry__0_i_9
+       (.I0(mode_sFREQ[0]),
+        .I1(mode_sFREQ[4]),
+        .I2(mode_sFREQ[2]),
+        .I3(mode_sFREQ[3]),
+        .O(w_MODEfreq0__4_carry__0_i_9_n_0));
+  CARRY4 w_MODEfreq0__4_carry__1
+       (.CI(w_MODEfreq0__4_carry__0_n_0),
+        .CO({w_MODEfreq0__4_carry__1_n_0,w_MODEfreq0__4_carry__1_n_1,w_MODEfreq0__4_carry__1_n_2,w_MODEfreq0__4_carry__1_n_3}),
+        .CYINIT(1'b0),
+        .DI({w_MODEfreq0__4_carry__1_i_1_n_0,w_MODEfreq0__4_carry__1_i_2_n_0,w_MODEfreq0__4_carry__1_i_3_n_0,w_MODEfreq0__4_carry__1_i_4_n_0}),
+        .O(freq[14:11]),
+        .S({w_MODEfreq0__4_carry__1_i_5_n_0,w_MODEfreq0__4_carry__1_i_6_n_0,w_MODEfreq0__4_carry__1_i_7_n_0,w_MODEfreq0__4_carry__1_i_8_n_0}));
+  LUT6 #(
+    .INIT(64'h066FF990F990066F)) 
+    w_MODEfreq0__4_carry__1_i_1
+       (.I0(mode_sFREQ[3]),
+        .I1(mode_sFREQ[2]),
+        .I2(mode_sFREQ[4]),
+        .I3(mode_sFREQ[0]),
+        .I4(w_MODEfreq0__4_carry_i_9_n_0),
+        .I5(w_MODEfreq0__4_carry__1_i_9_n_0),
+        .O(w_MODEfreq0__4_carry__1_i_1_n_0));
+  LUT5 #(
+    .INIT(32'h69969669)) 
+    w_MODEfreq0__4_carry__1_i_2
+       (.I0(mode_sFREQ[0]),
+        .I1(mode_sFREQ[3]),
+        .I2(mode_sFREQ[2]),
+        .I3(mode_sFREQ[4]),
+        .I4(mode_sFREQ[6]),
+        .O(w_MODEfreq0__4_carry__1_i_2_n_0));
+  LUT5 #(
+    .INIT(32'h08008E08)) 
+    w_MODEfreq0__4_carry__1_i_3
+       (.I0(mode_sFREQ[1]),
+        .I1(mode_sFREQ[4]),
+        .I2(mode_sFREQ[5]),
+        .I3(mode_sFREQ[6]),
+        .I4(mode_sFREQ[7]),
+        .O(w_MODEfreq0__4_carry__1_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h6969960069000000)) 
+    w_MODEfreq0__4_carry__1_i_4
+       (.I0(w_MODEfreq0__4_carry_i_9_n_0),
+        .I1(mode_sFREQ[1]),
+        .I2(mode_sFREQ[5]),
+        .I3(w_MODEfreq0__4_carry__0_i_16_n_0),
+        .I4(mode_sFREQ[4]),
+        .I5(mode_sFREQ[0]),
+        .O(w_MODEfreq0__4_carry__1_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h9969969969669969)) 
+    w_MODEfreq0__4_carry__1_i_5
+       (.I0(w_MODEfreq0__4_carry__1_i_9_n_0),
+        .I1(mode_sFREQ[7]),
+        .I2(mode_sFREQ[6]),
+        .I3(mode_sFREQ[4]),
+        .I4(w_MODEfreq0__4_carry__0_i_17_n_0),
+        .I5(mode_sFREQ[0]),
+        .O(w_MODEfreq0__4_carry__1_i_5_n_0));
+  LUT4 #(
+    .INIT(16'h6A56)) 
+    w_MODEfreq0__4_carry__1_i_6
+       (.I0(w_MODEfreq0__4_carry__1_i_2_n_0),
+        .I1(mode_sFREQ[7]),
+        .I2(mode_sFREQ[5]),
+        .I3(mode_sFREQ[2]),
+        .O(w_MODEfreq0__4_carry__1_i_6_n_0));
+  LUT6 #(
+    .INIT(64'h007F7FE8FF808017)) 
+    w_MODEfreq0__4_carry__1_i_7
+       (.I0(mode_sFREQ[6]),
+        .I1(mode_sFREQ[4]),
+        .I2(mode_sFREQ[1]),
+        .I3(mode_sFREQ[7]),
+        .I4(mode_sFREQ[5]),
+        .I5(mode_sFREQ[2]),
+        .O(w_MODEfreq0__4_carry__1_i_7_n_0));
+  LUT6 #(
+    .INIT(64'h65A6596559659A59)) 
+    w_MODEfreq0__4_carry__1_i_8
+       (.I0(w_MODEfreq0__4_carry__1_i_4_n_0),
+        .I1(mode_sFREQ[7]),
+        .I2(mode_sFREQ[6]),
+        .I3(mode_sFREQ[5]),
+        .I4(mode_sFREQ[4]),
+        .I5(mode_sFREQ[1]),
+        .O(w_MODEfreq0__4_carry__1_i_8_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'h96996966)) 
+    w_MODEfreq0__4_carry__1_i_9
+       (.I0(mode_sFREQ[4]),
+        .I1(mode_sFREQ[5]),
+        .I2(mode_sFREQ[3]),
+        .I3(mode_sFREQ[2]),
+        .I4(mode_sFREQ[1]),
+        .O(w_MODEfreq0__4_carry__1_i_9_n_0));
+  CARRY4 w_MODEfreq0__4_carry__2
+       (.CI(w_MODEfreq0__4_carry__1_n_0),
+        .CO({w_MODEfreq0__4_carry__2_n_0,w_MODEfreq0__4_carry__2_n_1,w_MODEfreq0__4_carry__2_n_2,w_MODEfreq0__4_carry__2_n_3}),
+        .CYINIT(1'b0),
+        .DI({w_MODEfreq0__4_carry__2_i_1_n_0,w_MODEfreq0__4_carry__2_i_2_n_0,w_MODEfreq0__4_carry__2_i_3_n_0,w_MODEfreq0__4_carry__2_i_4_n_0}),
+        .O(freq[18:15]),
+        .S({w_MODEfreq0__4_carry__2_i_5_n_0,w_MODEfreq0__4_carry__2_i_6_n_0,w_MODEfreq0__4_carry__2_i_7_n_0,w_MODEfreq0__4_carry__2_i_8_n_0}));
+  LUT2 #(
+    .INIT(4'h7)) 
+    w_MODEfreq0__4_carry__2_i_1
+       (.I0(mode_sFREQ[4]),
+        .I1(mode_sFREQ[6]),
+        .O(w_MODEfreq0__4_carry__2_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h8)) 
+    w_MODEfreq0__4_carry__2_i_10
+       (.I0(mode_sFREQ[6]),
+        .I1(mode_sFREQ[7]),
+        .O(w_MODEfreq0__4_carry__2_i_10_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    w_MODEfreq0__4_carry__2_i_11
+       (.I0(mode_sFREQ[4]),
+        .I1(mode_sFREQ[5]),
+        .O(w_MODEfreq0__4_carry__2_i_11_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT4 #(
+    .INIT(16'h6999)) 
+    w_MODEfreq0__4_carry__2_i_12
+       (.I0(mode_sFREQ[0]),
+        .I1(mode_sFREQ[3]),
+        .I2(mode_sFREQ[4]),
+        .I3(mode_sFREQ[5]),
+        .O(w_MODEfreq0__4_carry__2_i_12_n_0));
+  LUT5 #(
+    .INIT(32'hFFFF8F08)) 
+    w_MODEfreq0__4_carry__2_i_2
+       (.I0(mode_sFREQ[5]),
+        .I1(mode_sFREQ[4]),
+        .I2(mode_sFREQ[3]),
+        .I3(mode_sFREQ[0]),
+        .I4(mode_sFREQ[1]),
+        .O(w_MODEfreq0__4_carry__2_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h8EE8E88EE88EE88E)) 
+    w_MODEfreq0__4_carry__2_i_3
+       (.I0(w_MODEfreq0__4_carry__2_i_9_n_0),
+        .I1(w_MODEfreq0__4_carry__2_i_10_n_0),
+        .I2(mode_sFREQ[0]),
+        .I3(mode_sFREQ[3]),
+        .I4(mode_sFREQ[4]),
+        .I5(mode_sFREQ[5]),
+        .O(w_MODEfreq0__4_carry__2_i_3_n_0));
+  LUT6 #(
+    .INIT(64'hFFFF066F066F0000)) 
+    w_MODEfreq0__4_carry__2_i_4
+       (.I0(mode_sFREQ[3]),
+        .I1(mode_sFREQ[2]),
+        .I2(mode_sFREQ[4]),
+        .I3(mode_sFREQ[0]),
+        .I4(w_MODEfreq0__4_carry_i_9_n_0),
+        .I5(w_MODEfreq0__4_carry__1_i_9_n_0),
+        .O(w_MODEfreq0__4_carry__2_i_4_n_0));
+  (* HLUTNM = "lutpair1" *) 
+  LUT5 #(
+    .INIT(32'h96696969)) 
+    w_MODEfreq0__4_carry__2_i_5
+       (.I0(mode_sFREQ[2]),
+        .I1(mode_sFREQ[5]),
+        .I2(mode_sFREQ[7]),
+        .I3(mode_sFREQ[4]),
+        .I4(mode_sFREQ[6]),
+        .O(w_MODEfreq0__4_carry__2_i_5_n_0));
+  LUT6 #(
+    .INIT(64'h1051EFAEAEAE5151)) 
+    w_MODEfreq0__4_carry__2_i_6
+       (.I0(mode_sFREQ[1]),
+        .I1(mode_sFREQ[0]),
+        .I2(mode_sFREQ[3]),
+        .I3(mode_sFREQ[5]),
+        .I4(mode_sFREQ[6]),
+        .I5(mode_sFREQ[4]),
+        .O(w_MODEfreq0__4_carry__2_i_6_n_0));
+  LUT6 #(
+    .INIT(64'h78E11E78E18778E1)) 
+    w_MODEfreq0__4_carry__2_i_7
+       (.I0(w_MODEfreq0__4_carry__2_i_10_n_0),
+        .I1(w_MODEfreq0__4_carry__2_i_9_n_0),
+        .I2(mode_sFREQ[1]),
+        .I3(mode_sFREQ[0]),
+        .I4(mode_sFREQ[3]),
+        .I5(w_MODEfreq0__4_carry__2_i_11_n_0),
+        .O(w_MODEfreq0__4_carry__2_i_7_n_0));
+  LUT5 #(
+    .INIT(32'h69999666)) 
+    w_MODEfreq0__4_carry__2_i_8
+       (.I0(w_MODEfreq0__4_carry__2_i_4_n_0),
+        .I1(w_MODEfreq0__4_carry__2_i_12_n_0),
+        .I2(mode_sFREQ[7]),
+        .I3(mode_sFREQ[6]),
+        .I4(w_MODEfreq0__4_carry__2_i_9_n_0),
+        .O(w_MODEfreq0__4_carry__2_i_8_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT5 #(
+    .INIT(32'h0BB0BFFB)) 
+    w_MODEfreq0__4_carry__2_i_9
+       (.I0(mode_sFREQ[3]),
+        .I1(mode_sFREQ[2]),
+        .I2(mode_sFREQ[4]),
+        .I3(mode_sFREQ[5]),
+        .I4(mode_sFREQ[1]),
+        .O(w_MODEfreq0__4_carry__2_i_9_n_0));
+  CARRY4 w_MODEfreq0__4_carry__3
+       (.CI(w_MODEfreq0__4_carry__2_n_0),
+        .CO({w_MODEfreq0__4_carry__3_n_0,w_MODEfreq0__4_carry__3_n_1,w_MODEfreq0__4_carry__3_n_2,w_MODEfreq0__4_carry__3_n_3}),
+        .CYINIT(1'b0),
+        .DI({w_MODEfreq0__4_carry__3_i_1_n_0,w_MODEfreq0__4_carry__3_i_2_n_0,w_MODEfreq0__4_carry__3_i_3_n_0,w_MODEfreq0__4_carry__3_i_4_n_0}),
+        .O(freq[22:19]),
+        .S({w_MODEfreq0__4_carry__3_i_5_n_0,w_MODEfreq0__4_carry__3_i_6_n_0,w_MODEfreq0__4_carry__3_i_7_n_0,w_MODEfreq0__4_carry__3_i_8_n_0}));
+  (* HLUTNM = "lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
+    w_MODEfreq0__4_carry__3_i_1
+       (.I0(mode_sFREQ[4]),
+        .I1(mode_sFREQ[6]),
+        .O(w_MODEfreq0__4_carry__3_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    w_MODEfreq0__4_carry__3_i_2
+       (.I0(mode_sFREQ[4]),
+        .I1(mode_sFREQ[6]),
+        .O(w_MODEfreq0__4_carry__3_i_2_n_0));
+  LUT3 #(
+    .INIT(8'hE8)) 
+    w_MODEfreq0__4_carry__3_i_3
+       (.I0(mode_sFREQ[3]),
+        .I1(mode_sFREQ[4]),
+        .I2(mode_sFREQ[6]),
+        .O(w_MODEfreq0__4_carry__3_i_3_n_0));
+  (* HLUTNM = "lutpair1" *) 
+  LUT3 #(
+    .INIT(8'h2B)) 
+    w_MODEfreq0__4_carry__3_i_4
+       (.I0(mode_sFREQ[2]),
+        .I1(mode_sFREQ[5]),
+        .I2(mode_sFREQ[7]),
+        .O(w_MODEfreq0__4_carry__3_i_4_n_0));
+  LUT5 #(
+    .INIT(32'h96696996)) 
+    w_MODEfreq0__4_carry__3_i_5
+       (.I0(w_MODEfreq0__4_carry__3_i_1_n_0),
+        .I1(mode_sFREQ[4]),
+        .I2(mode_sFREQ[5]),
+        .I3(mode_sFREQ[6]),
+        .I4(mode_sFREQ[7]),
+        .O(w_MODEfreq0__4_carry__3_i_5_n_0));
+  (* HLUTNM = "lutpair2" *) 
+  LUT4 #(
+    .INIT(16'h9666)) 
+    w_MODEfreq0__4_carry__3_i_6
+       (.I0(mode_sFREQ[4]),
+        .I1(mode_sFREQ[6]),
+        .I2(mode_sFREQ[5]),
+        .I3(mode_sFREQ[7]),
+        .O(w_MODEfreq0__4_carry__3_i_6_n_0));
   LUT5 #(
     .INIT(32'hE81717E8)) 
-    adj_Pinc_byfreq0__89_carry__5_i_6
-       (.I0(w_MODEfreq0_carry__1_n_5),
-        .I1(w_MODEfreq0_carry__1_n_7),
-        .I2(w_MODEfreq0_carry__0_n_5),
-        .I3(w_MODEfreq0_carry__0_n_4),
-        .I4(w_MODEfreq0_carry__1_n_6),
-        .O(adj_Pinc_byfreq0__89_carry__5_i_6_n_0));
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__5_i_7
-       (.I0(adj_Pinc_byfreq0__89_carry__5_i_3_n_0),
-        .I1(w_MODEfreq0_carry__1_n_7),
-        .I2(w_MODEfreq0_carry__0_n_5),
-        .I3(w_MODEfreq0_carry__1_n_5),
-        .O(adj_Pinc_byfreq0__89_carry__5_i_7_n_0));
-  (* HLUTNM = "lutpair20" *) 
-  LUT4 #(
-    .INIT(16'h6996)) 
-    adj_Pinc_byfreq0__89_carry__5_i_8
-       (.I0(w_MODEfreq0_carry__0_n_6),
-        .I1(w_MODEfreq0_carry__0_n_4),
-        .I2(w_MODEfreq0_carry__1_n_6),
-        .I3(adj_Pinc_byfreq0__89_carry__5_i_4_n_0),
-        .O(adj_Pinc_byfreq0__89_carry__5_i_8_n_0));
-  CARRY4 adj_Pinc_byfreq0__89_carry__6
-       (.CI(adj_Pinc_byfreq0__89_carry__5_n_0),
-        .CO({NLW_adj_Pinc_byfreq0__89_carry__6_CO_UNCONNECTED[3],adj_Pinc_byfreq0__89_carry__6_n_1,NLW_adj_Pinc_byfreq0__89_carry__6_CO_UNCONNECTED[1],adj_Pinc_byfreq0__89_carry__6_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,w_MODEfreq0_carry__1_n_6}),
-        .O({NLW_adj_Pinc_byfreq0__89_carry__6_O_UNCONNECTED[3:2],adj_Pinc_byfreq0__89_carry__6_n_6,adj_Pinc_byfreq0__89_carry__6_n_7}),
-        .S({1'b0,1'b1,w_MODEfreq0_carry__1_n_5,adj_Pinc_byfreq0__89_carry__6_i_1_n_0}));
-  LUT3 #(
-    .INIT(8'h78)) 
-    adj_Pinc_byfreq0__89_carry__6_i_1
-       (.I0(w_MODEfreq0_carry__1_n_5),
-        .I1(w_MODEfreq0_carry__1_n_7),
-        .I2(w_MODEfreq0_carry__1_n_6),
-        .O(adj_Pinc_byfreq0__89_carry__6_i_1_n_0));
-  LUT3 #(
-    .INIT(8'h96)) 
-    adj_Pinc_byfreq0__89_carry_i_1
-       (.I0(w_MODEfreq0__0_n_105),
-        .I1(w_MODEfreq0__0_n_103),
-        .I2(w_MODEfreq0__0_n_101),
-        .O(adj_Pinc_byfreq0__89_carry_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    adj_Pinc_byfreq0__89_carry_i_2
-       (.I0(w_MODEfreq0__0_n_102),
-        .I1(w_MODEfreq0__0_n_104),
-        .O(adj_Pinc_byfreq0__89_carry_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    adj_Pinc_byfreq0__89_carry_i_3
-       (.I0(w_MODEfreq0__0_n_103),
-        .I1(w_MODEfreq0__0_n_105),
-        .O(adj_Pinc_byfreq0__89_carry_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__0_i_1
-       (.I0(i__carry__0_i_9_n_5),
-        .I1(i__carry__0_i_10__0_n_5),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__0_n_5 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[8]),
-        .O(i__carry__0_i_1_n_0));
-  CARRY4 i__carry__0_i_10
-       (.CI(i__carry_i_17_n_0),
-        .CO({i__carry__0_i_10_n_0,i__carry__0_i_10_n_1,i__carry__0_i_10_n_2,i__carry__0_i_10_n_3}),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__0/i__carry__0_n_6 ,\TEMP1_inferred__0/i__carry__0_n_7 ,\TEMP1_inferred__0/i__carry_n_4 ,\TEMP1_inferred__0/i__carry_n_5 }),
-        .O({i__carry__0_i_10_n_4,i__carry__0_i_10_n_5,i__carry__0_i_10_n_6,i__carry__0_i_10_n_7}),
-        .S({i__carry__0_i_13__0_n_0,i__carry__0_i_14_n_0,i__carry__0_i_15_n_0,i__carry__0_i_16_n_0}));
-  CARRY4 i__carry__0_i_10__0
-       (.CI(i__carry_i_4__0_n_0),
-        .CO({i__carry__0_i_10__0_n_0,i__carry__0_i_10__0_n_1,i__carry__0_i_10__0_n_2,i__carry__0_i_10__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__6/i__carry__0_n_7 ,\TEMP1_inferred__6/i__carry_n_4 ,\TEMP1_inferred__6/i__carry_n_5 ,\TEMP1_inferred__6/i__carry_n_6 }),
-        .O({i__carry__0_i_10__0_n_4,i__carry__0_i_10__0_n_5,i__carry__0_i_10__0_n_6,i__carry__0_i_10__0_n_7}),
-        .S({i__carry__0_i_18__0_n_0,i__carry__0_i_19__0_n_0,i__carry__0_i_20__0_n_0,i__carry__0_i_21_n_0}));
-  CARRY4 i__carry__0_i_11
-       (.CI(i__carry_i_18_n_0),
-        .CO({i__carry__0_i_11_n_0,i__carry__0_i_11_n_1,i__carry__0_i_11_n_2,i__carry__0_i_11_n_3}),
-        .CYINIT(1'b0),
-        .DI({i__carry__0_i_17_n_4,i__carry__0_i_17_n_5,i__carry__0_i_17_n_6,i__carry__0_i_17_n_7}),
-        .O({i__carry__0_i_11_n_4,i__carry__0_i_11_n_5,i__carry__0_i_11_n_6,i__carry__0_i_11_n_7}),
-        .S({i__carry__0_i_18_n_0,i__carry__0_i_19_n_0,i__carry__0_i_20_n_0,i__carry__0_i_21__0_n_0}));
-  CARRY4 i__carry__0_i_11__0
-       (.CI(i__carry_i_3__1_n_0),
-        .CO({i__carry__0_i_11__0_n_0,i__carry__0_i_11__0_n_1,i__carry__0_i_11__0_n_2,i__carry__0_i_11__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({i__carry_i_2__5_n_5,i__carry_i_2__5_n_6,i__carry_i_2__5_n_7,i__carry_i_1__5_n_4}),
-        .O(TEMP0[9:6]),
-        .S({i__carry__0_i_22__0_n_0,i__carry__0_i_23__0_n_0,i__carry__0_i_24__0_n_0,i__carry__0_i_25__0_n_0}));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__0_i_12
-       (.I0(i__carry_i_5__0_n_5),
-        .I1(i__carry_i_4__0_n_5),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry_n_5 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[4]),
-        .O(i__carry__0_i_12_n_0));
-  CARRY4 i__carry__0_i_12__0
-       (.CI(i__carry_i_19_n_0),
-        .CO({i__carry__0_i_12__0_n_0,i__carry__0_i_12__0_n_1,i__carry__0_i_12__0_n_2,i__carry__0_i_12__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({TEMP1_carry__1_n_7,TEMP1_carry__0_n_4,TEMP1_carry__0_n_5,TEMP1_carry__0_n_6}),
-        .O({i__carry__0_i_12__0_n_4,i__carry__0_i_12__0_n_5,i__carry__0_i_12__0_n_6,i__carry__0_i_12__0_n_7}),
-        .S({i__carry__0_i_22_n_0,i__carry__0_i_23_n_0,i__carry__0_i_24_n_0,i__carry__0_i_25_n_0}));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__0_i_13
-       (.I0(i__carry_i_5__0_n_6),
-        .I1(i__carry_i_4__0_n_6),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry_n_6 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[3]),
-        .O(i__carry__0_i_13_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_13__0
-       (.I0(\TEMP1_inferred__0/i__carry__0_n_6 ),
-        .I1(\TEMP1_inferred__0/i__carry_n_4 ),
-        .O(i__carry__0_i_13__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_14
-       (.I0(\TEMP1_inferred__0/i__carry__0_n_7 ),
-        .I1(\TEMP1_inferred__0/i__carry_n_5 ),
-        .O(i__carry__0_i_14_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_14__0
-       (.I0(\TEMP1_inferred__4/i__carry__0_n_7 ),
-        .I1(\TEMP1_inferred__4/i__carry_n_5 ),
-        .O(i__carry__0_i_14__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_15
-       (.I0(\TEMP1_inferred__0/i__carry_n_4 ),
-        .I1(\TEMP1_inferred__0/i__carry_n_6 ),
-        .O(i__carry__0_i_15_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_15__0
-       (.I0(\TEMP1_inferred__4/i__carry_n_4 ),
-        .I1(\TEMP1_inferred__4/i__carry_n_6 ),
-        .O(i__carry__0_i_15__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_16
-       (.I0(\TEMP1_inferred__0/i__carry_n_5 ),
-        .I1(\TEMP1_inferred__0/i__carry_n_7 ),
-        .O(i__carry__0_i_16_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_16__0
-       (.I0(\TEMP1_inferred__4/i__carry_n_5 ),
-        .I1(\TEMP1_inferred__4/i__carry_n_7 ),
-        .O(i__carry__0_i_16__0_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 i__carry__0_i_17
-       (.CI(i__carry_i_33_n_0),
-        .CO({i__carry__0_i_17_n_0,i__carry__0_i_17_n_1,i__carry__0_i_17_n_2,i__carry__0_i_17_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({i__carry__0_i_17_n_4,i__carry__0_i_17_n_5,i__carry__0_i_17_n_6,i__carry__0_i_17_n_7}),
-        .S({TEMP1_carry__1_n_7,TEMP1_carry__0_n_4,TEMP1_carry__0_n_5,TEMP1_carry__0_n_6}));
-  LUT2 #(
-    .INIT(4'h9)) 
-    i__carry__0_i_17__0
-       (.I0(\TEMP1_inferred__4/i__carry_n_6 ),
-        .I1(O[1]),
-        .O(i__carry__0_i_17__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_18
-       (.I0(i__carry__0_i_17_n_4),
-        .I1(i__carry__0_i_17_n_6),
-        .O(i__carry__0_i_18_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_18__0
-       (.I0(\TEMP1_inferred__6/i__carry__0_n_7 ),
-        .I1(\TEMP1_inferred__6/i__carry_n_5 ),
-        .O(i__carry__0_i_18__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_19
-       (.I0(i__carry__0_i_17_n_5),
-        .I1(i__carry__0_i_17_n_7),
-        .O(i__carry__0_i_19_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_19__0
-       (.I0(\TEMP1_inferred__6/i__carry_n_4 ),
-        .I1(\TEMP1_inferred__6/i__carry_n_6 ),
-        .O(i__carry__0_i_19__0_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 i__carry__0_i_1__0
-       (.CI(i__carry__0_i_2__1_n_0),
-        .CO({i__carry__0_i_1__0_n_0,i__carry__0_i_1__0_n_1,i__carry__0_i_1__0_n_2,i__carry__0_i_1__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({i__carry__0_i_1__0_n_4,i__carry__0_i_1__0_n_5,i__carry__0_i_1__0_n_6,i__carry__0_i_1__0_n_7}),
-        .S({TEMP1_carry__0_n_4,TEMP1_carry__0_n_5,TEMP1_carry__0_n_6,TEMP1_carry__0_n_7}));
-  CARRY4 i__carry__0_i_1__1
-       (.CI(i__carry_i_2__5_n_0),
-        .CO({i__carry__0_i_1__1_n_0,i__carry__0_i_1__1_n_1,i__carry__0_i_1__1_n_2,i__carry__0_i_1__1_n_3}),
-        .CYINIT(1'b0),
-        .DI(A[12:9]),
-        .O({i__carry__0_i_1__1_n_4,i__carry__0_i_1__1_n_5,i__carry__0_i_1__1_n_6,i__carry__0_i_1__1_n_7}),
-        .S({i__carry__0_i_6__1_n_0,i__carry__0_i_7__1_n_0,i__carry__0_i_8__0_n_0,i__carry__0_i_9__0_n_0}));
-  CARRY4 i__carry__0_i_1__2
-       (.CI(i__carry_i_1__6_n_0),
-        .CO({i__carry__0_i_1__2_n_0,i__carry__0_i_1__2_n_1,i__carry__0_i_1__2_n_2,i__carry__0_i_1__2_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({i__carry__0_i_1__2_n_4,i__carry__0_i_1__2_n_5,i__carry__0_i_1__2_n_6,i__carry__0_i_1__2_n_7}),
-        .S(TEMP1[11:8]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_1__3
-       (.I0(\TEMP1_inferred__5/i__carry__0_n_6 ),
-        .I1(\TEMP1_inferred__5/i__carry_n_4 ),
-        .O(i__carry__0_i_1__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_1__4
-       (.I0(\TEMP1_inferred__8/i__carry__0_n_7 ),
-        .I1(\TEMP1_inferred__8/i__carry_n_5 ),
-        .O(i__carry__0_i_1__4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_1__5
-       (.I0(\TEMP1_inferred__9/i__carry__0_n_6 ),
-        .I1(\TEMP1_inferred__9/i__carry_n_4 ),
-        .O(i__carry__0_i_1__5_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_1__6
-       (.I0(TEMP1[8]),
-        .I1(TEMP1[6]),
-        .O(i__carry__0_i_1__6_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__0_i_2
-       (.I0(i__carry__0_i_9_n_6),
-        .I1(i__carry__0_i_10__0_n_6),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__0_n_6 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[7]),
-        .O(i__carry__0_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_20
-       (.I0(i__carry__0_i_17_n_6),
-        .I1(i__carry_i_33_n_4),
-        .O(i__carry__0_i_20_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_20__0
-       (.I0(\TEMP1_inferred__6/i__carry_n_5 ),
-        .I1(\TEMP1_inferred__6/i__carry_n_7 ),
-        .O(i__carry__0_i_20__0_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    i__carry__0_i_21
-       (.I0(\TEMP1_inferred__6/i__carry_n_6 ),
-        .I1(O[1]),
-        .O(i__carry__0_i_21_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_21__0
-       (.I0(i__carry__0_i_17_n_7),
-        .I1(i__carry_i_33_n_5),
-        .O(i__carry__0_i_21__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_22
-       (.I0(TEMP1_carry__1_n_7),
-        .I1(TEMP1_carry__0_n_5),
-        .O(i__carry__0_i_22_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_22__0
-       (.I0(i__carry_i_2__5_n_5),
-        .I1(i__carry_i_2__5_n_7),
-        .O(i__carry__0_i_22__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_23
-       (.I0(TEMP1_carry__0_n_4),
-        .I1(TEMP1_carry__0_n_6),
-        .O(i__carry__0_i_23_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_23__0
-       (.I0(i__carry_i_2__5_n_6),
-        .I1(i__carry_i_1__5_n_4),
-        .O(i__carry__0_i_23__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_24
-       (.I0(TEMP1_carry__0_n_5),
-        .I1(TEMP1_carry__0_n_7),
-        .O(i__carry__0_i_24_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_24__0
-       (.I0(i__carry_i_2__5_n_7),
-        .I1(i__carry_i_1__5_n_5),
-        .O(i__carry__0_i_24__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_25
-       (.I0(TEMP1_carry__0_n_6),
-        .I1(TEMP1_carry_n_4),
-        .O(i__carry__0_i_25_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_25__0
-       (.I0(i__carry_i_1__5_n_4),
-        .I1(O[1]),
-        .O(i__carry__0_i_25__0_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__0_i_2__0
-       (.I0(i__carry__0_i_10_n_5),
-        .I1(\TEMP0_inferred__0/i__carry__1_n_5 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry__0_i_11_n_5),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry__0_i_12__0_n_5),
-        .O(A[12]));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 i__carry__0_i_2__1
-       (.CI(1'b0),
-        .CO({i__carry__0_i_2__1_n_0,i__carry__0_i_2__1_n_1,i__carry__0_i_2__1_n_2,i__carry__0_i_2__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,TEMP1_carry_n_6,1'b0}),
-        .O({i__carry__0_i_2__1_n_4,i__carry__0_i_2__1_n_5,i__carry__0_i_2__1_n_6,NLW_i__carry__0_i_2__1_O_UNCONNECTED[0]}),
-        .S({TEMP1_carry_n_4,TEMP1_carry_n_5,i__carry__0_i_7_n_0,1'b1}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_2__2
-       (.I0(\TEMP1_inferred__5/i__carry__0_n_7 ),
-        .I1(\TEMP1_inferred__5/i__carry_n_5 ),
-        .O(i__carry__0_i_2__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_2__3
-       (.I0(\TEMP1_inferred__8/i__carry_n_4 ),
-        .I1(\TEMP1_inferred__8/i__carry_n_6 ),
-        .O(i__carry__0_i_2__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_2__4
-       (.I0(\TEMP1_inferred__9/i__carry__0_n_7 ),
-        .I1(\TEMP1_inferred__9/i__carry_n_5 ),
-        .O(i__carry__0_i_2__4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_2__5
-       (.I0(i__carry__0_i_1__2_n_7),
-        .I1(i__carry_i_1__6_n_5),
-        .O(i__carry__0_i_2__5_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_2__6
-       (.I0(TEMP1[7]),
-        .I1(TEMP1[5]),
-        .O(i__carry__0_i_2__6_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__0_i_3
-       (.I0(i__carry__0_i_9_n_7),
-        .I1(i__carry__0_i_10__0_n_7),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__0_n_7 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[6]),
-        .O(i__carry__0_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__0_i_3__0
-       (.I0(i__carry__0_i_10_n_6),
-        .I1(\TEMP0_inferred__0/i__carry__1_n_6 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry__0_i_11_n_6),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry__0_i_12__0_n_6),
-        .O(A[11]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_3__1
-       (.I0(i__carry__0_i_1__0_n_7),
-        .I1(i__carry__0_i_2__1_n_5),
-        .O(i__carry__0_i_3__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_3__2
-       (.I0(\TEMP1_inferred__5/i__carry_n_4 ),
-        .I1(\TEMP1_inferred__5/i__carry_n_6 ),
-        .O(i__carry__0_i_3__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_3__3
-       (.I0(\TEMP1_inferred__8/i__carry_n_5 ),
-        .I1(\TEMP1_inferred__8/i__carry_n_7 ),
-        .O(i__carry__0_i_3__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_3__4
-       (.I0(\TEMP1_inferred__9/i__carry_n_4 ),
-        .I1(\TEMP1_inferred__9/i__carry_n_6 ),
-        .O(i__carry__0_i_3__4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_3__5
-       (.I0(i__carry_i_1__6_n_4),
-        .I1(i__carry_i_1__6_n_6),
-        .O(i__carry__0_i_3__5_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_3__6
-       (.I0(TEMP1[6]),
-        .I1(TEMP1[4]),
-        .O(i__carry__0_i_3__6_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__0_i_4
-       (.I0(i__carry_i_5__0_n_4),
-        .I1(i__carry_i_4__0_n_4),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry_n_4 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[5]),
-        .O(i__carry__0_i_4_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__0_i_4__0
-       (.I0(i__carry__0_i_10_n_7),
-        .I1(\TEMP0_inferred__0/i__carry__1_n_7 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry__0_i_11_n_7),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry__0_i_12__0_n_7),
-        .O(A[10]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_4__1
-       (.I0(i__carry__0_i_2__1_n_4),
-        .I1(i__carry__0_i_2__1_n_6),
-        .O(i__carry__0_i_4__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_4__2
-       (.I0(\TEMP1_inferred__5/i__carry_n_5 ),
-        .I1(\TEMP1_inferred__5/i__carry_n_7 ),
-        .O(i__carry__0_i_4__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_4__3
-       (.I0(\TEMP1_inferred__9/i__carry_n_5 ),
-        .I1(\TEMP1_inferred__9/i__carry_n_7 ),
-        .O(i__carry__0_i_4__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_4__4
-       (.I0(i__carry_i_1__6_n_5),
-        .I1(i__carry_i_1__6_n_7),
-        .O(i__carry__0_i_4__4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_4__5
-       (.I0(TEMP1[5]),
-        .I1(TEMP1[3]),
-        .O(i__carry__0_i_4__5_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    i__carry__0_i_4__6
-       (.I0(\TEMP1_inferred__8/i__carry_n_6 ),
-        .I1(TEMP1[3]),
-        .O(i__carry__0_i_4__6_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__0_i_5
-       (.I0(i__carry_i_17_n_4),
-        .I1(\TEMP0_inferred__0/i__carry__0_n_4 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry_i_18_n_4),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry_i_19_n_4),
-        .O(A[9]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_5__0
-       (.I0(i__carry__0_i_1_n_0),
-        .I1(i__carry__0_i_3_n_0),
-        .O(i__carry__0_i_5__0_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry__0_i_5__1
-       (.I0(i__carry__0_i_2__1_n_5),
-        .O(i__carry__0_i_5__1_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    i__carry__0_i_5__2
-       (.I0(i__carry_i_1__6_n_6),
-        .I1(TEMP1[3]),
-        .O(i__carry__0_i_5__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_6
-       (.I0(i__carry__0_i_2__1_n_6),
-        .I1(mode_sFREQ[7]),
-        .O(i__carry__0_i_6_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_6__0
-       (.I0(i__carry__0_i_2_n_0),
-        .I1(i__carry__0_i_4_n_0),
-        .O(i__carry__0_i_6__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_6__1
-       (.I0(A[12]),
-        .I1(A[10]),
-        .O(i__carry__0_i_6__1_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry__0_i_7
-       (.I0(TEMP1_carry_n_6),
-        .O(i__carry__0_i_7_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_7__0
-       (.I0(i__carry__0_i_3_n_0),
-        .I1(i__carry__0_i_12_n_0),
-        .O(i__carry__0_i_7__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_7__1
-       (.I0(A[11]),
-        .I1(A[9]),
-        .O(i__carry__0_i_7__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_8
-       (.I0(i__carry__0_i_4_n_0),
-        .I1(i__carry__0_i_13_n_0),
-        .O(i__carry__0_i_8_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_8__0
-       (.I0(A[10]),
-        .I1(A[8]),
-        .O(i__carry__0_i_8__0_n_0));
-  CARRY4 i__carry__0_i_9
-       (.CI(i__carry_i_5__0_n_0),
-        .CO({i__carry__0_i_9_n_0,i__carry__0_i_9_n_1,i__carry__0_i_9_n_2,i__carry__0_i_9_n_3}),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__4/i__carry__0_n_7 ,\TEMP1_inferred__4/i__carry_n_4 ,\TEMP1_inferred__4/i__carry_n_5 ,\TEMP1_inferred__4/i__carry_n_6 }),
-        .O({i__carry__0_i_9_n_4,i__carry__0_i_9_n_5,i__carry__0_i_9_n_6,i__carry__0_i_9_n_7}),
-        .S({i__carry__0_i_14__0_n_0,i__carry__0_i_15__0_n_0,i__carry__0_i_16__0_n_0,i__carry__0_i_17__0_n_0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__0_i_9__0
-       (.I0(A[9]),
-        .I1(A[7]),
-        .O(i__carry__0_i_9__0_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__1_i_1
-       (.I0(i__carry__1_i_9_n_5),
-        .I1(i__carry__1_i_10__0_n_5),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__1_n_5 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[12]),
-        .O(i__carry__1_i_1_n_0));
-  CARRY4 i__carry__1_i_10
-       (.CI(i__carry__0_i_10_n_0),
-        .CO({i__carry__1_i_10_n_0,NLW_i__carry__1_i_10_CO_UNCONNECTED[2],i__carry__1_i_10_n_2,i__carry__1_i_10_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,\TEMP1_inferred__0/i__carry__0_n_5 }),
-        .O({NLW_i__carry__1_i_10_O_UNCONNECTED[3],i__carry__1_i_10_n_5,i__carry__1_i_10_n_6,i__carry__1_i_10_n_7}),
-        .S({1'b1,\TEMP1_inferred__0/i__carry__0_n_5 ,\TEMP1_inferred__0/i__carry__0_n_6 ,i__carry__1_i_13_n_0}));
-  CARRY4 i__carry__1_i_10__0
-       (.CI(i__carry__0_i_10__0_n_0),
-        .CO({i__carry__1_i_10__0_n_0,i__carry__1_i_10__0_n_1,i__carry__1_i_10__0_n_2,i__carry__1_i_10__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__6/i__carry__1_n_7 ,\TEMP1_inferred__6/i__carry__0_n_4 ,\TEMP1_inferred__6/i__carry__0_n_5 ,\TEMP1_inferred__6/i__carry__0_n_6 }),
-        .O({i__carry__1_i_10__0_n_4,i__carry__1_i_10__0_n_5,i__carry__1_i_10__0_n_6,i__carry__1_i_10__0_n_7}),
-        .S({i__carry__1_i_16__0_n_0,i__carry__1_i_17_n_0,i__carry__1_i_18_n_0,i__carry__1_i_19_n_0}));
-  CARRY4 i__carry__1_i_11
-       (.CI(i__carry__0_i_11_n_0),
-        .CO({i__carry__1_i_11_n_0,NLW_i__carry__1_i_11_CO_UNCONNECTED[2],i__carry__1_i_11_n_2,i__carry__1_i_11_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,i__carry__1_i_14_n_7}),
-        .O({NLW_i__carry__1_i_11_O_UNCONNECTED[3],i__carry__1_i_11_n_5,i__carry__1_i_11_n_6,i__carry__1_i_11_n_7}),
-        .S({1'b1,i__carry__1_i_14_n_7,i__carry__0_i_17_n_4,i__carry__1_i_15_n_0}));
-  CARRY4 i__carry__1_i_11__0
-       (.CI(i__carry__0_i_11__0_n_0),
-        .CO({i__carry__1_i_11__0_n_0,i__carry__1_i_11__0_n_1,i__carry__1_i_11__0_n_2,i__carry__1_i_11__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({i__carry__0_i_1__1_n_5,i__carry__0_i_1__1_n_6,i__carry__0_i_1__1_n_7,i__carry_i_2__5_n_4}),
-        .O(TEMP0[13:10]),
-        .S({i__carry__1_i_20_n_0,i__carry__1_i_21_n_0,i__carry__1_i_22_n_0,i__carry__1_i_23_n_0}));
-  CARRY4 i__carry__1_i_12
-       (.CI(i__carry__0_i_12__0_n_0),
-        .CO({i__carry__1_i_12_n_0,NLW_i__carry__1_i_12_CO_UNCONNECTED[2],i__carry__1_i_12_n_2,i__carry__1_i_12_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,TEMP1_carry__1_n_6}),
-        .O({NLW_i__carry__1_i_12_O_UNCONNECTED[3],i__carry__1_i_12_n_5,i__carry__1_i_12_n_6,i__carry__1_i_12_n_7}),
-        .S({1'b1,TEMP1_carry__1_n_6,TEMP1_carry__1_n_7,i__carry__1_i_16_n_0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_12__0
-       (.I0(\TEMP1_inferred__4/i__carry__1_n_7 ),
-        .I1(\TEMP1_inferred__4/i__carry__0_n_5 ),
-        .O(i__carry__1_i_12__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_13
-       (.I0(\TEMP1_inferred__0/i__carry__0_n_5 ),
-        .I1(\TEMP1_inferred__0/i__carry__0_n_7 ),
-        .O(i__carry__1_i_13_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_13__0
-       (.I0(\TEMP1_inferred__4/i__carry__0_n_4 ),
-        .I1(\TEMP1_inferred__4/i__carry__0_n_6 ),
-        .O(i__carry__1_i_13__0_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 i__carry__1_i_14
-       (.CI(i__carry__0_i_17_n_0),
-        .CO(NLW_i__carry__1_i_14_CO_UNCONNECTED[3:0]),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({NLW_i__carry__1_i_14_O_UNCONNECTED[3:1],i__carry__1_i_14_n_7}),
-        .S({1'b0,1'b0,1'b0,TEMP1_carry__1_n_6}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_14__0
-       (.I0(\TEMP1_inferred__4/i__carry__0_n_5 ),
-        .I1(\TEMP1_inferred__4/i__carry__0_n_7 ),
-        .O(i__carry__1_i_14__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_15
-       (.I0(i__carry__1_i_14_n_7),
-        .I1(i__carry__0_i_17_n_5),
-        .O(i__carry__1_i_15_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_15__0
-       (.I0(\TEMP1_inferred__4/i__carry__0_n_6 ),
-        .I1(\TEMP1_inferred__4/i__carry_n_4 ),
-        .O(i__carry__1_i_15__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_16
-       (.I0(TEMP1_carry__1_n_6),
-        .I1(TEMP1_carry__0_n_4),
-        .O(i__carry__1_i_16_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_16__0
-       (.I0(\TEMP1_inferred__6/i__carry__1_n_7 ),
-        .I1(\TEMP1_inferred__6/i__carry__0_n_5 ),
-        .O(i__carry__1_i_16__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_17
-       (.I0(\TEMP1_inferred__6/i__carry__0_n_4 ),
-        .I1(\TEMP1_inferred__6/i__carry__0_n_6 ),
-        .O(i__carry__1_i_17_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_18
-       (.I0(\TEMP1_inferred__6/i__carry__0_n_5 ),
-        .I1(\TEMP1_inferred__6/i__carry__0_n_7 ),
-        .O(i__carry__1_i_18_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_19
-       (.I0(\TEMP1_inferred__6/i__carry__0_n_6 ),
-        .I1(\TEMP1_inferred__6/i__carry_n_4 ),
-        .O(i__carry__1_i_19_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 i__carry__1_i_1__0
-       (.CI(i__carry__0_i_1__0_n_0),
-        .CO({NLW_i__carry__1_i_1__0_CO_UNCONNECTED[3:1],i__carry__1_i_1__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({NLW_i__carry__1_i_1__0_O_UNCONNECTED[3:2],i__carry__1_i_1__0_n_6,i__carry__1_i_1__0_n_7}),
-        .S({1'b0,1'b0,TEMP1_carry__1_n_6,TEMP1_carry__1_n_7}));
-  CARRY4 i__carry__1_i_1__1
-       (.CI(i__carry__0_i_1__1_n_0),
-        .CO({i__carry__1_i_1__1_n_0,i__carry__1_i_1__1_n_1,i__carry__1_i_1__1_n_2,i__carry__1_i_1__1_n_3}),
-        .CYINIT(1'b0),
-        .DI(A[16:13]),
-        .O({i__carry__1_i_1__1_n_4,i__carry__1_i_1__1_n_5,i__carry__1_i_1__1_n_6,i__carry__1_i_1__1_n_7}),
-        .S({i__carry__1_i_6__0_n_0,i__carry__1_i_7__0_n_0,i__carry__1_i_8__0_n_0,i__carry__1_i_9__0_n_0}));
-  CARRY4 i__carry__1_i_1__2
-       (.CI(i__carry__0_i_1__2_n_0),
-        .CO({i__carry__1_i_1__2_n_0,i__carry__1_i_1__2_n_1,i__carry__1_i_1__2_n_2,i__carry__1_i_1__2_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({i__carry__1_i_1__2_n_4,i__carry__1_i_1__2_n_5,i__carry__1_i_1__2_n_6,i__carry__1_i_1__2_n_7}),
-        .S(TEMP1[15:12]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_1__3
-       (.I0(\TEMP1_inferred__5/i__carry__1_n_6 ),
-        .I1(\TEMP1_inferred__5/i__carry__0_n_4 ),
-        .O(i__carry__1_i_1__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_1__4
-       (.I0(\TEMP1_inferred__8/i__carry__1_n_7 ),
-        .I1(\TEMP1_inferred__8/i__carry__0_n_5 ),
-        .O(i__carry__1_i_1__4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_1__5
-       (.I0(\TEMP1_inferred__9/i__carry__1_n_6 ),
-        .I1(\TEMP1_inferred__9/i__carry__0_n_4 ),
-        .O(i__carry__1_i_1__5_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_1__6
-       (.I0(TEMP1[12]),
-        .I1(TEMP1[10]),
-        .O(i__carry__1_i_1__6_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__1_i_2
-       (.I0(i__carry__1_i_9_n_6),
-        .I1(i__carry__1_i_10__0_n_6),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__1_n_6 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[11]),
-        .O(i__carry__1_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_20
-       (.I0(i__carry__0_i_1__1_n_5),
-        .I1(i__carry__0_i_1__1_n_7),
-        .O(i__carry__1_i_20_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_21
-       (.I0(i__carry__0_i_1__1_n_6),
-        .I1(i__carry_i_2__5_n_4),
-        .O(i__carry__1_i_21_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_22
-       (.I0(i__carry__0_i_1__1_n_7),
-        .I1(i__carry_i_2__5_n_5),
-        .O(i__carry__1_i_22_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_23
-       (.I0(i__carry_i_2__5_n_4),
-        .I1(i__carry_i_2__5_n_6),
-        .O(i__carry__1_i_23_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__1_i_2__0
-       (.I0(i__carry__1_i_10_n_5),
-        .I1(\TEMP0_inferred__0/i__carry__2_n_5 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry__1_i_11_n_5),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry__1_i_12_n_5),
-        .O(A[16]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_2__1
-       (.I0(i__carry__1_i_1__0_n_7),
-        .I1(i__carry__0_i_1__0_n_5),
-        .O(i__carry__1_i_2__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_2__2
-       (.I0(\TEMP1_inferred__5/i__carry__1_n_7 ),
-        .I1(\TEMP1_inferred__5/i__carry__0_n_5 ),
-        .O(i__carry__1_i_2__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_2__3
-       (.I0(\TEMP1_inferred__8/i__carry__0_n_4 ),
-        .I1(\TEMP1_inferred__8/i__carry__0_n_6 ),
-        .O(i__carry__1_i_2__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_2__4
-       (.I0(\TEMP1_inferred__9/i__carry__1_n_7 ),
-        .I1(\TEMP1_inferred__9/i__carry__0_n_5 ),
-        .O(i__carry__1_i_2__4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_2__5
-       (.I0(i__carry__1_i_1__2_n_7),
-        .I1(i__carry__0_i_1__2_n_5),
-        .O(i__carry__1_i_2__5_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_2__6
-       (.I0(TEMP1[11]),
-        .I1(TEMP1[9]),
-        .O(i__carry__1_i_2__6_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__1_i_3
-       (.I0(i__carry__1_i_9_n_7),
-        .I1(i__carry__1_i_10__0_n_7),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__1_n_7 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[10]),
-        .O(i__carry__1_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__1_i_3__0
-       (.I0(i__carry__1_i_10_n_6),
-        .I1(\TEMP0_inferred__0/i__carry__2_n_6 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry__1_i_11_n_6),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry__1_i_12_n_6),
-        .O(A[15]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_3__1
-       (.I0(i__carry__0_i_1__0_n_4),
-        .I1(i__carry__0_i_1__0_n_6),
-        .O(i__carry__1_i_3__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_3__2
-       (.I0(\TEMP1_inferred__5/i__carry__0_n_4 ),
-        .I1(\TEMP1_inferred__5/i__carry__0_n_6 ),
-        .O(i__carry__1_i_3__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_3__3
-       (.I0(\TEMP1_inferred__8/i__carry__0_n_5 ),
-        .I1(\TEMP1_inferred__8/i__carry__0_n_7 ),
-        .O(i__carry__1_i_3__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_3__4
-       (.I0(\TEMP1_inferred__9/i__carry__0_n_4 ),
-        .I1(\TEMP1_inferred__9/i__carry__0_n_6 ),
-        .O(i__carry__1_i_3__4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_3__5
-       (.I0(i__carry__0_i_1__2_n_4),
-        .I1(i__carry__0_i_1__2_n_6),
-        .O(i__carry__1_i_3__5_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_3__6
-       (.I0(TEMP1[10]),
-        .I1(TEMP1[8]),
-        .O(i__carry__1_i_3__6_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__1_i_4
-       (.I0(i__carry__0_i_9_n_4),
-        .I1(i__carry__0_i_10__0_n_4),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__0_n_4 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[9]),
-        .O(i__carry__1_i_4_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__1_i_4__0
-       (.I0(i__carry__1_i_10_n_7),
-        .I1(\TEMP0_inferred__0/i__carry__2_n_7 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry__1_i_11_n_7),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry__1_i_12_n_7),
-        .O(A[14]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_4__1
-       (.I0(i__carry__0_i_1__0_n_5),
-        .I1(i__carry__0_i_1__0_n_7),
-        .O(i__carry__1_i_4__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_4__2
-       (.I0(\TEMP1_inferred__5/i__carry__0_n_5 ),
-        .I1(\TEMP1_inferred__5/i__carry__0_n_7 ),
-        .O(i__carry__1_i_4__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_4__3
-       (.I0(\TEMP1_inferred__8/i__carry__0_n_6 ),
-        .I1(\TEMP1_inferred__8/i__carry_n_4 ),
-        .O(i__carry__1_i_4__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_4__4
-       (.I0(\TEMP1_inferred__9/i__carry__0_n_5 ),
-        .I1(\TEMP1_inferred__9/i__carry__0_n_7 ),
-        .O(i__carry__1_i_4__4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_4__5
-       (.I0(i__carry__0_i_1__2_n_5),
-        .I1(i__carry__0_i_1__2_n_7),
-        .O(i__carry__1_i_4__5_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_4__6
-       (.I0(TEMP1[9]),
-        .I1(TEMP1[7]),
-        .O(i__carry__1_i_4__6_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__1_i_5
-       (.I0(i__carry__0_i_10_n_4),
-        .I1(\TEMP0_inferred__0/i__carry__1_n_4 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry__0_i_11_n_4),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry__0_i_12__0_n_4),
-        .O(A[13]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_5__0
-       (.I0(i__carry__0_i_1__0_n_6),
-        .I1(i__carry__0_i_2__1_n_4),
-        .O(i__carry__1_i_5__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_5__1
-       (.I0(i__carry__1_i_1_n_0),
-        .I1(i__carry__1_i_3_n_0),
-        .O(i__carry__1_i_5__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_5__2
-       (.I0(i__carry__0_i_1__2_n_6),
-        .I1(i__carry_i_1__6_n_4),
-        .O(i__carry__1_i_5__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_6
-       (.I0(i__carry__1_i_2_n_0),
-        .I1(i__carry__1_i_4_n_0),
-        .O(i__carry__1_i_6_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_6__0
-       (.I0(A[16]),
-        .I1(A[14]),
-        .O(i__carry__1_i_6__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_7
-       (.I0(i__carry__1_i_3_n_0),
-        .I1(i__carry__0_i_1_n_0),
-        .O(i__carry__1_i_7_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_7__0
-       (.I0(A[15]),
-        .I1(A[13]),
-        .O(i__carry__1_i_7__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_8
-       (.I0(i__carry__1_i_4_n_0),
-        .I1(i__carry__0_i_2_n_0),
-        .O(i__carry__1_i_8_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_8__0
-       (.I0(A[14]),
-        .I1(A[12]),
-        .O(i__carry__1_i_8__0_n_0));
-  CARRY4 i__carry__1_i_9
-       (.CI(i__carry__0_i_9_n_0),
-        .CO({i__carry__1_i_9_n_0,i__carry__1_i_9_n_1,i__carry__1_i_9_n_2,i__carry__1_i_9_n_3}),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__4/i__carry__1_n_7 ,\TEMP1_inferred__4/i__carry__0_n_4 ,\TEMP1_inferred__4/i__carry__0_n_5 ,\TEMP1_inferred__4/i__carry__0_n_6 }),
-        .O({i__carry__1_i_9_n_4,i__carry__1_i_9_n_5,i__carry__1_i_9_n_6,i__carry__1_i_9_n_7}),
-        .S({i__carry__1_i_12__0_n_0,i__carry__1_i_13__0_n_0,i__carry__1_i_14__0_n_0,i__carry__1_i_15__0_n_0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__1_i_9__0
-       (.I0(A[13]),
-        .I1(A[11]),
-        .O(i__carry__1_i_9__0_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__2_i_1
-       (.I0(i__carry__2_i_9_n_5),
-        .I1(i__carry__2_i_10_n_5),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__2_n_5 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[16]),
-        .O(i__carry__2_i_1_n_0));
-  CARRY4 i__carry__2_i_10
-       (.CI(i__carry__1_i_10__0_n_0),
-        .CO({i__carry__2_i_10_n_0,i__carry__2_i_10_n_1,i__carry__2_i_10_n_2,i__carry__2_i_10_n_3}),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__6/i__carry__2_n_7 ,\TEMP1_inferred__6/i__carry__1_n_4 ,\TEMP1_inferred__6/i__carry__1_n_5 ,\TEMP1_inferred__6/i__carry__1_n_6 }),
-        .O({i__carry__2_i_10_n_4,i__carry__2_i_10_n_5,i__carry__2_i_10_n_6,i__carry__2_i_10_n_7}),
-        .S({i__carry__2_i_16_n_0,i__carry__2_i_17_n_0,i__carry__2_i_18_n_0,i__carry__2_i_19_n_0}));
-  CARRY4 i__carry__2_i_11
-       (.CI(i__carry__1_i_11__0_n_0),
-        .CO({i__carry__2_i_11_n_0,i__carry__2_i_11_n_1,i__carry__2_i_11_n_2,i__carry__2_i_11_n_3}),
-        .CYINIT(1'b0),
-        .DI({i__carry__1_i_1__1_n_5,i__carry__1_i_1__1_n_6,i__carry__1_i_1__1_n_7,i__carry__0_i_1__1_n_4}),
-        .O(TEMP0[17:14]),
-        .S({i__carry__2_i_20_n_0,i__carry__2_i_21_n_0,i__carry__2_i_22_n_0,i__carry__2_i_23_n_0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_12
-       (.I0(\TEMP1_inferred__4/i__carry__2_n_7 ),
-        .I1(\TEMP1_inferred__4/i__carry__1_n_5 ),
-        .O(i__carry__2_i_12_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_13
-       (.I0(\TEMP1_inferred__4/i__carry__1_n_4 ),
-        .I1(\TEMP1_inferred__4/i__carry__1_n_6 ),
-        .O(i__carry__2_i_13_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_14
-       (.I0(\TEMP1_inferred__4/i__carry__1_n_5 ),
-        .I1(\TEMP1_inferred__4/i__carry__1_n_7 ),
-        .O(i__carry__2_i_14_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_15
-       (.I0(\TEMP1_inferred__4/i__carry__1_n_6 ),
-        .I1(\TEMP1_inferred__4/i__carry__0_n_4 ),
-        .O(i__carry__2_i_15_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_16
-       (.I0(\TEMP1_inferred__6/i__carry__2_n_7 ),
-        .I1(\TEMP1_inferred__6/i__carry__1_n_5 ),
-        .O(i__carry__2_i_16_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_17
-       (.I0(\TEMP1_inferred__6/i__carry__1_n_4 ),
-        .I1(\TEMP1_inferred__6/i__carry__1_n_6 ),
-        .O(i__carry__2_i_17_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_18
-       (.I0(\TEMP1_inferred__6/i__carry__1_n_5 ),
-        .I1(\TEMP1_inferred__6/i__carry__1_n_7 ),
-        .O(i__carry__2_i_18_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_19
-       (.I0(\TEMP1_inferred__6/i__carry__1_n_6 ),
-        .I1(\TEMP1_inferred__6/i__carry__0_n_4 ),
-        .O(i__carry__2_i_19_n_0));
-  CARRY4 i__carry__2_i_1__0
-       (.CI(i__carry__1_i_1__1_n_0),
-        .CO({i__carry__2_i_1__0_n_0,NLW_i__carry__2_i_1__0_CO_UNCONNECTED[2],i__carry__2_i_1__0_n_2,i__carry__2_i_1__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,A[17]}),
-        .O({NLW_i__carry__2_i_1__0_O_UNCONNECTED[3],i__carry__2_i_1__0_n_5,i__carry__2_i_1__0_n_6,i__carry__2_i_1__0_n_7}),
-        .S({1'b1,i__carry__2_i_3__0_n_0,i__carry__2_i_4__0_n_0,i__carry__2_i_5__1_n_0}));
-  CARRY4 i__carry__2_i_1__1
-       (.CI(i__carry__1_i_1__2_n_0),
-        .CO({i__carry__2_i_1__1_n_0,i__carry__2_i_1__1_n_1,i__carry__2_i_1__1_n_2,i__carry__2_i_1__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({i__carry__2_i_1__1_n_4,i__carry__2_i_1__1_n_5,i__carry__2_i_1__1_n_6,i__carry__2_i_1__1_n_7}),
-        .S(TEMP1[19:16]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_1__2
-       (.I0(i__carry__1_i_1__0_n_6),
-        .I1(i__carry__0_i_1__0_n_4),
-        .O(i__carry__2_i_1__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_1__3
-       (.I0(\TEMP1_inferred__5/i__carry__2_n_6 ),
-        .I1(\TEMP1_inferred__5/i__carry__1_n_4 ),
-        .O(i__carry__2_i_1__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_1__4
-       (.I0(\TEMP1_inferred__8/i__carry__2_n_7 ),
-        .I1(\TEMP1_inferred__8/i__carry__1_n_5 ),
-        .O(i__carry__2_i_1__4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_1__5
-       (.I0(\TEMP1_inferred__9/i__carry__2_n_6 ),
-        .I1(\TEMP1_inferred__9/i__carry__1_n_4 ),
-        .O(i__carry__2_i_1__5_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_1__6
-       (.I0(TEMP1[16]),
-        .I1(TEMP1[14]),
-        .O(i__carry__2_i_1__6_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__2_i_2
-       (.I0(i__carry__2_i_9_n_6),
-        .I1(i__carry__2_i_10_n_6),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__2_n_6 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[15]),
-        .O(i__carry__2_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_20
-       (.I0(i__carry__1_i_1__1_n_5),
-        .I1(i__carry__1_i_1__1_n_7),
-        .O(i__carry__2_i_20_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_21
-       (.I0(i__carry__1_i_1__1_n_6),
-        .I1(i__carry__0_i_1__1_n_4),
-        .O(i__carry__2_i_21_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_22
-       (.I0(i__carry__1_i_1__1_n_7),
-        .I1(i__carry__0_i_1__1_n_5),
-        .O(i__carry__2_i_22_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_23
-       (.I0(i__carry__0_i_1__1_n_4),
-        .I1(i__carry__0_i_1__1_n_6),
-        .O(i__carry__2_i_23_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__2_i_2__0
-       (.I0(i__carry__1_i_10_n_0),
-        .I1(\TEMP0_inferred__0/i__carry__2_n_0 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry__1_i_11_n_0),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry__1_i_12_n_0),
-        .O(A[17]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_2__1
-       (.I0(\TEMP1_inferred__5/i__carry__2_n_7 ),
-        .I1(\TEMP1_inferred__5/i__carry__1_n_5 ),
-        .O(i__carry__2_i_2__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_2__2
-       (.I0(\TEMP1_inferred__8/i__carry__1_n_4 ),
-        .I1(\TEMP1_inferred__8/i__carry__1_n_6 ),
-        .O(i__carry__2_i_2__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_2__3
-       (.I0(\TEMP1_inferred__9/i__carry__2_n_7 ),
-        .I1(\TEMP1_inferred__9/i__carry__1_n_5 ),
-        .O(i__carry__2_i_2__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_2__4
-       (.I0(i__carry__2_i_1__1_n_7),
-        .I1(i__carry__1_i_1__2_n_5),
-        .O(i__carry__2_i_2__4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_2__5
-       (.I0(TEMP1[15]),
-        .I1(TEMP1[13]),
-        .O(i__carry__2_i_2__5_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__2_i_3
-       (.I0(i__carry__2_i_9_n_7),
-        .I1(i__carry__2_i_10_n_7),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__2_n_7 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[14]),
-        .O(i__carry__2_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__2_i_3__0
-       (.I0(i__carry__1_i_10_n_0),
-        .I1(\TEMP0_inferred__0/i__carry__2_n_0 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry__1_i_11_n_0),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry__1_i_12_n_0),
-        .O(i__carry__2_i_3__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_3__1
-       (.I0(\TEMP1_inferred__5/i__carry__1_n_4 ),
-        .I1(\TEMP1_inferred__5/i__carry__1_n_6 ),
-        .O(i__carry__2_i_3__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_3__2
-       (.I0(\TEMP1_inferred__8/i__carry__1_n_5 ),
-        .I1(\TEMP1_inferred__8/i__carry__1_n_7 ),
-        .O(i__carry__2_i_3__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_3__3
-       (.I0(\TEMP1_inferred__9/i__carry__1_n_4 ),
-        .I1(\TEMP1_inferred__9/i__carry__1_n_6 ),
-        .O(i__carry__2_i_3__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_3__4
-       (.I0(i__carry__1_i_1__2_n_4),
-        .I1(i__carry__1_i_1__2_n_6),
-        .O(i__carry__2_i_3__4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_3__5
-       (.I0(TEMP1[14]),
-        .I1(TEMP1[12]),
-        .O(i__carry__2_i_3__5_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__2_i_4
-       (.I0(i__carry__1_i_9_n_4),
-        .I1(i__carry__1_i_10__0_n_4),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__1_n_4 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[13]),
-        .O(i__carry__2_i_4_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__2_i_4__0
-       (.I0(i__carry__1_i_10_n_5),
-        .I1(\TEMP0_inferred__0/i__carry__2_n_5 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry__1_i_11_n_5),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry__1_i_12_n_5),
-        .O(i__carry__2_i_4__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_4__1
-       (.I0(\TEMP1_inferred__5/i__carry__1_n_5 ),
-        .I1(\TEMP1_inferred__5/i__carry__1_n_7 ),
-        .O(i__carry__2_i_4__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_4__2
-       (.I0(\TEMP1_inferred__8/i__carry__1_n_6 ),
-        .I1(\TEMP1_inferred__8/i__carry__0_n_4 ),
-        .O(i__carry__2_i_4__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_4__3
-       (.I0(\TEMP1_inferred__9/i__carry__1_n_5 ),
-        .I1(\TEMP1_inferred__9/i__carry__1_n_7 ),
-        .O(i__carry__2_i_4__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_4__4
-       (.I0(i__carry__1_i_1__2_n_5),
-        .I1(i__carry__1_i_1__2_n_7),
-        .O(i__carry__2_i_4__4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_4__5
-       (.I0(TEMP1[13]),
-        .I1(TEMP1[11]),
-        .O(i__carry__2_i_4__5_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_5
-       (.I0(i__carry__2_i_1_n_0),
-        .I1(i__carry__2_i_3_n_0),
-        .O(i__carry__2_i_5_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_5__0
-       (.I0(i__carry__1_i_1__2_n_6),
-        .I1(i__carry__0_i_1__2_n_4),
-        .O(i__carry__2_i_5__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_5__1
-       (.I0(A[17]),
-        .I1(A[15]),
-        .O(i__carry__2_i_5__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_6
-       (.I0(i__carry__2_i_2_n_0),
-        .I1(i__carry__2_i_4_n_0),
-        .O(i__carry__2_i_6_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_7
-       (.I0(i__carry__2_i_3_n_0),
-        .I1(i__carry__1_i_1_n_0),
-        .O(i__carry__2_i_7_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__2_i_8
-       (.I0(i__carry__2_i_4_n_0),
-        .I1(i__carry__1_i_2_n_0),
-        .O(i__carry__2_i_8_n_0));
-  CARRY4 i__carry__2_i_9
-       (.CI(i__carry__1_i_9_n_0),
-        .CO({i__carry__2_i_9_n_0,i__carry__2_i_9_n_1,i__carry__2_i_9_n_2,i__carry__2_i_9_n_3}),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__4/i__carry__2_n_7 ,\TEMP1_inferred__4/i__carry__1_n_4 ,\TEMP1_inferred__4/i__carry__1_n_5 ,\TEMP1_inferred__4/i__carry__1_n_6 }),
-        .O({i__carry__2_i_9_n_4,i__carry__2_i_9_n_5,i__carry__2_i_9_n_6,i__carry__2_i_9_n_7}),
-        .S({i__carry__2_i_12_n_0,i__carry__2_i_13_n_0,i__carry__2_i_14_n_0,i__carry__2_i_15_n_0}));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__3_i_1
-       (.I0(i__carry__3_i_9_n_5),
-        .I1(i__carry__3_i_10_n_5),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__3_n_5 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[20]),
-        .O(i__carry__3_i_1_n_0));
-  CARRY4 i__carry__3_i_10
-       (.CI(i__carry__2_i_10_n_0),
-        .CO({i__carry__3_i_10_n_0,i__carry__3_i_10_n_1,i__carry__3_i_10_n_2,i__carry__3_i_10_n_3}),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__6/i__carry__3_n_7 ,\TEMP1_inferred__6/i__carry__2_n_4 ,\TEMP1_inferred__6/i__carry__2_n_5 ,\TEMP1_inferred__6/i__carry__2_n_6 }),
-        .O({i__carry__3_i_10_n_4,i__carry__3_i_10_n_5,i__carry__3_i_10_n_6,i__carry__3_i_10_n_7}),
-        .S({i__carry__3_i_16_n_0,i__carry__3_i_17_n_0,i__carry__3_i_18_n_0,i__carry__3_i_19_n_0}));
-  CARRY4 i__carry__3_i_11
-       (.CI(i__carry__2_i_11_n_0),
-        .CO({i__carry__3_i_11_n_0,i__carry__3_i_11_n_1,i__carry__3_i_11_n_2,i__carry__3_i_11_n_3}),
-        .CYINIT(1'b0),
-        .DI({i__carry__2_i_1__0_n_5,i__carry__2_i_1__0_n_6,i__carry__2_i_1__0_n_7,i__carry__1_i_1__1_n_4}),
-        .O(TEMP0[21:18]),
-        .S({i__carry__3_i_20_n_0,i__carry__3_i_21_n_0,i__carry__3_i_22_n_0,i__carry__3_i_23_n_0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_12
-       (.I0(\TEMP1_inferred__4/i__carry__3_n_7 ),
-        .I1(\TEMP1_inferred__4/i__carry__2_n_5 ),
-        .O(i__carry__3_i_12_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_13
-       (.I0(\TEMP1_inferred__4/i__carry__2_n_4 ),
-        .I1(\TEMP1_inferred__4/i__carry__2_n_6 ),
-        .O(i__carry__3_i_13_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_14
-       (.I0(\TEMP1_inferred__4/i__carry__2_n_5 ),
-        .I1(\TEMP1_inferred__4/i__carry__2_n_7 ),
-        .O(i__carry__3_i_14_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_15
-       (.I0(\TEMP1_inferred__4/i__carry__2_n_6 ),
-        .I1(\TEMP1_inferred__4/i__carry__1_n_4 ),
-        .O(i__carry__3_i_15_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_16
-       (.I0(\TEMP1_inferred__6/i__carry__3_n_7 ),
-        .I1(\TEMP1_inferred__6/i__carry__2_n_5 ),
-        .O(i__carry__3_i_16_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_17
-       (.I0(\TEMP1_inferred__6/i__carry__2_n_4 ),
-        .I1(\TEMP1_inferred__6/i__carry__2_n_6 ),
-        .O(i__carry__3_i_17_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_18
-       (.I0(\TEMP1_inferred__6/i__carry__2_n_5 ),
-        .I1(\TEMP1_inferred__6/i__carry__2_n_7 ),
-        .O(i__carry__3_i_18_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_19
-       (.I0(\TEMP1_inferred__6/i__carry__2_n_6 ),
-        .I1(\TEMP1_inferred__6/i__carry__1_n_4 ),
-        .O(i__carry__3_i_19_n_0));
-  CARRY4 i__carry__3_i_1__0
-       (.CI(i__carry__2_i_1__1_n_0),
-        .CO({i__carry__3_i_1__0_n_0,i__carry__3_i_1__0_n_1,i__carry__3_i_1__0_n_2,i__carry__3_i_1__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({i__carry__3_i_1__0_n_4,i__carry__3_i_1__0_n_5,i__carry__3_i_1__0_n_6,i__carry__3_i_1__0_n_7}),
-        .S(TEMP1[23:20]));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_1__1
-       (.I0(\TEMP1_inferred__5/i__carry__3_n_6 ),
-        .I1(\TEMP1_inferred__5/i__carry__2_n_4 ),
-        .O(i__carry__3_i_1__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_1__2
-       (.I0(\TEMP1_inferred__8/i__carry__3_n_7 ),
-        .I1(\TEMP1_inferred__8/i__carry__2_n_5 ),
-        .O(i__carry__3_i_1__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_1__3
-       (.I0(\TEMP1_inferred__9/i__carry__3_n_6 ),
-        .I1(\TEMP1_inferred__9/i__carry__2_n_4 ),
-        .O(i__carry__3_i_1__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_1__4
-       (.I0(TEMP1[20]),
-        .I1(TEMP1[18]),
-        .O(i__carry__3_i_1__4_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__3_i_2
-       (.I0(i__carry__3_i_9_n_6),
-        .I1(i__carry__3_i_10_n_6),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__3_n_6 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[19]),
-        .O(i__carry__3_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_20
-       (.I0(i__carry__2_i_1__0_n_5),
-        .I1(i__carry__2_i_1__0_n_7),
-        .O(i__carry__3_i_20_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_21
-       (.I0(i__carry__2_i_1__0_n_6),
-        .I1(i__carry__1_i_1__1_n_4),
-        .O(i__carry__3_i_21_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_22
-       (.I0(i__carry__2_i_1__0_n_7),
-        .I1(i__carry__1_i_1__1_n_5),
-        .O(i__carry__3_i_22_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_23
-       (.I0(i__carry__1_i_1__1_n_4),
-        .I1(i__carry__1_i_1__1_n_6),
-        .O(i__carry__3_i_23_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_2__0
-       (.I0(\TEMP1_inferred__5/i__carry__3_n_7 ),
-        .I1(\TEMP1_inferred__5/i__carry__2_n_5 ),
-        .O(i__carry__3_i_2__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_2__1
-       (.I0(\TEMP1_inferred__8/i__carry__2_n_4 ),
-        .I1(\TEMP1_inferred__8/i__carry__2_n_6 ),
-        .O(i__carry__3_i_2__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_2__2
-       (.I0(\TEMP1_inferred__9/i__carry__3_n_7 ),
-        .I1(\TEMP1_inferred__9/i__carry__2_n_5 ),
-        .O(i__carry__3_i_2__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_2__3
-       (.I0(i__carry__3_i_1__0_n_7),
-        .I1(i__carry__2_i_1__1_n_5),
-        .O(i__carry__3_i_2__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_2__4
-       (.I0(TEMP1[19]),
-        .I1(TEMP1[17]),
-        .O(i__carry__3_i_2__4_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__3_i_3
-       (.I0(i__carry__3_i_9_n_7),
-        .I1(i__carry__3_i_10_n_7),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__3_n_7 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[18]),
-        .O(i__carry__3_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_3__0
-       (.I0(\TEMP1_inferred__5/i__carry__2_n_4 ),
-        .I1(\TEMP1_inferred__5/i__carry__2_n_6 ),
-        .O(i__carry__3_i_3__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_3__1
-       (.I0(\TEMP1_inferred__8/i__carry__2_n_5 ),
-        .I1(\TEMP1_inferred__8/i__carry__2_n_7 ),
-        .O(i__carry__3_i_3__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_3__2
-       (.I0(\TEMP1_inferred__9/i__carry__2_n_4 ),
-        .I1(\TEMP1_inferred__9/i__carry__2_n_6 ),
-        .O(i__carry__3_i_3__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_3__3
-       (.I0(i__carry__2_i_1__1_n_4),
-        .I1(i__carry__2_i_1__1_n_6),
-        .O(i__carry__3_i_3__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_3__4
-       (.I0(TEMP1[18]),
-        .I1(TEMP1[16]),
-        .O(i__carry__3_i_3__4_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__3_i_4
-       (.I0(i__carry__2_i_9_n_4),
-        .I1(i__carry__2_i_10_n_4),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__2_n_4 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[17]),
-        .O(i__carry__3_i_4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_4__0
-       (.I0(\TEMP1_inferred__5/i__carry__2_n_5 ),
-        .I1(\TEMP1_inferred__5/i__carry__2_n_7 ),
-        .O(i__carry__3_i_4__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_4__1
-       (.I0(\TEMP1_inferred__8/i__carry__2_n_6 ),
-        .I1(\TEMP1_inferred__8/i__carry__1_n_4 ),
-        .O(i__carry__3_i_4__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_4__2
-       (.I0(\TEMP1_inferred__9/i__carry__2_n_5 ),
-        .I1(\TEMP1_inferred__9/i__carry__2_n_7 ),
-        .O(i__carry__3_i_4__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_4__3
-       (.I0(i__carry__2_i_1__1_n_5),
-        .I1(i__carry__2_i_1__1_n_7),
-        .O(i__carry__3_i_4__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_4__4
-       (.I0(TEMP1[17]),
-        .I1(TEMP1[15]),
-        .O(i__carry__3_i_4__4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_5
-       (.I0(i__carry__3_i_1_n_0),
-        .I1(i__carry__3_i_3_n_0),
-        .O(i__carry__3_i_5_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_5__0
-       (.I0(i__carry__2_i_1__1_n_6),
-        .I1(i__carry__1_i_1__2_n_4),
-        .O(i__carry__3_i_5__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_6
-       (.I0(i__carry__3_i_2_n_0),
-        .I1(i__carry__3_i_4_n_0),
-        .O(i__carry__3_i_6_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_7
-       (.I0(i__carry__3_i_3_n_0),
-        .I1(i__carry__2_i_1_n_0),
-        .O(i__carry__3_i_7_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__3_i_8
-       (.I0(i__carry__3_i_4_n_0),
-        .I1(i__carry__2_i_2_n_0),
-        .O(i__carry__3_i_8_n_0));
-  CARRY4 i__carry__3_i_9
-       (.CI(i__carry__2_i_9_n_0),
-        .CO({i__carry__3_i_9_n_0,i__carry__3_i_9_n_1,i__carry__3_i_9_n_2,i__carry__3_i_9_n_3}),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__4/i__carry__3_n_7 ,\TEMP1_inferred__4/i__carry__2_n_4 ,\TEMP1_inferred__4/i__carry__2_n_5 ,\TEMP1_inferred__4/i__carry__2_n_6 }),
-        .O({i__carry__3_i_9_n_4,i__carry__3_i_9_n_5,i__carry__3_i_9_n_6,i__carry__3_i_9_n_7}),
-        .S({i__carry__3_i_12_n_0,i__carry__3_i_13_n_0,i__carry__3_i_14_n_0,i__carry__3_i_15_n_0}));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__4_i_1
-       (.I0(i__carry__4_i_8_n_6),
-        .I1(i__carry__4_i_9_n_6),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__4_n_6 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[23]),
-        .O(i__carry__4_i_1_n_0));
-  CARRY4 i__carry__4_i_10
-       (.CI(i__carry__3_i_11_n_0),
-        .CO({NLW_i__carry__4_i_10_CO_UNCONNECTED[3:2],i__carry__4_i_10_n_2,i__carry__4_i_10_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,i__carry__2_i_1__0_n_0}),
-        .O({NLW_i__carry__4_i_10_O_UNCONNECTED[3],TEMP0[24:22]}),
-        .S({1'b0,i__carry__2_i_1__0_n_0,i__carry__2_i_1__0_n_5,i__carry__4_i_17_n_0}));
-  LUT5 #(
-    .INIT(32'h606F6F60)) 
-    i__carry__4_i_11
-       (.I0(i__carry__4_i_8_n_5),
-        .I1(i__carry__4_i_8_n_7),
-        .I2(mode_sFREQ[3]),
-        .I3(i__carry__4_i_9_n_5),
-        .I4(i__carry__4_i_9_n_7),
-        .O(i__carry__4_i_11_n_0));
-  LUT5 #(
-    .INIT(32'h606F6F60)) 
-    i__carry__4_i_12
-       (.I0(\TEMP0_inferred__4/i__carry__4_n_5 ),
-        .I1(\TEMP0_inferred__4/i__carry__4_n_7 ),
-        .I2(mode_sFREQ[3]),
-        .I3(TEMP0[24]),
-        .I4(TEMP0[22]),
-        .O(i__carry__4_i_12_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_13
-       (.I0(\TEMP1_inferred__4/i__carry__3_n_1 ),
-        .I1(\TEMP1_inferred__4/i__carry__3_n_7 ),
-        .O(i__carry__4_i_13_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_14
-       (.I0(\TEMP1_inferred__4/i__carry__3_n_6 ),
-        .I1(\TEMP1_inferred__4/i__carry__2_n_4 ),
-        .O(i__carry__4_i_14_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_15
-       (.I0(\TEMP1_inferred__6/i__carry__3_n_1 ),
-        .I1(\TEMP1_inferred__6/i__carry__3_n_7 ),
-        .O(i__carry__4_i_15_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_16
-       (.I0(\TEMP1_inferred__6/i__carry__3_n_6 ),
-        .I1(\TEMP1_inferred__6/i__carry__2_n_4 ),
-        .O(i__carry__4_i_16_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_17
-       (.I0(i__carry__2_i_1__0_n_0),
-        .I1(i__carry__2_i_1__0_n_6),
-        .O(i__carry__4_i_17_n_0));
-  CARRY4 i__carry__4_i_1__0
-       (.CI(i__carry__3_i_1__0_n_0),
-        .CO({NLW_i__carry__4_i_1__0_CO_UNCONNECTED[3:1],i__carry__4_i_1__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({NLW_i__carry__4_i_1__0_O_UNCONNECTED[3:2],i__carry__4_i_1__0_n_6,i__carry__4_i_1__0_n_7}),
-        .S({1'b0,1'b0,TEMP1[25:24]}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_1__1
-       (.I0(\TEMP1_inferred__5/i__carry__3_n_0 ),
-        .I1(\TEMP1_inferred__5/i__carry__3_n_6 ),
-        .O(i__carry__4_i_1__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_1__2
-       (.I0(\TEMP1_inferred__8/i__carry__4_n_7 ),
-        .I1(\TEMP1_inferred__8/i__carry__3_n_5 ),
-        .O(i__carry__4_i_1__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_1__3
-       (.I0(\TEMP1_inferred__9/i__carry__4_n_6 ),
-        .I1(\TEMP1_inferred__9/i__carry__3_n_4 ),
-        .O(i__carry__4_i_1__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_1__4
-       (.I0(TEMP1[24]),
-        .I1(TEMP1[22]),
-        .O(i__carry__4_i_1__4_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__4_i_2
-       (.I0(i__carry__4_i_8_n_7),
-        .I1(i__carry__4_i_9_n_7),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__4_n_7 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[22]),
-        .O(i__carry__4_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_2__0
-       (.I0(\TEMP1_inferred__5/i__carry__3_n_5 ),
-        .I1(\TEMP1_inferred__5/i__carry__3_n_7 ),
-        .O(i__carry__4_i_2__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_2__1
-       (.I0(\TEMP1_inferred__8/i__carry__3_n_4 ),
-        .I1(\TEMP1_inferred__8/i__carry__3_n_6 ),
-        .O(i__carry__4_i_2__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_2__2
-       (.I0(\TEMP1_inferred__9/i__carry__4_n_7 ),
-        .I1(\TEMP1_inferred__9/i__carry__3_n_5 ),
-        .O(i__carry__4_i_2__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_2__3
-       (.I0(i__carry__4_i_1__0_n_7),
-        .I1(i__carry__3_i_1__0_n_5),
-        .O(i__carry__4_i_2__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_2__4
-       (.I0(TEMP1[23]),
-        .I1(TEMP1[21]),
-        .O(i__carry__4_i_2__4_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry__4_i_3
-       (.I0(i__carry__3_i_9_n_4),
-        .I1(i__carry__3_i_10_n_4),
-        .I2(mode_sFREQ[2]),
-        .I3(\TEMP0_inferred__4/i__carry__3_n_4 ),
-        .I4(mode_sFREQ[3]),
-        .I5(TEMP0[21]),
-        .O(i__carry__4_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_3__0
-       (.I0(\TEMP1_inferred__8/i__carry__3_n_5 ),
-        .I1(\TEMP1_inferred__8/i__carry__3_n_7 ),
-        .O(i__carry__4_i_3__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_3__1
-       (.I0(\TEMP1_inferred__9/i__carry__3_n_4 ),
-        .I1(\TEMP1_inferred__9/i__carry__3_n_6 ),
-        .O(i__carry__4_i_3__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_3__2
-       (.I0(i__carry__3_i_1__0_n_4),
-        .I1(i__carry__3_i_1__0_n_6),
-        .O(i__carry__4_i_3__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_3__3
-       (.I0(TEMP1[22]),
-        .I1(TEMP1[20]),
-        .O(i__carry__4_i_3__3_n_0));
-  LUT3 #(
-    .INIT(8'hB8)) 
-    i__carry__4_i_4
-       (.I0(i__carry__4_i_11_n_0),
-        .I1(mode_sFREQ[2]),
-        .I2(i__carry__4_i_12_n_0),
-        .O(i__carry__4_i_4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_4__0
-       (.I0(\TEMP1_inferred__8/i__carry__3_n_6 ),
-        .I1(\TEMP1_inferred__8/i__carry__2_n_4 ),
-        .O(i__carry__4_i_4__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_4__1
-       (.I0(\TEMP1_inferred__9/i__carry__3_n_5 ),
-        .I1(\TEMP1_inferred__9/i__carry__3_n_7 ),
-        .O(i__carry__4_i_4__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_4__2
-       (.I0(i__carry__3_i_1__0_n_5),
-        .I1(i__carry__3_i_1__0_n_7),
-        .O(i__carry__4_i_4__2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_4__3
-       (.I0(TEMP1[21]),
-        .I1(TEMP1[19]),
-        .O(i__carry__4_i_4__3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_5
-       (.I0(i__carry__4_i_1_n_0),
-        .I1(i__carry__4_i_3_n_0),
-        .O(i__carry__4_i_5_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_5__0
-       (.I0(i__carry__3_i_1__0_n_6),
-        .I1(i__carry__2_i_1__1_n_4),
-        .O(i__carry__4_i_5__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_6
-       (.I0(i__carry__4_i_2_n_0),
-        .I1(i__carry__3_i_1_n_0),
-        .O(i__carry__4_i_6_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__4_i_7
-       (.I0(i__carry__4_i_3_n_0),
-        .I1(i__carry__3_i_2_n_0),
-        .O(i__carry__4_i_7_n_0));
-  CARRY4 i__carry__4_i_8
-       (.CI(i__carry__3_i_9_n_0),
-        .CO({NLW_i__carry__4_i_8_CO_UNCONNECTED[3:2],i__carry__4_i_8_n_2,i__carry__4_i_8_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,\TEMP1_inferred__4/i__carry__3_n_1 ,\TEMP1_inferred__4/i__carry__3_n_6 }),
-        .O({NLW_i__carry__4_i_8_O_UNCONNECTED[3],i__carry__4_i_8_n_5,i__carry__4_i_8_n_6,i__carry__4_i_8_n_7}),
-        .S({1'b0,\TEMP1_inferred__4/i__carry__3_n_6 ,i__carry__4_i_13_n_0,i__carry__4_i_14_n_0}));
-  CARRY4 i__carry__4_i_9
-       (.CI(i__carry__3_i_10_n_0),
-        .CO({NLW_i__carry__4_i_9_CO_UNCONNECTED[3:2],i__carry__4_i_9_n_2,i__carry__4_i_9_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,\TEMP1_inferred__6/i__carry__3_n_1 ,\TEMP1_inferred__6/i__carry__3_n_6 }),
-        .O({NLW_i__carry__4_i_9_O_UNCONNECTED[3],i__carry__4_i_9_n_5,i__carry__4_i_9_n_6,i__carry__4_i_9_n_7}),
-        .S({1'b0,\TEMP1_inferred__6/i__carry__3_n_6 ,i__carry__4_i_15_n_0,i__carry__4_i_16_n_0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__5_i_1
-       (.I0(TEMP1[25]),
-        .I1(TEMP1[23]),
-        .O(i__carry__5_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__5_i_1__0
-       (.I0(i__carry__4_i_1__0_n_6),
-        .I1(i__carry__3_i_1__0_n_4),
-        .O(i__carry__5_i_1__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__5_i_1__1
-       (.I0(\TEMP1_inferred__9/i__carry__4_n_7 ),
-        .I1(\TEMP1_inferred__9/i__carry__4_n_5 ),
-        .O(i__carry__5_i_1__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry__5_i_1__2
-       (.I0(\TEMP1_inferred__8/i__carry__3_n_4 ),
-        .I1(\TEMP1_inferred__8/i__carry__4_n_6 ),
-        .O(i__carry__5_i_1__2_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_1
-       (.I0(i__carry_i_1__5_n_4),
-        .O(i__carry_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_10
-       (.I0(A[8]),
-        .I1(A[6]),
-        .O(i__carry_i_10_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_11
-       (.I0(A[7]),
-        .I1(A[5]),
-        .O(i__carry_i_11_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_12
-       (.I0(A[6]),
-        .I1(A[4]),
-        .O(i__carry_i_12_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_12__0
-       (.I0(\TEMP1_inferred__4/i__carry_n_7 ),
-        .I1(O[0]),
-        .O(i__carry_i_12__0_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_13
-       (.I0(A[5]),
-        .I1(A[3]),
-        .O(i__carry_i_13_n_0));
-  CARRY4 i__carry_i_14
-       (.CI(1'b0),
-        .CO({i__carry_i_14_n_0,i__carry_i_14_n_1,i__carry_i_14_n_2,i__carry_i_14_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,mode_sFREQ[7:6],1'b0}),
-        .O({i__carry_i_14_n_4,i__carry_i_14_n_5,i__carry_i_14_n_6,NLW_i__carry_i_14_O_UNCONNECTED[0]}),
-        .S({mode_sFREQ[6],mode_sFREQ[7:6],1'b0}));
-  CARRY4 i__carry_i_15
-       (.CI(1'b0),
-        .CO({i__carry_i_15_n_0,i__carry_i_15_n_1,i__carry_i_15_n_2,i__carry_i_15_n_3}),
-        .CYINIT(1'b0),
-        .DI({mode_sFREQ[6],i__carry_i_22_n_0,mode_sFREQ[6],1'b0}),
-        .O({i__carry_i_15_n_4,i__carry_i_15_n_5,i__carry_i_15_n_6,NLW_i__carry_i_15_O_UNCONNECTED[0]}),
-        .S({i__carry_i_23_n_0,i__carry_i_24_n_0,i__carry_i_25_n_0,1'b0}));
-  CARRY4 i__carry_i_16
-       (.CI(1'b0),
-        .CO({i__carry_i_16_n_0,i__carry_i_16_n_1,i__carry_i_16_n_2,i__carry_i_16_n_3}),
-        .CYINIT(1'b0),
-        .DI({mode_sFREQ[7],i__carry_i_26_n_0,mode_sFREQ[6],1'b0}),
-        .O({i__carry_i_16_n_4,i__carry_i_16_n_5,i__carry_i_16_n_6,NLW_i__carry_i_16_O_UNCONNECTED[0]}),
-        .S({i__carry_i_27_n_0,mode_sFREQ[7],i__carry_i_28_n_0,1'b1}));
-  CARRY4 i__carry_i_17
-       (.CI(i__carry_i_16_n_0),
-        .CO({i__carry_i_17_n_0,i__carry_i_17_n_1,i__carry_i_17_n_2,i__carry_i_17_n_3}),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__0/i__carry_n_6 ,\TEMP1_inferred__0/i__carry_n_7 ,mode_sFREQ[7],TEMP1_carry_n_6}),
-        .O({i__carry_i_17_n_4,i__carry_i_17_n_5,i__carry_i_17_n_6,i__carry_i_17_n_7}),
-        .S({i__carry_i_29_n_0,i__carry_i_30_n_0,i__carry_i_31_n_0,i__carry_i_32_n_0}));
-  CARRY4 i__carry_i_18
-       (.CI(i__carry_i_15_n_0),
-        .CO({i__carry_i_18_n_0,i__carry_i_18_n_1,i__carry_i_18_n_2,i__carry_i_18_n_3}),
-        .CYINIT(1'b0),
-        .DI({i__carry_i_33_n_4,i__carry_i_33_n_5,i__carry_i_33_n_6,i__carry_i_33_n_7}),
-        .O({i__carry_i_18_n_4,i__carry_i_18_n_5,i__carry_i_18_n_6,i__carry_i_18_n_7}),
-        .S({i__carry_i_34_n_0,i__carry_i_35_n_0,i__carry_i_36_n_0,i__carry_i_37_n_0}));
-  CARRY4 i__carry_i_19
-       (.CI(i__carry_i_14_n_0),
-        .CO({i__carry_i_19_n_0,i__carry_i_19_n_1,i__carry_i_19_n_2,i__carry_i_19_n_3}),
-        .CYINIT(1'b0),
-        .DI({TEMP1_carry__0_n_7,TEMP1_carry_n_4,TEMP1_carry_n_5,TEMP1_carry_n_6}),
-        .O({i__carry_i_19_n_4,i__carry_i_19_n_5,i__carry_i_19_n_6,i__carry_i_19_n_7}),
-        .S({i__carry_i_38_n_0,i__carry_i_39_n_0,TEMP1_carry_n_5,i__carry_i_40_n_0}));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_1__0
-       (.I0(TEMP1[6]),
-        .O(i__carry_i_1__0_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_1__1
-       (.I0(TEMP1[5]),
-        .O(i__carry_i_1__1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_1__10
-       (.I0(TEMP1[4]),
-        .I1(TEMP1[2]),
-        .O(i__carry_i_1__10_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_1__2
-       (.I0(i__carry_i_1__5_n_5),
-        .O(i__carry_i_1__2_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_1__3
+    w_MODEfreq0__4_carry__3_i_7
        (.I0(mode_sFREQ[6]),
-        .O(i__carry_i_1__3_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_1__4
-       (.I0(TEMP1[3]),
-        .O(i__carry_i_1__4_n_0));
-  CARRY4 i__carry_i_1__5
-       (.CI(1'b0),
-        .CO({i__carry_i_1__5_n_0,i__carry_i_1__5_n_1,i__carry_i_1__5_n_2,i__carry_i_1__5_n_3}),
-        .CYINIT(1'b0),
-        .DI({mode_sFREQ[5:4],mode_sFREQ[5],1'b0}),
-        .O({i__carry_i_1__5_n_4,i__carry_i_1__5_n_5,O}),
-        .S({i__carry_i_4__1_n_0,i__carry_i_5__1_n_0,mode_sFREQ[5:4]}));
-  CARRY4 i__carry_i_1__6
-       (.CI(1'b0),
-        .CO({i__carry_i_1__6_n_0,i__carry_i_1__6_n_1,i__carry_i_1__6_n_2,i__carry_i_1__6_n_3}),
-        .CYINIT(TEMP1[3]),
-        .DI({1'b0,1'b0,1'b0,TEMP1[4]}),
-        .O({i__carry_i_1__6_n_4,i__carry_i_1__6_n_5,i__carry_i_1__6_n_6,i__carry_i_1__6_n_7}),
-        .S({TEMP1[7:5],i__carry_i_6_n_0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_1__7
-       (.I0(\TEMP1_inferred__5/i__carry_n_6 ),
-        .I1(O[0]),
-        .O(i__carry_i_1__7_n_0));
-  LUT6 #(
-    .INIT(64'h0303F3F3FA0AFA0A)) 
-    i__carry_i_1__8
-       (.I0(TEMP0[4]),
-        .I1(\TEMP0_inferred__4/i__carry_n_5 ),
-        .I2(mode_sFREQ[2]),
-        .I3(i__carry_i_4__0_n_5),
-        .I4(i__carry_i_5__0_n_5),
-        .I5(mode_sFREQ[3]),
-        .O(i__carry_i_1__8_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_1__9
-       (.I0(\TEMP1_inferred__9/i__carry_n_6 ),
-        .I1(TEMP1[2]),
-        .O(i__carry_i_1__9_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_2
-       (.I0(\TEMP1_inferred__5/i__carry_n_7 ),
-        .O(i__carry_i_2_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry_i_20
-       (.I0(i__carry_i_16_n_5),
-        .I1(\TEMP0_inferred__0/i__carry_n_5 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry_i_15_n_5),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry_i_14_n_5),
-        .O(A[4]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry_i_21
-       (.I0(i__carry_i_16_n_6),
-        .I1(\TEMP0_inferred__0/i__carry_n_6 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry_i_15_n_6),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry_i_14_n_6),
-        .O(A[3]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_22
-       (.I0(mode_sFREQ[7]),
-        .O(i__carry_i_22_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    i__carry_i_23
-       (.I0(mode_sFREQ[7]),
-        .I1(mode_sFREQ[6]),
-        .O(i__carry_i_23_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_24
-       (.I0(mode_sFREQ[7]),
-        .O(i__carry_i_24_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_25
-       (.I0(mode_sFREQ[6]),
-        .O(i__carry_i_25_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_26
-       (.I0(mode_sFREQ[7]),
-        .O(i__carry_i_26_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_27
-       (.I0(mode_sFREQ[6]),
-        .I1(mode_sFREQ[7]),
-        .O(i__carry_i_27_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_28
-       (.I0(mode_sFREQ[6]),
-        .O(i__carry_i_28_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    i__carry_i_29
-       (.I0(\TEMP1_inferred__0/i__carry_n_6 ),
-        .I1(TEMP1_carry_n_5),
-        .O(i__carry_i_29_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_2__0
-       (.I0(TEMP1[3]),
-        .O(i__carry_i_2__0_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_2__1
-       (.I0(\TEMP1_inferred__9/i__carry_n_7 ),
-        .O(i__carry_i_2__1_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_2__2
-       (.I0(mode_sFREQ[7]),
-        .O(i__carry_i_2__2_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_2__3
-       (.I0(i__carry_i_1__5_n_5),
-        .O(i__carry_i_2__3_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_2__4
-       (.I0(TEMP1[4]),
-        .O(i__carry_i_2__4_n_0));
-  CARRY4 i__carry_i_2__5
-       (.CI(i__carry_i_1__5_n_0),
-        .CO({i__carry_i_2__5_n_0,i__carry_i_2__5_n_1,i__carry_i_2__5_n_2,i__carry_i_2__5_n_3}),
-        .CYINIT(1'b0),
-        .DI(A[8:5]),
-        .O({i__carry_i_2__5_n_4,i__carry_i_2__5_n_5,i__carry_i_2__5_n_6,i__carry_i_2__5_n_7}),
-        .S({i__carry_i_10_n_0,i__carry_i_11_n_0,i__carry_i_12_n_0,i__carry_i_13_n_0}));
-  LUT6 #(
-    .INIT(64'h0033CCFFE2E2E2E2)) 
-    i__carry_i_2__6
-       (.I0(TEMP0[3]),
-        .I1(mode_sFREQ[3]),
-        .I2(\TEMP0_inferred__4/i__carry_n_6 ),
-        .I3(i__carry_i_4__0_n_6),
-        .I4(i__carry_i_5__0_n_6),
-        .I5(mode_sFREQ[2]),
-        .O(i__carry_i_2__6_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_2__7
-       (.I0(\TEMP1_inferred__8/i__carry_n_7 ),
-        .I1(TEMP1[2]),
-        .O(i__carry_i_2__7_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_3
-       (.I0(i__carry_i_2__5_n_7),
-        .O(i__carry_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_30
-       (.I0(\TEMP1_inferred__0/i__carry_n_7 ),
-        .I1(TEMP1_carry_n_6),
-        .O(i__carry_i_30_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    i__carry_i_31
-       (.I0(TEMP1_carry_n_5),
-        .I1(mode_sFREQ[7]),
-        .O(i__carry_i_31_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    i__carry_i_32
-       (.I0(mode_sFREQ[7]),
-        .I1(TEMP1_carry_n_6),
-        .O(i__carry_i_32_n_0));
-  (* ADDER_THRESHOLD = "35" *) 
-  CARRY4 i__carry_i_33
-       (.CI(1'b0),
-        .CO({i__carry_i_33_n_0,i__carry_i_33_n_1,i__carry_i_33_n_2,i__carry_i_33_n_3}),
-        .CYINIT(mode_sFREQ[7]),
-        .DI({1'b0,1'b0,1'b0,1'b0}),
-        .O({i__carry_i_33_n_4,i__carry_i_33_n_5,i__carry_i_33_n_6,i__carry_i_33_n_7}),
-        .S({TEMP1_carry__0_n_7,TEMP1_carry_n_4,TEMP1_carry_n_5,TEMP1_carry_n_6}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_34
-       (.I0(i__carry_i_33_n_4),
-        .I1(i__carry_i_33_n_6),
-        .O(i__carry_i_34_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_35
-       (.I0(i__carry_i_33_n_5),
-        .I1(i__carry_i_33_n_7),
-        .O(i__carry_i_35_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    i__carry_i_36
-       (.I0(i__carry_i_33_n_6),
-        .I1(mode_sFREQ[7]),
-        .O(i__carry_i_36_n_0));
-  LUT2 #(
-    .INIT(4'h9)) 
-    i__carry_i_37
-       (.I0(i__carry_i_33_n_7),
-        .I1(mode_sFREQ[7]),
-        .O(i__carry_i_37_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_38
-       (.I0(TEMP1_carry__0_n_7),
-        .I1(TEMP1_carry_n_5),
-        .O(i__carry_i_38_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_39
-       (.I0(TEMP1_carry_n_4),
-        .I1(TEMP1_carry_n_6),
-        .O(i__carry_i_39_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_3__0
-       (.I0(TEMP1[2]),
-        .O(i__carry_i_3__0_n_0));
-  CARRY4 i__carry_i_3__1
-       (.CI(1'b0),
-        .CO({i__carry_i_3__1_n_0,i__carry_i_3__1_n_1,i__carry_i_3__1_n_2,i__carry_i_3__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({i__carry_i_1__5_n_5,O,1'b0}),
-        .O({TEMP0[5:3],NLW_i__carry_i_3__1_O_UNCONNECTED[0]}),
-        .S({i__carry_i_6__1_n_0,O,1'b0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_3__2
-       (.I0(i__carry_i_1__6_n_7),
-        .I1(TEMP1[2]),
-        .O(i__carry_i_3__2_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_4
-       (.I0(TEMP1[3]),
-        .O(i__carry_i_4_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    i__carry_i_40
-       (.I0(TEMP1_carry_n_6),
-        .I1(mode_sFREQ[7]),
-        .O(i__carry_i_40_n_0));
-  CARRY4 i__carry_i_4__0
-       (.CI(1'b0),
-        .CO({i__carry_i_4__0_n_0,i__carry_i_4__0_n_1,i__carry_i_4__0_n_2,i__carry_i_4__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__6/i__carry_n_7 ,i__carry_i_2__6_0,O[0],1'b0}),
-        .O({i__carry_i_4__0_n_4,i__carry_i_4__0_n_5,i__carry_i_4__0_n_6,NLW_i__carry_i_4__0_O_UNCONNECTED[0]}),
-        .S({i__carry_i_8__0_n_0,i__carry_i_2__6_1,1'b0}));
-  LUT6 #(
-    .INIT(64'h0033CCFFE2E2E2E2)) 
-    i__carry_i_4__1
-       (.I0(i__carry_i_14_n_5),
         .I1(mode_sFREQ[4]),
-        .I2(i__carry_i_15_n_5),
-        .I3(\TEMP0_inferred__0/i__carry_n_5 ),
-        .I4(i__carry_i_16_n_5),
-        .I5(mode_sFREQ[5]),
-        .O(i__carry_i_4__1_n_0));
+        .I2(mode_sFREQ[3]),
+        .I3(mode_sFREQ[5]),
+        .I4(mode_sFREQ[7]),
+        .O(w_MODEfreq0__4_carry__3_i_7_n_0));
+  LUT4 #(
+    .INIT(16'h6996)) 
+    w_MODEfreq0__4_carry__3_i_8
+       (.I0(w_MODEfreq0__4_carry__3_i_4_n_0),
+        .I1(mode_sFREQ[3]),
+        .I2(mode_sFREQ[4]),
+        .I3(mode_sFREQ[6]),
+        .O(w_MODEfreq0__4_carry__3_i_8_n_0));
+  CARRY4 w_MODEfreq0__4_carry__4
+       (.CI(w_MODEfreq0__4_carry__3_n_0),
+        .CO({NLW_w_MODEfreq0__4_carry__4_CO_UNCONNECTED[3],freq[25],NLW_w_MODEfreq0__4_carry__4_CO_UNCONNECTED[1],w_MODEfreq0__4_carry__4_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,1'b0,1'b0,w_MODEfreq0__4_carry__4_i_1_n_0}),
+        .O({NLW_w_MODEfreq0__4_carry__4_O_UNCONNECTED[3:2],freq[24:23]}),
+        .S({1'b0,1'b1,w_MODEfreq0__4_carry__4_i_2_n_0,w_MODEfreq0__4_carry__4_i_3_n_0}));
+  LUT4 #(
+    .INIT(16'h0660)) 
+    w_MODEfreq0__4_carry__4_i_1
+       (.I0(mode_sFREQ[5]),
+        .I1(mode_sFREQ[4]),
+        .I2(mode_sFREQ[7]),
+        .I3(mode_sFREQ[6]),
+        .O(w_MODEfreq0__4_carry__4_i_1_n_0));
+  LUT4 #(
+    .INIT(16'h8000)) 
+    w_MODEfreq0__4_carry__4_i_2
+       (.I0(mode_sFREQ[5]),
+        .I1(mode_sFREQ[4]),
+        .I2(mode_sFREQ[7]),
+        .I3(mode_sFREQ[6]),
+        .O(w_MODEfreq0__4_carry__4_i_2_n_0));
+  LUT4 #(
+    .INIT(16'h7EE8)) 
+    w_MODEfreq0__4_carry__4_i_3
+       (.I0(mode_sFREQ[4]),
+        .I1(mode_sFREQ[5]),
+        .I2(mode_sFREQ[6]),
+        .I3(mode_sFREQ[7]),
+        .O(w_MODEfreq0__4_carry__4_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h8778788778878778)) 
+    w_MODEfreq0__4_carry_i_1
+       (.I0(mode_sFREQ[3]),
+        .I1(mode_sFREQ[2]),
+        .I2(w_MODEfreq0__4_carry_i_8_n_0),
+        .I3(mode_sFREQ[0]),
+        .I4(mode_sFREQ[1]),
+        .I5(w_MODEfreq0__4_carry_i_9_n_0),
+        .O(w_MODEfreq0__4_carry_i_1_n_0));
+  LUT5 #(
+    .INIT(32'hD22D2DD2)) 
+    w_MODEfreq0__4_carry_i_2
+       (.I0(mode_sFREQ[0]),
+        .I1(mode_sFREQ[1]),
+        .I2(mode_sFREQ[4]),
+        .I3(mode_sFREQ[2]),
+        .I4(mode_sFREQ[3]),
+        .O(w_MODEfreq0__4_carry_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    w_MODEfreq0__4_carry_i_3
+       (.I0(mode_sFREQ[0]),
+        .I1(mode_sFREQ[1]),
+        .O(w_MODEfreq0__4_carry_i_3_n_0));
+  LUT6 #(
+    .INIT(64'h96559655AA969655)) 
+    w_MODEfreq0__4_carry_i_4
+       (.I0(w_MODEfreq0__4_carry_i_1_n_0),
+        .I1(mode_sFREQ[3]),
+        .I2(mode_sFREQ[2]),
+        .I3(mode_sFREQ[4]),
+        .I4(mode_sFREQ[0]),
+        .I5(mode_sFREQ[1]),
+        .O(w_MODEfreq0__4_carry_i_4_n_0));
+  LUT6 #(
+    .INIT(64'h9669969669966969)) 
+    w_MODEfreq0__4_carry_i_5
+       (.I0(mode_sFREQ[3]),
+        .I1(mode_sFREQ[2]),
+        .I2(mode_sFREQ[4]),
+        .I3(mode_sFREQ[1]),
+        .I4(mode_sFREQ[0]),
+        .I5(mode_sFREQ[6]),
+        .O(w_MODEfreq0__4_carry_i_5_n_0));
+  LUT3 #(
+    .INIT(8'h69)) 
+    w_MODEfreq0__4_carry_i_6
+       (.I0(mode_sFREQ[1]),
+        .I1(mode_sFREQ[0]),
+        .I2(mode_sFREQ[2]),
+        .O(w_MODEfreq0__4_carry_i_6_n_0));
   LUT1 #(
     .INIT(2'h1)) 
-    i__carry_i_5
-       (.I0(TEMP1[2]),
-        .O(i__carry_i_5_n_0));
-  CARRY4 i__carry_i_5__0
-       (.CI(1'b0),
-        .CO({i__carry_i_5__0_n_0,i__carry_i_5__0_n_1,i__carry_i_5__0_n_2,i__carry_i_5__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({\TEMP1_inferred__4/i__carry_n_7 ,DI,O[0],1'b0}),
-        .O({i__carry_i_5__0_n_4,i__carry_i_5__0_n_5,i__carry_i_5__0_n_6,NLW_i__carry_i_5__0_O_UNCONNECTED[0]}),
-        .S({i__carry_i_12__0_n_0,O[1],S,1'b1}));
-  LUT6 #(
-    .INIT(64'h0303F3F3FA0AFA0A)) 
-    i__carry_i_5__1
-       (.I0(i__carry_i_14_n_6),
-        .I1(i__carry_i_15_n_6),
-        .I2(mode_sFREQ[5]),
-        .I3(\TEMP0_inferred__0/i__carry_n_6 ),
-        .I4(i__carry_i_16_n_6),
-        .I5(mode_sFREQ[4]),
-        .O(i__carry_i_5__1_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    i__carry_i_6
-       (.I0(TEMP1[4]),
-        .O(i__carry_i_6_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry_i_6__0
-       (.I0(i__carry_i_17_n_5),
-        .I1(\TEMP0_inferred__0/i__carry__0_n_5 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry_i_18_n_5),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry_i_19_n_5),
-        .O(A[8]));
+    w_MODEfreq0__4_carry_i_7
+       (.I0(mode_sFREQ[0]),
+        .O(w_MODEfreq0__4_carry_i_7_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT2 #(
     .INIT(4'h6)) 
-    i__carry_i_6__1
-       (.I0(i__carry_i_1__5_n_5),
-        .I1(O[0]),
-        .O(i__carry_i_6__1_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry_i_7__0
-       (.I0(i__carry_i_17_n_6),
-        .I1(\TEMP0_inferred__0/i__carry__0_n_6 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry_i_18_n_6),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry_i_19_n_6),
-        .O(A[7]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry_i_8
-       (.I0(i__carry_i_17_n_7),
-        .I1(\TEMP0_inferred__0/i__carry__0_n_7 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry_i_18_n_7),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry_i_19_n_7),
-        .O(A[6]));
+    w_MODEfreq0__4_carry_i_8
+       (.I0(mode_sFREQ[4]),
+        .I1(mode_sFREQ[5]),
+        .O(w_MODEfreq0__4_carry_i_8_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h6)) 
-    i__carry_i_8__0
-       (.I0(\TEMP1_inferred__6/i__carry_n_7 ),
-        .I1(O[0]),
-        .O(i__carry_i_8__0_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    i__carry_i_9
-       (.I0(i__carry_i_16_n_4),
-        .I1(\TEMP0_inferred__0/i__carry_n_4 ),
-        .I2(mode_sFREQ[5]),
-        .I3(i__carry_i_15_n_4),
-        .I4(mode_sFREQ[4]),
-        .I5(i__carry_i_14_n_4),
-        .O(A[5]));
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-10 {cell *THIS*} {string 11x18 4}}" *) 
-  DSP48E1 #(
-    .ACASCREG(0),
-    .ADREG(1),
-    .ALUMODEREG(0),
-    .AREG(0),
-    .AUTORESET_PATDET("NO_RESET"),
-    .A_INPUT("DIRECT"),
-    .BCASCREG(0),
-    .BREG(0),
-    .B_INPUT("DIRECT"),
-    .CARRYINREG(0),
-    .CARRYINSELREG(0),
-    .CREG(1),
-    .DREG(1),
-    .INMODEREG(0),
-    .MASK(48'h3FFFFFFFFFFF),
-    .MREG(0),
-    .OPMODEREG(0),
-    .PATTERN(48'h000000000000),
-    .PREG(0),
-    .SEL_MASK("MASK"),
-    .SEL_PATTERN("PATTERN"),
-    .USE_DPORT("FALSE"),
-    .USE_MULT("MULTIPLY"),
-    .USE_PATTERN_DETECT("NO_PATDET"),
-    .USE_SIMD("ONE48")) 
-    w_MODEfreq0
-       (.A({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,TEMP[26:17]}),
-        .ACIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .ACOUT(NLW_w_MODEfreq0_ACOUT_UNCONNECTED[29:0]),
-        .ALUMODE({1'b0,1'b0,1'b0,1'b0}),
-        .B({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b1,1'b1,1'b1,1'b1,1'b0,1'b1,1'b0,1'b0,1'b0}),
-        .BCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .BCOUT(NLW_w_MODEfreq0_BCOUT_UNCONNECTED[17:0]),
-        .C({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
-        .CARRYCASCIN(1'b0),
-        .CARRYCASCOUT(NLW_w_MODEfreq0_CARRYCASCOUT_UNCONNECTED),
-        .CARRYIN(1'b0),
-        .CARRYINSEL({1'b0,1'b0,1'b0}),
-        .CARRYOUT(NLW_w_MODEfreq0_CARRYOUT_UNCONNECTED[3:0]),
-        .CEA1(1'b0),
-        .CEA2(1'b0),
-        .CEAD(1'b0),
-        .CEALUMODE(1'b0),
-        .CEB1(1'b0),
-        .CEB2(1'b0),
-        .CEC(1'b0),
-        .CECARRYIN(1'b0),
-        .CECTRL(1'b0),
-        .CED(1'b0),
-        .CEINMODE(1'b0),
-        .CEM(1'b0),
-        .CEP(1'b0),
-        .CLK(1'b0),
-        .D({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .INMODE({1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .MULTSIGNIN(1'b0),
-        .MULTSIGNOUT(NLW_w_MODEfreq0_MULTSIGNOUT_UNCONNECTED),
-        .OPMODE({1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b1}),
-        .OVERFLOW(NLW_w_MODEfreq0_OVERFLOW_UNCONNECTED),
-        .P({w_MODEfreq0_n_58,w_MODEfreq0_n_59,w_MODEfreq0_n_60,w_MODEfreq0_n_61,w_MODEfreq0_n_62,w_MODEfreq0_n_63,w_MODEfreq0_n_64,w_MODEfreq0_n_65,w_MODEfreq0_n_66,w_MODEfreq0_n_67,w_MODEfreq0_n_68,w_MODEfreq0_n_69,w_MODEfreq0_n_70,w_MODEfreq0_n_71,w_MODEfreq0_n_72,w_MODEfreq0_n_73,w_MODEfreq0_n_74,w_MODEfreq0_n_75,w_MODEfreq0_n_76,w_MODEfreq0_n_77,w_MODEfreq0_n_78,w_MODEfreq0_n_79,w_MODEfreq0_n_80,w_MODEfreq0_n_81,w_MODEfreq0_n_82,w_MODEfreq0_n_83,w_MODEfreq0_n_84,w_MODEfreq0_n_85,w_MODEfreq0_n_86,w_MODEfreq0_n_87,w_MODEfreq0_n_88,w_MODEfreq0_n_89,w_MODEfreq0_n_90,w_MODEfreq0_n_91,w_MODEfreq0_n_92,w_MODEfreq0_n_93,w_MODEfreq0_n_94,w_MODEfreq0_n_95,w_MODEfreq0_n_96,w_MODEfreq0_n_97,w_MODEfreq0_n_98,w_MODEfreq0_n_99,w_MODEfreq0_n_100,w_MODEfreq0_n_101,w_MODEfreq0_n_102,w_MODEfreq0_n_103,w_MODEfreq0_n_104,w_MODEfreq0_n_105}),
-        .PATTERNBDETECT(NLW_w_MODEfreq0_PATTERNBDETECT_UNCONNECTED),
-        .PATTERNDETECT(NLW_w_MODEfreq0_PATTERNDETECT_UNCONNECTED),
-        .PCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .PCOUT({w_MODEfreq0_n_106,w_MODEfreq0_n_107,w_MODEfreq0_n_108,w_MODEfreq0_n_109,w_MODEfreq0_n_110,w_MODEfreq0_n_111,w_MODEfreq0_n_112,w_MODEfreq0_n_113,w_MODEfreq0_n_114,w_MODEfreq0_n_115,w_MODEfreq0_n_116,w_MODEfreq0_n_117,w_MODEfreq0_n_118,w_MODEfreq0_n_119,w_MODEfreq0_n_120,w_MODEfreq0_n_121,w_MODEfreq0_n_122,w_MODEfreq0_n_123,w_MODEfreq0_n_124,w_MODEfreq0_n_125,w_MODEfreq0_n_126,w_MODEfreq0_n_127,w_MODEfreq0_n_128,w_MODEfreq0_n_129,w_MODEfreq0_n_130,w_MODEfreq0_n_131,w_MODEfreq0_n_132,w_MODEfreq0_n_133,w_MODEfreq0_n_134,w_MODEfreq0_n_135,w_MODEfreq0_n_136,w_MODEfreq0_n_137,w_MODEfreq0_n_138,w_MODEfreq0_n_139,w_MODEfreq0_n_140,w_MODEfreq0_n_141,w_MODEfreq0_n_142,w_MODEfreq0_n_143,w_MODEfreq0_n_144,w_MODEfreq0_n_145,w_MODEfreq0_n_146,w_MODEfreq0_n_147,w_MODEfreq0_n_148,w_MODEfreq0_n_149,w_MODEfreq0_n_150,w_MODEfreq0_n_151,w_MODEfreq0_n_152,w_MODEfreq0_n_153}),
-        .RSTA(1'b0),
-        .RSTALLCARRYIN(1'b0),
-        .RSTALUMODE(1'b0),
-        .RSTB(1'b0),
-        .RSTC(1'b0),
-        .RSTCTRL(1'b0),
-        .RSTD(1'b0),
-        .RSTINMODE(1'b0),
-        .RSTM(1'b0),
-        .RSTP(1'b0),
-        .UNDERFLOW(NLW_w_MODEfreq0_UNDERFLOW_UNCONNECTED));
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-10 {cell *THIS*} {string 18x18 4}}" *) 
-  DSP48E1 #(
-    .ACASCREG(0),
-    .ADREG(1),
-    .ALUMODEREG(0),
-    .AREG(0),
-    .AUTORESET_PATDET("NO_RESET"),
-    .A_INPUT("DIRECT"),
-    .BCASCREG(0),
-    .BREG(0),
-    .B_INPUT("DIRECT"),
-    .CARRYINREG(0),
-    .CARRYINSELREG(0),
-    .CREG(1),
-    .DREG(1),
-    .INMODEREG(0),
-    .MASK(48'h3FFFFFFFFFFF),
-    .MREG(0),
-    .OPMODEREG(0),
-    .PATTERN(48'h000000000000),
-    .PREG(0),
-    .SEL_MASK("MASK"),
-    .SEL_PATTERN("PATTERN"),
-    .USE_DPORT("FALSE"),
-    .USE_MULT("MULTIPLY"),
-    .USE_PATTERN_DETECT("NO_PATDET"),
-    .USE_SIMD("ONE48")) 
-    w_MODEfreq0__0
-       (.A({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,TEMP[16:3],mode_sFREQ[1:0],1'b0}),
-        .ACIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .ACOUT(NLW_w_MODEfreq0__0_ACOUT_UNCONNECTED[29:0]),
-        .ALUMODE({1'b0,1'b0,1'b0,1'b0}),
-        .B({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b1,1'b1,1'b1,1'b1,1'b1,1'b0,1'b1,1'b0,1'b0,1'b0}),
-        .BCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .BCOUT(NLW_w_MODEfreq0__0_BCOUT_UNCONNECTED[17:0]),
-        .C({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
-        .CARRYCASCIN(1'b0),
-        .CARRYCASCOUT(NLW_w_MODEfreq0__0_CARRYCASCOUT_UNCONNECTED),
-        .CARRYIN(1'b0),
-        .CARRYINSEL({1'b0,1'b0,1'b0}),
-        .CARRYOUT(NLW_w_MODEfreq0__0_CARRYOUT_UNCONNECTED[3:0]),
-        .CEA1(1'b0),
-        .CEA2(1'b0),
-        .CEAD(1'b0),
-        .CEALUMODE(1'b0),
-        .CEB1(1'b0),
-        .CEB2(1'b0),
-        .CEC(1'b0),
-        .CECARRYIN(1'b0),
-        .CECTRL(1'b0),
-        .CED(1'b0),
-        .CEINMODE(1'b0),
-        .CEM(1'b0),
-        .CEP(1'b0),
-        .CLK(1'b0),
-        .D({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .INMODE({1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .MULTSIGNIN(1'b0),
-        .MULTSIGNOUT(NLW_w_MODEfreq0__0_MULTSIGNOUT_UNCONNECTED),
-        .OPMODE({1'b0,1'b0,1'b0,1'b0,1'b1,1'b0,1'b1}),
-        .OVERFLOW(NLW_w_MODEfreq0__0_OVERFLOW_UNCONNECTED),
-        .P({w_MODEfreq0__0_n_58,w_MODEfreq0__0_n_59,w_MODEfreq0__0_n_60,w_MODEfreq0__0_n_61,w_MODEfreq0__0_n_62,w_MODEfreq0__0_n_63,w_MODEfreq0__0_n_64,w_MODEfreq0__0_n_65,w_MODEfreq0__0_n_66,w_MODEfreq0__0_n_67,w_MODEfreq0__0_n_68,w_MODEfreq0__0_n_69,w_MODEfreq0__0_n_70,w_MODEfreq0__0_n_71,w_MODEfreq0__0_n_72,w_MODEfreq0__0_n_73,w_MODEfreq0__0_n_74,w_MODEfreq0__0_n_75,w_MODEfreq0__0_n_76,w_MODEfreq0__0_n_77,w_MODEfreq0__0_n_78,w_MODEfreq0__0_n_79,w_MODEfreq0__0_n_80,w_MODEfreq0__0_n_81,w_MODEfreq0__0_n_82,w_MODEfreq0__0_n_83,w_MODEfreq0__0_n_84,w_MODEfreq0__0_n_85,w_MODEfreq0__0_n_86,w_MODEfreq0__0_n_87,w_MODEfreq0__0_n_88,w_MODEfreq0__0_n_89,w_MODEfreq0__0_n_90,w_MODEfreq0__0_n_91,w_MODEfreq0__0_n_92,w_MODEfreq0__0_n_93,w_MODEfreq0__0_n_94,w_MODEfreq0__0_n_95,w_MODEfreq0__0_n_96,w_MODEfreq0__0_n_97,w_MODEfreq0__0_n_98,w_MODEfreq0__0_n_99,w_MODEfreq0__0_n_100,w_MODEfreq0__0_n_101,w_MODEfreq0__0_n_102,w_MODEfreq0__0_n_103,w_MODEfreq0__0_n_104,w_MODEfreq0__0_n_105}),
-        .PATTERNBDETECT(NLW_w_MODEfreq0__0_PATTERNBDETECT_UNCONNECTED),
-        .PATTERNDETECT(NLW_w_MODEfreq0__0_PATTERNDETECT_UNCONNECTED),
-        .PCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .PCOUT({w_MODEfreq0__0_n_106,w_MODEfreq0__0_n_107,w_MODEfreq0__0_n_108,w_MODEfreq0__0_n_109,w_MODEfreq0__0_n_110,w_MODEfreq0__0_n_111,w_MODEfreq0__0_n_112,w_MODEfreq0__0_n_113,w_MODEfreq0__0_n_114,w_MODEfreq0__0_n_115,w_MODEfreq0__0_n_116,w_MODEfreq0__0_n_117,w_MODEfreq0__0_n_118,w_MODEfreq0__0_n_119,w_MODEfreq0__0_n_120,w_MODEfreq0__0_n_121,w_MODEfreq0__0_n_122,w_MODEfreq0__0_n_123,w_MODEfreq0__0_n_124,w_MODEfreq0__0_n_125,w_MODEfreq0__0_n_126,w_MODEfreq0__0_n_127,w_MODEfreq0__0_n_128,w_MODEfreq0__0_n_129,w_MODEfreq0__0_n_130,w_MODEfreq0__0_n_131,w_MODEfreq0__0_n_132,w_MODEfreq0__0_n_133,w_MODEfreq0__0_n_134,w_MODEfreq0__0_n_135,w_MODEfreq0__0_n_136,w_MODEfreq0__0_n_137,w_MODEfreq0__0_n_138,w_MODEfreq0__0_n_139,w_MODEfreq0__0_n_140,w_MODEfreq0__0_n_141,w_MODEfreq0__0_n_142,w_MODEfreq0__0_n_143,w_MODEfreq0__0_n_144,w_MODEfreq0__0_n_145,w_MODEfreq0__0_n_146,w_MODEfreq0__0_n_147,w_MODEfreq0__0_n_148,w_MODEfreq0__0_n_149,w_MODEfreq0__0_n_150,w_MODEfreq0__0_n_151,w_MODEfreq0__0_n_152,w_MODEfreq0__0_n_153}),
-        .RSTA(1'b0),
-        .RSTALLCARRYIN(1'b0),
-        .RSTALUMODE(1'b0),
-        .RSTB(1'b0),
-        .RSTC(1'b0),
-        .RSTCTRL(1'b0),
-        .RSTD(1'b0),
-        .RSTINMODE(1'b0),
-        .RSTM(1'b0),
-        .RSTP(1'b0),
-        .UNDERFLOW(NLW_w_MODEfreq0__0_UNDERFLOW_UNCONNECTED));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0__0_i_1
-       (.I0(\TEMP0_inferred__7/i__carry__2_n_5 ),
-        .I1(TEMP00_in[16]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[16]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[16]),
-        .O(TEMP[16]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0__0_i_10
-       (.I0(\TEMP0_inferred__7/i__carry__0_n_6 ),
-        .I1(TEMP00_in[7]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[7]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[7]),
-        .O(TEMP[7]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0__0_i_11
-       (.I0(\TEMP0_inferred__7/i__carry__0_n_7 ),
-        .I1(TEMP00_in[6]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[6]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[6]),
-        .O(TEMP[6]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0__0_i_12
-       (.I0(\TEMP0_inferred__7/i__carry_n_4 ),
-        .I1(TEMP00_in[5]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[5]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[5]),
-        .O(TEMP[5]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0__0_i_13
-       (.I0(\TEMP0_inferred__7/i__carry_n_5 ),
-        .I1(TEMP00_in[4]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[4]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[4]),
-        .O(TEMP[4]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0__0_i_14
-       (.I0(\TEMP0_inferred__7/i__carry_n_6 ),
-        .I1(TEMP00_in[3]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[3]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[3]),
-        .O(TEMP[3]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0__0_i_2
-       (.I0(\TEMP0_inferred__7/i__carry__2_n_6 ),
-        .I1(TEMP00_in[15]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[15]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[15]),
-        .O(TEMP[15]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0__0_i_3
-       (.I0(\TEMP0_inferred__7/i__carry__2_n_7 ),
-        .I1(TEMP00_in[14]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[14]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[14]),
-        .O(TEMP[14]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0__0_i_4
-       (.I0(\TEMP0_inferred__7/i__carry__1_n_4 ),
-        .I1(TEMP00_in[13]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[13]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[13]),
-        .O(TEMP[13]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0__0_i_5
-       (.I0(\TEMP0_inferred__7/i__carry__1_n_5 ),
-        .I1(TEMP00_in[12]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[12]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[12]),
-        .O(TEMP[12]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0__0_i_6
-       (.I0(\TEMP0_inferred__7/i__carry__1_n_6 ),
-        .I1(TEMP00_in[11]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[11]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[11]),
-        .O(TEMP[11]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0__0_i_7
-       (.I0(\TEMP0_inferred__7/i__carry__1_n_7 ),
-        .I1(TEMP00_in[10]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[10]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[10]),
-        .O(TEMP[10]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0__0_i_8
-       (.I0(\TEMP0_inferred__7/i__carry__0_n_4 ),
-        .I1(TEMP00_in[9]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[9]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[9]),
-        .O(TEMP[9]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0__0_i_9
-       (.I0(\TEMP0_inferred__7/i__carry__0_n_5 ),
-        .I1(TEMP00_in[8]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[8]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[8]),
-        .O(TEMP[8]));
-  (* METHODOLOGY_DRC_VIOS = "{SYNTH-10 {cell *THIS*} {string 18x16 4}}" *) 
-  DSP48E1 #(
-    .ACASCREG(0),
-    .ADREG(1),
-    .ALUMODEREG(0),
-    .AREG(0),
-    .AUTORESET_PATDET("NO_RESET"),
-    .A_INPUT("DIRECT"),
-    .BCASCREG(0),
-    .BREG(0),
-    .B_INPUT("DIRECT"),
-    .CARRYINREG(0),
-    .CARRYINSELREG(0),
-    .CREG(1),
-    .DREG(1),
-    .INMODEREG(0),
-    .MASK(48'h3FFFFFFFFFFF),
-    .MREG(0),
-    .OPMODEREG(0),
-    .PATTERN(48'h000000000000),
-    .PREG(0),
-    .SEL_MASK("MASK"),
-    .SEL_PATTERN("PATTERN"),
-    .USE_DPORT("FALSE"),
-    .USE_MULT("MULTIPLY"),
-    .USE_PATTERN_DETECT("NO_PATDET"),
-    .USE_SIMD("ONE48")) 
-    w_MODEfreq0__1
-       (.A({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,TEMP[16:3],mode_sFREQ[1:0],1'b0}),
-        .ACIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .ACOUT(NLW_w_MODEfreq0__1_ACOUT_UNCONNECTED[29:0]),
-        .ALUMODE({1'b0,1'b0,1'b0,1'b0}),
-        .B({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .BCIN({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .BCOUT(NLW_w_MODEfreq0__1_BCOUT_UNCONNECTED[17:0]),
-        .C({1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1,1'b1}),
-        .CARRYCASCIN(1'b0),
-        .CARRYCASCOUT(NLW_w_MODEfreq0__1_CARRYCASCOUT_UNCONNECTED),
-        .CARRYIN(1'b0),
-        .CARRYINSEL({1'b0,1'b0,1'b0}),
-        .CARRYOUT(NLW_w_MODEfreq0__1_CARRYOUT_UNCONNECTED[3:0]),
-        .CEA1(1'b0),
-        .CEA2(1'b0),
-        .CEAD(1'b0),
-        .CEALUMODE(1'b0),
-        .CEB1(1'b0),
-        .CEB2(1'b0),
-        .CEC(1'b0),
-        .CECARRYIN(1'b0),
-        .CECTRL(1'b0),
-        .CED(1'b0),
-        .CEINMODE(1'b0),
-        .CEM(1'b0),
-        .CEP(1'b0),
-        .CLK(1'b0),
-        .D({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .INMODE({1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .MULTSIGNIN(1'b0),
-        .MULTSIGNOUT(NLW_w_MODEfreq0__1_MULTSIGNOUT_UNCONNECTED),
-        .OPMODE({1'b1,1'b0,1'b1,1'b0,1'b1,1'b0,1'b1}),
-        .OVERFLOW(NLW_w_MODEfreq0__1_OVERFLOW_UNCONNECTED),
-        .P({w_MODEfreq0__1_n_58,w_MODEfreq0__1_n_59,w_MODEfreq0__1_n_60,w_MODEfreq0__1_n_61,w_MODEfreq0__1_n_62,w_MODEfreq0__1_n_63,w_MODEfreq0__1_n_64,w_MODEfreq0__1_n_65,w_MODEfreq0__1_n_66,w_MODEfreq0__1_n_67,w_MODEfreq0__1_n_68,w_MODEfreq0__1_n_69,w_MODEfreq0__1_n_70,w_MODEfreq0__1_n_71,w_MODEfreq0__1_n_72,w_MODEfreq0__1_n_73,w_MODEfreq0__1_n_74,w_MODEfreq0__1_n_75,w_MODEfreq0__1_n_76,w_MODEfreq0__1_n_77,w_MODEfreq0__1_n_78,w_MODEfreq0__1_n_79,w_MODEfreq0__1_n_80,w_MODEfreq0__1_n_81,w_MODEfreq0__1_n_82,w_MODEfreq0__1_n_83,w_MODEfreq0__1_n_84,w_MODEfreq0__1_n_85,w_MODEfreq0__1_n_86,w_MODEfreq0__1_n_87,w_MODEfreq0__1_n_88,w_MODEfreq0__1_n_89,w_MODEfreq0__1_n_90,w_MODEfreq0__1_n_91,w_MODEfreq0__1_n_92,w_MODEfreq0__1_n_93,w_MODEfreq0__1_n_94,w_MODEfreq0__1_n_95,w_MODEfreq0__1_n_96,w_MODEfreq0__1_n_97,w_MODEfreq0__1_n_98,w_MODEfreq0__1_n_99,w_MODEfreq0__1_n_100,w_MODEfreq0__1_n_101,w_MODEfreq0__1_n_102,w_MODEfreq0__1_n_103,w_MODEfreq0__1_n_104,w_MODEfreq0__1_n_105}),
-        .PATTERNBDETECT(NLW_w_MODEfreq0__1_PATTERNBDETECT_UNCONNECTED),
-        .PATTERNDETECT(NLW_w_MODEfreq0__1_PATTERNDETECT_UNCONNECTED),
-        .PCIN({w_MODEfreq0__0_n_106,w_MODEfreq0__0_n_107,w_MODEfreq0__0_n_108,w_MODEfreq0__0_n_109,w_MODEfreq0__0_n_110,w_MODEfreq0__0_n_111,w_MODEfreq0__0_n_112,w_MODEfreq0__0_n_113,w_MODEfreq0__0_n_114,w_MODEfreq0__0_n_115,w_MODEfreq0__0_n_116,w_MODEfreq0__0_n_117,w_MODEfreq0__0_n_118,w_MODEfreq0__0_n_119,w_MODEfreq0__0_n_120,w_MODEfreq0__0_n_121,w_MODEfreq0__0_n_122,w_MODEfreq0__0_n_123,w_MODEfreq0__0_n_124,w_MODEfreq0__0_n_125,w_MODEfreq0__0_n_126,w_MODEfreq0__0_n_127,w_MODEfreq0__0_n_128,w_MODEfreq0__0_n_129,w_MODEfreq0__0_n_130,w_MODEfreq0__0_n_131,w_MODEfreq0__0_n_132,w_MODEfreq0__0_n_133,w_MODEfreq0__0_n_134,w_MODEfreq0__0_n_135,w_MODEfreq0__0_n_136,w_MODEfreq0__0_n_137,w_MODEfreq0__0_n_138,w_MODEfreq0__0_n_139,w_MODEfreq0__0_n_140,w_MODEfreq0__0_n_141,w_MODEfreq0__0_n_142,w_MODEfreq0__0_n_143,w_MODEfreq0__0_n_144,w_MODEfreq0__0_n_145,w_MODEfreq0__0_n_146,w_MODEfreq0__0_n_147,w_MODEfreq0__0_n_148,w_MODEfreq0__0_n_149,w_MODEfreq0__0_n_150,w_MODEfreq0__0_n_151,w_MODEfreq0__0_n_152,w_MODEfreq0__0_n_153}),
-        .PCOUT(NLW_w_MODEfreq0__1_PCOUT_UNCONNECTED[47:0]),
-        .RSTA(1'b0),
-        .RSTALLCARRYIN(1'b0),
-        .RSTALUMODE(1'b0),
-        .RSTB(1'b0),
-        .RSTC(1'b0),
-        .RSTCTRL(1'b0),
-        .RSTD(1'b0),
-        .RSTINMODE(1'b0),
-        .RSTM(1'b0),
-        .RSTP(1'b0),
-        .UNDERFLOW(NLW_w_MODEfreq0__1_UNDERFLOW_UNCONNECTED));
-  CARRY4 w_MODEfreq0_carry
-       (.CI(1'b0),
-        .CO({w_MODEfreq0_carry_n_0,w_MODEfreq0_carry_n_1,w_MODEfreq0_carry_n_2,w_MODEfreq0_carry_n_3}),
-        .CYINIT(1'b0),
-        .DI({w_MODEfreq0__1_n_103,w_MODEfreq0__1_n_104,w_MODEfreq0__1_n_105,1'b0}),
-        .O({w_MODEfreq0_carry_n_4,w_MODEfreq0_carry_n_5,w_MODEfreq0_carry_n_6,w_MODEfreq0_carry_n_7}),
-        .S({w_MODEfreq0_carry_i_1_n_0,w_MODEfreq0_carry_i_2_n_0,w_MODEfreq0_carry_i_3_n_0,w_MODEfreq0__0_n_89}));
-  CARRY4 w_MODEfreq0_carry__0
-       (.CI(w_MODEfreq0_carry_n_0),
-        .CO({w_MODEfreq0_carry__0_n_0,w_MODEfreq0_carry__0_n_1,w_MODEfreq0_carry__0_n_2,w_MODEfreq0_carry__0_n_3}),
-        .CYINIT(1'b0),
-        .DI({w_MODEfreq0__1_n_99,w_MODEfreq0__1_n_100,w_MODEfreq0__1_n_101,w_MODEfreq0__1_n_102}),
-        .O({w_MODEfreq0_carry__0_n_4,w_MODEfreq0_carry__0_n_5,w_MODEfreq0_carry__0_n_6,w_MODEfreq0_carry__0_n_7}),
-        .S({w_MODEfreq0_carry__0_i_1_n_0,w_MODEfreq0_carry__0_i_2_n_0,w_MODEfreq0_carry__0_i_3_n_0,w_MODEfreq0_carry__0_i_4_n_0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    w_MODEfreq0_carry__0_i_1
-       (.I0(w_MODEfreq0__1_n_99),
-        .I1(w_MODEfreq0_n_99),
-        .O(w_MODEfreq0_carry__0_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    w_MODEfreq0_carry__0_i_2
-       (.I0(w_MODEfreq0__1_n_100),
-        .I1(w_MODEfreq0_n_100),
-        .O(w_MODEfreq0_carry__0_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    w_MODEfreq0_carry__0_i_3
-       (.I0(w_MODEfreq0__1_n_101),
-        .I1(w_MODEfreq0_n_101),
-        .O(w_MODEfreq0_carry__0_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    w_MODEfreq0_carry__0_i_4
-       (.I0(w_MODEfreq0__1_n_102),
-        .I1(w_MODEfreq0_n_102),
-        .O(w_MODEfreq0_carry__0_i_4_n_0));
-  CARRY4 w_MODEfreq0_carry__1
-       (.CI(w_MODEfreq0_carry__0_n_0),
-        .CO({NLW_w_MODEfreq0_carry__1_CO_UNCONNECTED[3:2],w_MODEfreq0_carry__1_n_2,w_MODEfreq0_carry__1_n_3}),
-        .CYINIT(1'b0),
-        .DI({1'b0,1'b0,w_MODEfreq0__1_n_97,w_MODEfreq0__1_n_98}),
-        .O({NLW_w_MODEfreq0_carry__1_O_UNCONNECTED[3],w_MODEfreq0_carry__1_n_5,w_MODEfreq0_carry__1_n_6,w_MODEfreq0_carry__1_n_7}),
-        .S({1'b0,w_MODEfreq0_carry__1_i_1_n_0,w_MODEfreq0_carry__1_i_2_n_0,w_MODEfreq0_carry__1_i_3_n_0}));
-  LUT2 #(
-    .INIT(4'h6)) 
-    w_MODEfreq0_carry__1_i_1
-       (.I0(w_MODEfreq0__1_n_96),
-        .I1(w_MODEfreq0_n_96),
-        .O(w_MODEfreq0_carry__1_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    w_MODEfreq0_carry__1_i_2
-       (.I0(w_MODEfreq0__1_n_97),
-        .I1(w_MODEfreq0_n_97),
-        .O(w_MODEfreq0_carry__1_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    w_MODEfreq0_carry__1_i_3
-       (.I0(w_MODEfreq0__1_n_98),
-        .I1(w_MODEfreq0_n_98),
-        .O(w_MODEfreq0_carry__1_i_3_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    w_MODEfreq0_carry_i_1
-       (.I0(w_MODEfreq0__1_n_103),
-        .I1(w_MODEfreq0_n_103),
-        .O(w_MODEfreq0_carry_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    w_MODEfreq0_carry_i_2
-       (.I0(w_MODEfreq0__1_n_104),
-        .I1(w_MODEfreq0_n_104),
-        .O(w_MODEfreq0_carry_i_2_n_0));
-  LUT2 #(
-    .INIT(4'h6)) 
-    w_MODEfreq0_carry_i_3
-       (.I0(w_MODEfreq0__1_n_105),
-        .I1(w_MODEfreq0_n_105),
-        .O(w_MODEfreq0_carry_i_3_n_0));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0_i_1
-       (.I0(\TEMP0_inferred__7/i__carry__5_n_7 ),
-        .I1(TEMP00_in[26]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[26]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[26]),
-        .O(TEMP[26]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0_i_10
-       (.I0(\TEMP0_inferred__7/i__carry__2_n_4 ),
-        .I1(TEMP00_in[17]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[17]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[17]),
-        .O(TEMP[17]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0_i_2
-       (.I0(\TEMP0_inferred__7/i__carry__4_n_4 ),
-        .I1(TEMP00_in[25]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[25]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[25]),
-        .O(TEMP[25]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0_i_3
-       (.I0(\TEMP0_inferred__7/i__carry__4_n_5 ),
-        .I1(TEMP00_in[24]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[24]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[24]),
-        .O(TEMP[24]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0_i_4
-       (.I0(\TEMP0_inferred__7/i__carry__4_n_6 ),
-        .I1(TEMP00_in[23]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[23]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[23]),
-        .O(TEMP[23]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0_i_5
-       (.I0(\TEMP0_inferred__7/i__carry__4_n_7 ),
-        .I1(TEMP00_in[22]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[22]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[22]),
-        .O(TEMP[22]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0_i_6
-       (.I0(\TEMP0_inferred__7/i__carry__3_n_4 ),
-        .I1(TEMP00_in[21]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[21]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[21]),
-        .O(TEMP[21]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0_i_7
-       (.I0(\TEMP0_inferred__7/i__carry__3_n_5 ),
-        .I1(TEMP00_in[20]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[20]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[20]),
-        .O(TEMP[20]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0_i_8
-       (.I0(\TEMP0_inferred__7/i__carry__3_n_6 ),
-        .I1(TEMP00_in[19]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[19]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[19]),
-        .O(TEMP[19]));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    w_MODEfreq0_i_9
-       (.I0(\TEMP0_inferred__7/i__carry__3_n_7 ),
-        .I1(TEMP00_in[18]),
-        .I2(mode_sFREQ[1]),
-        .I3(TEMP01_in[18]),
-        .I4(mode_sFREQ[0]),
-        .I5(TEMP02_in[18]),
-        .O(TEMP[18]));
+    w_MODEfreq0__4_carry_i_9
+       (.I0(mode_sFREQ[6]),
+        .I1(mode_sFREQ[7]),
+        .O(w_MODEfreq0__4_carry_i_9_n_0));
 endmodule
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_p05_dds
    (D,
     E,
-    O,
     Sin_val,
     Cos_val,
-    mode_sFREQ,
     clk,
-    DI,
-    S,
-    i__carry_i_2__6,
-    i__carry_i_2__6_0,
     reset,
+    mode_sFREQ,
     Q);
   output [11:0]D;
   output [0:0]E;
-  output [1:0]O;
   output [31:0]Sin_val;
   output [31:0]Cos_val;
-  input [7:0]mode_sFREQ;
   input clk;
-  input [0:0]DI;
-  input [0:0]S;
-  input [0:0]i__carry_i_2__6;
-  input [1:0]i__carry_i_2__6_0;
   input reset;
+  input [7:0]mode_sFREQ;
   input [11:0]Q;
 
   wire [31:0]Cos_val;
   wire [11:0]D;
-  wire [0:0]DI;
   wire [0:0]E;
-  wire [1:0]O;
   wire [11:0]Q;
-  wire [0:0]S;
   wire [31:0]Sin_val;
   wire [11:0]addr;
   wire clk;
   wire dout_reg_3_i_13_n_2;
   wire dout_reg_3_i_13_n_3;
   wire dout_reg_3_i_14_n_0;
-  wire [0:0]i__carry_i_2__6;
-  wire [1:0]i__carry_i_2__6_0;
   wire [7:0]mode_sFREQ;
   wire reset;
   wire [11:9]sel;
@@ -9688,14 +4599,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_p05_dds
 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_p05_accum ACC
        (.D(D),
-        .DI(DI),
         .E(E),
-        .O(O),
         .Q(addr),
-        .S(S),
         .clk(clk),
-        .i__carry_i_2__6_0(i__carry_i_2__6),
-        .i__carry_i_2__6_1(i__carry_i_2__6_0),
         .mode_sFREQ(mode_sFREQ),
         .reset(reset));
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_rom_file Sinwave

@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Thu Aug 22 14:58:05 2024
+--Date        : Thu Aug 22 17:17:45 2024
 --Host        : Arif running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -602,7 +602,7 @@ entity design_1 is
     mode_sFREQ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=9,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=9,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=3,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -693,15 +693,6 @@ architecture STRUCTURE of design_1 is
     probe1 : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   end component design_1_ila_0_0;
-  component design_1_p05_dds_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    mode_sFREQ : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Sin_val : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    Cos_val : out STD_LOGIC_VECTOR ( 31 downto 0 )
-  );
-  end component design_1_p05_dds_0_0;
   component design_1_axi_gpio_0_0 is
   port (
     s_axi_aclk : in STD_LOGIC;
@@ -723,7 +714,7 @@ architecture STRUCTURE of design_1 is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
-    gpio_io_i : in STD_LOGIC_VECTOR ( 7 downto 0 )
+    gpio_io_i : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
   end component design_1_axi_gpio_0_0;
   component design_1_rst_ps7_0_100M_0 is
@@ -740,6 +731,15 @@ architecture STRUCTURE of design_1 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_rst_ps7_0_100M_0;
+  component design_1_p05_dds_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    mode_sFREQ : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Sin_val : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    Cos_val : out STD_LOGIC_VECTOR ( 31 downto 0 )
+  );
+  end component design_1_p05_dds_0_0;
   signal p05_dds_0_Cos_val : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal p05_dds_0_Sin_val : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
@@ -861,7 +861,7 @@ begin
   sw_in_1(7 downto 0) <= mode_sFREQ(7 downto 0);
 axi_gpio_0: component design_1_axi_gpio_0_0
      port map (
-      gpio_io_i(7 downto 0) => B"00000000",
+      gpio_io_i(4 downto 0) => B"00000",
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M00_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),
