@@ -70,7 +70,11 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 7
+set_param project.hsv.suppressChildGraphs 0
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -97,6 +101,13 @@ set_property used_in_synthesis false [get_files -all c:/Users/arify/WorkSpace/ZE
 set_property used_in_implementation false [get_files -all c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.srcs/sources_1/bd/design_1/ip/design_1_ila_0_0/design_1_ila_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_0_0/design_1_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }

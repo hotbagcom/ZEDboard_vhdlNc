@@ -60,7 +60,7 @@ signal w_MODEfreq : integer range 1 to x_clk := 25_000_000;
 ------- VARIABLE -------
 shared variable TEMP   : integer range 0 to X_clk:= 0;
 ------- CONSTANT -------
-constant multi_ofset : integer := powof10(log10(x_clk)-(Mux_in_size/2 +1));
+--constant multi_ofset : integer := powof10(log10(x_clk)-(Mux_in_size/2 +1));
 
 begin
 
@@ -76,7 +76,7 @@ FmodsACC :process (Md_SLK )begin
         when others => TEMP := temp ;
         end case ;         
      end loop;
-     w_MODEfreq <= temp*  multi_ofset ;
+     w_MODEfreq <= temp;--*  multi_ofset ;
 end process ;
 
 PincACCM : process (clk , rst ) begin 

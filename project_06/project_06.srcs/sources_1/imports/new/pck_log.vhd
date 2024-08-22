@@ -62,6 +62,8 @@ function log2( input :in natural ) return integer is
     end loop;
     return return_val ;
 end function ;
+
+
 function log10( input :in natural ) return integer is
     variable temp       : integer := input ;
     variable return_val : integer := 0;
