@@ -59,12 +59,13 @@ signal inc : integer ;
 signal w_MODEfreq : integer range 1 to x_clk := 25_000_000;
 ------- VARIABLE -------
 shared variable TEMP   : integer range 0 to X_clk:= 0;
-shared variable multi_ofset : integer := powof10(log10(x_clk)-(Mux_in_size/2 +1));
+------- CONSTANT -------
+constant multi_ofset : integer := powof10(log10(x_clk)-(Mux_in_size/2 +1));
 
 begin
 
 FmodsACC :process (Md_SLK )begin 
-    
+    TEMP := 0;
     for i in 0 to (Mux_in_size/2) -1 loop 
         TEMP := TEMP *10;
         case( Md_SLK ( Mux_in_size-1-i*2 downto Mux_in_size-2-i*2 ) ) is 
