@@ -926,13 +926,16 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "2"
+            "value": "3"
           },
           "C_PROBE0_WIDTH": {
             "value": "32"
           },
           "C_PROBE1_WIDTH": {
             "value": "32"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "8"
           }
         }
       },
@@ -1114,16 +1117,16 @@
           }
         },
         "interface_nets": {
-          "ps7_0_axi_periph_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
           "s00_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "s00_couplers/M_AXI"
+            ]
+          },
+          "ps7_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           }
         },
@@ -1213,10 +1216,10 @@
       }
     },
     "interface_nets": {
-      "processing_system7_0_DDR": {
+      "processing_system7_0_M_AXI_GP0": {
         "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
+          "processing_system7_0/M_AXI_GP0",
+          "ps7_0_axi_periph/S00_AXI"
         ]
       },
       "processing_system7_0_FIXED_IO": {
@@ -1225,10 +1228,10 @@
           "processing_system7_0/FIXED_IO"
         ]
       },
-      "processing_system7_0_M_AXI_GP0": {
+      "processing_system7_0_DDR": {
         "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "ps7_0_axi_periph/S00_AXI"
+          "DDR",
+          "processing_system7_0/DDR"
         ]
       },
       "ps7_0_axi_periph_M00_AXI": {
@@ -1268,7 +1271,8 @@
       "sw_in_1": {
         "ports": [
           "mode_sFREQ",
-          "p05_dds_0/mode_sFREQ"
+          "p05_dds_0/mode_sFREQ",
+          "ila_0/probe2"
         ]
       },
       "p05_dds_0_Cos_val": {

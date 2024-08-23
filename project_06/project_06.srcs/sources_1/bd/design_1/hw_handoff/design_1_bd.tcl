@@ -183,9 +183,10 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {2} \
+   CONFIG.C_NUM_OF_PROBES {3} \
    CONFIG.C_PROBE0_WIDTH {32} \
    CONFIG.C_PROBE1_WIDTH {32} \
+   CONFIG.C_PROBE2_WIDTH {8} \
  ] $ila_0
 
   # Create instance: p05_dds_0, and set properties
@@ -626,7 +627,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins ila_0/clk] [get_bd_pins p05_dds_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in] [get_bd_pins util_vector_logic_0/Op1]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
-  connect_bd_net -net sw_in_1 [get_bd_ports mode_sFREQ] [get_bd_pins p05_dds_0/mode_sFREQ]
+  connect_bd_net -net sw_in_1 [get_bd_ports mode_sFREQ] [get_bd_pins ila_0/probe2] [get_bd_pins p05_dds_0/mode_sFREQ]
   connect_bd_net -net util_vector_logic_0_Res [get_bd_pins p05_dds_0/reset] [get_bd_pins util_vector_logic_0/Res]
 
   # Create address segments

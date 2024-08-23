@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Thu Aug 22 17:17:45 2024
+--Date        : Fri Aug 23 09:50:52 2024
 --Host        : Arif running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -690,7 +690,8 @@ architecture STRUCTURE of design_1 is
   port (
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 31 downto 0 )
+    probe1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component design_1_ila_0_0;
   component design_1_axi_gpio_0_0 is
@@ -886,7 +887,8 @@ ila_0: component design_1_ila_0_0
      port map (
       clk => processing_system7_0_FCLK_CLK0,
       probe0(31 downto 0) => p05_dds_0_Sin_val(31 downto 0),
-      probe1(31 downto 0) => p05_dds_0_Cos_val(31 downto 0)
+      probe1(31 downto 0) => p05_dds_0_Cos_val(31 downto 0),
+      probe2(7 downto 0) => sw_in_1(7 downto 0)
     );
 p05_dds_0: component design_1_p05_dds_0_0
      port map (

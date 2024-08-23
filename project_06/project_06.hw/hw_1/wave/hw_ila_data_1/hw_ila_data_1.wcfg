@@ -9,15 +9,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="59fs"></ZoomStartTime>
-      <ZoomEndTime time="137fs"></ZoomEndTime>
-      <Cursor1Time time="158fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="257fs"></ZoomEndTime>
+      <Cursor1Time time="65fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="302"></NameColumnWidth>
-      <ValueColumnWidth column_width="180"></ValueColumnWidth>
+      <ValueColumnWidth column_width="175"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="3" />
+   <WVObjectSize size="2" />
    <wave_markers>
    </wave_markers>
    <wvobject fp_name="design_1_i/p05_dds_0_Sin_val" type="array">
@@ -37,13 +37,5 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_1_i/p05_dds_0_Cos_val" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_1_i/p05_dds_0_Cos_val[31:0]</obj_property>
-      <obj_property name="ObjectShortName">p05_dds_0_Cos_val[31:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
    </wvobject>
 </wave_config>
