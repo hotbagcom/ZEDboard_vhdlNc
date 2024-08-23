@@ -37,7 +37,7 @@ function log010( input :in natural ) return integer;
 function powof02 (input :in natural ) return integer;
 function powof010 (input :in natural ) return integer;
 function to_string0(slv: std_logic_vector) return string ; --chatgpt
-function adj_Pinc_byfreq(freq : in natural) return integer ;
+function adj_Pinc_byfreq0(freq : in natural) return integer ;
 
 constant X_clk                  : integer   := 100_000_000 ;
 constant Ram_width_inBIT        : integer   := 32 ;    --ram width
@@ -122,7 +122,7 @@ begin
     return result;
 end function;
 
-function adj_Pinc_byfreq(freq : in natural ) return integer  is
+function adj_Pinc_byfreq0(freq : in natural ) return integer  is
     variable out_freq : integer := freq ;
 begin
 -- manupulation for floating point 

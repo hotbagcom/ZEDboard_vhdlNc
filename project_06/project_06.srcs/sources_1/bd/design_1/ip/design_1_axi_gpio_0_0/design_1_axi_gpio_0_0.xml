@@ -1872,7 +1872,7 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_GPIO_WIDTH">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_GPIO_WIDTH">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -1908,7 +1908,7 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_ALL_INPUTS">true</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PARAM_ENABLEMENT.C_ALL_INPUTS">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:parameterInfo>
       </spirit:vendorExtensions>
@@ -1998,7 +1998,7 @@ Each I/O pin of the AXI GPIO is individually programmable as an input or output 
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>GPIO_BOARD_INTERFACE</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GPIO_BOARD_INTERFACE" spirit:choiceRef="choice_list_8c470c7f" spirit:order="1001">Custom</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.GPIO_BOARD_INTERFACE" spirit:choiceRef="choice_list_8c470c7f" spirit:order="1001">btns_5bits</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>

@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Fri Aug 23 09:50:52 2024
+--Date        : Fri Aug 23 16:03:29 2024
 --Host        : Arif running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -41,7 +41,7 @@ end design_1_wrapper;
 architecture STRUCTURE of design_1_wrapper is
   component design_1 is
   port (
-    mode_sFREQ : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    btns_poss : in STD_LOGIC_VECTOR ( 7 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -89,6 +89,6 @@ design_1_i: component design_1
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      mode_sFREQ(7 downto 0) => mode_sFREQ(7 downto 0)
+      btns_poss(7 downto 0) => mode_sFREQ(7 downto 0)
     );
 end STRUCTURE;
