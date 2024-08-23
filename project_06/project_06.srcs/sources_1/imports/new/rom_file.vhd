@@ -33,18 +33,19 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity rom_file is
         generic(
-            RAM_WIDTH 		: integer 	;
-            RAM_DEPTH 		: integer 	
+            Ram_width_bit       : integer   := Ram_width_inBIT ;     --ram width
+            Ram_depth_size      : integer   := Ram_depth_inSIZE ;        --ram depth    
+            Ram_depth_bit       : integer   := Ram_depth_inBIT           --ram depth    
         );
         port (
             clk : in std_logic;                                         --for control by wave_freq
-            addr: in std_logic_vector(log2(RAM_DEPTH)-1 downto 0);    --ram line 
-            dout: out std_logic_vector(RAM_WIDTH-1 downto 0)            --ram line value
+            addr: in std_logic_vector(Ram_depth_bit-1 downto 0);    --ram line 
+            dout: out std_logic_vector(Ram_width_bit-1 downto 0)            --ram line value
         );
 end rom_file;
 
 architecture bhvrl_rom of rom_file is
-type rome_type is array(0 to RAM_DEPTH -1 ) of bit_vector (RAM_WIDTH-1 downto 0);
+type rome_type is array(0 to Ram_depth_bit -1 ) of bit_vector (Ram_width_bit-1 downto 0);
 signal ROM :rome_type := (
 x"FFFFFFFF" ,
 x"FFFFF620" ,

@@ -32,17 +32,20 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 package pck_log is
-function log2( input :in natural ) return integer;
-function log10( input :in natural ) return integer;
-function powof2 (input :in natural ) return integer;
-function powof10 (input :in natural ) return integer;
-function to_string(slv: std_logic_vector) return string ; --chatgpt
+function log02( input :in natural ) return integer;
+function log010( input :in natural ) return integer;
+function powof02 (input :in natural ) return integer;
+function powof010 (input :in natural ) return integer;
+function to_string0(slv: std_logic_vector) return string ; --chatgpt
 function adj_Pinc_byfreq(freq : in natural) return integer ;
 
-constant X_clk : integer := 100_000_000 ;
+constant X_clk                  : integer   := 100_000_000 ;
+constant Ram_width_inBIT        : integer   := 32 ;    --ram width
+constant Ram_depth_inBIT        : integer   := 12;
+constant Ram_depth_inSIZE       : integer   := 4096;
+constant Sw_inSIZE              : integer   := 8 ;
+constant Accum_inBIT            : integer   := 28 ;
 
-constant accum_inBIT : integer := 28 ;
-constant ram_depth_inNUM :integer := 4096;
 end  pck_log ;
 
 
@@ -51,7 +54,7 @@ end  pck_log ;
 
 
 package body  pck_log is
-function log2( input :in natural ) return integer is
+function log02( input :in natural ) return integer is
     variable temp       : integer := input ;
     variable return_val : integer := 0;
     
@@ -64,7 +67,7 @@ function log2( input :in natural ) return integer is
 end function ;
 
 
-function log10( input :in natural ) return integer is
+function log010( input :in natural ) return integer is
     variable temp       : integer := input ;
     variable return_val : integer := 0;
     
@@ -76,7 +79,7 @@ function log10( input :in natural ) return integer is
     return return_val ;
 end function ;
 
-function powof2( input :in natural ) return integer is
+function powof02( input :in natural ) return integer is
     variable temp       : integer := input ;
     variable return_val : integer := 1;
     
@@ -88,7 +91,7 @@ function powof2( input :in natural ) return integer is
     return return_val ;
 end function ;
 
-function powof10( input :in natural ) return integer is
+function powof010( input :in natural ) return integer is
     variable temp       : integer := input ;
     variable return_val : integer := 1;
     
@@ -100,7 +103,7 @@ function powof10( input :in natural ) return integer is
     return return_val ;
 end function ;
 
-function to_string(slv: std_logic_vector) return string is
+function to_string0(slv: std_logic_vector) return string is
     variable result: string(1 to slv'length);
 begin
     for i in slv'range loop
@@ -110,7 +113,7 @@ begin
 end function;
 
 function to_string(slv: integer ) return string is -- unfinished
-    variable temp : integer := log10(slv) ;
+    variable temp : integer := log010(slv) ;
     variable result: string(1 to temp );
 begin
 --    while slv loop
@@ -124,7 +127,7 @@ function adj_Pinc_byfreq(freq : in natural ) return integer  is
 begin
 -- manupulation for floating point 
 
-    return (   powof2(accum_inBIT)/ ( X_clk/100 )   )* ( out_freq/100 )   ;
+    return (   powof02(accum_inBIT)/ ( X_clk/100 )   )* ( out_freq/100 )   ;
    --return (    out_freq * ram_depth_inNUM * powof2( accum_inBIT - log2(ram_depth_inNUM) )  ) / (X_clk  ) ;
    -- 15 ns 0001111011101001100110011000 5 
    -- 15 ns 0000001111010001100110011000 4

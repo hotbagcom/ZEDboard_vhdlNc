@@ -37,24 +37,25 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity p05_accum is
     Generic (   
-        Ram_width_bitsize   : integer ;
-        Ram_depth_bitsize   : integer ;
-        Mux_in_size         : integer ;
-        Accum_bsize   :integer 
+        Num_sw              : integer   := Sw_inSIZE ;
+    --    Ram_width_bit       : integer   := Ram_width_inBIT ;     --ram width
+    --    Ram_depth_size      : integer   := Ram_depth_inSIZE ;        --ram depth    
+        Ram_depth_bit       : integer   := Ram_depth_inBIT ;          --ram depth    
+        Accum_bit     : integer      --28
         
      );
     Port (
         clk     : in std_logic;
         rst     : in std_logic ;  
-        Md_SLK : in std_logic_vector(Mux_in_size -1 downto 0);
-        addrs   :out std_logic_vector(Ram_depth_bitsize-1 downto 0)
+        Md_SLK  : in std_logic_vector(Num_sw -1 downto 0);
+        addrs   :out std_logic_vector(Ram_depth_bit-1 downto 0)
      );
 end p05_accum;
 
 architecture bhvrl_accum of p05_accum is
 --signal test_todo_clr : std_logic_vector( downto ) 
 ------- SIGNAL -------
-signal accum_value : std_logic_vector( Accum_bsize - 1 downto 0 ) := (others => '0');
+signal accum_value : std_logic_vector( Accum_bit - 1 downto 0 ) := (others => '0');
 signal inc : integer ;
 signal w_MODEfreq : integer range 1 to x_clk := 25_000_000;
 
@@ -113,7 +114,7 @@ PincACCM : process (clk , rst ) begin
 end process  ;
 
 
-   addrs <= accum_value(Accum_bsize -1 downto Accum_bsize - Ram_depth_bitsize);
+   addrs <= accum_value(Accum_bit -1 downto Accum_bit - Ram_depth_bit);
 
 
 end bhvrl_accum;
