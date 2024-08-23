@@ -15,7 +15,7 @@
   </ObjectList>
   <ObjectList object_type="hw_ila" gui_info="">
     <Object name="design_1_i/ila_0" gui_info="">
-      <Properties Property="CONTROL.DATA_DEPTH" value="128"/>
+      <Properties Property="CONTROL.DATA_DEPTH" value="512"/>
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
       <Properties Property="CONTROL.TRIGGER_POSITION" value="12"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="1"/>

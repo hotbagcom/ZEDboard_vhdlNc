@@ -74,30 +74,30 @@ FmodsACC :process (Md_SLK )begin
         
     case( Md_SLK ( 7 downto 6) ) is 
         when "00" => TEMP0 <= 0;
-        when "01" => TEMP0 <= 2_500_00;
-        when "10" => TEMP0 <= 5_000_00;
-        when "11" => TEMP0 <= 10_000_00;
+        when "01" => TEMP0 <= 25_000_000;
+        when "10" => TEMP0 <= 50_000_000;
+        when "11" => TEMP0 <= 100_000_000;
         when others => TEMP0 <= 0 ;
         end case ;         
     case( Md_SLK ( 5 downto 4) ) is 
         when "00" => TEMP1 <= 0;
-        when "01" => TEMP1 <= 250_00;
-        when "10" => TEMP1 <= 500_00;
-        when "11" => TEMP1 <= 1_000_00;
+        when "01" => TEMP1 <= 250_0000;
+        when "10" => TEMP1 <= 500_0000;
+        when "11" => TEMP1 <= 1_000_0000;
         when others => TEMP1 <= 0 ;
         end case ;  
     case( Md_SLK ( 3 downto 2) ) is 
         when "00" => TEMP2 <= 0;
-        when "01" => TEMP2 <= 25_00;
-        when "10" => TEMP2 <= 50_00;
-        when "11" => TEMP2 <= 100_00;
+        when "01" => TEMP2 <= 25_0000;
+        when "10" => TEMP2 <= 50_0000;
+        when "11" => TEMP2 <= 100_0000;
         when others => TEMP2 <= 0 ;
         end case ;  
     case( Md_SLK ( 1 downto 0) ) is 
         when "00" => TEMP3 <= 0;
-        when "01" => TEMP3 <= 2_50;
-        when "10" => TEMP3 <= 5_00;
-        when "11" => TEMP3 <= 10_00;
+        when "01" => TEMP3 <= 2_5000;
+        when "10" => TEMP3 <= 5_0000;
+        when "11" => TEMP3 <= 10_0000;
         when others => TEMP3 <= 0 ;
         end case ;  
      w_MODEfreq <= TEMP0 + TEMP1 + TEMP2 + TEMP3;--*  multi_ofset ;
