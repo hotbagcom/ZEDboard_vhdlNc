@@ -1,0 +1,14 @@
+*.wdb
+*.xml
+*.vds
+*.rpt
+*.jou
+*.pb
+*.rst
+*.xci
+*.cpp
+*.v
+*.h
+*.cc
+*.sv
+
