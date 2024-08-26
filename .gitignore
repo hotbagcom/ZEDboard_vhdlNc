@@ -11,4 +11,8 @@
 *.h
 *.cc
 *.sv
-
+*.txt
+*.wdf
+*.wcfg
+*.wdb
+*.xml
