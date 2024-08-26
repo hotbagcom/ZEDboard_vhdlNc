@@ -45,7 +45,7 @@ entity rom_file is
 end rom_file;
 
 architecture bhvrl_rom of rom_file is
-type rome_type is array(0 to Ram_depth_bit -1 ) of bit_vector (Ram_width_bit-1 downto 0);
+type rome_type is array(0 to Ram_depth_size -1 ) of bit_vector (Ram_width_bit-1 downto 0);
 signal ROM :rome_type := (
 x"FFFFFFFF" ,
 x"FFFFF620" ,
