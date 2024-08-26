@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Fri Aug 23 09:50:52 2024
+--Date        : Mon Aug 26 14:44:25 2024
 --Host        : Arif running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -599,15 +599,29 @@ entity design_1 is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    mode_sFREQ : in STD_LOGIC_VECTOR ( 7 downto 0 )
+    btns_poss_0 : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=9,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=3,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=9,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=18,da_clkrst_cnt=1,da_ps7_cnt=5,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
 
 architecture STRUCTURE of design_1 is
+  component design_1_util_vector_logic_0_0 is
+  port (
+    Op1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Res : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component design_1_util_vector_logic_0_0;
+  component design_1_ila_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    probe0 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component design_1_ila_0_0;
   component design_1_processing_system7_0_0 is
   port (
     TTC0_WAVE0_OUT : out STD_LOGIC;
@@ -680,20 +694,6 @@ architecture STRUCTURE of design_1 is
     PS_PORB : inout STD_LOGIC
   );
   end component design_1_processing_system7_0_0;
-  component design_1_util_vector_logic_0_0 is
-  port (
-    Op1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Res : out STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-  end component design_1_util_vector_logic_0_0;
-  component design_1_ila_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-  end component design_1_ila_0_0;
   component design_1_axi_gpio_0_0 is
   port (
     s_axi_aclk : in STD_LOGIC;
@@ -715,7 +715,8 @@ architecture STRUCTURE of design_1 is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
-    gpio_io_i : in STD_LOGIC_VECTOR ( 4 downto 0 )
+    gpio_io_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    gpio2_io_i : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
   end component design_1_axi_gpio_0_0;
   component design_1_rst_ps7_0_100M_0 is
@@ -732,15 +733,16 @@ architecture STRUCTURE of design_1 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_rst_ps7_0_100M_0;
-  component design_1_p05_dds_0_0 is
+  component design_1_p05_dds_0_5 is
   port (
     clk : in STD_LOGIC;
     reset : in STD_LOGIC;
-    mode_sFREQ : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    btns_poss : in STD_LOGIC_VECTOR ( 7 downto 0 );
     Sin_val : out STD_LOGIC_VECTOR ( 31 downto 0 );
     Cos_val : out STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  end component design_1_p05_dds_0_0;
+  end component design_1_p05_dds_0_5;
+  signal btns_poss_0_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal p05_dds_0_Cos_val : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal p05_dds_0_Sin_val : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
@@ -758,7 +760,7 @@ architecture STRUCTURE of design_1 is
   signal processing_system7_0_DDR_RAS_N : STD_LOGIC;
   signal processing_system7_0_DDR_RESET_N : STD_LOGIC;
   signal processing_system7_0_DDR_WE_N : STD_LOGIC;
-  signal processing_system7_0_FCLK_CLK0 : STD_LOGIC;
+  signal processing_system7_0_FCLK_CLK1 : STD_LOGIC;
   signal processing_system7_0_FCLK_RESET0_N : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_DDR_VRN : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_DDR_VRP : STD_LOGIC;
@@ -822,7 +824,6 @@ architecture STRUCTURE of design_1 is
   signal ps7_0_axi_periph_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal ps7_0_axi_periph_M00_AXI_WVALID : STD_LOGIC;
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal sw_in_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal util_vector_logic_0_Res : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_processing_system7_0_TTC0_WAVE0_OUT_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_TTC0_WAVE1_OUT_UNCONNECTED : STD_LOGIC;
@@ -859,11 +860,12 @@ architecture STRUCTURE of design_1 is
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
-  sw_in_1(7 downto 0) <= mode_sFREQ(7 downto 0);
+  btns_poss_0_1(7 downto 0) <= btns_poss_0(7 downto 0);
 axi_gpio_0: component design_1_axi_gpio_0_0
      port map (
+      gpio2_io_i(4 downto 0) => B"00000",
       gpio_io_i(4 downto 0) => B"00000",
-      s_axi_aclk => processing_system7_0_FCLK_CLK0,
+      s_axi_aclk => processing_system7_0_FCLK_CLK1,
       s_axi_araddr(8 downto 0) => ps7_0_axi_periph_M00_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),
       s_axi_arready => ps7_0_axi_periph_M00_AXI_ARREADY,
@@ -885,17 +887,17 @@ axi_gpio_0: component design_1_axi_gpio_0_0
     );
 ila_0: component design_1_ila_0_0
      port map (
-      clk => processing_system7_0_FCLK_CLK0,
+      clk => processing_system7_0_FCLK_CLK1,
       probe0(31 downto 0) => p05_dds_0_Sin_val(31 downto 0),
       probe1(31 downto 0) => p05_dds_0_Cos_val(31 downto 0),
-      probe2(7 downto 0) => sw_in_1(7 downto 0)
+      probe2(7 downto 0) => btns_poss_0_1(7 downto 0)
     );
-p05_dds_0: component design_1_p05_dds_0_0
+p05_dds_0: component design_1_p05_dds_0_5
      port map (
       Cos_val(31 downto 0) => p05_dds_0_Cos_val(31 downto 0),
       Sin_val(31 downto 0) => p05_dds_0_Sin_val(31 downto 0),
-      clk => processing_system7_0_FCLK_CLK0,
-      mode_sFREQ(7 downto 0) => sw_in_1(7 downto 0),
+      btns_poss(7 downto 0) => btns_poss_0_1(7 downto 0),
+      clk => processing_system7_0_FCLK_CLK1,
       reset => util_vector_logic_0_Res(0)
     );
 processing_system7_0: component design_1_processing_system7_0_0
@@ -917,10 +919,10 @@ processing_system7_0: component design_1_processing_system7_0_0
       DDR_VRN => FIXED_IO_ddr_vrn,
       DDR_VRP => FIXED_IO_ddr_vrp,
       DDR_WEB => DDR_we_n,
-      FCLK_CLK0 => processing_system7_0_FCLK_CLK0,
+      FCLK_CLK0 => processing_system7_0_FCLK_CLK1,
       FCLK_RESET0_N => processing_system7_0_FCLK_RESET0_N,
       MIO(53 downto 0) => FIXED_IO_mio(53 downto 0),
-      M_AXI_GP0_ACLK => processing_system7_0_FCLK_CLK0,
+      M_AXI_GP0_ACLK => processing_system7_0_FCLK_CLK1,
       M_AXI_GP0_ARADDR(31 downto 0) => processing_system7_0_M_AXI_GP0_ARADDR(31 downto 0),
       M_AXI_GP0_ARBURST(1 downto 0) => processing_system7_0_M_AXI_GP0_ARBURST(1 downto 0),
       M_AXI_GP0_ARCACHE(3 downto 0) => processing_system7_0_M_AXI_GP0_ARCACHE(3 downto 0),
@@ -971,9 +973,9 @@ processing_system7_0: component design_1_processing_system7_0_0
     );
 ps7_0_axi_periph: entity work.design_1_ps7_0_axi_periph_0
      port map (
-      ACLK => processing_system7_0_FCLK_CLK0,
+      ACLK => processing_system7_0_FCLK_CLK1,
       ARESETN => rst_ps7_0_100M_peripheral_aresetn(0),
-      M00_ACLK => processing_system7_0_FCLK_CLK0,
+      M00_ACLK => processing_system7_0_FCLK_CLK1,
       M00_ARESETN => rst_ps7_0_100M_peripheral_aresetn(0),
       M00_AXI_araddr(31 downto 0) => ps7_0_axi_periph_M00_AXI_ARADDR(31 downto 0),
       M00_AXI_arready => ps7_0_axi_periph_M00_AXI_ARREADY,
@@ -992,7 +994,7 @@ ps7_0_axi_periph: entity work.design_1_ps7_0_axi_periph_0
       M00_AXI_wready => ps7_0_axi_periph_M00_AXI_WREADY,
       M00_AXI_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
       M00_AXI_wvalid => ps7_0_axi_periph_M00_AXI_WVALID,
-      S00_ACLK => processing_system7_0_FCLK_CLK0,
+      S00_ACLK => processing_system7_0_FCLK_CLK1,
       S00_ARESETN => rst_ps7_0_100M_peripheral_aresetn(0),
       S00_AXI_araddr(31 downto 0) => processing_system7_0_M_AXI_GP0_ARADDR(31 downto 0),
       S00_AXI_arburst(1 downto 0) => processing_system7_0_M_AXI_GP0_ARBURST(1 downto 0),
@@ -1044,7 +1046,7 @@ rst_ps7_0_100M: component design_1_rst_ps7_0_100M_0
       mb_reset => NLW_rst_ps7_0_100M_mb_reset_UNCONNECTED,
       peripheral_aresetn(0) => rst_ps7_0_100M_peripheral_aresetn(0),
       peripheral_reset(0) => NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED(0),
-      slowest_sync_clk => processing_system7_0_FCLK_CLK0
+      slowest_sync_clk => processing_system7_0_FCLK_CLK1
     );
 util_vector_logic_0: component design_1_util_vector_logic_0_0
      port map (
