@@ -1,17 +1,18 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x3EE01B3903691F3B",
+      "boundary_crc": "0xA93CBBA53935F559",
       "device": "xc7z020clg484-1",
       "name": "design_1",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.1"
+      "tool_version": "2020.1",
+      "validated": "true"
     },
     "design_tree": {
-      "processing_system7_0": "",
       "util_vector_logic_0": "",
       "ila_0": "",
+      "processing_system7_0": "",
       "axi_gpio_0": "",
       "ps7_0_axi_periph": {
         "s00_couplers": {
@@ -19,30 +20,117 @@
         }
       },
       "rst_ps7_0_100M": "",
-      "p05_dds_0": ""
+      "vio_0": "",
+      "p05_dds_0": "",
+      "p05_dds_1": ""
     },
     "interface_ports": {
       "DDR": {
         "mode": "Master",
-        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0"
+        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "TIMEPERIOD_PS": {
+            "value": "1250",
+            "value_src": "default"
+          },
+          "MEMORY_TYPE": {
+            "value": "COMPONENTS",
+            "value_src": "default"
+          },
+          "DATA_WIDTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "CS_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "DATA_MASK_ENABLED": {
+            "value": "true",
+            "value_src": "default"
+          },
+          "SLOT": {
+            "value": "Single",
+            "value_src": "default"
+          },
+          "MEM_ADDR_MAP": {
+            "value": "ROW_COLUMN_BANK",
+            "value_src": "default"
+          },
+          "BURST_LENGTH": {
+            "value": "8",
+            "value_src": "default"
+          },
+          "AXI_ARBITRATION_SCHEME": {
+            "value": "TDM",
+            "value_src": "default"
+          },
+          "CAS_LATENCY": {
+            "value": "11",
+            "value_src": "default"
+          },
+          "CAS_WRITE_LATENCY": {
+            "value": "11",
+            "value_src": "default"
+          }
+        }
       },
       "FIXED_IO": {
         "mode": "Master",
-        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0"
-      },
-      "btns_5bits": {
-        "mode": "Master",
-        "vlnv": "xilinx.com:interface:gpio_rtl:1.0"
+        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          }
+        }
       }
     },
     "ports": {
-      "mode_sFREQ": {
+      "btns_poss_0": {
         "direction": "I",
         "left": "7",
         "right": "0"
       }
     },
     "components": {
+      "util_vector_logic_0": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "design_1_util_vector_logic_0_0",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "not"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_1_ila_0_0",
+        "parameters": {
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "3"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "32"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "32"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "8"
+          }
+        }
+      },
       "processing_system7_0": {
         "vlnv": "xilinx.com:ip:processing_system7:5.5",
         "xci_name": "design_1_processing_system7_0_0",
@@ -853,45 +941,15 @@
           }
         }
       },
-      "util_vector_logic_0": {
-        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
-        "xci_name": "design_1_util_vector_logic_0_0",
-        "parameters": {
-          "C_OPERATION": {
-            "value": "not"
-          }
-        }
-      },
-      "ila_0": {
-        "vlnv": "xilinx.com:ip:ila:6.2",
-        "xci_name": "design_1_ila_0_0",
-        "parameters": {
-          "C_ENABLE_ILA_AXI_MON": {
-            "value": "false"
-          },
-          "C_MONITOR_TYPE": {
-            "value": "Native"
-          },
-          "C_NUM_OF_PROBES": {
-            "value": "3"
-          },
-          "C_PROBE0_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE1_WIDTH": {
-            "value": "32"
-          },
-          "C_PROBE2_WIDTH": {
-            "value": "8"
-          }
-        }
-      },
       "axi_gpio_0": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "design_1_axi_gpio_0_0",
         "parameters": {
-          "GPIO_BOARD_INTERFACE": {
+          "GPIO2_BOARD_INTERFACE": {
             "value": "btns_5bits"
+          },
+          "GPIO_BOARD_INTERFACE": {
+            "value": "Custom"
           },
           "USE_BOARD_FLOW": {
             "value": "true"
@@ -1034,16 +1092,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "s00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -1064,16 +1122,16 @@
           }
         },
         "interface_nets": {
-          "ps7_0_axi_periph_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
-            ]
-          },
           "s00_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "s00_couplers/M_AXI"
+            ]
+          },
+          "ps7_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
             ]
           }
         },
@@ -1108,9 +1166,27 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "design_1_rst_ps7_0_100M_0"
       },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "design_1_vio_0_0",
+        "parameters": {
+          "C_EN_PROBE_IN_ACTIVITY": {
+            "value": "0"
+          },
+          "C_NUM_PROBE_IN": {
+            "value": "2"
+          },
+          "C_PROBE_OUT0_INIT_VAL": {
+            "value": "0x40"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "8"
+          }
+        }
+      },
       "p05_dds_0": {
         "vlnv": "xilinx.com:module_ref:p05_dds:1.0",
-        "xci_name": "design_1_p05_dds_0_0",
+        "xci_name": "design_1_p05_dds_0_5",
         "reference_info": {
           "ref_type": "hdl",
           "ref_name": "p05_dds",
@@ -1119,13 +1195,85 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              }
+            }
           },
           "reset": {
             "type": "rst",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
           },
-          "mode_sFREQ": {
+          "btns_poss": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Sin_val": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "Cos_val": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "p05_dds_1": {
+        "vlnv": "xilinx.com:module_ref:p05_dds:1.0",
+        "xci_name": "design_1_p05_dds_0_6",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "p05_dds",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "btns_poss": {
             "direction": "I",
             "left": "7",
             "right": "0"
@@ -1167,16 +1315,10 @@
           "ps7_0_axi_periph/M00_AXI",
           "axi_gpio_0/S_AXI"
         ]
-      },
-      "axi_gpio_0_GPIO": {
-        "interface_ports": [
-          "btns_5bits",
-          "axi_gpio_0/GPIO"
-        ]
       }
     },
     "nets": {
-      "processing_system7_0_FCLK_CLK0": {
+      "processing_system7_0_FCLK_CLK1": {
         "ports": [
           "processing_system7_0/FCLK_CLK0",
           "processing_system7_0/M_AXI_GP0_ACLK",
@@ -1186,27 +1328,25 @@
           "axi_gpio_0/s_axi_aclk",
           "ps7_0_axi_periph/M00_ACLK",
           "ps7_0_axi_periph/ACLK",
-          "p05_dds_0/clk"
+          "vio_0/clk",
+          "p05_dds_0/clk",
+          "p05_dds_1/clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
-          "util_vector_logic_0/Op1",
-          "rst_ps7_0_100M/ext_reset_in"
+          "rst_ps7_0_100M/ext_reset_in",
+          "util_vector_logic_0/Op1"
         ]
       },
-      "util_vector_logic_0_Res": {
+      "rst_ps7_0_100M_peripheral_aresetn": {
         "ports": [
-          "util_vector_logic_0/Res",
-          "p05_dds_0/reset"
-        ]
-      },
-      "sw_in_1": {
-        "ports": [
-          "mode_sFREQ",
-          "ila_0/probe2",
-          "p05_dds_0/mode_sFREQ"
+          "rst_ps7_0_100M/peripheral_aresetn",
+          "ps7_0_axi_periph/S00_ARESETN",
+          "axi_gpio_0/s_axi_aresetn",
+          "ps7_0_axi_periph/M00_ARESETN",
+          "ps7_0_axi_periph/ARESETN"
         ]
       },
       "p05_dds_0_Cos_val": {
@@ -1221,13 +1361,36 @@
           "ila_0/probe0"
         ]
       },
-      "rst_ps7_0_100M_peripheral_aresetn": {
+      "util_vector_logic_0_Res": {
         "ports": [
-          "rst_ps7_0_100M/peripheral_aresetn",
-          "ps7_0_axi_periph/S00_ARESETN",
-          "axi_gpio_0/s_axi_aresetn",
-          "ps7_0_axi_periph/M00_ARESETN",
-          "ps7_0_axi_periph/ARESETN"
+          "util_vector_logic_0/Res",
+          "p05_dds_0/reset",
+          "p05_dds_1/reset"
+        ]
+      },
+      "btns_poss_0_1": {
+        "ports": [
+          "btns_poss_0",
+          "ila_0/probe2",
+          "p05_dds_0/btns_poss"
+        ]
+      },
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "p05_dds_1/btns_poss"
+        ]
+      },
+      "p05_dds_1_Sin_val": {
+        "ports": [
+          "p05_dds_1/Sin_val",
+          "vio_0/probe_in0"
+        ]
+      },
+      "p05_dds_1_Cos_val": {
+        "ports": [
+          "p05_dds_1/Cos_val",
+          "vio_0/probe_in1"
         ]
       }
     },

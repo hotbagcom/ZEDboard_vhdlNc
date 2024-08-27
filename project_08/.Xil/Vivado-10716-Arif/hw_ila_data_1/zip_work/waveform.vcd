@@ -1,0 +1,38 @@
+$date
+        2024-Aug-27 18:05:07
+$end
+$version
+        Vivado v2020.1 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 8 " design_02_i/t07_debounce_3mux8_0_led [7:0] $end
+$var reg 1 * _TRIGGER $end
+$var reg 1 + _WINDOW $end
+$var reg 1 , _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11110100 "
+0*
+1+
+0,
+$end
+#1
+b1110100 "
+#2
+b11110100 "
+#3
+b1110100 "
+#4
+b11110100 "
+#5
+b1110100 "
+#6
+b11110100 "
+#7
+b1110100 "
+1*

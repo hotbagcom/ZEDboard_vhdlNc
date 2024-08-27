@@ -125,8 +125,7 @@ Sinwave : rom_file
     dout    => S_Sin_val       
     );
     
-    S_phaseshift <= std_logic_vector( unsigned(S_ram_adress)  +  (to_unsigned( Ram_depth_size, Ram_depth_bit ) srl 2)  );  
-    
+    S_phaseshift <= std_logic_vector( unsigned(S_ram_adress)  +  (  resize( ((to_unsigned(Ram_depth_size,Ram_depth_bit+1) ) srl 2 ) ,Ram_depth_bit) )) ;
      
   --to_unsigned(shift_right(unsigned(to_unsigned(Ram_depth_size,Ram_depth_bit)) , 2 ) , Ram_depth_bit)   );--(Ram_depth_bit downto 2 )  ;
     

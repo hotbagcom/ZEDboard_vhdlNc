@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"p05_dds_func_impl.vhd" \
+"../../../../../project_06.srcs/sources_1/imports/new/pck_log.vhd" \
+"../../../../../project_06.srcs/sources_1/imports/new/p05_accum.vhd" \
+"../../../../../project_06.srcs/sources_1/imports/new/rom_file.vhd" \
+"../../../../../project_06.srcs/sources_1/imports/new/p05_dds.vhd" \
+
+# Do not sort compile order
+nosort
