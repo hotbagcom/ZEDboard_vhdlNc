@@ -54,36 +54,60 @@ signal led_status :std_logic := '0' ;
 
 begin
 
-Getrst_upclk :
-process (clk) begin 
-    if rising_edge(clk) and rst ='1'  then
-        led_status <= '0' ;
+process (clk ) begin 
+    if rising_edge(clk)then
+   --     btn_status <= btn ;
+        if rst ='1'  then
+            led_status <= '0' ;
+            debounce_cntr <= debounce_max;
+            
+        elsif (debounce_cntr < debounce_max) then --pressed earlier
+            debounce_cntr <= debounce_cntr +1 ;
+            
+        elsif (btn_status /= btn) then 
+            btn_status <= btn ;
+            
+            if (btn_status = '1') then 
+                debounce_cntr <= 0;
+                led_status <= not led_status;
+                end if ;
+        end if; 
     end if;
 end process ;
 
-GetBtn_onclk : 
-process (clk) begin 
-    if rising_edge(clk) then
-        btn_status <= btn ;
-    end if;
-end process ;
+led <= led_status ;
 
-Count_waitclk : --todo make an apropriate algorithm 
-process ( btn_status ) begin 
-    if (debounce_cntr < debounce_max) then --pressed earlier
-        debounce_cntr <= debounce_cntr +1 ;
-    end if; 
-end process;
 
-SetLed_onclk :
-process ( clk) begin 
-    if rising_edge(clk) and (btn_status = '1') then 
-            debounce_cntr <= 0;
-            led_status <= not led_status;
-    end if;--rising edge clk    
-end process;
+--Getrst_upclk :
+--process (clk) begin 
+--    if rising_edge(clk) and rst ='1'  then
+--        led_status <= '0' ;
+--    end if;
+--end process ;
+
+--GetBtn_onclk : 
+--process (clk) begin 
+--    if rising_edge(clk) then
+--        btn_status <= btn ;
+--    end if;
+--end process ;
+
+--Count_waitclk : --todo make an apropriate algorithm 
+--process ( btn_status ) begin 
+--    if (debounce_cntr < debounce_max) then --pressed earlier
+--        debounce_cntr <= debounce_cntr +1 ;
+--    end if; 
+--end process;
+
+--SetLed_onclk :
+--process ( clk) begin 
+--    if rising_edge(clk) and (btn_status = '1') then 
+--            debounce_cntr <= 0;
+--            led_status <= not led_status;
+--    end if;--rising edge clk    
+--end process;
     
     
-    led <= led_status ;
+    
     
 end bhvrl_debouncetop;

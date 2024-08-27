@@ -1,0 +1,538 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 21320
+License: Customer
+
+Current time: 	Tue Aug 27 13:07:08 EET 2024
+Time zone: 	Eastern European Time (Asia/Istanbul)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 28
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Users/arify/Prog_4_user/Xlixv20_1/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	C:/Users/arify/Prog_4_user/Xlixv20_1/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	arify
+User home directory: C:/Users/arify
+User working directory: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07
+User country: 	TR
+User language: 	tr
+User locale: 	tr_TR
+
+RDI_BASEROOT: C:/Users/arify/Prog_4_user/Xlixv20_1/Vivado
+HDI_APPROOT: C:/Users/arify/Prog_4_user/Xlixv20_1/Vivado/2020.1
+RDI_DATADIR: C:/Users/arify/Prog_4_user/Xlixv20_1/Vivado/2020.1/data
+RDI_BINDIR: C:/Users/arify/Prog_4_user/Xlixv20_1/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/arify/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/arify/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/arify/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	C:/Users/arify/Prog_4_user/Xlixv20_1/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/vivado.log
+Vivado journal file location: 	C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/vivado.jou
+Engine tmp dir: 	C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/.Xil/Vivado-21320-Arif
+
+Xilinx Environment Variables
+----------------------------
+XILINX_PLANAHEAD: C:/Users/arify/Prog_4_user/Xlixv20_1/Vivado/2020.1
+XILINX_SDK: C:/Users/arify/Prog_4_user/Xlixv20_1/Vitis/2020.1
+XILINX_VITIS: C:/Users/arify/Prog_4_user/Xlixv20_1/Vitis/2020.1
+XILINX_VIVADO: C:/Users/arify/Prog_4_user/Xlixv20_1/Vivado/2020.1
+XILINX_VIVADO_HLS: C:/Users/arify/Prog_4_user/Xlixv20_1/Vivado/2020.1
+
+
+GUI allocated memory:	139 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,087 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\arify\WorkSpace\ZEDboard_vhdlNc\project_07\project_07.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/ip_repo/debounce_BTNLED_ip_1.0'. INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 88 MB (+90315kb) [00:00:13]
+// [Engine Memory]: 1,087 MB (+988039kb) [00:00:13]
+// [GUI Memory]: 106 MB (+14208kb) [00:00:13]
+// [GUI Memory]: 118 MB (+6094kb) [00:00:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  4293 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Users/arify/Prog_4_user/Xlixv20_1/Vivado/2020.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,087 MB. GUI used memory: 61 MB. Current time: 8/27/24, 1:07:08 PM EET
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:07 . Memory (MB): peak = 1101.406 ; gain = 0.000 
+// Project name: project_07; location: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07; part: xc7z020clg484-1
+dismissDialog("Open Project"); // bz (cs)
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 131 MB (+7544kb) [00:01:23]
+// Elapsed time: 70 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (F, cs) - Node
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "t07"); // ac (Q, F)
+dismissDialog("Create Source File"); // F (c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+// Elapsed time: 46 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "t08_debounce_RightLeft"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+// Elapsed time: 37 seconds
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+// Elapsed time: 59 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "t07_debounce_3mux8"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 171 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: close [ open C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/sources_1/new/t08_debounce_RightLeft.vhd w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/sources_1/new/t08_debounce_RightLeft.vhd 
+// Tcl Message: close [ open C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/sources_1/new/t07_debounce_3mux8.vhd w ] 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/sources_1/new/t07_debounce_3mux8.vhd 
+// I (cs): Define Modules: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+dismissDialog("Define Modules"); // I (cs)
+// [GUI Memory]: 140 MB (+2327kb) [00:04:30]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, t08_debounce_RightLeft(Behavioral) (t08_debounce_RightLeft.vhd)]", 3, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, t08_debounce_RightLeft(Behavioral) (t08_debounce_RightLeft.vhd)]", 3, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, t08_debounce_RightLeft(Behavioral) (t08_debounce_RightLeft.vhd)]", 3, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, t07_debounce_top(bhvrl_debouncetop) (t07_debounce.vhd)]", 2, false); // B (F, cs)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, t07_debounce_3mux8.vhd]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, t07_debounce_3mux8.vhd]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, t07_debounce_3mux8.vhd]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "t08_debounce_RightLeft.vhd", 1); // m (l, cs)
+selectCodeEditor("t08_debounce_RightLeft.vhd", 481, 345); // bP (w, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, t07_debounce_3mux8.vhd]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, t07_debounce_3mux8.vhd]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, t07_debounce_3mux8.vhd]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, t07_debounce_3mux8.vhd]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, t07_debounce_3mux8.vhd]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, t07_debounce_3mux8.vhd]", 2, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectCodeEditor("t08_debounce_RightLeft.vhd", 245, 120); // bP (w, cs)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "t07_debounce_3mux8.vhd", 2); // m (l, cs)
+setText("PAResourceAtoD.AbstractFileView_READ_ONLY", "C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/sources_1/new/t07_debounce_3mux8.vhd"); // d (F, cs)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, t07_debounce_3mux8.vhd]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, t07_debounce_3mux8.vhd]", 2, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cs)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/sources_1/new/t07_debounce_3mux8.vhd] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/sources_1/new/t07_debounce_3mux8.vhd 
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "t07_debounce_3mux8"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// HOptionPane Warning: 'A file with the specified name already exists. Please enter another name. (Create Source File)'
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// HOptionPane Warning: 'A file with the specified name already exists. Please enter another name. (Create Source File)'
+selectButton("OptionPane.button", "OK"); // JButton (v, C)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("CANCEL", "Cancel"); // JButton (j, c)
+// 'h' command handler elapsed time: 19 seconds
+dismissDialog("Add Sources"); // c (cs)
+selectCodeEditor("t08_debounce_RightLeft.vhd", 211, 181); // bP (w, cs)
+// Elapsed time: 18 seconds
+selectCodeEditor("t08_debounce_RightLeft.vhd", 735, 161); // bP (w, cs)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "t07_debounce_3mux8"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 6 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: close [ open C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/sources_1/new/t07_debounce_3mux8.vhd w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/sources_1/new/t07_debounce_3mux8.vhd 
+// I (cs): Define Module: addNotify
+// Elapsed time: 19 seconds
+setText(PAResourceAtoD.DefineModulesDialog_ARCHITECTURE_NAME, "bhvrl_3mux8"); // ac (Q, I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+dismissDialog("Define Module"); // I (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, t08_debounce_RightLeft(Behavioral) (t08_debounce_RightLeft.vhd)]", 3, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, t08_debounce_RightLeft(Behavioral) (t08_debounce_RightLeft.vhd)]", 3, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, Popup.HeavyWeightWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, Popup.HeavyWeightWindow)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, t08_debounce_RightLeft(Behavioral) (t08_debounce_RightLeft.vhd)]", 3, false); // B (F, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectCheckBox(PAResourceQtoS.RemoveSourcesDialog_ALSO_DELETE, "Also delete the project local file/directory from disk", true); // g (Q, aE): TRUE
+// 'c' command handler elapsed time: 5 seconds
+dismissDialog("Remove Sources"); // aE (cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, t08_debounce_RightLeft(Behavioral) (t08_debounce_RightLeft.vhd)]", 3, false); // B (F, cs)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cs): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cs)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/sources_1/new/t08_debounce_RightLeft.vhd] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/sources_1/new/t08_debounce_RightLeft.vhd 
+// Tcl Message: file delete -force C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/sources_1/new/t08_debounce_RightLeft.vhd 
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "t07_debounce_3mux8"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// HOptionPane Warning: 'A file with the specified name already exists. Please enter another name. (Create Source File)'
+// Elapsed time: 26 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "t07_debounce_RightLeft"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 40 seconds
+dismissDialog("Add Sources"); // c (cs)
+// Tcl Message: close [ open C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/sources_1/new/t07_debounce_RightLeft.vhd w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/sources_1/new/t07_debounce_RightLeft.vhd 
+// I (cs): Define Module: addNotify
+setText(PAResourceAtoD.DefineModulesDialog_ARCHITECTURE_NAME, (String) null); // ac (Q, I)
+typeControlKey(null, null, 'z');
+setText(PAResourceAtoD.DefineModulesDialog_ARCHITECTURE_NAME, "Behavioral"); // ac (Q, I)
+typeControlKey(null, null, 'z');
+// Elapsed time: 10 seconds
+setText(PAResourceAtoD.DefineModulesDialog_ARCHITECTURE_NAME, "Behavioralbhvrl_RL"); // ac (Q, I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (v, C)
+dismissDialog("Define Module"); // I (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, t07_debounce_3mux8(bhvrl_3mux8) (t07_debounce_3mux8.vhd)]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, t07_debounce_3mux8(bhvrl_3mux8) (t07_debounce_3mux8.vhd)]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, t07_debounce_3mux8(bhvrl_3mux8) (t07_debounce_3mux8.vhd)]", 2, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("t07_debounce_3mux8.vhd", 263, 230); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 193, 270); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 124, 234); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 36, 158); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 98, 157); // bP (w, cs)
+// Elapsed time: 69 seconds
+typeControlKey((HResource) null, "t07_debounce_3mux8.vhd", 'c'); // bP (w, cs)
+typeControlKey((HResource) null, "t07_debounce_3mux8.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 285, 208); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 324, 237); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 251, 203); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 232, 221); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 134, 272); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 120, 300); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 114, 286); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 105, 249); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 404, 134); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 239, 243); // bP (w, cs)
+// Elapsed time: 184 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 142, 262); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 353, 248); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 297, 258); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 144, 264); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 318, 266); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 54, 277); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 149, 285); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 97, 302); // bP (w, cs)
+// Elapsed time: 11 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 86 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 574, 317); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 574, 311); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 556, 280); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 304, 287); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 52, 264); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 56, 244); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 232, 260); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 361, 235); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 226, 265); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 296, 227); // bP (w, cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Language Templates]", 3, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_LANGUAGE_TEMPLATES
+// a (cs): Language Templates: addNotify
+expandTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL]", 1); // a (J, a)
+expandTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Device Macro Instantiation]", 3); // a (J, a)
+expandTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Common Constructs]", 2); // a (J, a)
+collapseTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Device Macro Instantiation]", 12); // a (J, a)
+expandTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Common Constructs, Conversion Functions]", 5); // a (J, a)
+expandTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Common Constructs, Conversion Functions, IEEE-NUMERIC_STD]", 6); // a (J, a)
+selectTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Common Constructs, Conversion Functions, IEEE-NUMERIC_STD, UNSIGNED to INTEGER]", 10, false); // a (J, a)
+selectTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Common Constructs, Conversion Functions, IEEE-NUMERIC_STD, SIGNED to INTEGER]", 9, false); // a (J, a)
+selectTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Common Constructs, Conversion Functions, IEEE-NUMERIC_STD, UNSIGNED to INTEGER]", 10, false); // a (J, a)
+selectTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Common Constructs, Conversion Functions, IEEE-NUMERIC_STD, SIGNED to INTEGER]", 9, false); // a (J, a)
+selectTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Common Constructs, Conversion Functions, IEEE-NUMERIC_STD, UNSIGNED to INTEGER]", 10, false); // a (J, a)
+// Elapsed time: 11 seconds
+expandTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Common Constructs, Operators]", 14); // a (J, a)
+expandTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Common Constructs, Operators, Shift Left Logical]", 22); // a (J, a)
+selectTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Common Constructs, Operators, Shift Left Logical, Unsigned]", 24, false); // a (J, a)
+selectTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Common Constructs, Operators, Shift Left Logical, Signed]", 23, false); // a (J, a)
+selectTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Common Constructs, Operators, Shift Left Logical, Unsigned]", 24, false); // a (J, a)
+selectCodeEditor("t07_debounce_3mux8.vhd", 120, 264); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 120, 264, false, false, false, false, true); // bP (w, cs) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 273, 220); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 275, 261); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 275, 261, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "t07_debounce_3mux8.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 575, 259); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 247, 266); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 523, 264); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 456, 264); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 411, 221); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 359, 259); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 359, 259, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("t07_debounce_3mux8.vhd", 259, 304); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 21, 276); // bP (w, cs)
+typeControlKey((HResource) null, "t07_debounce_3mux8.vhd", 'c'); // bP (w, cs)
+// Elapsed time: 324 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 215, 317); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 147, 270); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 147, 270, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("t07_debounce_3mux8.vhd", 374, 214); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 552, 263); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 552, 263, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("t07_debounce_3mux8.vhd", 638, 260); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 518, 259); // bP (w, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 592, 221); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 668, 262); // bP (w, cs)
+// Elapsed time: 24 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 18, 220); // bP (w, cs)
+// Elapsed time: 27 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 558, 264); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 738, 262); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 694, 227); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 226, 258); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 73, 262); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 657, 257); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 73, 258); // bP (w, cs)
+// Elapsed time: 25 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 157, 51); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 108, 271); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 75, 213); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 573, 266); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("t07_debounce_3mux8.vhd", 331, 199); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 285, 268); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 285, 268, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey(null, null, 'z');
+selectCodeEditor("t07_debounce_3mux8.vhd", 311, 203); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 371, 262); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 566, 198); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 520, 265); // bP (w, cs)
+// Elapsed time: 17 seconds
+selectTree(PAResourceItoN.LanguageTemplatesDialog_TEMPLATES_TREE, "[Templates, VHDL, Common Constructs, Conversion Functions, IEEE-NUMERIC_STD, INTEGER to UNSIGNED]", 8, false); // a (J, a)
+// Elapsed time: 23 seconds
+dismissDialog("Language Templates"); // a (cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 95, 115); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 435, 35); // bP (w, cs)
+typeControlKey((HResource) null, "t07_debounce_3mux8.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 176, 121); // bP (w, cs)
+typeControlKey((HResource) null, "t07_debounce_3mux8.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 391, 58); // bP (w, cs)
+// Elapsed time: 13 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 443, 57); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 473, 29); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 383, 148); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 109, 64); // bP (w, cs)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 14 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 573, 182); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 111, 179); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 511, 189); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 499, 173); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 256, 157); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 392, 202); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 394, 113); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 398, 198); // bP (w, cs)
+// Elapsed time: 26 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 14, 205); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 14, 205, false, false, false, false, true); // bP (w, cs) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,087 MB. GUI used memory: 82 MB. Current time: 8/27/24, 1:37:11 PM EET
+selectCodeEditor("t07_debounce_3mux8.vhd", 14, 222); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 35, 251); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 34, 263); // bP (w, cs)
+typeControlKey((HResource) null, "t07_debounce_3mux8.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 510, 263); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 447, 303); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 122, 156); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 122, 156, false, false, false, false, true); // bP (w, cs) - Double Click
+typeControlKey((HResource) null, "t07_debounce_3mux8.vhd", 'c'); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 281, 243); // bP (w, cs)
+typeControlKey((HResource) null, "t07_debounce_3mux8.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 262, 151); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 262, 151, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("t07_debounce_3mux8.vhd", 436, 154); // bP (w, cs)
+// Elapsed time: 15 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 197, 191); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 125, 233); // bP (w, cs)
+// Elapsed time: 24 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 118, 246); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 589, 285); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 366, 242); // bP (w, cs)
+typeControlKey((HResource) null, "t07_debounce_3mux8.vhd", 'v'); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 338, 238); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 587, 285); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 679, 212); // bP (w, cs)
+// Elapsed time: 14 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 389, 281); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 513, 282); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 331, 285); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 331, 285, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("t07_debounce_3mux8.vhd", 494, 285); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 113, 285); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 159, 12); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 447, 113); // bP (w, cs)
+// Elapsed time: 16 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 305, 264); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 296, 284); // bP (w, cs)
+// Elapsed time: 10 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 156, 268); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 156, 268, false, false, false, false, true); // bP (w, cs) - Double Click
+selectCodeEditor("t07_debounce_3mux8.vhd", 134, 305); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 172, 281); // bP (w, cs)
+selectCodeEditor("t07_debounce_3mux8.vhd", 394, 262); // bP (w, cs)
+// Elapsed time: 11 seconds
+selectCodeEditor("t07_debounce_3mux8.vhd", 360, 286); // bP (w, cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, t07_debounce_RightLeft(Behavioralbhvrl_RL) (t07_debounce_RightLeft.vhd)]", 3, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, t07_debounce_RightLeft(Behavioralbhvrl_RL) (t07_debounce_RightLeft.vhd)]", 3, false, false, false, false, false, true); // B (F, cs) - Double Click
+selectCodeEditor("t07_debounce_RightLeft.vhd", 412, 283); // bP (w, cs)
+// Elapsed time: 56 seconds
+selectCodeEditor("t07_debounce_RightLeft.vhd", 334, 291); // bP (w, cs)
+selectCodeEditor("t07_debounce_RightLeft.vhd", 303, 237); // bP (w, cs)
+selectCodeEditor("t07_debounce_RightLeft.vhd", 0, 218); // bP (w, cs)
+selectCodeEditor("t07_debounce_RightLeft.vhd", 19, 190); // bP (w, cs)
+typeControlKey(null, null, 'z');
+selectCodeEditor("t07_debounce_RightLeft.vhd", 71, 194); // bP (w, cs)
