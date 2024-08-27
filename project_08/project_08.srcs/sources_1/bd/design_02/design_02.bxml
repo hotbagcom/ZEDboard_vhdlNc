@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="39">
   <CompositeFile CompositeFileTopName="design_02" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1724753158"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1724753158"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1724753158"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1724753158"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1724773551"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1724773551"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1724773551"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1724773551"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\design_02_processing_system7_0_0\design_02_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
@@ -15,7 +15,15 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\design_02_t07_debounce_top_0_0\design_02_t07_debounce_top_0_0.xci" Type="IP">
+      <File Name="ip\design_02_util_vector_logic_0_0\design_02_util_vector_logic_0_0.xci" Type="IP">
+        <Instance HierarchyPath="util_vector_logic_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_02_t07_debounce_top_0_1\design_02_t07_debounce_top_0_1.xci" Type="IP">
         <Instance HierarchyPath="t07_debounce_top_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
@@ -23,8 +31,40 @@
         <UsedIn Val="IMPLEMENTATION"/>
         <UsedIn Val="SIMULATION"/>
       </File>
-      <File Name="ip\design_02_util_vector_logic_0_0\design_02_util_vector_logic_0_0.xci" Type="IP">
-        <Instance HierarchyPath="util_vector_logic_0"/>
+      <File Name="ip\design_02_t07_debounce_top_0_2\design_02_t07_debounce_top_0_2.xci" Type="IP">
+        <Instance HierarchyPath="t07_debounce_top_1"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_02_t07_debounce_top_0_3\design_02_t07_debounce_top_0_3.xci" Type="IP">
+        <Instance HierarchyPath="t07_debounce_top_2"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_02_t07_debounce_3mux8_0_0\design_02_t07_debounce_3mux8_0_0.xci" Type="IP">
+        <Instance HierarchyPath="t07_debounce_3mux8_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_02_t07_debounce_RightLe_0_0\design_02_t07_debounce_RightLe_0_0.xci" Type="IP">
+        <Instance HierarchyPath="t07_debounce_RightLe_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip\design_02_ila_0_0\design_02_ila_0_0.xci" Type="IP">
+        <Instance HierarchyPath="ila_0"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

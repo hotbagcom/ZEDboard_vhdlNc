@@ -1,26 +1,39 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.922807",
-   "Default View_TopLeft":"-224,-150",
+   "Default View_ScaleFactor":"0.72987",
+   "Default View_TopLeft":"-226,-260",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS-threadsafe
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 2 -x 730 -y -90 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 2 -x 730 -y -60 -defaultsOSRD
-preplace port btn_0 -pg 1 -lvl 0 -x -50 -y 360 -defaultsOSRD
-preplace port led_0 -pg 1 -lvl 2 -x 730 -y 340 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 480 -y 0 -defaultsOSRD
-preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 480 -y 200 -defaultsOSRD
-preplace inst t07_debounce_top_0 -pg 1 -lvl 1 -x 480 -y 340 -defaultsOSRD
-preplace netloc Net 1 0 2 -30 -140 680
-preplace netloc btn_0_1 1 0 1 N 360
-preplace netloc t07_debounce_top_0_led 1 1 1 N 340
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 -20 140 680
-preplace netloc util_vector_logic_0_Res 1 0 2 -20 260 680
-preplace netloc processing_system7_0_DDR 1 1 1 690J -90n
-preplace netloc processing_system7_0_FIXED_IO 1 1 1 NJ -60
-levelinfo -pg 1 -50 480 730
-pagesize -pg 1 -db -bbox -sgen -140 -150 840 500
+preplace port DDR -pg 1 -lvl 4 -x 1110 -y -90 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 1110 -y -60 -defaultsOSRD
+preplace port btn_L -pg 1 -lvl 0 -x -120 -y 120 -defaultsOSRD
+preplace port btn_M -pg 1 -lvl 0 -x -120 -y 300 -defaultsOSRD
+preplace port btn_R -pg 1 -lvl 0 -x -120 -y 450 -defaultsOSRD
+preplace portBus led -pg 1 -lvl 4 -x 1110 -y 260 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 620 -y -100 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 1 -x 240 -y -50 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 3 -x 980 -y 180 -defaultsOSRD
+preplace inst t07_debounce_top_0 -pg 1 -lvl 1 -x 240 -y 430 -defaultsOSRD
+preplace inst t07_debounce_top_1 -pg 1 -lvl 1 -x 240 -y 100 -defaultsOSRD
+preplace inst t07_debounce_top_2 -pg 1 -lvl 1 -x 240 -y 280 -defaultsOSRD
+preplace inst t07_debounce_RightLe_0 -pg 1 -lvl 2 -x 620 -y 100 -defaultsOSRD
+preplace inst t07_debounce_3mux8_0 -pg 1 -lvl 2 -x 620 -y 260 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 3 -100 -250 N -250 820
+preplace netloc util_vector_logic_0_Res 1 0 2 -100 10 380
+preplace netloc btn_0_1 1 0 1 N 300
+preplace netloc btn_1_1 1 0 1 N 450
+preplace netloc btn_L_1 1 0 1 N 120
+preplace netloc t07_debounce_top_0_led 1 1 1 400 120n
+preplace netloc t07_debounce_top_1_led 1 1 1 N 100
+preplace netloc t07_debounce_RightLe_0_res 1 1 2 410 180 820
+preplace netloc Net 1 0 3 -90 180 390 -240 830
+preplace netloc t07_debounce_top_2_led 1 1 1 N 280
+preplace netloc t07_debounce_3mux8_0_led 1 2 2 820 260 N
+preplace netloc processing_system7_0_FIXED_IO 1 2 2 NJ -160 1070
+preplace netloc processing_system7_0_DDR 1 2 2 NJ -180 1080
+levelinfo -pg 1 -120 240 620 980 1110
+pagesize -pg 1 -db -bbox -sgen -210 -400 1220 580
 "
 }
 {

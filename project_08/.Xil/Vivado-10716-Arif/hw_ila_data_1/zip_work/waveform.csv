@@ -1,0 +1,10 @@
+Sample in Buffer,Sample in Window,TRIGGER,design_02_i/t07_debounce_3mux8_0_led[7:0]
+Radix - UNSIGNED,UNSIGNED,UNSIGNED,HEX
+0,0,0,f4
+1,1,0,74
+2,2,0,f4
+3,3,0,74
+4,4,0,f4
+5,5,0,74
+6,6,0,f4
+7,7,1,74

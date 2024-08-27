@@ -73,9 +73,10 @@ process (clk ) begin
                 end if ;
         end if; 
     end if;
+    led <= led_status ;
 end process ;
 
-led <= led_status ;
+
 
 
 --Getrst_upclk :
