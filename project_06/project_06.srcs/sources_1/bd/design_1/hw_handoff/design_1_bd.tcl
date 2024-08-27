@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# p05_dds
+# p05_dds, p05_dds
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -169,11 +169,12 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
-  set mode_sFREQ [ create_bd_port -dir I -from 7 -to 0 mode_sFREQ ]
+  set btns_poss_0 [ create_bd_port -dir I -from 7 -to 0 btns_poss_0 ]
 
   # Create instance: axi_gpio_0, and set properties
   set axi_gpio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0 ]
   set_property -dict [ list \
+   CONFIG.GPIO2_BOARD_INTERFACE {btns_5bits} \
    CONFIG.GPIO_BOARD_INTERFACE {Custom} \
    CONFIG.USE_BOARD_FLOW {true} \
  ] $axi_gpio_0
@@ -203,6 +204,21 @@ proc create_root_design { parentCell } {
   set_property -dict [ list \
    CONFIG.POLARITY {ACTIVE_HIGH} \
  ] [get_bd_pins /p05_dds_0/reset]
+
+  # Create instance: p05_dds_1, and set properties
+  set block_name p05_dds
+  set block_cell_name p05_dds_1
+  if { [catch {set p05_dds_1 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $p05_dds_1 eq "" } {
+     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  set_property -dict [ list \
+   CONFIG.POLARITY {ACTIVE_HIGH} \
+ ] [get_bd_pins /p05_dds_1/reset]
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -615,6 +631,15 @@ proc create_root_design { parentCell } {
    CONFIG.LOGO_FILE {data/sym_notgate.png} \
  ] $util_vector_logic_0
 
+  # Create instance: vio_0, and set properties
+  set vio_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:vio:3.0 vio_0 ]
+  set_property -dict [ list \
+   CONFIG.C_EN_PROBE_IN_ACTIVITY {0} \
+   CONFIG.C_NUM_PROBE_IN {2} \
+   CONFIG.C_PROBE_OUT0_INIT_VAL {0x40} \
+   CONFIG.C_PROBE_OUT0_WIDTH {8} \
+ ] $vio_0
+
   # Create interface connections
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
@@ -622,13 +647,16 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
 
   # Create port connections
+  connect_bd_net -net btns_poss_0_1 [get_bd_ports btns_poss_0] [get_bd_pins ila_0/probe2] [get_bd_pins p05_dds_0/btns_poss]
   connect_bd_net -net p05_dds_0_Cos_val [get_bd_pins ila_0/probe1] [get_bd_pins p05_dds_0/Cos_val]
   connect_bd_net -net p05_dds_0_Sin_val [get_bd_pins ila_0/probe0] [get_bd_pins p05_dds_0/Sin_val]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins ila_0/clk] [get_bd_pins p05_dds_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
+  connect_bd_net -net p05_dds_1_Cos_val [get_bd_pins p05_dds_1/Cos_val] [get_bd_pins vio_0/probe_in1]
+  connect_bd_net -net p05_dds_1_Sin_val [get_bd_pins p05_dds_1/Sin_val] [get_bd_pins vio_0/probe_in0]
+  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins ila_0/clk] [get_bd_pins p05_dds_0/clk] [get_bd_pins p05_dds_1/clk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins vio_0/clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in] [get_bd_pins util_vector_logic_0/Op1]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
-  connect_bd_net -net sw_in_1 [get_bd_ports mode_sFREQ] [get_bd_pins ila_0/probe2] [get_bd_pins p05_dds_0/mode_sFREQ]
-  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins p05_dds_0/reset] [get_bd_pins util_vector_logic_0/Res]
+  connect_bd_net -net util_vector_logic_0_Res [get_bd_pins p05_dds_0/reset] [get_bd_pins p05_dds_1/reset] [get_bd_pins util_vector_logic_0/Res]
+  connect_bd_net -net vio_0_probe_out0 [get_bd_pins p05_dds_1/btns_poss] [get_bd_pins vio_0/probe_out0]
 
   # Create address segments
   assign_bd_address -offset 0x41200000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_gpio_0/S_AXI/Reg] -force

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Aug 26 15:51:45 2024
+# Process ID: 19976
+# Current directory: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.sim/sim_1/impl/func/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.sim/sim_1/impl/func/xsim/xsim.dir/p05_dds_func_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.sim/sim_1/impl/func/xsim/webtalk.log
+# Journal file: C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.sim/sim_1/impl/func/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_06/project_06.sim/sim_1/impl/func/xsim/xsim.dir/p05_dds_func_impl/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Aug 26 15:51:45 2024...

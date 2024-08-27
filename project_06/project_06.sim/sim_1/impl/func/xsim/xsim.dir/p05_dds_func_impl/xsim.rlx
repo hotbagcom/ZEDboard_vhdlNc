@@ -1,0 +1,12 @@
+
+{ 
+    crc :  17728759555996174044  , 
+    ccp_crc :  0  , 
+    cmdline : " -wto 6b46deaaeb524062b5a9a57ac23db863 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L secureip --snapshot p05_dds_func_impl xil_defaultlib.p05_dds xil_defaultlib.glbl" , 
+    buildDate : "May 27 2020" , 
+    buildTime : "20:09:33" , 
+    linkCmd : "C:\\Users\\arify\\Prog_4_user\\Xlixv20_1\\Vivado\\2020.1\\data\\..\\tps\\mingw\\6.2.0\\win64.o\\nt\\bin\\gcc.exe -Wa,-W  -O -Wl,--stack,104857600 -o \"xsim.dir/p05_dds_func_impl/xsimk.exe\"   \"xsim.dir/p05_dds_func_impl/obj/xsim_0.win64.obj\" \"xsim.dir/p05_dds_func_impl/obj/xsim_1.win64.obj\" -L\"C:\\Users\\arify\\Prog_4_user\\Xlixv20_1\\Vivado\\2020.1\\lib\\win64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

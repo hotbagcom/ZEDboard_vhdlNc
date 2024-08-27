@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Fri Aug 23 15:11:46 2024
+| Date         : Mon Aug 26 15:29:25 2024
 | Host         : Arif running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -156,10 +156,12 @@ Table of Contents
 +---------------------------------+------+
 |             Ref Name            | Used |
 +---------------------------------+------+
+| design_1_vio_0_0                |    1 |
 | design_1_util_vector_logic_0_0  |    1 |
 | design_1_rst_ps7_0_100M_0       |    1 |
 | design_1_processing_system7_0_0 |    1 |
-| design_1_p05_dds_0_0            |    1 |
+| design_1_p05_dds_0_6            |    1 |
+| design_1_p05_dds_0_5            |    1 |
 | design_1_ila_0_0                |    1 |
 | design_1_axi_gpio_0_0           |    1 |
 | design_1_auto_pc_0              |    1 |

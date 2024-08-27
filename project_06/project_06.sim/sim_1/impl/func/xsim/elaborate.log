@@ -1,0 +1,20 @@
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Users/arify/Prog_4_user/Xlixv20_1/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto 6b46deaaeb524062b5a9a57ac23db863 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L secureip --snapshot p05_dds_func_impl xil_defaultlib.p05_dds xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.pck_log
+Compiling module xil_defaultlib.glbl
+Compiling architecture bhvrl_accum of entity xil_defaultlib.p05_accum [\p05_accum(num_sw=8,ram_depth_bi...]
+Compiling architecture bhvrl_rom of entity xil_defaultlib.rom_file [\rom_file(ram_width_bit=32,ram_d...]
+Compiling architecture bhvrl_top of entity xil_defaultlib.p05_dds
+Built simulation snapshot p05_dds_func_impl

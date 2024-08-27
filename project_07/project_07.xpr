@@ -30,6 +30,8 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/debounce_RightLeft_ip_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/debounce_3to8mux_ip_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ip_repo/debounce_BTNLED_ip_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/."/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
