@@ -16,3 +16,5 @@
 *.wcfg
 *.wdb
 *.xml
+*.so
+*.tcl
