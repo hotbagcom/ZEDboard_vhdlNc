@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Aug 27 18:45:51 2024" VIVADOVERSION="2020.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Sep  2 11:18:58 2024" VIVADOVERSION="2020.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.4" DEVICE="7z020" NAME="design_02" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
     <PORT DIR="I" NAME="btn_L" SIGIS="undef" SIGNAME="External_Ports_btn_L">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="t07_debounce_top_1" PORT="btn"/>
+        <CONNECTION INSTANCE="t07_debounce_top_0" PORT="btn"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="btn_M" SIGIS="undef" SIGNAME="External_Ports_btn_M">
@@ -16,12 +16,22 @@
     </PORT>
     <PORT DIR="I" NAME="btn_R" SIGIS="undef" SIGNAME="External_Ports_btn_R">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="t07_debounce_top_0" PORT="btn"/>
+        <CONNECTION INSTANCE="t07_debounce_top_1" PORT="btn"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="7" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="t07_debounce_3mux8_0_led">
+    <PORT DIR="O" LEFT="7" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_1_Res">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="t07_debounce_3mux8_0" PORT="led"/>
+        <CONNECTION INSTANCE="util_vector_logic_1" PORT="Res"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btn_U" SIGIS="undef" SIGNAME="External_Ports_btn_U">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="t07_debounce_top_4" PORT="btn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="btn_D" SIGIS="undef" SIGNAME="External_Ports_btn_D">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="t07_debounce_top_3" PORT="btn"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
@@ -199,7 +209,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="2"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="6"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="1024"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2020"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="1"/>
@@ -214,7 +224,7 @@
         <PARAMETER NAME="C_RAM_STYLE" VALUE="SUBCORE"/>
         <PARAMETER NAME="C_TRIGOUT_EN" VALUE="0"/>
         <PARAMETER NAME="C_TRIGIN_EN" VALUE="0"/>
-        <PARAMETER NAME="C_SLOT_0_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_SLOT_0_AXIS_TUSER_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_SLOT_0_AXIS_TDEST_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXIS_TID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_ID_WIDTH" VALUE="1"/>
@@ -225,10 +235,10 @@
         <PARAMETER NAME="C_SLOT_0_AXI_BUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE0_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE3_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="C_PROBE5_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE2_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="C_PROBE3_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="C_PROBE4_WIDTH" VALUE="3"/>
+        <PARAMETER NAME="C_PROBE5_WIDTH" VALUE="3"/>
         <PARAMETER NAME="C_PROBE6_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE7_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE8_WIDTH" VALUE="1"/>
@@ -3334,6 +3344,26 @@
             <CONNECTION INSTANCE="t07_debounce_3mux8_0" PORT="led"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="7" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_1_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="t07_debounce_PWMcont_0_pwm_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="t07_debounce_PWMcont_0" PORT="pwm_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="probe4" RIGHT="0" SIGIS="undef" SIGNAME="t07_debounce_PWMcont_0_pwm_cntr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="t07_debounce_PWMcont_0" PORT="pwm_cntr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="probe5" RIGHT="0" SIGIS="undef" SIGNAME="t07_debounce_PWMcont_0_actv_led_timeline">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="t07_debounce_PWMcont_0" PORT="actv_led_timeline"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -4332,11 +4362,14 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
             <CONNECTION INSTANCE="ila_0" PORT="clk"/>
+            <CONNECTION INSTANCE="t07_debounce_RightLe_0" PORT="clk"/>
+            <CONNECTION INSTANCE="t07_debounce_3mux8_0" PORT="clk"/>
             <CONNECTION INSTANCE="t07_debounce_top_0" PORT="clk"/>
             <CONNECTION INSTANCE="t07_debounce_top_1" PORT="clk"/>
             <CONNECTION INSTANCE="t07_debounce_top_2" PORT="clk"/>
-            <CONNECTION INSTANCE="t07_debounce_RightLe_0" PORT="clk"/>
-            <CONNECTION INSTANCE="t07_debounce_3mux8_0" PORT="clk"/>
+            <CONNECTION INSTANCE="t07_debounce_top_3" PORT="clk"/>
+            <CONNECTION INSTANCE="t07_debounce_top_4" PORT="clk"/>
+            <CONNECTION INSTANCE="t07_debounce_PWMcont_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -4596,15 +4629,63 @@
             <CONNECTION INSTANCE="t07_debounce_RightLe_0" PORT="res"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="toogle" SIGIS="undef" SIGNAME="t07_debounce_top_2_led">
+        <PORT DIR="I" NAME="toogle" SIGIS="undef" SIGNAME="t07_debounce_top_2_debnc_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="t07_debounce_top_2" PORT="led"/>
+            <CONNECTION INSTANCE="t07_debounce_top_2" PORT="debnc_o"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="led" RIGHT="0" SIGIS="undef" SIGNAME="t07_debounce_3mux8_0_led">
           <CONNECTIONS>
             <CONNECTION INSTANCE="ila_0" PORT="probe1"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="led"/>
+            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Op1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/t07_debounce_PWMcont_0" HWVERSION="1.0" INSTANCE="t07_debounce_PWMcont_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="t07_debounce_PWMcontrol" VLNV="xilinx.com:module_ref:t07_debounce_PWMcontrol:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="step_bit" VALUE="3"/>
+        <PARAMETER NAME="step_size" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_02_t07_debounce_PWMcont_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn_U" SIGIS="undef" SIGNAME="t07_debounce_top_4_debnc_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="t07_debounce_top_4" PORT="debnc_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn_D" SIGIS="undef" SIGNAME="t07_debounce_top_3_debnc_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="t07_debounce_top_3" PORT="debnc_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="activ" RIGHT="0" SIGIS="undef" SIGNAME="t07_debounce_RightLe_0_res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="t07_debounce_RightLe_0" PORT="res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="actv_led_timeline" RIGHT="0" SIGIS="undef" SIGNAME="t07_debounce_PWMcont_0_actv_led_timeline">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe5"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="pwm_cntr" RIGHT="0" SIGIS="undef" SIGNAME="t07_debounce_PWMcont_0_pwm_cntr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe4"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="pwm_o" RIGHT="0" SIGIS="undef" SIGNAME="t07_debounce_PWMcont_0_pwm_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe3"/>
+            <CONNECTION INSTANCE="util_vector_logic_1" PORT="Op2"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4622,20 +4703,21 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="incr" SIGIS="undef" SIGNAME="t07_debounce_top_1_led">
+        <PORT DIR="I" NAME="incr" SIGIS="undef" SIGNAME="t07_debounce_top_0_debnc_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="t07_debounce_top_1" PORT="led"/>
+            <CONNECTION INSTANCE="t07_debounce_top_0" PORT="debnc_o"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="decr" SIGIS="undef" SIGNAME="t07_debounce_top_0_led">
+        <PORT DIR="I" NAME="decr" SIGIS="undef" SIGNAME="t07_debounce_top_1_debnc_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="t07_debounce_top_0" PORT="led"/>
+            <CONNECTION INSTANCE="t07_debounce_top_1" PORT="debnc_o"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="res" RIGHT="0" SIGIS="undef" SIGNAME="t07_debounce_RightLe_0_res">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="t07_debounce_3mux8_0" PORT="in3"/>
             <CONNECTION INSTANCE="ila_0" PORT="probe0"/>
+            <CONNECTION INSTANCE="t07_debounce_3mux8_0" PORT="in3"/>
+            <CONNECTION INSTANCE="t07_debounce_PWMcont_0" PORT="activ"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4650,39 +4732,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="btn" SIGIS="undef" SIGNAME="External_Ports_btn_R">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="btn_R"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="led" SIGIS="undef" SIGNAME="t07_debounce_top_0_led">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="t07_debounce_RightLe_0" PORT="decr"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
-    <MODULE COREREVISION="1" FULLNAME="/t07_debounce_top_1" HWVERSION="1.0" INSTANCE="t07_debounce_top_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="t07_debounce_top" VLNV="xilinx.com:module_ref:t07_debounce_top:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="X_clk" VALUE="100000000"/>
-        <PARAMETER NAME="debounce_max" VALUE="20000000"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_02_t07_debounce_top_0_2"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
           <CONNECTIONS>
             <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
           </CONNECTIONS>
@@ -4697,9 +4747,41 @@
             <CONNECTION INSTANCE="External_Ports" PORT="btn_L"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="led" SIGIS="undef" SIGNAME="t07_debounce_top_1_led">
+        <PORT DIR="O" NAME="debnc_o" SIGIS="undef" SIGNAME="t07_debounce_top_0_debnc_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="t07_debounce_RightLe_0" PORT="incr"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/t07_debounce_top_1" HWVERSION="1.0" INSTANCE="t07_debounce_top_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="t07_debounce_top" VLNV="xilinx.com:module_ref:t07_debounce_top:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="X_clk" VALUE="100000000"/>
+        <PARAMETER NAME="debounce_max" VALUE="20000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_02_t07_debounce_top_0_2"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn" SIGIS="undef" SIGNAME="External_Ports_btn_R">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn_R"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="debnc_o" SIGIS="undef" SIGNAME="t07_debounce_top_1_debnc_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="t07_debounce_RightLe_0" PORT="decr"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4714,7 +4796,7 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
           <CONNECTIONS>
             <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
           </CONNECTIONS>
@@ -4729,9 +4811,73 @@
             <CONNECTION INSTANCE="External_Ports" PORT="btn_M"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="led" SIGIS="undef" SIGNAME="t07_debounce_top_2_led">
+        <PORT DIR="O" NAME="debnc_o" SIGIS="undef" SIGNAME="t07_debounce_top_2_debnc_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="t07_debounce_3mux8_0" PORT="toogle"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/t07_debounce_top_3" HWVERSION="1.0" INSTANCE="t07_debounce_top_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="t07_debounce_top" VLNV="xilinx.com:module_ref:t07_debounce_top:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="X_clk" VALUE="100000000"/>
+        <PARAMETER NAME="debounce_max" VALUE="20000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_02_t07_debounce_top_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn" SIGIS="undef" SIGNAME="External_Ports_btn_D">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn_D"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="debnc_o" SIGIS="undef" SIGNAME="t07_debounce_top_3_debnc_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="t07_debounce_PWMcont_0" PORT="btn_D"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/t07_debounce_top_4" HWVERSION="1.0" INSTANCE="t07_debounce_top_4" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="t07_debounce_top" VLNV="xilinx.com:module_ref:t07_debounce_top:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="X_clk" VALUE="100000000"/>
+        <PARAMETER NAME="debounce_max" VALUE="20000000"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_02_t07_debounce_top_1_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_HIGH" SIGIS="rst" SIGNAME="util_vector_logic_0_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="util_vector_logic_0" PORT="Res"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="processing_system7_0_FCLK_CLK0">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="FCLK_CLK0"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="btn" SIGIS="undef" SIGNAME="External_Ports_btn_U">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="btn_U"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="debnc_o" SIGIS="undef" SIGNAME="t07_debounce_top_4_debnc_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="t07_debounce_PWMcont_0" PORT="btn_U"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -4757,6 +4903,37 @@
             <CONNECTION INSTANCE="t07_debounce_top_0" PORT="rst"/>
             <CONNECTION INSTANCE="t07_debounce_top_1" PORT="rst"/>
             <CONNECTION INSTANCE="t07_debounce_top_2" PORT="rst"/>
+            <CONNECTION INSTANCE="t07_debounce_top_3" PORT="rst"/>
+            <CONNECTION INSTANCE="t07_debounce_top_4" PORT="rst"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/util_vector_logic_1" HWVERSION="2.0" INSTANCE="util_vector_logic_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="util_vector_logic" VLNV="xilinx.com:ip:util_vector_logic:2.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="C_OPERATION" VALUE="xor"/>
+        <PARAMETER NAME="C_SIZE" VALUE="8"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_02_util_vector_logic_0_1"/>
+        <PARAMETER NAME="LOGO_FILE" VALUE="data/sym_xorgate.png"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="7" NAME="Op1" RIGHT="0" SIGIS="undef" SIGNAME="t07_debounce_3mux8_0_led">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="t07_debounce_3mux8_0" PORT="led"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="Op2" RIGHT="0" SIGIS="undef" SIGNAME="t07_debounce_PWMcont_0_pwm_o">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="t07_debounce_PWMcont_0" PORT="pwm_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="Res" RIGHT="0" SIGIS="undef" SIGNAME="util_vector_logic_1_Res">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ila_0" PORT="probe2"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="led"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

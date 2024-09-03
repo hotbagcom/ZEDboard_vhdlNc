@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xB6DDCFA399386758",
+      "boundary_crc": "0x7202EFEEF8B93594",
       "device": "xc7z020clg484-1",
       "name": "design_02",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
@@ -13,11 +13,15 @@
       "processing_system7_0": "",
       "util_vector_logic_0": "",
       "ila_0": "",
+      "t07_debounce_RightLe_0": "",
+      "util_vector_logic_1": "",
+      "t07_debounce_3mux8_0": "",
       "t07_debounce_top_0": "",
       "t07_debounce_top_1": "",
       "t07_debounce_top_2": "",
-      "t07_debounce_RightLe_0": "",
-      "t07_debounce_3mux8_0": ""
+      "t07_debounce_top_3": "",
+      "t07_debounce_top_4": "",
+      "t07_debounce_PWMcont_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -99,6 +103,12 @@
         "direction": "O",
         "left": "7",
         "right": "0"
+      },
+      "btn_U": {
+        "direction": "I"
+      },
+      "btn_D": {
+        "direction": "I"
       }
     },
     "components": {
@@ -935,130 +945,25 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "2"
+            "value": "6"
           },
           "C_PROBE0_WIDTH": {
             "value": "3"
           },
           "C_PROBE1_WIDTH": {
             "value": "8"
-          }
-        }
-      },
-      "t07_debounce_top_0": {
-        "vlnv": "xilinx.com:module_ref:t07_debounce_top:1.0",
-        "xci_name": "design_02_t07_debounce_top_0_1",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "t07_debounce_top",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "rst": {
-            "type": "rst",
-            "direction": "I"
           },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_02_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              }
-            }
+          "C_PROBE2_WIDTH": {
+            "value": "8"
           },
-          "btn": {
-            "direction": "I"
+          "C_PROBE3_WIDTH": {
+            "value": "8"
           },
-          "led": {
-            "direction": "O"
-          }
-        }
-      },
-      "t07_debounce_top_1": {
-        "vlnv": "xilinx.com:module_ref:t07_debounce_top:1.0",
-        "xci_name": "design_02_t07_debounce_top_0_2",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "t07_debounce_top",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "rst": {
-            "type": "rst",
-            "direction": "I"
+          "C_PROBE4_WIDTH": {
+            "value": "3"
           },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_02_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "btn": {
-            "direction": "I"
-          },
-          "led": {
-            "direction": "O"
-          }
-        }
-      },
-      "t07_debounce_top_2": {
-        "vlnv": "xilinx.com:module_ref:t07_debounce_top:1.0",
-        "xci_name": "design_02_t07_debounce_top_0_3",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "t07_debounce_top",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_02_processing_system7_0_0_FCLK_CLK0",
-                "value_src": "default_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "user_prop"
-              }
-            }
-          },
-          "btn": {
-            "direction": "I"
-          },
-          "led": {
-            "direction": "O"
+          "C_PROBE5_WIDTH": {
+            "value": "3"
           }
         }
       },
@@ -1095,6 +1000,18 @@
             "direction": "O",
             "left": "2",
             "right": "0"
+          }
+        }
+      },
+      "util_vector_logic_1": {
+        "vlnv": "xilinx.com:ip:util_vector_logic:2.0",
+        "xci_name": "design_02_util_vector_logic_0_1",
+        "parameters": {
+          "C_OPERATION": {
+            "value": "xor"
+          },
+          "C_SIZE": {
+            "value": "8"
           }
         }
       },
@@ -1135,6 +1052,277 @@
             "right": "0"
           }
         }
+      },
+      "t07_debounce_top_0": {
+        "vlnv": "xilinx.com:module_ref:t07_debounce_top:1.0",
+        "xci_name": "design_02_t07_debounce_top_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "t07_debounce_top",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_02_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "debnc_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "t07_debounce_top_1": {
+        "vlnv": "xilinx.com:module_ref:t07_debounce_top:1.0",
+        "xci_name": "design_02_t07_debounce_top_0_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "t07_debounce_top",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_02_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "debnc_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "t07_debounce_top_2": {
+        "vlnv": "xilinx.com:module_ref:t07_debounce_top:1.0",
+        "xci_name": "design_02_t07_debounce_top_0_3",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "t07_debounce_top",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_02_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "debnc_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "t07_debounce_top_3": {
+        "vlnv": "xilinx.com:module_ref:t07_debounce_top:1.0",
+        "xci_name": "design_02_t07_debounce_top_1_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "t07_debounce_top",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_02_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "debnc_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "t07_debounce_top_4": {
+        "vlnv": "xilinx.com:module_ref:t07_debounce_top:1.0",
+        "xci_name": "design_02_t07_debounce_top_1_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "t07_debounce_top",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH"
+              }
+            }
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_02_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn": {
+            "direction": "I"
+          },
+          "debnc_o": {
+            "direction": "O"
+          }
+        }
+      },
+      "t07_debounce_PWMcont_0": {
+        "vlnv": "xilinx.com:module_ref:t07_debounce_PWMcontrol:1.0",
+        "xci_name": "design_02_t07_debounce_PWMcont_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "t07_debounce_PWMcontrol",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_02_processing_system7_0_0_FCLK_CLK0",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "btn_U": {
+            "direction": "I"
+          },
+          "btn_D": {
+            "direction": "I"
+          },
+          "activ": {
+            "direction": "I",
+            "left": "2",
+            "right": "0"
+          },
+          "actv_led_timeline": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "pwm_cntr": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "pwm_o": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1152,18 +1340,14 @@
       }
     },
     "nets": {
-      "processing_system7_0_FCLK_RESET0_N": {
-        "ports": [
-          "processing_system7_0/FCLK_RESET0_N",
-          "util_vector_logic_0/Op1"
-        ]
-      },
       "util_vector_logic_0_Res": {
         "ports": [
           "util_vector_logic_0/Res",
           "t07_debounce_top_0/rst",
           "t07_debounce_top_1/rst",
-          "t07_debounce_top_2/rst"
+          "t07_debounce_top_2/rst",
+          "t07_debounce_top_3/rst",
+          "t07_debounce_top_4/rst"
         ]
       },
       "btn_0_1": {
@@ -1172,35 +1356,24 @@
           "t07_debounce_top_2/btn"
         ]
       },
-      "btn_1_1": {
-        "ports": [
-          "btn_R",
-          "t07_debounce_top_0/btn"
-        ]
-      },
-      "btn_L_1": {
-        "ports": [
-          "btn_L",
-          "t07_debounce_top_1/btn"
-        ]
-      },
       "t07_debounce_top_0_led": {
         "ports": [
-          "t07_debounce_top_0/led",
+          "t07_debounce_top_1/debnc_o",
           "t07_debounce_RightLe_0/decr"
         ]
       },
       "t07_debounce_top_1_led": {
         "ports": [
-          "t07_debounce_top_1/led",
+          "t07_debounce_top_0/debnc_o",
           "t07_debounce_RightLe_0/incr"
         ]
       },
       "t07_debounce_RightLe_0_res": {
         "ports": [
           "t07_debounce_RightLe_0/res",
+          "ila_0/probe0",
           "t07_debounce_3mux8_0/in3",
-          "ila_0/probe0"
+          "t07_debounce_PWMcont_0/activ"
         ]
       },
       "Net": {
@@ -1208,16 +1381,19 @@
           "processing_system7_0/FCLK_CLK0",
           "processing_system7_0/M_AXI_GP0_ACLK",
           "ila_0/clk",
+          "t07_debounce_RightLe_0/clk",
+          "t07_debounce_3mux8_0/clk",
           "t07_debounce_top_0/clk",
           "t07_debounce_top_1/clk",
           "t07_debounce_top_2/clk",
-          "t07_debounce_RightLe_0/clk",
-          "t07_debounce_3mux8_0/clk"
+          "t07_debounce_top_3/clk",
+          "t07_debounce_top_4/clk",
+          "t07_debounce_PWMcont_0/clk"
         ]
       },
       "t07_debounce_top_2_led": {
         "ports": [
-          "t07_debounce_top_2/led",
+          "t07_debounce_top_2/debnc_o",
           "t07_debounce_3mux8_0/toogle"
         ]
       },
@@ -1225,7 +1401,75 @@
         "ports": [
           "t07_debounce_3mux8_0/led",
           "ila_0/probe1",
+          "util_vector_logic_1/Op1"
+        ]
+      },
+      "t07_debounce_top_4_led": {
+        "ports": [
+          "t07_debounce_top_4/debnc_o",
+          "t07_debounce_PWMcont_0/btn_U"
+        ]
+      },
+      "btn_D_1": {
+        "ports": [
+          "btn_D",
+          "t07_debounce_top_3/btn"
+        ]
+      },
+      "t07_debounce_top_3_led": {
+        "ports": [
+          "t07_debounce_top_3/debnc_o",
+          "t07_debounce_PWMcont_0/btn_D"
+        ]
+      },
+      "btn_L_1": {
+        "ports": [
+          "btn_L",
+          "t07_debounce_top_0/btn"
+        ]
+      },
+      "btn_R_1": {
+        "ports": [
+          "btn_R",
+          "t07_debounce_top_1/btn"
+        ]
+      },
+      "t07_debounce_PWMcont_0_pwm_cntr": {
+        "ports": [
+          "t07_debounce_PWMcont_0/pwm_cntr",
+          "ila_0/probe4"
+        ]
+      },
+      "btn_U_1": {
+        "ports": [
+          "btn_U",
+          "t07_debounce_top_4/btn"
+        ]
+      },
+      "t07_debounce_PWMcont_0_pwm_o": {
+        "ports": [
+          "t07_debounce_PWMcont_0/pwm_o",
+          "ila_0/probe3",
+          "util_vector_logic_1/Op2"
+        ]
+      },
+      "processing_system7_0_FCLK_RESET0_N": {
+        "ports": [
+          "processing_system7_0/FCLK_RESET0_N",
+          "util_vector_logic_0/Op1"
+        ]
+      },
+      "util_vector_logic_1_Res": {
+        "ports": [
+          "util_vector_logic_1/Res",
+          "ila_0/probe2",
           "led"
+        ]
+      },
+      "t07_debounce_PWMcont_0_actv_led_timeline": {
+        "ports": [
+          "t07_debounce_PWMcont_0/actv_led_timeline",
+          "ila_0/probe5"
         ]
       }
     },

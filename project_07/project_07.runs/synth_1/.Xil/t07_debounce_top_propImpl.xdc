@@ -1,5 +1,0 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_07/project_07.srcs/constrs_1/new/btn_led_cstrn.xdc rfile:../../../project_07.srcs/constrs_1/new/btn_led_cstrn.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN P16 [ get_ports { btn } ]
-set_property src_info {type:XDC file:1 line:6 export:INPUT save:INPUT read:READ} [current_design]
-set_property PACKAGE_PIN T22 [ get_ports { led } ]

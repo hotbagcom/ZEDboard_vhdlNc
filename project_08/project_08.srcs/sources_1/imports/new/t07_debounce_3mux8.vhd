@@ -36,8 +36,7 @@ entity t07_debounce_3mux8 is
     clk     : in std_logic;
     in3     : in std_logic_vector (2 downto 0);
     toogle  : in std_logic ;
-    led     :out std_logic_vector (7 downto 0):= X"00"
-    
+    led     :out std_logic_vector (7 downto 0):= X"00" 
     );
 end t07_debounce_3mux8;
 
