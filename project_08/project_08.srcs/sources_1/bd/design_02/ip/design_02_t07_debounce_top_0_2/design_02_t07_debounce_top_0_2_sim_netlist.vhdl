@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Tue Aug 27 18:27:30 2024
+-- Date        : Wed Aug 28 18:05:05 2024
 -- Host        : Arif running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Users/arify/WorkSpace/ZEDboard_vhdlNc/project_08/project_08.srcs/sources_1/bd/design_02/ip/design_02_t07_debounce_top_0_2/design_02_t07_debounce_top_0_2_sim_netlist.vhdl
@@ -16,7 +16,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_02_t07_debounce_top_0_2_t07_debounce_top is
   port (
-    led : out STD_LOGIC;
+    debnc_o : out STD_LOGIC;
     btn : in STD_LOGIC;
     rst : in STD_LOGIC;
     clk : in STD_LOGIC
@@ -28,6 +28,7 @@ end design_02_t07_debounce_top_0_2_t07_debounce_top;
 architecture STRUCTURE of design_02_t07_debounce_top_0_2_t07_debounce_top is
   signal btn_status : STD_LOGIC;
   signal btn_status_i_1_n_0 : STD_LOGIC;
+  signal \^debnc_o\ : STD_LOGIC;
   signal \debounce_cntr0_carry__0_n_0\ : STD_LOGIC;
   signal \debounce_cntr0_carry__0_n_1\ : STD_LOGIC;
   signal \debounce_cntr0_carry__0_n_2\ : STD_LOGIC;
@@ -100,7 +101,6 @@ architecture STRUCTURE of design_02_t07_debounce_top_0_2_t07_debounce_top is
   signal \i__carry_i_5_n_0\ : STD_LOGIC;
   signal \i__carry_i_6_n_0\ : STD_LOGIC;
   signal \i__carry_i_7_n_0\ : STD_LOGIC;
-  signal \^led\ : STD_LOGIC;
   signal \led_status1_inferred__0/i__carry__0_n_0\ : STD_LOGIC;
   signal \led_status1_inferred__0/i__carry__0_n_1\ : STD_LOGIC;
   signal \led_status1_inferred__0/i__carry__0_n_2\ : STD_LOGIC;
@@ -140,7 +140,7 @@ architecture STRUCTURE of design_02_t07_debounce_top_0_2_t07_debounce_top is
   attribute COMPARATOR_THRESHOLD of \led_status1_inferred__0/i__carry__1\ : label is 11;
   attribute SOFT_HLUTNM of led_status_i_1 : label is "soft_lutpair0";
 begin
-  led <= \^led\;
+  debnc_o <= \^debnc_o\;
 btn_status_i_1: unisim.vcomponents.LUT4
     generic map(
       INIT => X"F0E4"
@@ -819,7 +819,7 @@ led_status_i_1: unisim.vcomponents.LUT5
       INIT => X"0000A9AA"
     )
         port map (
-      I0 => \^led\,
+      I0 => \^debnc_o\,
       I1 => \led_status1_inferred__0/i__carry__1_n_3\,
       I2 => btn,
       I3 => btn_status,
@@ -834,7 +834,7 @@ led_status_reg: unisim.vcomponents.FDRE
       C => clk,
       CE => '1',
       D => led_status_i_1_n_0,
-      Q => \^led\,
+      Q => \^debnc_o\,
       R => '0'
     );
 end STRUCTURE;
@@ -847,7 +847,7 @@ entity design_02_t07_debounce_top_0_2 is
     rst : in STD_LOGIC;
     clk : in STD_LOGIC;
     btn : in STD_LOGIC;
-    led : out STD_LOGIC
+    debnc_o : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of design_02_t07_debounce_top_0_2 : entity is true;
@@ -873,7 +873,7 @@ U0: entity work.design_02_t07_debounce_top_0_2_t07_debounce_top
      port map (
       btn => btn,
       clk => clk,
-      led => led,
+      debnc_o => debnc_o,
       rst => rst
     );
 end STRUCTURE;

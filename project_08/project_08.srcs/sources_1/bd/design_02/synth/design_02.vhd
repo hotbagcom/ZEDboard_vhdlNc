@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Tue Aug 27 18:45:50 2024
+--Date        : Mon Sep  2 11:18:58 2024
 --Host        : Arif running 64-bit major release  (build 9200)
 --Command     : generate_target design_02.bd
 --Design      : design_02
@@ -34,13 +34,15 @@ entity design_02 is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    btn_D : in STD_LOGIC;
     btn_L : in STD_LOGIC;
     btn_M : in STD_LOGIC;
     btn_R : in STD_LOGIC;
+    btn_U : in STD_LOGIC;
     led : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_02 : entity is "design_02,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_02,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=8,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=5,numPkgbdBlks=0,bdsource=USER,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_02 : entity is "design_02,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_02,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=12,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=8,numPkgbdBlks=0,bdsource=USER,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_02 : entity is "design_02.hwdef";
 end design_02;
@@ -128,33 +130,13 @@ architecture STRUCTURE of design_02 is
   port (
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 7 downto 0 )
+    probe1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    probe5 : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component design_02_ila_0_0;
-  component design_02_t07_debounce_top_0_1 is
-  port (
-    rst : in STD_LOGIC;
-    clk : in STD_LOGIC;
-    btn : in STD_LOGIC;
-    led : out STD_LOGIC
-  );
-  end component design_02_t07_debounce_top_0_1;
-  component design_02_t07_debounce_top_0_2 is
-  port (
-    rst : in STD_LOGIC;
-    clk : in STD_LOGIC;
-    btn : in STD_LOGIC;
-    led : out STD_LOGIC
-  );
-  end component design_02_t07_debounce_top_0_2;
-  component design_02_t07_debounce_top_0_3 is
-  port (
-    rst : in STD_LOGIC;
-    clk : in STD_LOGIC;
-    btn : in STD_LOGIC;
-    led : out STD_LOGIC
-  );
-  end component design_02_t07_debounce_top_0_3;
   component design_02_t07_debounce_RightLe_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -163,6 +145,13 @@ architecture STRUCTURE of design_02 is
     res : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component design_02_t07_debounce_RightLe_0_0;
+  component design_02_util_vector_logic_0_1 is
+  port (
+    Op1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Op2 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Res : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component design_02_util_vector_logic_0_1;
   component design_02_t07_debounce_3mux8_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -171,10 +160,63 @@ architecture STRUCTURE of design_02 is
     led : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component design_02_t07_debounce_3mux8_0_0;
+  component design_02_t07_debounce_top_0_1 is
+  port (
+    rst : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    btn : in STD_LOGIC;
+    debnc_o : out STD_LOGIC
+  );
+  end component design_02_t07_debounce_top_0_1;
+  component design_02_t07_debounce_top_0_2 is
+  port (
+    rst : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    btn : in STD_LOGIC;
+    debnc_o : out STD_LOGIC
+  );
+  end component design_02_t07_debounce_top_0_2;
+  component design_02_t07_debounce_top_0_3 is
+  port (
+    rst : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    btn : in STD_LOGIC;
+    debnc_o : out STD_LOGIC
+  );
+  end component design_02_t07_debounce_top_0_3;
+  component design_02_t07_debounce_top_1_0 is
+  port (
+    rst : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    btn : in STD_LOGIC;
+    debnc_o : out STD_LOGIC
+  );
+  end component design_02_t07_debounce_top_1_0;
+  component design_02_t07_debounce_top_1_1 is
+  port (
+    rst : in STD_LOGIC;
+    clk : in STD_LOGIC;
+    btn : in STD_LOGIC;
+    debnc_o : out STD_LOGIC
+  );
+  end component design_02_t07_debounce_top_1_1;
+  component design_02_t07_debounce_PWMcont_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    btn_U : in STD_LOGIC;
+    btn_D : in STD_LOGIC;
+    activ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    actv_led_timeline : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    pwm_cntr : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    pwm_o : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component design_02_t07_debounce_PWMcont_0_0;
   signal Net : STD_LOGIC;
   signal btn_0_1 : STD_LOGIC;
-  signal btn_1_1 : STD_LOGIC;
+  signal btn_D_1 : STD_LOGIC;
   signal btn_L_1 : STD_LOGIC;
+  signal btn_R_1 : STD_LOGIC;
+  signal btn_U_1 : STD_LOGIC;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -198,11 +240,17 @@ architecture STRUCTURE of design_02 is
   signal processing_system7_0_FIXED_IO_PS_PORB : STD_LOGIC;
   signal processing_system7_0_FIXED_IO_PS_SRSTB : STD_LOGIC;
   signal t07_debounce_3mux8_0_led : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal t07_debounce_PWMcont_0_actv_led_timeline : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal t07_debounce_PWMcont_0_pwm_cntr : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal t07_debounce_PWMcont_0_pwm_o : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal t07_debounce_RightLe_0_res : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal t07_debounce_top_0_led : STD_LOGIC;
   signal t07_debounce_top_1_led : STD_LOGIC;
   signal t07_debounce_top_2_led : STD_LOGIC;
+  signal t07_debounce_top_3_led : STD_LOGIC;
+  signal t07_debounce_top_4_led : STD_LOGIC;
   signal util_vector_logic_0_Res : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal util_vector_logic_1_Res : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_processing_system7_0_M_AXI_GP0_ARVALID_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_M_AXI_GP0_AWVALID_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_M_AXI_GP0_BREADY_UNCONNECTED : STD_LOGIC;
@@ -262,14 +310,20 @@ architecture STRUCTURE of design_02 is
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
   btn_0_1 <= btn_M;
-  btn_1_1 <= btn_R;
+  btn_D_1 <= btn_D;
   btn_L_1 <= btn_L;
-  led(7 downto 0) <= t07_debounce_3mux8_0_led(7 downto 0);
+  btn_R_1 <= btn_R;
+  btn_U_1 <= btn_U;
+  led(7 downto 0) <= util_vector_logic_1_Res(7 downto 0);
 ila_0: component design_02_ila_0_0
      port map (
       clk => Net,
       probe0(2 downto 0) => t07_debounce_RightLe_0_res(2 downto 0),
-      probe1(7 downto 0) => t07_debounce_3mux8_0_led(7 downto 0)
+      probe1(7 downto 0) => t07_debounce_3mux8_0_led(7 downto 0),
+      probe2(7 downto 0) => util_vector_logic_1_Res(7 downto 0),
+      probe3(7 downto 0) => t07_debounce_PWMcont_0_pwm_o(7 downto 0),
+      probe4(2 downto 0) => t07_debounce_PWMcont_0_pwm_cntr(2 downto 0),
+      probe5(2 downto 0) => t07_debounce_PWMcont_0_actv_led_timeline(2 downto 0)
     );
 processing_system7_0: component design_02_processing_system7_0_0
      port map (
@@ -349,6 +403,16 @@ t07_debounce_3mux8_0: component design_02_t07_debounce_3mux8_0_0
       led(7 downto 0) => t07_debounce_3mux8_0_led(7 downto 0),
       toogle => t07_debounce_top_2_led
     );
+t07_debounce_PWMcont_0: component design_02_t07_debounce_PWMcont_0_0
+     port map (
+      activ(2 downto 0) => t07_debounce_RightLe_0_res(2 downto 0),
+      actv_led_timeline(2 downto 0) => t07_debounce_PWMcont_0_actv_led_timeline(2 downto 0),
+      btn_D => t07_debounce_top_3_led,
+      btn_U => t07_debounce_top_4_led,
+      clk => Net,
+      pwm_cntr(2 downto 0) => t07_debounce_PWMcont_0_pwm_cntr(2 downto 0),
+      pwm_o(7 downto 0) => t07_debounce_PWMcont_0_pwm_o(7 downto 0)
+    );
 t07_debounce_RightLe_0: component design_02_t07_debounce_RightLe_0_0
      port map (
       clk => Net,
@@ -358,23 +422,37 @@ t07_debounce_RightLe_0: component design_02_t07_debounce_RightLe_0_0
     );
 t07_debounce_top_0: component design_02_t07_debounce_top_0_1
      port map (
-      btn => btn_1_1,
+      btn => btn_L_1,
       clk => Net,
-      led => t07_debounce_top_0_led,
+      debnc_o => t07_debounce_top_1_led,
       rst => util_vector_logic_0_Res(0)
     );
 t07_debounce_top_1: component design_02_t07_debounce_top_0_2
      port map (
-      btn => btn_L_1,
+      btn => btn_R_1,
       clk => Net,
-      led => t07_debounce_top_1_led,
+      debnc_o => t07_debounce_top_0_led,
       rst => util_vector_logic_0_Res(0)
     );
 t07_debounce_top_2: component design_02_t07_debounce_top_0_3
      port map (
       btn => btn_0_1,
       clk => Net,
-      led => t07_debounce_top_2_led,
+      debnc_o => t07_debounce_top_2_led,
+      rst => util_vector_logic_0_Res(0)
+    );
+t07_debounce_top_3: component design_02_t07_debounce_top_1_0
+     port map (
+      btn => btn_D_1,
+      clk => Net,
+      debnc_o => t07_debounce_top_3_led,
+      rst => util_vector_logic_0_Res(0)
+    );
+t07_debounce_top_4: component design_02_t07_debounce_top_1_1
+     port map (
+      btn => btn_U_1,
+      clk => Net,
+      debnc_o => t07_debounce_top_4_led,
       rst => util_vector_logic_0_Res(0)
     );
 util_vector_logic_0: component design_02_util_vector_logic_0_0
@@ -388,5 +466,11 @@ util_vector_logic_0: component design_02_util_vector_logic_0_0
       Op1(1) => processing_system7_0_FCLK_RESET0_N,
       Op1(0) => processing_system7_0_FCLK_RESET0_N,
       Res(7 downto 0) => util_vector_logic_0_Res(7 downto 0)
+    );
+util_vector_logic_1: component design_02_util_vector_logic_0_1
+     port map (
+      Op1(7 downto 0) => t07_debounce_3mux8_0_led(7 downto 0),
+      Op2(7 downto 0) => t07_debounce_PWMcont_0_pwm_o(7 downto 0),
+      Res(7 downto 0) => util_vector_logic_1_Res(7 downto 0)
     );
 end STRUCTURE;

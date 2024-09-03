@@ -1,0 +1,6 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]C:\Users\arify\WorkSpace\ZEDboard_vitis\proje_08_deBounce\FSBL\Debug\FSBL.elf
+	C:\Users\arify\WorkSpace\ZEDboard_vhdlNc\project_08\project_08.runs\impl_1\design_02_wrapper.bit
+}

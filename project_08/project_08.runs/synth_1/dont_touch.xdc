@@ -30,4 +30,16 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_02_t07_d
 # IP: bd/design_02/ip/design_02_ila_0_0/design_02_ila_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_02_ila_0_0 || ORIG_REF_NAME==design_02_ila_0_0} -quiet] -quiet
 
+# IP: bd/design_02/ip/design_02_util_vector_logic_0_1/design_02_util_vector_logic_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_02_util_vector_logic_0_1 || ORIG_REF_NAME==design_02_util_vector_logic_0_1} -quiet] -quiet
+
+# IP: bd/design_02/ip/design_02_t07_debounce_PWMcont_0_0/design_02_t07_debounce_PWMcont_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_02_t07_debounce_PWMcont_0_0 || ORIG_REF_NAME==design_02_t07_debounce_PWMcont_0_0} -quiet] -quiet
+
+# IP: bd/design_02/ip/design_02_t07_debounce_top_1_0/design_02_t07_debounce_top_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_02_t07_debounce_top_1_0 || ORIG_REF_NAME==design_02_t07_debounce_top_1_0} -quiet] -quiet
+
+# IP: bd/design_02/ip/design_02_t07_debounce_top_1_1/design_02_t07_debounce_top_1_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_02_t07_debounce_top_1_1 || ORIG_REF_NAME==design_02_t07_debounce_top_1_1} -quiet] -quiet
+
 # XDC: bd/design_02/design_02_ooc.xdc

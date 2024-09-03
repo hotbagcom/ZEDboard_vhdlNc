@@ -41,7 +41,7 @@ entity t07_debounce_top is
         rst : in std_logic;
         clk : in std_logic ;
         btn : in std_logic ;
-        led : out std_logic := '0' 
+        debnc_o : out std_logic := '0' 
     );
 end t07_debounce_top;
 
@@ -73,7 +73,7 @@ process (clk ) begin
                 end if ;
         end if; 
     end if;
-    led <= led_status ;
+    debnc_o <= led_status ;
 end process ;
 
 

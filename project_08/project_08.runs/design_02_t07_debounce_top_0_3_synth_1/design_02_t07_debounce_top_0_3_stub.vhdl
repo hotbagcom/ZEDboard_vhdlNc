@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Tue Aug 27 18:27:29 2024
+-- Date        : Wed Aug 28 18:05:04 2024
 -- Host        : Arif running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_02_t07_debounce_top_0_3_stub.vhdl
@@ -17,7 +17,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     rst : in STD_LOGIC;
     clk : in STD_LOGIC;
     btn : in STD_LOGIC;
-    led : out STD_LOGIC
+    debnc_o : out STD_LOGIC
   );
 
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
@@ -26,7 +26,7 @@ architecture stub of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "rst,clk,btn,led";
+attribute black_box_pad_pin of stub : architecture is "rst,clk,btn,debnc_o";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "t07_debounce_top,Vivado 2020.1";
 begin

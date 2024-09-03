@@ -58,7 +58,7 @@ ENTITY design_02_t07_debounce_top_0_2 IS
     rst : IN STD_LOGIC;
     clk : IN STD_LOGIC;
     btn : IN STD_LOGIC;
-    led : OUT STD_LOGIC
+    debnc_o : OUT STD_LOGIC
   );
 END design_02_t07_debounce_top_0_2;
 
@@ -74,7 +74,7 @@ ARCHITECTURE design_02_t07_debounce_top_0_2_arch OF design_02_t07_debounce_top_0
       rst : IN STD_LOGIC;
       clk : IN STD_LOGIC;
       btn : IN STD_LOGIC;
-      led : OUT STD_LOGIC
+      debnc_o : OUT STD_LOGIC
     );
   END COMPONENT t07_debounce_top;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
@@ -95,6 +95,6 @@ BEGIN
       rst => rst,
       clk => clk,
       btn => btn,
-      led => led
+      debnc_o => debnc_o
     );
 END design_02_t07_debounce_top_0_2_arch;

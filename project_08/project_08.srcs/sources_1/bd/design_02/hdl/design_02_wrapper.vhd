@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Tue Aug 27 18:45:50 2024
+--Date        : Mon Sep  2 11:18:58 2024
 --Host        : Arif running 64-bit major release  (build 9200)
 --Command     : generate_target design_02_wrapper.bd
 --Design      : design_02_wrapper
@@ -34,9 +34,11 @@ entity design_02_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    btn_D : in STD_LOGIC;
     btn_L : in STD_LOGIC;
     btn_M : in STD_LOGIC;
     btn_R : in STD_LOGIC;
+    btn_U : in STD_LOGIC;
     led : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
 end design_02_wrapper;
@@ -48,6 +50,8 @@ architecture STRUCTURE of design_02_wrapper is
     btn_M : in STD_LOGIC;
     btn_R : in STD_LOGIC;
     led : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    btn_U : in STD_LOGIC;
+    btn_D : in STD_LOGIC;
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ddr_vrn : inout STD_LOGIC;
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
@@ -95,9 +99,11 @@ design_02_i: component design_02
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      btn_D => btn_D,
       btn_L => btn_L,
       btn_M => btn_M,
       btn_R => btn_R,
+      btn_U => btn_U,
       led(7 downto 0) => led(7 downto 0)
     );
 end STRUCTURE;
